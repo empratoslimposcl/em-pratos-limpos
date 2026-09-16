@@ -1,7 +1,7 @@
 # Atuação dos vereadores nas sessões ordinárias de 2026
 
-Gerado em: 2026-09-15T21:48:43-03:00
-Dado coletado em: 2026-09-15T18:12:02-03:00
+Gerado em: 2026-09-16T01:19:42-03:00
+Dado coletado em: 2026-09-16T04:19:42+00:00
 Script: `dados/tratados/gerar_atuacao_vereadores_2026.py`
 Fonte: arquivos oficiais guardados em `dados/brutos/` e a tabela única `dados/tratados/vereadores.json`. Nada foi inventado na mão.
 
@@ -414,7 +414,7 @@ Apresentou 4 Projetos de Lei do Legislativo em 2026. Aprovados em sessão ordin�
 Temas (classificação por IA, não revisada): Homenagens, nomes e datas (1), Cultura, esporte e lazer (1), Meio ambiente e animais (1) e Iluminação e serviços urbanos (1).
 
 - PLL 29/2026 (id 25999): DISPÕE SOBRE A OBRIGATORIEDADE DA EMPRESA CONCESSIONÁRIA OU PERMISSIONÁRIA DE ENERGIA ELETRICA E DEMAIS EMPRESAS COMPARTILHANTES DE SUA INFRAESTRUTURA, DE CUMPRIR COM AS DIRETRIZES DAS NORMAS TÉCNICAS APLICÁVEIS E PROMOVER A REGULARIZAÇÃO E RETIRADA DOS FIOS INUTILIZADOS EM VIAS PÚBLICAS DO MUNICIPIO DE CAMPO LARGO E DÁ OUTRAS PROVIDENCIAS. Tema: Iluminação e serviços urbanos. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/25999
-- PLL 62/2026 (id 26457): INSTITUI O PROGRAMA PROTETORES MIRINS NO MUNICÍPIO DE CAMPO LARGO, E DÁ OUTRAS PROVIDENCIAS.
+- PLL 62/2026 (id 26457): INSTITUI O PROGRAMA PROTETORES MIRINS NO MUNICÍPIO DE CAMPO LARGO, E DÁ OUTRAS PROVIDENCIAS.
 ***COM SUBSTITUTIVO GERAL, CUJA SÚMULA: INSTITUI O PROGRAMA PROTETORES MIRINS DOS ANIMAIS NO MUNICÍPIO DE CAMPO LARGO, E DÁ OUTRAS PROVIDÊNCIAS.*** Tema: Meio ambiente e animais. Situação: Aprovado em 2026-09-08 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26457
 - PLL 63/2026 (id 26458): INSTITUI O PROGRAMA MUNICIPAL DE FOMENTO AO ESPORTE FEMININO. Tema: Cultura, esporte e lazer. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26458
 - PLL 65/2026 (id 26466): CRIA, NO ÂMBITO DO MUNICIPIO DE CAMPO LARGO, O DIA MUNICIPAL DA PESSOA IDOSA E DÁ OUTRAS PROVIDENCIAS. Tema: Homenagens, nomes e datas. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26466
@@ -429,9 +429,9 @@ Temas (classificação por IA, não revisada): Homenagens, nomes e datas (5), Cu
 - PLL 26/2026 (id 25946): DECLARA DE UTILIDADE PUBLICA MUNICIPAL DE CAMPO LARGO O CLUBE DE DESBRAVADORES E AVENTUREIROS SUL – FILIAL CAMPO LARGO. Tema: Homenagens, nomes e datas. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/25946
 - PLL 32/2026 (id 26021): ALTERA O ART. 1° DA LEI MUNICIPAL N° 3.948, DE 16 DE DEZEMBRO DE 2025, CONFORME ESPECIFICA. Tema: Outros. Situação: Aprovado em 2026-05-18 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26021
 - PLL 36/2026 (id 26074): DECLARA DE UTILIDADE PÚBLICA MUNICIPAL DE CAMPO LARGO O CENTRO DE TRADIÇÕES GAÚCHAS PONCHO CRIOULO - CTG. Tema: Homenagens, nomes e datas. Situação: Aprovado em 2026-05-25 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26074
-- PLL 54/2026 (id 26224): INCLUI NO CALENDÁRIO OFICIAL DE EVENTOS DO MUNICÍPIO DE CAMPO LARGO O DIA DO CRIADOR DE CAVALO CRIOULO.
+- PLL 54/2026 (id 26224): INCLUI NO CALENDÁRIO OFICIAL DE EVENTOS DO MUNICÍPIO DE CAMPO LARGO O DIA DO CRIADOR DE CAVALO CRIOULO.
 ***COM SUBSTITUTIVO GERAL*** Tema: Homenagens, nomes e datas. Situação: Aprovado em 2026-08-10 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26224
-- PLL 69/2026 (id 26534): INSTITUI O PROGRAMA MUNICIPAL “VACA PARADA”, DESTINADO AO INCENTIVO DE ATIVIDADES CULTURAIS, CAMPEIRAS E TRADICIONALISTAS VOLTADAS ÀS CRIANÇAS E ADOLESCENTES NO MUNICIPIO, E DÁ OUTRAS PROVIDÊNCIAS.
+- PLL 69/2026 (id 26534): INSTITUI O PROGRAMA MUNICIPAL “VACA PARADA”, DESTINADO AO INCENTIVO DE ATIVIDADES CULTURAIS, CAMPEIRAS E TRADICIONALISTAS VOLTADAS ÀS CRIANÇAS E ADOLESCENTES NO MUNICIPIO, E DÁ OUTRAS PROVIDÊNCIAS.
 ***COM SUBSTITUTIVO GERAL*** Tema: Cultura, esporte e lazer. Situação: Aprovado em 2026-09-14 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26534
 - PLL 98/2026 (id 27046): INSTITUI O DIA MUNICIPAL DA VACA PARADA NO CALENDÁRIO OFICIAL DE EVENTOS DO MUNICIPIO DE CAMPO LARGO. Tema: Homenagens, nomes e datas. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/27046
 
@@ -461,12 +461,12 @@ Apresentou 8 Projetos de Lei do Legislativo em 2026. Aprovados em sessão ordin�
 
 Temas (classificação por IA, não revisada): Homenagens, nomes e datas (2), Saúde (2), Cultura, esporte e lazer (1) e Outros (3).
 
-- PLL 13/2026 (id 25650): INSTITUI FERIADO MUNICIPAL O DIA 23 DE FEVEREIRO, EM COMEMORAÇÃO À EMANCIPAÇÃO POLÍTICA DO MUNICÍPIO DE CAMPO LARGO.
+- PLL 13/2026 (id 25650): INSTITUI FERIADO MUNICIPAL O DIA 23 DE FEVEREIRO, EM COMEMORAÇÃO À EMANCIPAÇÃO POLÍTICA DO MUNICÍPIO DE CAMPO LARGO.
 ***COM SUBSTITUTIVO GERAL, CUJA SÚMULA: DISPÕE SOBRE A CELEBRAÇÃO DO DIA MUNICIPAL DA EMANCIPAÇÃO POLITICA DE CAMPO LARGO." Tema: Homenagens, nomes e datas. Situação: Aprovado em 2026-04-06 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/25650
 - PLL 19/2026 (id 25768): INSTITUI A SEMANA MUNICIPAL DE PREVENÇÃO E CONSCIENTIZAÇÃO SOBRE O BULLYING E CYBERBULLYING NAS ESCOLAS E DÁ OUTRAS PROVIDÊNCIAS. Tema: Homenagens, nomes e datas. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: sim. Fonte: https://sapl.campolargo.pr.leg.br/materia/25768
 - PLL 30/2026 (id 26019): INSTITUI NO CALENDÁRIO MUNICIPAL DE CAMPO LARGO A FESTA DA PADROEIRA DA PARÓQUIA NOSSA SENHORA DA PIEDADE. Tema: Outros. Situação: Aprovado em 2026-05-11 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26019
-- PLL 31/2026 (id 26020): INSTITUI NO MUNICIPIO DE CAMPO LARGO O PROGRAMA EDUCATIVO E PREVENTIVO SAMUZINHO VOLTADO À CONSCIENTIZAÇÃO SOBRE PREVENÇÃO DE ACIDENTES E USO ADEQUADO DOS SERVIÇOS DE URGÊNCIA E EMERGÊNCIA, E DÁ OUTRAS PROVIDÊNCIAS.
-***COM SUBSTITUTIVO GERAL*** CUJA SÚMULA: "INSTITUI, NO MUNICÍPIO DE CAMPO LARGO, O PROGRAMA EDUCATIVO E PREVENTIVO "SAMUZINHO", VOLTADO À CONSCIENTIZAÇÃO SOBRE PREVENÇÃO DE ACIDENTES E USO ADEQUADO DOS SERVIÇOS DE URGÊNCIA E EMERGÊNCIA, E ESTABELECE DIRETRIZES PARA SUA IMPLEMENTAÇÃO".
+- PLL 31/2026 (id 26020): INSTITUI NO MUNICIPIO DE CAMPO LARGO O PROGRAMA EDUCATIVO E PREVENTIVO SAMUZINHO VOLTADO À CONSCIENTIZAÇÃO SOBRE PREVENÇÃO DE ACIDENTES E USO ADEQUADO DOS SERVIÇOS DE URGÊNCIA E EMERGÊNCIA, E DÁ OUTRAS PROVIDÊNCIAS.
+***COM SUBSTITUTIVO GERAL*** CUJA SÚMULA: "INSTITUI, NO MUNICÍPIO DE CAMPO LARGO, O PROGRAMA EDUCATIVO E PREVENTIVO "SAMUZINHO", VOLTADO À CONSCIENTIZAÇÃO SOBRE PREVENÇÃO DE ACIDENTES E USO ADEQUADO DOS SERVIÇOS DE URGÊNCIA E EMERGÊNCIA, E ESTABELECE DIRETRIZES PARA SUA IMPLEMENTAÇÃO".
 ***COM VETO INTEGRAL*** Tema: Saúde. Situação: Aprovado em 2026-06-15 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26020
 - PLL 44/2026 (id 26141): INSTITUI O SELO PET SEGURO NO MUNICÍPIO DE CAMPO LARGO, CONFORME ESPECIFICA. Tema: Outros. Situação: Aprovado em 2026-06-01 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26141
 - PLL 45/2026 (id 26142): INCLUI NO CALENDÁRIO MUNICIPAL DE CAMPO LARGO A FESTA DA PADROEIRA DA PAROQUIA NOSSA SENHORA APARECIDA E A PEREGRINAÇÃO AO MORRO DO CAL. Tema: Outros. Situação: Aprovado em 2026-05-18 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26142
@@ -482,9 +482,9 @@ Temas (classificação por IA, não revisada): Homenagens, nomes e datas (2), Ed
 - PLL 8/2026 (id 25644): INSTITUI, NO ÂMBITO DO MUNICÍPIO DE CAMPO LARGO, O PROJETO "MARIA DA PENHA NAS ESCOLAS", COM O OBJETIVO DE PROMOVER A CONSCIENTIZAÇÃO SOBRE A PREVENÇÃO E O COMBATE À VIOLÊNCIA DOMÉSTICA, FAMILIAR E AO FEMINICÍDLO NAS UNIDADES DA REDE PÚBLICA MUNICIPAL DE ENSINO. Tema: Educação. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/25644
 - PLL 9/2026 (id 25645): INSTITUI O PROGRAMA MUNICIPAL "PLENA MENTE" NAS UNIDADES DA REDE PÚBLICA MUNICIPAL DE ENSINO DE CAMPO LARGO E DÁ OUTRAS PROVIDÊNCIAS. Tema: Educação. Situação: Aprovado em 2026-03-16 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/25645
 - PLL 10/2026 (id 25646): INSTITUI A POLÍTICA MUNICIPAL DE ENFRENTAMENTO AO CAPACITISMO NO ÂMBITO DO MUNICÍPIO DE CAMPO LARGO E DÁ OUTRAS PROVIDÊNCIAS. Tema: Outros. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/25646
-- PLL 11/2026 (id 25647): INSTITUI O PROGRAMA MUNICIPAL DE EDUCAÇÃO FISCAL NAS ESCOLAS DE CAMPO LARGO E DÁ OUTRAS PROVIDÊNCIAS.
+- PLL 11/2026 (id 25647): INSTITUI O PROGRAMA MUNICIPAL DE EDUCAÇÃO FISCAL NAS ESCOLAS DE CAMPO LARGO E DÁ OUTRAS PROVIDÊNCIAS.
 ***COM SUBSTITUTIVO GERAL*** Tema: Educação. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/25647
-- PLL 12/2026 (id 25649): INCLUI NO CALENDÁRIO OFICIAL DE EVENTOS DO MUNICÍPIO DE CAMPO LARGO A "CAMINHADA DE CONSCIENTIZAÇÃO DO AUTISMO", A SER REALIZADA ANUALMENTE NO MÊS DE ABRIL.
+- PLL 12/2026 (id 25649): INCLUI NO CALENDÁRIO OFICIAL DE EVENTOS DO MUNICÍPIO DE CAMPO LARGO A "CAMINHADA DE CONSCIENTIZAÇÃO DO AUTISMO", A SER REALIZADA ANUALMENTE NO MÊS DE ABRIL.
 ***COM SUBSTITUTIVO GERAL*** Tema: Homenagens, nomes e datas. Situação: Aprovado em 2026-04-22 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/25649
 - PLL 23/2026 (id 25872): INSTITUI A SEMANA MUNICIPAL DE ENFRENTAMENTO AO CAPACITISMO NO MUNICÍPIO DE CAMPO LARGO E DÁ OUTRAS PROVIDÊNCIAS. Tema: Homenagens, nomes e datas. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/25872
 - PLL 71/2026 (id 26544): INSTITUI, NO AMBITO DO MUNICIPIO DE CAMPO LARGO, O PROJETO MARIA DA PENHA NAS ESCOLAS E DÁ OUTRAS PROVIDÊNCIAS. Tema: Educação. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26544
@@ -533,9 +533,9 @@ Temas (classificação por IA, não revisada): Homenagens, nomes e datas (1), Sa
 - PLL 25/2026 (id 25945): INSTITUI O PROGRAMA MUNICIPAL DE INCENTIVO À CIDADANIA ATIVA NO MUNICIPIO DE CAMPO LARGO Tema: Outros. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/25945
 - PLL 28/2026 (id 25991): DENOMINA DE DESTACAMENTO ALEXANDRE DINIZ DOS SANTOS O MÓDULO DA GUARDA MUNICIPAL DO FERRARIA, NO MUNICIPIO DE CAMPO LARGO. Tema: Homenagens, nomes e datas. Situação: Aprovado em 2026-05-04 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/25991
 - PLL 35/2026 (id 26073): DISPÕE SOBRE A OBRIGATORIEDADE DE NOTIFICAÇÃO À PREFEITURA DOS CASOS CONFIRMADOS DE ZOONOSES EM ANIMAIS ATENDIDOS POR SERVIÇOS DE SAÚDE E CUIDADO ANIMAL, PÚBLICOS OU PRIVADOS, NO MUNICIPIO DE CAMPO LARGO. Tema: Saúde. Situação: Aprovado em 2026-05-18 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26073
-- PLL 58/2026 (id 26306): INSTITUI POLITICA MUNICIPAL DE ENFRENTAMENTO ÀS DROGAS ILÍCITAS.
+- PLL 58/2026 (id 26306): INSTITUI POLITICA MUNICIPAL DE ENFRENTAMENTO ÀS DROGAS ILÍCITAS.
 ***COM VETO INTEGRAL*** Tema: Outros. Situação: Aprovado em 2026-06-15 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26306
-- PLL 59/2026 (id 26348): INSTITUI A LEI CÃO ABACATE, PARA MAJORAR AS MULTAS ADMINISTRATIVAS COMINADAS À PRATICA DE MAUS-TRATOS COM CRUELDADE AOS ANIMAIS.
+- PLL 59/2026 (id 26348): INSTITUI A LEI CÃO ABACATE, PARA MAJORAR AS MULTAS ADMINISTRATIVAS COMINADAS À PRATICA DE MAUS-TRATOS COM CRUELDADE AOS ANIMAIS.
 ***COM VETO INTEGRAL*** Tema: Meio ambiente e animais. Situação: Aprovado em 2026-06-15 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26348
 
 ### VICTOR BINI
@@ -556,10 +556,10 @@ Apresentou 8 Projetos de Lei do Legislativo em 2026. Aprovados em sessão ordin�
 Temas (classificação por IA, não revisada): Homenagens, nomes e datas (4), Educação (2) e Ruas, trânsito e transporte (2).
 
 - PLL 27/2026 (id 25972): ALTERA E ACRESCENTA DISPOSITIVOS À LEI MUNICIPAL N° 2841/2013, INSTITUINDO A COMPENSAÇÃO AUTOMÁTICA DE CRÉDITOS NO SISTEMA DE ESTACIONAMENTO REGULAMENTADO (ESTAR) DE CAMPO LARGO E DÁ OUTRAS PROVIDÊNCIAS. Tema: Ruas, trânsito e transporte. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/25972
-- PLL 33/2026 (id 26038): INSTITUI O DIA MUNICIPAL DO TRILHEIRO DE MOTOCICLISMO NO MUNICIPIO DE CAMPO LARGO E DÁ OUTRAS PROVIDENCIAS.
+- PLL 33/2026 (id 26038): INSTITUI O DIA MUNICIPAL DO TRILHEIRO DE MOTOCICLISMO NO MUNICIPIO DE CAMPO LARGO E DÁ OUTRAS PROVIDENCIAS.
 ***COM SUBSTITUTIVO GERAL*** Tema: Homenagens, nomes e datas. Situação: Aprovado em 2026-08-24 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26038
-- PLL 34/2026 (id 26040): INSTITUI O DIA MUNICIPAL DOS AVENTUREIROS NO MUNICIPIO DE CAMPO LARGO E DÁ OUTRAS PROVIDÊNCIAS.
-***COM SUBSTITUTIVO GERAL***
+- PLL 34/2026 (id 26040): INSTITUI O DIA MUNICIPAL DOS AVENTUREIROS NO MUNICIPIO DE CAMPO LARGO E DÁ OUTRAS PROVIDÊNCIAS.
+***COM SUBSTITUTIVO GERAL***
 CUJA SÚMULA : "INSTITUI NO CALENDÁRIO OFICIAL DE EVENTOS DO MUNICÍPIO DE CAMPO LARGO O DIA MUNICIPAL DOS AVENTUREIROS, CELEBRADO ANUALMENTE EM 18 DE MAIO." Tema: Homenagens, nomes e datas. Situação: Aprovado em 2026-06-08 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26040
 - PLL 74/2026 (id 26603): INSTITUI O DIA MUNICIPAL DO ASSOCIATIVISMO, A SER CELEBRADO ANUALMENTE NO DIA 15 DE JULHO. Tema: Homenagens, nomes e datas. Situação: Aprovado em 2026-06-15 (UNANIMIDADE). Autoria conjunta: sim. Fonte: https://sapl.campolargo.pr.leg.br/materia/26603
 - PLL 78/2026 (id 26763): ALTERA E ACRESCENTA DISPOSITIVOS À LEI MUNICIPAL N° 2481/2013, INSTITUINDO O PERÍODO DE TOLERANCIA DE ATÉ 15 (QUINZE) MINUTOS APÓS A IDENTIFICAÇÃO DO VEICULOS POR FISCALIZAÇÃO OFICIAL NO SISTEMA DE ESTACIONAMENTO REGULAMENTADO (ESTAR) DE CAMPO LARGO E DÁ OUTRAS PROVIDÊNCIAS. Tema: Ruas, trânsito e transporte. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26763
@@ -574,7 +574,7 @@ Apresentou 15 Projetos de Lei do Legislativo em 2026. Aprovados em sessão ordin
 Temas (classificação por IA, não revisada): Homenagens, nomes e datas (6), Saúde (1), Educação (1), Cultura, esporte e lazer (1), Administração e finanças (1) e Outros (5).
 
 - PLL 3/2026 (id 25574): ESTABELECE TEMPO MÁXIMO DE ESPERA PARA ATENDIMENTOS NAS UNIDADES DE SAÚDE DO MUNICÍPIO, COM O OBJETIVO DE OTIMIZAR OS FLUXOS DE ATENDIMENTO E REDUZIR FILAS DE ESPERA, E DÁ OUTRAS PROVIDÊNCIAS. Tema: Saúde. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/25574
-- PLL 4/2026 (id 25582): DISPÕE SOBRE A INSTITUIÇÃO DO DIA DO MASSOTERAPEUTA NO MUNICÍPIO DE CAMPO LARGO - ESTADO DO PARANÁ E DÁ OUTRAS PROVIDÊNCIAS.
+- PLL 4/2026 (id 25582): DISPÕE SOBRE A INSTITUIÇÃO DO DIA DO MASSOTERAPEUTA NO MUNICÍPIO DE CAMPO LARGO - ESTADO DO PARANÁ E DÁ OUTRAS PROVIDÊNCIAS.
 ***COM SUBSTITUTIVO GERAL*** Tema: Outros. Situação: Aprovado em 2026-05-18 (UNANIMIDADE). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/25582
 - PLL 46/2026 (id 26178): INSTITUI O PROGRAMA MUNICIPAL DE INCENTIVO À DOAÇÃO DE LEITE MATERNO NO MUNICÍPIO DE CAMPO LARGO, DISPÕE SOBRE SEUS OBJETIVOS, DIRETRIZES E FORMAS DE FINANCIAMENTO, E DÁ OUTRAS PROVIDÊNCIAS. Tema: Outros. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26178
 - PLL 47/2026 (id 26180): DISPÕE SOBRE A ADOÇÃO OBRIGATÓRIA DE GIZ ANTIALÉRGICO NO ÂMBITO DA REDE PÚBLICA MUNICIPAL DE ENSINO E DÁ OUTRAS PROVIDÊNCIAS. Tema: Educação. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26180
@@ -613,7 +613,7 @@ Temas (classificação por IA, não revisada): Homenagens, nomes e datas (4), Cu
 - PLL 19/2026 (id 25768): INSTITUI A SEMANA MUNICIPAL DE PREVENÇÃO E CONSCIENTIZAÇÃO SOBRE O BULLYING E CYBERBULLYING NAS ESCOLAS E DÁ OUTRAS PROVIDÊNCIAS. Tema: Homenagens, nomes e datas. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: sim. Fonte: https://sapl.campolargo.pr.leg.br/materia/25768
 - PLL 56/2026 (id 26264): INSTITUI O DIA MUNICIPAL DE COMBATE AO BULLYING E AO CYBERBULLYING E DÁ OUTRAS PROVIDENCIAS. Tema: Homenagens, nomes e datas. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26264
 - PLL 64/2026 (id 26461): INSTITUI A ROTA DO TURISMO CATÓLICO DE CAMPO LARGO E DÁ OUTRAS PROVIDÊNCIAS. Tema: Cultura, esporte e lazer. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26461
-- PLL 66/2026 (id 26530): INSTITUI A “ROTA DAS COLÔNIAS” NO MUNICIPIO DE CAMPO LARGO, COMPREENDENDO O CONJUNTO DE ESTABELECIMENTOS, PROPRIEDADES RURAIS, IGREJAS, MUSEUS E ATRATIVOS NATURAIS QUE RESGATAM E PRESERVAM A HISTÓRIA DA IMIGRAÇÃO E AS TRADIÇÕES RURAIS LOCAIS.
+- PLL 66/2026 (id 26530): INSTITUI A “ROTA DAS COLÔNIAS” NO MUNICIPIO DE CAMPO LARGO, COMPREENDENDO O CONJUNTO DE ESTABELECIMENTOS, PROPRIEDADES RURAIS, IGREJAS, MUSEUS E ATRATIVOS NATURAIS QUE RESGATAM E PRESERVAM A HISTÓRIA DA IMIGRAÇÃO E AS TRADIÇÕES RURAIS LOCAIS.
 ***COM SUBSTITUTIVO GERAL*** Tema: Cultura, esporte e lazer. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26530
 - PLL 72/2026 (id 26550): ALTERA LEI MUNICIPAL N° 3.820, DE 21 DE NOVEMBRO DE 2024, QUE DISPÕE SOBRE O CONSELHO MUNICIPAL DE ESPORTES, CRIA O FUNDO MUNICIPAL DE ESPORTES – FME E DÁ OUTRAS PROVIDÊNCIAS. Tema: Cultura, esporte e lazer. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26550
 - PLL 88/2026 (id 26841): INSTITUI O DIA MUNICIPAL DA CAPOEIRA, A SER COMEMORADO ANUALMENTE NO DIA 15 DE JULHO, E DÁ OUTRAS PROVIDÊNCIAS. Tema: Homenagens, nomes e datas. Situação: Em tramitação (ainda não votado em sessão ordinária até a data da coleta). Autoria conjunta: não. Fonte: https://sapl.campolargo.pr.leg.br/materia/26841
