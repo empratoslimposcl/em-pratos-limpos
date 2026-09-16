@@ -1,0 +1,22 @@
+{
+  "total": 1,
+  "results": [
+    {
+      "id": 22753,
+      "__str__": "Ordem: Ordem do Dia/Expediente: 1 - PROJETO DE LEI DO EXECUTIVO nº 7 de 2026 em 1ª EXTRAORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE",
+      "link_detail_backend": "",
+      "metadata": {},
+      "numero_votos_sim": 12,
+      "numero_votos_nao": 0,
+      "numero_abstencoes": 0,
+      "observacao": "O PRESIDENTE, VEREADOR ALEXANDRE GUIMARÃES, NÃO VOTA. VEREADOR VICTOR BINI PROTOCOLOU REQUERIMENTO SOLICITANDO REGIME DE URGÊNCIA. COLOCADO EM VOTAÇÃO O REGIME DE URGÊNCA FOI APROVADO POR UNANIMIDADE. RESTANDO O PROJETO DE LEI APROVADO POR UNÂNIMIDADE.\r\n",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-01-26T16:04:36.678874-03:00",
+      "tipo_resultado_votacao": 1,
+      "materia": 25496,
+      "ordem": 28846,
+      "expediente": null,
+      "user": 36
+    }
+  ]
+}

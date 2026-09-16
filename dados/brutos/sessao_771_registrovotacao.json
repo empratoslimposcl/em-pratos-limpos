@@ -1,0 +1,56 @@
+{
+  "total": 3,
+  "results": [
+    {
+      "id": 22834,
+      "__str__": "Ordem: Ordem do Dia/Expediente: 1 - VETO nº 1 de 2026 em 3ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: REJEITADO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "numero_votos_sim": 1,
+      "numero_votos_nao": 14,
+      "numero_abstencoes": 0,
+      "observacao": "DISCUTIDO E VOTADO O PARECER DA COMISSÃO DE JUSTIÇA E REDAÇÃO, FOI APROVADO POR MAIORIA DOS VEREADORES, VEREADOR GUSTAVO TORRES VOTOU NÃO. RESTANDO O VETO REJEITADO POR MAIORIA DOS VEREADORES, VEREADOR ROGÉRIO DA VIAÇÃO VOTOU SIM.",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-02-20T13:33:22.729273-03:00",
+      "tipo_resultado_votacao": 0,
+      "materia": 25495,
+      "ordem": 28930,
+      "expediente": null,
+      "user": 36
+    },
+    {
+      "id": 22835,
+      "__str__": "Ordem: Ordem do Dia/Expediente: 4 - PROJETO DE LEI DO EXECUTIVO nº 11 de 2026 em 3ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE",
+      "link_detail_backend": "",
+      "metadata": {},
+      "numero_votos_sim": 14,
+      "numero_votos_nao": 0,
+      "numero_abstencoes": 0,
+      "observacao": "O PRESIDENTE, VEREADOR ALEXANDRE GUIMARÃES, NÃO VOTA. VEREADOR VICTOR BINI PROTOCOLOU REGIME DE URGÊNCIA. COLOCADO EM DISCUSSÃO NENHUM VEREADOR SE INSCREVEU. COLOCADO EM VOTAÇÃO, O REGIME DE URGÊNCIA FOI APROVADO POR MAIORIA. VOTOU NÃO O VEREADOR GUSTAVO TORRES, OS DEMAIS VOTARAM SIM. RESTANDO O PROJETO PROVADO POR UNANIMIDADE.",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-02-20T13:36:49.073236-03:00",
+      "tipo_resultado_votacao": 1,
+      "materia": 25652,
+      "ordem": 28933,
+      "expediente": null,
+      "user": 36
+    },
+    {
+      "id": 22836,
+      "__str__": "Ordem: Ordem do Dia/Expediente: 11 - VOTAÇÃO REQUERIMENTOS EM CONJUNTO nº 2 de 2026 em 3ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE",
+      "link_detail_backend": "",
+      "metadata": {},
+      "numero_votos_sim": 14,
+      "numero_votos_nao": 0,
+      "numero_abstencoes": 0,
+      "observacao": "REQUERIMENTOS VOTADOS E APROVADOS POR UNANIMIDADE.",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-02-20T13:38:29.707632-03:00",
+      "tipo_resultado_votacao": 1,
+      "materia": 25665,
+      "ordem": 28940,
+      "expediente": null,
+      "user": 36
+    }
+  ]
+}

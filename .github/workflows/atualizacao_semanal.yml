@@ -1,0 +1,49 @@
+name: Atualização Semanal dos Dados
+
+on:
+  schedule:
+    # Terça-feira às 21h BRT (Quarta 00:00 UTC)
+    - cron: '0 0 * * 3'
+    # Quarta-feira às 21h BRT (Quinta 00:00 UTC - rodada de contingência)
+    - cron: '0 0 * * 4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: |
+          pip install --upgrade pip
+          pip install -r coletor/requirements.txt
+
+      - name: Executar coletor do SAPL
+        run: |
+          python coletor/baixar_voto_presenca_ordinarias_2026.py
+
+      - name: Processar dados consolidados
+        run: |
+          python dados/tratados/gerar_atuacao_vereadores_2026.py
+
+      - name: Publicar alterações
+        run: |
+          git config user.name "LaBottegaContadina"
+          git config user.email "322325978+LaBottegaContadina@users.noreply.github.com"
+          if [[ -n $(git status --porcelain) ]]; then
+            git add dados/
+            git commit -m "Atualizacao automatica: novos registros do SAPL"
+            git push
+          else
+            echo "Nenhuma alteracao detectada no SAPL."
+          fi

@@ -1,0 +1,492 @@
+{
+  "consultado_em": "2026-09-14T21:16:09-03:00",
+  "base": "https://sapl.campolargo.pr.leg.br",
+  "metodo": "filtro voto= e data_hora__year= na porta /api/sessao/votoparlamentar/",
+  "filtro_ano_funcionou": true,
+  "amostras_para_descobrir_palavras": [
+    {
+      "path": "/api/sessao/votoparlamentar/?page=1&page_size=50",
+      "ok": true,
+      "total_entries": 226809,
+      "votos_unicos_na_pagina": [
+        "-1",
+        "Abstenção",
+        "Sim"
+      ],
+      "anos_data_hora": [
+        "2018"
+      ]
+    },
+    {
+      "path": "/api/sessao/votoparlamentar/?page=2&page_size=50",
+      "ok": true,
+      "total_entries": 226809,
+      "votos_unicos_na_pagina": [
+        "-1",
+        "Sim"
+      ],
+      "anos_data_hora": [
+        "2018"
+      ]
+    },
+    {
+      "path": "/api/sessao/votoparlamentar/?data_hora__year=2024&page_size=50",
+      "ok": true,
+      "total_entries": 16235,
+      "votos_unicos_na_pagina": [
+        "Não",
+        "Não Votou",
+        "Sim"
+      ],
+      "anos_data_hora": [
+        "2024"
+      ]
+    },
+    {
+      "path": "/api/sessao/votoparlamentar/?data_hora__year=2024&page=2&page_size=50",
+      "ok": true,
+      "total_entries": 16235,
+      "votos_unicos_na_pagina": [
+        "Não Votou",
+        "Sim"
+      ],
+      "anos_data_hora": [
+        "2024"
+      ]
+    },
+    {
+      "path": "/api/sessao/votoparlamentar/?data_hora__year=2025&page_size=50",
+      "ok": true,
+      "total_entries": 34499,
+      "votos_unicos_na_pagina": [
+        "Não Votou",
+        "Sim"
+      ],
+      "anos_data_hora": [
+        "2025"
+      ]
+    },
+    {
+      "path": "/api/sessao/votoparlamentar/?data_hora__year=2025&page=2&page_size=50",
+      "ok": true,
+      "total_entries": 34499,
+      "votos_unicos_na_pagina": [
+        "Não Votou",
+        "Sim"
+      ],
+      "anos_data_hora": [
+        "2025"
+      ]
+    },
+    {
+      "path": "/api/sessao/votoparlamentar/?data_hora__year=2026&page_size=50",
+      "ok": true,
+      "total_entries": 21132,
+      "votos_unicos_na_pagina": [
+        "Não Votou",
+        "Sim"
+      ],
+      "anos_data_hora": [
+        "2026"
+      ]
+    },
+    {
+      "path": "/api/sessao/votoparlamentar/?data_hora__year=2026&page=2&page_size=50",
+      "ok": true,
+      "total_entries": 21132,
+      "votos_unicos_na_pagina": [
+        "Não Votou",
+        "Sim"
+      ],
+      "anos_data_hora": [
+        "2026"
+      ]
+    },
+    {
+      "path": "/api/sessao/votoparlamentar/?data_hora__year=2026&page=3&page_size=50",
+      "ok": true,
+      "total_entries": 21132,
+      "votos_unicos_na_pagina": [
+        "Não Votou",
+        "Sim"
+      ],
+      "anos_data_hora": [
+        "2026"
+      ]
+    }
+  ],
+  "valores": {
+    "Sim": {
+      "valor_exato": "Sim",
+      "total_geral": 202897,
+      "anos_em_que_aparece": [
+        2018,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "anos_consultados": [
+        2010,
+        2015,
+        2018,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "contagem_por_ano": {
+        "2018": 81506,
+        "2020": 3023,
+        "2021": 6289,
+        "2022": 16072,
+        "2023": 17304,
+        "2024": 14726,
+        "2025": 32209,
+        "2026": 19652
+      },
+      "exemplo": {
+        "id": 1,
+        "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 15 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA - Parlamentar: CELSINHO AÇOUGUEIRO.",
+        "link_detail_backend": "",
+        "metadata": {},
+        "voto": "Sim",
+        "ip": "",
+        "data_hora": "2018-06-12T17:03:31.701788-03:00",
+        "votacao": 1,
+        "parlamentar": 15,
+        "user": null,
+        "ordem": null,
+        "expediente": null
+      }
+    },
+    "Não": {
+      "valor_exato": "Não",
+      "total_geral": 3079,
+      "anos_em_que_aparece": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "anos_consultados": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "contagem_por_ano": {
+        "2018": 1984,
+        "2019": 206,
+        "2020": 196,
+        "2021": 133,
+        "2022": 131,
+        "2023": 220,
+        "2024": 85,
+        "2025": 51,
+        "2026": 73
+      },
+      "exemplo": {
+        "id": 757,
+        "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 13 - PROJETO DE DECRETO LEGISLATIVO nº 5 de 2010 em 107ª ORDINÁRIA da 2ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA - Parlamentar: BETINHO",
+        "link_detail_backend": "",
+        "metadata": {},
+        "voto": "Não",
+        "ip": "",
+        "data_hora": "2018-06-12T17:03:31.721175-03:00",
+        "votacao": 997,
+        "parlamentar": 25,
+        "user": null,
+        "ordem": null,
+        "expediente": null
+      }
+    },
+    "Abstenção": {
+      "valor_exato": "Abstenção",
+      "total_geral": 7136,
+      "anos_em_que_aparece": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "anos_consultados": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "contagem_por_ano": {
+        "2018": 3353,
+        "2019": 1191,
+        "2020": 256,
+        "2021": 453,
+        "2022": 1496,
+        "2023": 347,
+        "2024": 34,
+        "2025": 6
+      },
+      "exemplo": {
+        "id": 8,
+        "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 15 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA - Parlamentar: NELSON DE SOUZA",
+        "link_detail_backend": "",
+        "metadata": {},
+        "voto": "Abstenção",
+        "ip": "",
+        "data_hora": "2018-06-12T17:03:31.701975-03:00",
+        "votacao": 1,
+        "parlamentar": 21,
+        "user": null,
+        "ordem": null,
+        "expediente": null
+      }
+    },
+    "Não Votou": {
+      "valor_exato": "Não Votou",
+      "total_geral": 6421,
+      "anos_em_que_aparece": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "anos_consultados": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "contagem_por_ano": {
+        "2018": 44,
+        "2019": 48,
+        "2020": 1,
+        "2021": 148,
+        "2022": 9,
+        "2023": 1141,
+        "2024": 1390,
+        "2025": 2233,
+        "2026": 1407
+      },
+      "exemplo": {
+        "id": 86828,
+        "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 3 - PROJETO DE LEI DO EXECUTIVO nº 31 de 2018 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 39ª Legislatura - Votação: UNANIMIDADE - Parlamentar: BETE DAMACENO",
+        "link_detail_backend": "",
+        "metadata": {},
+        "voto": "Não Votou",
+        "ip": "",
+        "data_hora": "2018-08-14T09:56:33.196507-03:00",
+        "votacao": 9439,
+        "parlamentar": 34,
+        "user": null,
+        "ordem": 13526,
+        "expediente": null
+      }
+    },
+    "Ausente": {
+      "valor_exato": "Ausente",
+      "total_geral": 561,
+      "anos_em_que_aparece": [
+        2018
+      ],
+      "anos_consultados": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "contagem_por_ano": {
+        "2018": 561
+      },
+      "exemplo": {
+        "id": 30528,
+        "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 11 - REQUERIMENTO nº 1194 de 2014 em 24ª ORDINÁRIA da 2ª Sessão Legislativa da 38ª Legislatura - Votação: UNANIMIDADE - Parlamentar: DARCI ANDREASSA",
+        "link_detail_backend": "",
+        "metadata": {},
+        "voto": "Ausente",
+        "ip": "",
+        "data_hora": "2018-06-12T17:03:32.408834-03:00",
+        "votacao": 3794,
+        "parlamentar": 16,
+        "user": null,
+        "ordem": null,
+        "expediente": null
+      }
+    },
+    "-1": {
+      "valor_exato": "-1",
+      "total_geral": 6548,
+      "anos_em_que_aparece": [
+        2018
+      ],
+      "anos_consultados": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "contagem_por_ano": {
+        "2018": 6548
+      },
+      "exemplo": {
+        "id": 10,
+        "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 15 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA - Parlamentar: SERGIO SCHMIDT",
+        "link_detail_backend": "",
+        "metadata": {},
+        "voto": "-1",
+        "ip": "",
+        "data_hora": "2018-06-12T17:03:31.702015-03:00",
+        "votacao": 1,
+        "parlamentar": 22,
+        "user": null,
+        "ordem": null,
+        "expediente": null
+      }
+    },
+    "(vazio)": {
+      "valor_exato": "",
+      "total_geral": 226809,
+      "anos_em_que_aparece": [
+        2018,
+        2020,
+        2022,
+        2024,
+        2025,
+        2026
+      ],
+      "anos_consultados": [
+        2018,
+        2020,
+        2022,
+        2024,
+        2025,
+        2026
+      ],
+      "contagem_por_ano": {
+        "2018": 93997,
+        "2020": 3476,
+        "2022": 17708,
+        "2024": 16235,
+        "2025": 34499,
+        "2026": 21132
+      },
+      "exemplo": {
+        "id": 1,
+        "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 15 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA - Parlamentar: CELSINHO AÇOUGUEIRO.",
+        "link_detail_backend": "",
+        "metadata": {},
+        "voto": "Sim",
+        "ip": "",
+        "data_hora": "2018-06-12T17:03:31.701788-03:00",
+        "votacao": 1,
+        "parlamentar": 15,
+        "user": null,
+        "ordem": null,
+        "expediente": null
+      }
+    }
+  },
+  "exemplo_ausente": {
+    "consulta": "/api/sessao/votoparlamentar/?voto=Ausente&data_hora__year=2018&page_size=1",
+    "quando": "2026-09-14T21:14:54-03:00",
+    "registro": {
+      "id": 30528,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 11 - REQUERIMENTO nº 1194 de 2014 em 24ª ORDINÁRIA da 2ª Sessão Legislativa da 38ª Legislatura - Votação: UNANIMIDADE - Parlamentar: DARCI ANDREASSA",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Ausente",
+      "ip": "",
+      "data_hora": "2018-06-12T17:03:32.408834-03:00",
+      "votacao": 3794,
+      "parlamentar": 16,
+      "user": null,
+      "ordem": null,
+      "expediente": null
+    }
+  },
+  "conclusao_ausente": "O valor Ausente existe na fonte."
+}

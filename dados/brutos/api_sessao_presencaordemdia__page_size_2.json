@@ -1,0 +1,33 @@
+{
+  "pagination": {
+    "links": {
+      "next": "http://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?page=2&page_size=2",
+      "previous": null
+    },
+    "previous_page": null,
+    "next_page": 2,
+    "start_index": 1,
+    "end_index": 2,
+    "total_entries": 8249,
+    "total_pages": 4125,
+    "page": 1
+  },
+  "results": [
+    {
+      "id": 5599,
+      "__str__": "Sessão: 2ª ORDINÁRIA da 1ª Sessão Legislativa da 40ª Legislatura Parlamentar: ALEXANDRE GUIMARÃES",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 544,
+      "parlamentar": 50
+    },
+    {
+      "id": 5588,
+      "__str__": "Sessão: 1ª EXTRAORDINÁRIA da 1ª Sessão Legislativa da 40ª Legislatura Parlamentar: ALEXANDRE GUIMARÃES",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 543,
+      "parlamentar": 50
+    }
+  ]
+}

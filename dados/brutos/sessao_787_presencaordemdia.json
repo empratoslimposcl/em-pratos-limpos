@@ -1,0 +1,138 @@
+{
+  "pagination": {
+    "links": {
+      "next": null,
+      "previous": null
+    },
+    "previous_page": null,
+    "next_page": null,
+    "start_index": 1,
+    "end_index": 15,
+    "total_entries": 15,
+    "total_pages": 1,
+    "page": 1
+  },
+  "results": [
+    {
+      "id": 8723,
+      "__str__": "Sessão: 19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ALEXANDRE GUIMARÃES",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 787,
+      "parlamentar": 50
+    },
+    {
+      "id": 8724,
+      "__str__": "Sessão: 19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ANDRÉ GABARDO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 787,
+      "parlamentar": 51
+    },
+    {
+      "id": 8725,
+      "__str__": "Sessão: 19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ATHOS MARTINEZ",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 787,
+      "parlamentar": 62
+    },
+    {
+      "id": 8726,
+      "__str__": "Sessão: 19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: GENÉSIO DA VITAL",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 787,
+      "parlamentar": 49
+    },
+    {
+      "id": 8727,
+      "__str__": "Sessão: 19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: GUSTAVO TORRES",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 787,
+      "parlamentar": 61
+    },
+    {
+      "id": 8728,
+      "__str__": "Sessão: 19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: JUNIOR ANDREASSA",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 787,
+      "parlamentar": 60
+    },
+    {
+      "id": 8729,
+      "__str__": "Sessão: 19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: LUIZ SCERVENSKI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 787,
+      "parlamentar": 53
+    },
+    {
+      "id": 8730,
+      "__str__": "Sessão: 19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: POLACO PRETO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 787,
+      "parlamentar": 56
+    },
+    {
+      "id": 8731,
+      "__str__": "Sessão: 19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: RAFAEL FREITAS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 787,
+      "parlamentar": 58
+    },
+    {
+      "id": 8732,
+      "__str__": "Sessão: 19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ROGERIO DAS TINTAS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 787,
+      "parlamentar": 47
+    },
+    {
+      "id": 8733,
+      "__str__": "Sessão: 19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ROGÉRIO DA VIAÇÃO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 787,
+      "parlamentar": 57
+    },
+    {
+      "id": 8734,
+      "__str__": "Sessão: 19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: SARGENTO LEANDRO CHRESTANI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 787,
+      "parlamentar": 55
+    },
+    {
+      "id": 8735,
+      "__str__": "Sessão: 19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: SENSEI CLOVIS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 787,
+      "parlamentar": 63
+    },
+    {
+      "id": 8736,
+      "__str__": "Sessão: 19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: TOMAZINA",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 787,
+      "parlamentar": 64
+    },
+    {
+      "id": 8737,
+      "__str__": "Sessão: 19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: VICTOR BINI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 787,
+      "parlamentar": 59
+    }
+  ],
+  "total": 15
+}

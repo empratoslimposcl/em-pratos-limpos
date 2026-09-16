@@ -1,0 +1,53 @@
+{
+  "pagination": {
+    "links": {
+      "next": null,
+      "previous": null
+    },
+    "previous_page": null,
+    "next_page": null,
+    "start_index": 1,
+    "end_index": 4,
+    "total_entries": 4,
+    "total_pages": 1,
+    "page": 1
+  },
+  "results": [
+    {
+      "id": 2478,
+      "__str__": "PRESIDENTE - ALEXANDRE GUIMARÃES",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 768,
+      "cargo": 1,
+      "parlamentar": 50
+    },
+    {
+      "id": 2479,
+      "__str__": "1º VICE-PRESIDENTE - LUIZ SCERVENSKI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 768,
+      "cargo": 2,
+      "parlamentar": 53
+    },
+    {
+      "id": 2480,
+      "__str__": "2º VICE-PRESIDENTE - ROGÉRIO DA VIAÇÃO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 768,
+      "cargo": 3,
+      "parlamentar": 57
+    },
+    {
+      "id": 2481,
+      "__str__": "1º SECRETÁRIO - POLACO PRETO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 768,
+      "cargo": 4,
+      "parlamentar": 56
+    }
+  ]
+}

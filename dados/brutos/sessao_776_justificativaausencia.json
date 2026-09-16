@@ -1,0 +1,34 @@
+{
+  "pagination": {
+    "links": {
+      "next": null,
+      "previous": null
+    },
+    "previous_page": null,
+    "next_page": null,
+    "start_index": 1,
+    "end_index": 1,
+    "total_entries": 1,
+    "total_pages": 1,
+    "page": 1
+  },
+  "results": [
+    {
+      "id": 59,
+      "__str__": "Justificativa de Ausência",
+      "link_detail_backend": "/sessao/justificativaausencia/59",
+      "metadata": {},
+      "data": "2026-03-23",
+      "hora": "15:00",
+      "observacao": "EM ANEXO O REQUERIMENTO, CONVITE E DECISÃO SOBRE A DESIGNAÇÃO OFICIAL PARA REPRESENTAR A COMISSÃO DE AGRICULTURA, PECUÁRIA E DESENVOLVIMENTO RURAL.",
+      "ausencia": 2,
+      "upload_anexo": "http://sapl.campolargo.pr.leg.br/media/sapl/public/justificativaausencia/59/anexo/justificativa.pdf",
+      "parlamentar": 56,
+      "sessao_plenaria": 776,
+      "tipo_ausencia": 1,
+      "materias_do_expediente": [],
+      "materias_da_ordem_do_dia": []
+    }
+  ],
+  "total": 1
+}

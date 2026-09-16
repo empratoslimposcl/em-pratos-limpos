@@ -1,0 +1,1281 @@
+{
+  "consultado_em": "2026-09-14T22:06:54-03:00",
+  "base": "https://sapl.campolargo.pr.leg.br",
+  "pedidos_nesta_prova": 50,
+  "banca_conhecida_15": [
+    47,
+    49,
+    50,
+    51,
+    53,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64
+  ],
+  "sessoes_analisadas_de_arquivo_local": [
+    {
+      "sessao_id": 768,
+      "data": "2026-01-26",
+      "tipo": 2,
+      "rotulo": "1ª EXTRAORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "link": "https://sapl.campolargo.pr.leg.br/sessao/768",
+      "presidente_ids": [
+        50
+      ],
+      "presidente_nomes": [
+        "ALEXANDRE GUIMARÃES"
+      ],
+      "n_presentes": 13,
+      "presentes": [
+        47,
+        49,
+        50,
+        51,
+        53,
+        55,
+        56,
+        57,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "n_justificados": 2,
+      "justificados": [
+        {
+          "parlamentar": 64,
+          "nome": "TOMAZINA",
+          "tipo_ausencia": 2,
+          "esta_na_presenca": false,
+          "link": "/sessao/justificativaausencia/57"
+        },
+        {
+          "parlamentar": 58,
+          "nome": "RAFAEL FREITAS",
+          "tipo_ausencia": 2,
+          "esta_na_presenca": false,
+          "link": "/sessao/justificativaausencia/58"
+        }
+      ],
+      "presenca_preenchida": true,
+      "candidatos_ausente_sem_justificativa_no_universo_da_sessao": [],
+      "resumo_votos": {
+        "Não Votou": 1,
+        "Sim": 12
+      },
+      "n_registros": 1,
+      "votacoes": [
+        {
+          "votacao": 22753,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 12
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [
+            {
+              "parlamentar": 64,
+              "nome": null
+            },
+            {
+              "parlamentar": 58,
+              "nome": null
+            }
+          ],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        }
+      ],
+      "arquivos_fonte": [
+        "sessao_768_sessaoplenaria.json",
+        "sessao_768_votoparlamentar.json",
+        "sessao_768_integrantemesa.json",
+        "sessao_768_presencaordemdia.json",
+        "sessao_768_sessaoplenariapresenca.json",
+        "sessao_768_justificativaausencia.json",
+        "sessao_768_registrovotacao.json"
+      ]
+    },
+    {
+      "sessao_id": 769,
+      "data": "2026-02-03",
+      "tipo": 1,
+      "rotulo": "1ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "link": "https://sapl.campolargo.pr.leg.br/sessao/769",
+      "presidente_ids": [
+        50
+      ],
+      "presidente_nomes": [
+        "ALEXANDRE GUIMARÃES"
+      ],
+      "n_presentes": 15,
+      "presentes": [
+        47,
+        49,
+        50,
+        51,
+        53,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "n_justificados": 0,
+      "justificados": [],
+      "presenca_preenchida": true,
+      "candidatos_ausente_sem_justificativa_no_universo_da_sessao": [],
+      "resumo_votos": {
+        "Não Votou": 9,
+        "Sim": 141
+      },
+      "n_registros": 10,
+      "votacoes": [
+        {
+          "votacao": 22755,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 22756,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 22757,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 22758,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 22759,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 22760,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 22761,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 22762,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 22763,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 22764,
+          "valores": {
+            "Sim": 15
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        }
+      ],
+      "arquivos_fonte": [
+        "sessao_769_sessaoplenaria.json",
+        "sessao_769_votoparlamentar.json",
+        "sessao_769_integrantemesa.json",
+        "sessao_769_presencaordemdia.json",
+        "sessao_769_sessaoplenariapresenca.json",
+        "sessao_769_justificativaausencia.json",
+        "sessao_769_registrovotacao.json"
+      ]
+    },
+    {
+      "sessao_id": 771,
+      "data": "2026-02-19",
+      "tipo": 1,
+      "rotulo": "3ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "link": "https://sapl.campolargo.pr.leg.br/sessao/771",
+      "presidente_ids": [
+        50
+      ],
+      "presidente_nomes": [
+        "ALEXANDRE GUIMARÃES"
+      ],
+      "n_presentes": 15,
+      "presentes": [
+        47,
+        49,
+        50,
+        51,
+        53,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "n_justificados": 0,
+      "justificados": [],
+      "presenca_preenchida": true,
+      "candidatos_ausente_sem_justificativa_no_universo_da_sessao": [],
+      "resumo_votos": {
+        "Não": 14,
+        "Sim": 29,
+        "Não Votou": 2
+      },
+      "n_registros": 3,
+      "votacoes": [
+        {
+          "votacao": 22834,
+          "valores": {
+            "Não": 14,
+            "Sim": 1
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 22835,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 22836,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        }
+      ],
+      "arquivos_fonte": [
+        "sessao_771_sessaoplenaria.json",
+        "sessao_771_votoparlamentar.json",
+        "sessao_771_integrantemesa.json",
+        "sessao_771_presencaordemdia.json",
+        "sessao_771_sessaoplenariapresenca.json",
+        "sessao_771_justificativaausencia.json",
+        "sessao_771_registrovotacao.json"
+      ]
+    },
+    {
+      "sessao_id": 786,
+      "data": "2026-06-08",
+      "tipo": 1,
+      "rotulo": "18ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "link": "https://sapl.campolargo.pr.leg.br/sessao/786",
+      "presidente_ids": [
+        50
+      ],
+      "presidente_nomes": [
+        "ALEXANDRE GUIMARÃES"
+      ],
+      "n_presentes": 15,
+      "presentes": [
+        47,
+        49,
+        50,
+        51,
+        53,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "n_justificados": 0,
+      "justificados": [],
+      "presenca_preenchida": true,
+      "candidatos_ausente_sem_justificativa_no_universo_da_sessao": [],
+      "resumo_votos": {
+        "Não Votou": 11,
+        "Sim": 153,
+        "Não": 1
+      },
+      "n_registros": 11,
+      "votacoes": [
+        {
+          "votacao": 23663,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 23664,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 23666,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 13,
+            "Não": 1
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 23667,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 23668,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 23669,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 23670,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 23672,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 23673,
+          "valores": {
+            "Não Votou": 2,
+            "Sim": 13
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            },
+            {
+              "parlamentar": 51,
+              "nome": "ANDRÉ GABARDO",
+              "e_presidente_na_mesa": false,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 23674,
+          "valores": {
+            "Sim": 15
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        },
+        {
+          "votacao": 23675,
+          "valores": {
+            "Não Votou": 1,
+            "Sim": 14
+          },
+          "abstencoes": [],
+          "palavra_ausente": [],
+          "nao_votou": [
+            {
+              "parlamentar": 50,
+              "nome": "ALEXANDRE GUIMARÃES",
+              "e_presidente_na_mesa": true,
+              "esta_na_presenca": true
+            }
+          ],
+          "justificados_sem_linha": [],
+          "justificados_com_linha": {},
+          "presentes_sem_linha": []
+        }
+      ],
+      "arquivos_fonte": [
+        "sessao_786_sessaoplenaria.json",
+        "sessao_786_votoparlamentar.json",
+        "sessao_786_integrantemesa.json",
+        "sessao_786_presencaordemdia.json",
+        "sessao_786_sessaoplenariapresenca.json",
+        "sessao_786_justificativaausencia.json",
+        "sessao_786_registrovotacao.json"
+      ]
+    }
+  ],
+  "varredura_presenca_justificativa_ordinarias_2026": [
+    {
+      "sessao_id": 769,
+      "data": "2026-02-03",
+      "rotulo": "1ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 770,
+      "data": "2026-02-09",
+      "rotulo": "2ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 771,
+      "data": "2026-02-19",
+      "rotulo": "3ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 772,
+      "data": "2026-02-23",
+      "rotulo": "4ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 773,
+      "data": "2026-03-02",
+      "rotulo": "5ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 774,
+      "data": "2026-03-09",
+      "rotulo": "6ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 775,
+      "data": "2026-03-16",
+      "rotulo": "7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 776,
+      "data": "2026-03-23",
+      "rotulo": "8ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 14,
+      "n_justificados": 1,
+      "justificados": [
+        56
+      ],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 777,
+      "data": "2026-04-06",
+      "rotulo": "9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 14,
+      "n_justificados": 1,
+      "justificados": [
+        51
+      ],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 778,
+      "data": "2026-04-13",
+      "rotulo": "10ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 779,
+      "data": "2026-04-22",
+      "rotulo": "11ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 780,
+      "data": "2026-04-27",
+      "rotulo": "12ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 781,
+      "data": "2026-05-04",
+      "rotulo": "13ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 782,
+      "data": "2026-05-11",
+      "rotulo": "14ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 783,
+      "data": "2026-05-18",
+      "rotulo": "15ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 784,
+      "data": "2026-05-25",
+      "rotulo": "16ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 785,
+      "data": "2026-06-01",
+      "rotulo": "17ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 786,
+      "data": "2026-06-08",
+      "rotulo": "18ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 787,
+      "data": "2026-06-15",
+      "rotulo": "19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 788,
+      "data": "2026-06-22",
+      "rotulo": "20ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 790,
+      "data": "2026-08-03",
+      "rotulo": "21ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 791,
+      "data": "2026-08-10",
+      "rotulo": "22ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 792,
+      "data": "2026-08-17",
+      "rotulo": "23ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 793,
+      "data": "2026-08-24",
+      "rotulo": "24ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 794,
+      "data": "2026-09-08",
+      "rotulo": "25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    },
+    {
+      "sessao_id": 795,
+      "data": "2026-09-14",
+      "rotulo": "26ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_presentes": 15,
+      "n_justificados": 0,
+      "justificados": [],
+      "buracos_na_banca_conhecida": []
+    }
+  ],
+  "achado_ausente_sem_justificativa": null,
+  "exemplo_abstencao": {
+    "consulta": "/api/sessao/votoparlamentar/?voto=Abstenção&data_hora__year=2025&page_size=1",
+    "quando": "2026-09-14T22:06:54-03:00",
+    "registro": {
+      "id": 187702,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 7 - PROJETO DE LEI DO EXECUTIVO nº 14 de 2025 em 14ª ORDINÁRIA da 1ª Sessão Legislativa da 41ª Legislatura - Votação: MAIORIA ABSOLUTA - Parlamentar: RAFAEL FREITAS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Abstenção",
+      "ip": "177.99.178.66",
+      "data_hora": "2025-05-13T15:20:38.864565-03:00",
+      "votacao": 21159,
+      "parlamentar": 58,
+      "user": 36,
+      "ordem": 26942,
+      "expediente": null
+    }
+  },
+  "caso_nao_votou_sem_ser_presidente": {
+    "sessao_id": 786,
+    "votacao": 23673,
+    "pessoa": {
+      "parlamentar": 51,
+      "nome": "ANDRÉ GABARDO",
+      "e_presidente_na_mesa": false,
+      "esta_na_presenca": true
+    },
+    "nota": "Presente na lista de presença, nao e presidente na mesa, e mesmo assim o voto veio como Nao Votou. A observacao do registro fala so do presidente. Portanto Nao Votou sozinho nao identifica presidencia."
+  },
+  "regras_de_separacao": {
+    "abstencao": {
+      "da_para_separar": true,
+      "como": "Campo voto igual a Abstenção na lista de votos individuais.",
+      "exemplo_arquivo": "valores_voto_por_ano.json e exemplo abaixo se houver"
+    },
+    "presidente_que_nao_vota": {
+      "da_para_separar": "parcial",
+      "como": "Cruzar: (1) pessoa esta na mesa da sessao como PRESIDENTE (nao vice) e (2) o voto naquela materia e Nao Votou (ou -1 no acervo antigo). Nao usar so a palavra Nao Votou.",
+      "limite": "Ha caso em que outra pessoa presente tambem recebe Nao Votou. Ha caso em que o presidente vota Sim/Nao de verdade."
+    },
+    "ausente_com_justificativa": {
+      "da_para_separar": true,
+      "como": "Pessoa aparece em justificativaausencia da sessao e, nas provas vistas, nao aparece na lista de presença nem na lista de votos da materia.",
+      "exemplo_sessao": 768
+    },
+    "ausente_sem_justificativa": {
+      "da_para_separar": "metodo_sim_exemplo_nao",
+      "como": "Pessoa da banca da legislatura/sessao nao esta na presença e nao tem justificativa naquela sessao. Conferir se tambem nao aparece nos votos.",
+      "o_que_faltaria": "Nas ordinarias de 2026 varridas, a banca conhecida de 15 vereadores sempre esteve coberta por presença + justificativa. Nao apareceu buraco sem justificativa. O metodo esta definido; falta uma sessao real com esse buraco, se existir no ano."
+    }
+  },
+  "conclusao_em_uma_frase": "Abstenção: sim, pela palavra do voto. Presidente que não vota: sim só com cruzamento mesa + Não Votou; Não Votou sozinho não basta. Ausente com justificativa: sim (prova na sessão 768). Ausente sem justificativa: método definido, mas nenhum exemplo em 2026 nas sessões varridas.",
+  "log": [
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/sessaoplenaria/?data_inicio__year=2026&tipo=1&page=1&page_size=50",
+      "quando": "2026-09-14T22:05:09-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=770&page_size=50",
+      "quando": "2026-09-14T22:05:11-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=770&page_size=20",
+      "quando": "2026-09-14T22:05:13-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=772&page_size=50",
+      "quando": "2026-09-14T22:05:15-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=772&page_size=20",
+      "quando": "2026-09-14T22:05:17-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=773&page_size=50",
+      "quando": "2026-09-14T22:05:19-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=773&page_size=20",
+      "quando": "2026-09-14T22:05:21-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=774&page_size=50",
+      "quando": "2026-09-14T22:05:24-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=774&page_size=20",
+      "quando": "2026-09-14T22:05:26-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=775&page_size=50",
+      "quando": "2026-09-14T22:05:28-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=775&page_size=20",
+      "quando": "2026-09-14T22:05:30-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=776&page_size=50",
+      "quando": "2026-09-14T22:05:32-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=776&page_size=20",
+      "quando": "2026-09-14T22:05:34-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=777&page_size=50",
+      "quando": "2026-09-14T22:05:36-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=777&page_size=20",
+      "quando": "2026-09-14T22:05:38-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=778&page_size=50",
+      "quando": "2026-09-14T22:05:40-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=778&page_size=20",
+      "quando": "2026-09-14T22:05:42-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=779&page_size=50",
+      "quando": "2026-09-14T22:05:45-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=779&page_size=20",
+      "quando": "2026-09-14T22:05:47-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=780&page_size=50",
+      "quando": "2026-09-14T22:05:49-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=780&page_size=20",
+      "quando": "2026-09-14T22:05:51-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=781&page_size=50",
+      "quando": "2026-09-14T22:05:53-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=781&page_size=20",
+      "quando": "2026-09-14T22:05:55-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=782&page_size=50",
+      "quando": "2026-09-14T22:05:57-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=782&page_size=20",
+      "quando": "2026-09-14T22:06:00-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=783&page_size=50",
+      "quando": "2026-09-14T22:06:02-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=783&page_size=20",
+      "quando": "2026-09-14T22:06:04-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=784&page_size=50",
+      "quando": "2026-09-14T22:06:06-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=784&page_size=20",
+      "quando": "2026-09-14T22:06:08-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=785&page_size=50",
+      "quando": "2026-09-14T22:06:10-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=785&page_size=20",
+      "quando": "2026-09-14T22:06:12-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=787&page_size=50",
+      "quando": "2026-09-14T22:06:14-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=787&page_size=20",
+      "quando": "2026-09-14T22:06:16-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=788&page_size=50",
+      "quando": "2026-09-14T22:06:18-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=788&page_size=20",
+      "quando": "2026-09-14T22:06:21-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=790&page_size=50",
+      "quando": "2026-09-14T22:06:23-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=790&page_size=20",
+      "quando": "2026-09-14T22:06:25-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=791&page_size=50",
+      "quando": "2026-09-14T22:06:27-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=791&page_size=20",
+      "quando": "2026-09-14T22:06:29-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=792&page_size=50",
+      "quando": "2026-09-14T22:06:31-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=792&page_size=20",
+      "quando": "2026-09-14T22:06:33-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=793&page_size=50",
+      "quando": "2026-09-14T22:06:35-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=793&page_size=20",
+      "quando": "2026-09-14T22:06:37-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=794&page_size=50",
+      "quando": "2026-09-14T22:06:40-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=794&page_size=20",
+      "quando": "2026-09-14T22:06:42-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=795&page_size=50",
+      "quando": "2026-09-14T22:06:44-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=795&page_size=20",
+      "quando": "2026-09-14T22:06:46-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/parlamentares/parlamentar/64/",
+      "quando": "2026-09-14T22:06:48-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/parlamentares/parlamentar/58/",
+      "quando": "2026-09-14T22:06:50-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/votoparlamentar/?voto=Absten%C3%A7%C3%A3o&data_hora__year=2025&page_size=1",
+      "quando": "2026-09-14T22:06:52-03:00",
+      "status": 200
+    }
+  ]
+}

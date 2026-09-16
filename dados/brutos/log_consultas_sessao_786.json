@@ -1,0 +1,205 @@
+{
+  "pedidos": 40,
+  "consultas": [
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/materia/tipomaterialegislativa/?page_size=100",
+      "quando": "2026-09-14T21:27:02-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/sessaoplenaria/786/",
+      "quando": "2026-09-14T21:27:04-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/ordemdia/?sessao_plenaria=786&page=1&page_size=100",
+      "quando": "2026-09-14T21:27:06-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/registrovotacao/?ordem=29935&page_size=10",
+      "quando": "2026-09-14T21:27:08-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/registrovotacao/?ordem=29936&page_size=10",
+      "quando": "2026-09-14T21:27:10-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/registrovotacao/?ordem=29937&page_size=10",
+      "quando": "2026-09-14T21:27:12-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/registrovotacao/?ordem=29938&page_size=10",
+      "quando": "2026-09-14T21:27:14-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/registrovotacao/?ordem=29939&page_size=10",
+      "quando": "2026-09-14T21:27:16-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/registrovotacao/?ordem=29940&page_size=10",
+      "quando": "2026-09-14T21:27:18-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/registrovotacao/?ordem=29941&page_size=10",
+      "quando": "2026-09-14T21:27:21-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/registrovotacao/?ordem=29942&page_size=10",
+      "quando": "2026-09-14T21:27:23-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/registrovotacao/?ordem=29943&page_size=10",
+      "quando": "2026-09-14T21:27:25-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/registrovotacao/?ordem=29944&page_size=10",
+      "quando": "2026-09-14T21:27:27-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/registrovotacao/?ordem=29945&page_size=10",
+      "quando": "2026-09-14T21:27:29-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/votoparlamentar/?votacao=23663&page_size=100",
+      "quando": "2026-09-14T21:27:31-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/votoparlamentar/?votacao=23664&page_size=100",
+      "quando": "2026-09-14T21:27:33-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/votoparlamentar/?votacao=23675&page_size=100",
+      "quando": "2026-09-14T21:27:36-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/votoparlamentar/?votacao=23666&page_size=100",
+      "quando": "2026-09-14T21:27:38-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/votoparlamentar/?votacao=23667&page_size=100",
+      "quando": "2026-09-14T21:27:40-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/votoparlamentar/?votacao=23668&page_size=100",
+      "quando": "2026-09-14T21:27:42-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/votoparlamentar/?votacao=23669&page_size=100",
+      "quando": "2026-09-14T21:27:44-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/votoparlamentar/?votacao=23670&page_size=100",
+      "quando": "2026-09-14T21:27:47-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/votoparlamentar/?votacao=23673&page_size=100",
+      "quando": "2026-09-14T21:27:49-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/votoparlamentar/?votacao=23672&page_size=100",
+      "quando": "2026-09-14T21:27:51-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/votoparlamentar/?votacao=23674&page_size=100",
+      "quando": "2026-09-14T21:27:53-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/presencaordemdia/?sessao_plenaria=786&page_size=100",
+      "quando": "2026-09-14T21:27:55-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/sessaoplenariapresenca/?sessao_plenaria=786&page_size=100",
+      "quando": "2026-09-14T21:27:57-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/integrantemesa/?sessao_plenaria=786&page_size=50",
+      "quando": "2026-09-14T21:28:00-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/sessao/justificativaausencia/?sessao_plenaria=786&page_size=50",
+      "quando": "2026-09-14T21:28:02-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/materia/materialegislativa/26120/",
+      "quando": "2026-09-14T21:28:04-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/materia/materialegislativa/26418/",
+      "quando": "2026-09-14T21:28:06-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/materia/materialegislativa/26040/",
+      "quando": "2026-09-14T21:28:08-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/materia/materialegislativa/26405/",
+      "quando": "2026-09-14T21:28:10-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/materia/materialegislativa/26515/",
+      "quando": "2026-09-14T21:28:12-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/materia/materialegislativa/25871/",
+      "quando": "2026-09-14T21:28:15-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/materia/materialegislativa/26020/",
+      "quando": "2026-09-14T21:28:17-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/materia/materialegislativa/26288/",
+      "quando": "2026-09-14T21:28:19-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/materia/materialegislativa/26306/",
+      "quando": "2026-09-14T21:28:21-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/materia/materialegislativa/26348/",
+      "quando": "2026-09-14T21:28:23-03:00",
+      "status": 200
+    },
+    {
+      "url": "https://sapl.campolargo.pr.leg.br/api/materia/materialegislativa/26123/",
+      "quando": "2026-09-14T21:28:25-03:00",
+      "status": 200
+    }
+  ]
+}

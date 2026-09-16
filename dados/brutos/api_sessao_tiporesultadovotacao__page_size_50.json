@@ -1,0 +1,57 @@
+{
+  "pagination": {
+    "links": {
+      "next": null,
+      "previous": null
+    },
+    "previous_page": null,
+    "next_page": null,
+    "start_index": 1,
+    "end_index": 5,
+    "total_entries": 5,
+    "total_pages": 1,
+    "page": 1
+  },
+  "results": [
+    {
+      "id": 0,
+      "__str__": "REJEITADO",
+      "link_detail_backend": "/sistema/sessao-plenaria/tipo-resultado-votacao/0",
+      "metadata": {},
+      "nome": "REJEITADO",
+      "natureza": "R"
+    },
+    {
+      "id": 1,
+      "__str__": "UNANIMIDADE",
+      "link_detail_backend": "/sistema/sessao-plenaria/tipo-resultado-votacao/1",
+      "metadata": {},
+      "nome": "UNANIMIDADE",
+      "natureza": "A"
+    },
+    {
+      "id": 2,
+      "__str__": "MAIORIA SIMPLES",
+      "link_detail_backend": "/sistema/sessao-plenaria/tipo-resultado-votacao/2",
+      "metadata": {},
+      "nome": "MAIORIA SIMPLES",
+      "natureza": "A"
+    },
+    {
+      "id": 3,
+      "__str__": "MAIORIA ABSOLUTA",
+      "link_detail_backend": "/sistema/sessao-plenaria/tipo-resultado-votacao/3",
+      "metadata": {},
+      "nome": "MAIORIA ABSOLUTA",
+      "natureza": "A"
+    },
+    {
+      "id": 4,
+      "__str__": "DOIS TERÇOS",
+      "link_detail_backend": "/sistema/sessao-plenaria/tipo-resultado-votacao/4",
+      "metadata": {},
+      "nome": "DOIS TERÇOS",
+      "natureza": "A"
+    }
+  ]
+}

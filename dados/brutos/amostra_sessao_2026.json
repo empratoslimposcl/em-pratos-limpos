@@ -1,0 +1,588 @@
+{
+  "sessao": {
+    "id": 794,
+    "__str__": "25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+    "link_detail_backend": "/sessao/794",
+    "metadata": {},
+    "cod_andamento_sessao": null,
+    "painel_aberto": false,
+    "data_inicio": "2026-09-08",
+    "hora_inicio": "15:00",
+    "hora_fim": "15:45",
+    "numero": 25,
+    "data_fim": "2026-09-08",
+    "url_audio": "https://sapl.campolargo.pr.leg.br/sessao/pauta-sessao/794/",
+    "url_video": "https://www.youtube.com/watch?v=LPToGRP7rFc",
+    "upload_pauta": null,
+    "upload_ata": null,
+    "upload_anexo": null,
+    "iniciada": true,
+    "finalizada": true,
+    "interativa": false,
+    "tema_solene": "",
+    "data_ultima_atualizacao": "2026-09-09T16:29:51.863992-03:00",
+    "publicar_pauta": true,
+    "tipo": 1,
+    "sessao_legislativa": 18,
+    "legislatura": 41,
+    "correspondencias": []
+  },
+  "ordem": {
+    "id": 30422,
+    "__str__": "Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+    "link_detail_backend": "/sessao/ordemdia/30422",
+    "metadata": {},
+    "data_ordem": "2026-09-08",
+    "observacao": "",
+    "numero_ordem": 1,
+    "resultado": "UNANIMIDADE",
+    "tipo_votacao": 2,
+    "votacao_aberta": false,
+    "registro_aberto": false,
+    "sessao_plenaria": 794,
+    "materia": 26700,
+    "tramitacao": 52922
+  },
+  "registro": {
+    "id": 24089,
+    "__str__": "Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE",
+    "link_detail_backend": "",
+    "metadata": {},
+    "numero_votos_sim": 14,
+    "numero_votos_nao": 0,
+    "numero_abstencoes": 0,
+    "observacao": "DISCUTIDA E VOTADA A MOÇÃO FOI APROVADA POR UNANIMIDADE.",
+    "ip": "177.99.178.66",
+    "data_hora": "2026-09-09T14:07:40.960289-03:00",
+    "tipo_resultado_votacao": 1,
+    "materia": 26700,
+    "ordem": 30422,
+    "expediente": null,
+    "user": 36
+  },
+  "votos": [
+    {
+      "id": 231301,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE - Parlamentar: ALEXANDRE GUIMARÃES",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Não Votou",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-09-09T14:07:41.009346-03:00",
+      "votacao": 24089,
+      "parlamentar": 50,
+      "user": 36,
+      "ordem": 30422,
+      "expediente": null
+    },
+    {
+      "id": 231302,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE - Parlamentar: ANDRÉ GABARDO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-09-09T14:07:41.039266-03:00",
+      "votacao": 24089,
+      "parlamentar": 51,
+      "user": 36,
+      "ordem": 30422,
+      "expediente": null
+    },
+    {
+      "id": 231303,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE - Parlamentar: ATHOS MARTINEZ",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-09-09T14:07:41.060471-03:00",
+      "votacao": 24089,
+      "parlamentar": 62,
+      "user": 36,
+      "ordem": 30422,
+      "expediente": null
+    },
+    {
+      "id": 231304,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE - Parlamentar: GENÉSIO DA VITAL",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-09-09T14:07:41.081876-03:00",
+      "votacao": 24089,
+      "parlamentar": 49,
+      "user": 36,
+      "ordem": 30422,
+      "expediente": null
+    },
+    {
+      "id": 231305,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE - Parlamentar: GUSTAVO TORRES",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-09-09T14:07:41.099550-03:00",
+      "votacao": 24089,
+      "parlamentar": 61,
+      "user": 36,
+      "ordem": 30422,
+      "expediente": null
+    },
+    {
+      "id": 231306,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE - Parlamentar: JUNIOR ANDREASSA",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-09-09T14:07:41.117515-03:00",
+      "votacao": 24089,
+      "parlamentar": 60,
+      "user": 36,
+      "ordem": 30422,
+      "expediente": null
+    },
+    {
+      "id": 231307,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE - Parlamentar: LUIZ SCERVENSKI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-09-09T14:07:41.136159-03:00",
+      "votacao": 24089,
+      "parlamentar": 53,
+      "user": 36,
+      "ordem": 30422,
+      "expediente": null
+    },
+    {
+      "id": 231308,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE - Parlamentar: POLACO PRETO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-09-09T14:07:41.152386-03:00",
+      "votacao": 24089,
+      "parlamentar": 56,
+      "user": 36,
+      "ordem": 30422,
+      "expediente": null
+    },
+    {
+      "id": 231309,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE - Parlamentar: RAFAEL FREITAS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-09-09T14:07:41.170525-03:00",
+      "votacao": 24089,
+      "parlamentar": 58,
+      "user": 36,
+      "ordem": 30422,
+      "expediente": null
+    },
+    {
+      "id": 231310,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE - Parlamentar: ROGERIO DAS TINTAS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-09-09T14:07:41.187856-03:00",
+      "votacao": 24089,
+      "parlamentar": 47,
+      "user": 36,
+      "ordem": 30422,
+      "expediente": null
+    },
+    {
+      "id": 231311,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE - Parlamentar: ROGÉRIO DA VIAÇÃO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-09-09T14:07:41.208605-03:00",
+      "votacao": 24089,
+      "parlamentar": 57,
+      "user": 36,
+      "ordem": 30422,
+      "expediente": null
+    },
+    {
+      "id": 231312,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE - Parlamentar: SARGENTO LEANDRO CHRESTANI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-09-09T14:07:41.228871-03:00",
+      "votacao": 24089,
+      "parlamentar": 55,
+      "user": 36,
+      "ordem": 30422,
+      "expediente": null
+    },
+    {
+      "id": 231313,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE - Parlamentar: SENSEI CLOVIS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-09-09T14:07:41.246924-03:00",
+      "votacao": 24089,
+      "parlamentar": 63,
+      "user": 36,
+      "ordem": 30422,
+      "expediente": null
+    },
+    {
+      "id": 231314,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE - Parlamentar: TOMAZINA",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-09-09T14:07:41.264530-03:00",
+      "votacao": 24089,
+      "parlamentar": 64,
+      "user": 36,
+      "ordem": 30422,
+      "expediente": null
+    },
+    {
+      "id": 231315,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - MOÇÃO nº 7 de 2026 em 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura - Votação: UNANIMIDADE - Parlamentar: VICTOR BINI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "177.99.178.66",
+      "data_hora": "2026-09-09T14:07:41.294232-03:00",
+      "votacao": 24089,
+      "parlamentar": 59,
+      "user": 36,
+      "ordem": 30422,
+      "expediente": null
+    }
+  ],
+  "presenca_ordemdia": [
+    {
+      "id": 8828,
+      "__str__": "Sessão: 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ALEXANDRE GUIMARÃES",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "parlamentar": 50
+    },
+    {
+      "id": 8829,
+      "__str__": "Sessão: 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ANDRÉ GABARDO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "parlamentar": 51
+    },
+    {
+      "id": 8830,
+      "__str__": "Sessão: 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ATHOS MARTINEZ",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "parlamentar": 62
+    },
+    {
+      "id": 8831,
+      "__str__": "Sessão: 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: GENÉSIO DA VITAL",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "parlamentar": 49
+    },
+    {
+      "id": 8832,
+      "__str__": "Sessão: 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: GUSTAVO TORRES",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "parlamentar": 61
+    },
+    {
+      "id": 8833,
+      "__str__": "Sessão: 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: JUNIOR ANDREASSA",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "parlamentar": 60
+    },
+    {
+      "id": 8834,
+      "__str__": "Sessão: 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: LUIZ SCERVENSKI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "parlamentar": 53
+    },
+    {
+      "id": 8835,
+      "__str__": "Sessão: 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: POLACO PRETO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "parlamentar": 56
+    },
+    {
+      "id": 8836,
+      "__str__": "Sessão: 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: RAFAEL FREITAS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "parlamentar": 58
+    },
+    {
+      "id": 8837,
+      "__str__": "Sessão: 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ROGERIO DAS TINTAS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "parlamentar": 47
+    },
+    {
+      "id": 8838,
+      "__str__": "Sessão: 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ROGÉRIO DA VIAÇÃO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "parlamentar": 57
+    },
+    {
+      "id": 8839,
+      "__str__": "Sessão: 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: SARGENTO LEANDRO CHRESTANI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "parlamentar": 55
+    },
+    {
+      "id": 8840,
+      "__str__": "Sessão: 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: SENSEI CLOVIS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "parlamentar": 63
+    },
+    {
+      "id": 8841,
+      "__str__": "Sessão: 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: TOMAZINA",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "parlamentar": 64
+    },
+    {
+      "id": 8842,
+      "__str__": "Sessão: 25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: VICTOR BINI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "parlamentar": 59
+    }
+  ],
+  "presenca_sessao": [
+    {
+      "id": 9149,
+      "__str__": "SessaoPlenariaPresenca object (9149)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 794,
+      "parlamentar": 50
+    },
+    {
+      "id": 9150,
+      "__str__": "SessaoPlenariaPresenca object (9150)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 794,
+      "parlamentar": 51
+    },
+    {
+      "id": 9151,
+      "__str__": "SessaoPlenariaPresenca object (9151)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 794,
+      "parlamentar": 62
+    },
+    {
+      "id": 9152,
+      "__str__": "SessaoPlenariaPresenca object (9152)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 794,
+      "parlamentar": 49
+    },
+    {
+      "id": 9153,
+      "__str__": "SessaoPlenariaPresenca object (9153)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 794,
+      "parlamentar": 61
+    },
+    {
+      "id": 9154,
+      "__str__": "SessaoPlenariaPresenca object (9154)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 794,
+      "parlamentar": 60
+    },
+    {
+      "id": 9155,
+      "__str__": "SessaoPlenariaPresenca object (9155)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 794,
+      "parlamentar": 53
+    },
+    {
+      "id": 9156,
+      "__str__": "SessaoPlenariaPresenca object (9156)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 794,
+      "parlamentar": 56
+    },
+    {
+      "id": 9157,
+      "__str__": "SessaoPlenariaPresenca object (9157)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 794,
+      "parlamentar": 58
+    },
+    {
+      "id": 9158,
+      "__str__": "SessaoPlenariaPresenca object (9158)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 794,
+      "parlamentar": 47
+    },
+    {
+      "id": 9159,
+      "__str__": "SessaoPlenariaPresenca object (9159)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 794,
+      "parlamentar": 57
+    },
+    {
+      "id": 9160,
+      "__str__": "SessaoPlenariaPresenca object (9160)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 794,
+      "parlamentar": 55
+    },
+    {
+      "id": 9161,
+      "__str__": "SessaoPlenariaPresenca object (9161)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 794,
+      "parlamentar": 63
+    },
+    {
+      "id": 9162,
+      "__str__": "SessaoPlenariaPresenca object (9162)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 794,
+      "parlamentar": 64
+    },
+    {
+      "id": 9163,
+      "__str__": "SessaoPlenariaPresenca object (9163)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 794,
+      "parlamentar": 59
+    }
+  ],
+  "justificativas": [],
+  "mesa": [
+    {
+      "id": 2607,
+      "__str__": "PRESIDENTE - ALEXANDRE GUIMARÃES",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "cargo": 1,
+      "parlamentar": 50
+    },
+    {
+      "id": 2608,
+      "__str__": "1º VICE-PRESIDENTE - LUIZ SCERVENSKI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "cargo": 2,
+      "parlamentar": 53
+    },
+    {
+      "id": 2609,
+      "__str__": "2º VICE-PRESIDENTE - ROGÉRIO DA VIAÇÃO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "cargo": 3,
+      "parlamentar": 57
+    },
+    {
+      "id": 2610,
+      "__str__": "1º SECRETÁRIO - POLACO PRETO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "cargo": 4,
+      "parlamentar": 56
+    },
+    {
+      "id": 2611,
+      "__str__": "2º SECRETÁRIO - RAFAEL FREITAS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 794,
+      "cargo": 5,
+      "parlamentar": 58
+    }
+  ],
+  "materia": {
+    "id": 26700,
+    "str": "MOÇÃO nº 7 de 2026",
+    "ementa": "SOLICITA MOÇÃO DE APLAUSOS PARA O COLÉGIO ESTADUAL CLOTÁRIO PORTUGAL, EM RAZÃO DO DESENVOLVIMENTO DO PROJETO MENINAS DE DIREITO.",
+    "link": "/materia/26700"
+  }
+}

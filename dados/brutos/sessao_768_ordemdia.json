@@ -1,0 +1,21 @@
+{
+  "pagination_total": 1,
+  "results": [
+    {
+      "id": 28846,
+      "__str__": "Ordem do Dia/Expediente: 1 - PROJETO DE LEI DO EXECUTIVO nº 7 de 2026 em 1ª EXTRAORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "link_detail_backend": "/sessao/ordemdia/28846",
+      "metadata": {},
+      "data_ordem": "2026-01-26",
+      "observacao": "REGIME DE URGÊNCIA",
+      "numero_ordem": 1,
+      "resultado": "UNANIMIDADE",
+      "tipo_votacao": 2,
+      "votacao_aberta": false,
+      "registro_aberto": true,
+      "sessao_plenaria": 768,
+      "materia": 25496,
+      "tramitacao": 48146
+    }
+  ]
+}

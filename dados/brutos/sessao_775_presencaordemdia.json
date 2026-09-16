@@ -1,0 +1,138 @@
+{
+  "pagination": {
+    "links": {
+      "next": null,
+      "previous": null
+    },
+    "previous_page": null,
+    "next_page": null,
+    "start_index": 1,
+    "end_index": 15,
+    "total_entries": 15,
+    "total_pages": 1,
+    "page": 1
+  },
+  "results": [
+    {
+      "id": 8500,
+      "__str__": "Sessão: 7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ALEXANDRE GUIMARÃES",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 775,
+      "parlamentar": 50
+    },
+    {
+      "id": 8501,
+      "__str__": "Sessão: 7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ANDRÉ GABARDO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 775,
+      "parlamentar": 51
+    },
+    {
+      "id": 8502,
+      "__str__": "Sessão: 7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ATHOS MARTINEZ",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 775,
+      "parlamentar": 62
+    },
+    {
+      "id": 8503,
+      "__str__": "Sessão: 7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: GENÉSIO DA VITAL",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 775,
+      "parlamentar": 49
+    },
+    {
+      "id": 8504,
+      "__str__": "Sessão: 7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: GUSTAVO TORRES",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 775,
+      "parlamentar": 61
+    },
+    {
+      "id": 8505,
+      "__str__": "Sessão: 7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: JUNIOR ANDREASSA",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 775,
+      "parlamentar": 60
+    },
+    {
+      "id": 8506,
+      "__str__": "Sessão: 7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: LUIZ SCERVENSKI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 775,
+      "parlamentar": 53
+    },
+    {
+      "id": 8507,
+      "__str__": "Sessão: 7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: POLACO PRETO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 775,
+      "parlamentar": 56
+    },
+    {
+      "id": 8508,
+      "__str__": "Sessão: 7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: RAFAEL FREITAS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 775,
+      "parlamentar": 58
+    },
+    {
+      "id": 8509,
+      "__str__": "Sessão: 7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ROGERIO DAS TINTAS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 775,
+      "parlamentar": 47
+    },
+    {
+      "id": 8510,
+      "__str__": "Sessão: 7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ROGÉRIO DA VIAÇÃO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 775,
+      "parlamentar": 57
+    },
+    {
+      "id": 8511,
+      "__str__": "Sessão: 7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: SARGENTO LEANDRO CHRESTANI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 775,
+      "parlamentar": 55
+    },
+    {
+      "id": 8512,
+      "__str__": "Sessão: 7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: SENSEI CLOVIS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 775,
+      "parlamentar": 63
+    },
+    {
+      "id": 8513,
+      "__str__": "Sessão: 7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: TOMAZINA",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 775,
+      "parlamentar": 64
+    },
+    {
+      "id": 8514,
+      "__str__": "Sessão: 7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: VICTOR BINI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 775,
+      "parlamentar": 59
+    }
+  ],
+  "total": 15
+}

@@ -1,0 +1,49 @@
+{
+  "pagination": {
+    "links": {
+      "next": null,
+      "previous": null
+    },
+    "previous_page": null,
+    "next_page": null,
+    "start_index": 1,
+    "end_index": 2,
+    "total_entries": 2,
+    "total_pages": 1,
+    "page": 1
+  },
+  "results": [
+    {
+      "id": 57,
+      "__str__": "Justificativa de Ausência",
+      "link_detail_backend": "/sessao/justificativaausencia/57",
+      "metadata": {},
+      "data": "2026-01-26",
+      "hora": "15:00",
+      "observacao": "",
+      "ausencia": 2,
+      "upload_anexo": null,
+      "parlamentar": 64,
+      "sessao_plenaria": 768,
+      "tipo_ausencia": 2,
+      "materias_do_expediente": [],
+      "materias_da_ordem_do_dia": []
+    },
+    {
+      "id": 58,
+      "__str__": "Justificativa de Ausência",
+      "link_detail_backend": "/sessao/justificativaausencia/58",
+      "metadata": {},
+      "data": "2026-01-26",
+      "hora": "15:00",
+      "observacao": "",
+      "ausencia": 2,
+      "upload_anexo": null,
+      "parlamentar": 58,
+      "sessao_plenaria": 768,
+      "tipo_ausencia": 2,
+      "materias_do_expediente": [],
+      "materias_da_ordem_do_dia": []
+    }
+  ]
+}

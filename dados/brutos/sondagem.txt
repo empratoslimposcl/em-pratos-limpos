@@ -1,0 +1,81 @@
+Sondagem da porta de dados do SAPL de Campo Largo
+
+/api/
+  status: OK, indice
+  audiencia/anexoaudienciapublica, audiencia/audienciapublica, audiencia/tipoaudienciapublica, base/appconfig, base/auditlog, base/autor, base/casalegislativa, base/metadata, base/operadorautor, base/tipoautor, comissoes/cargocomissao, comissoes/comissao, comissoes/composicao, comissoes/documentoacessorio, comissoes/participacao, comissoes/periodo, comissoes/reuniao, comissoes/tipocomissao, compilacao/dispositivo, compilacao/nota, compilacao/perfilestruturaltextoarticulado, compilacao/publicacao, compilacao/textoarticulado, compilacao/tipodispositivo, compilacao/tipodispositivorelationship, comp
+
+/api/materia/materialegislativa/?page_size=1
+  status: OK, 26665 registros
+  campos: __str__, anexadas, ano, ano_origem_externa, apelido, autores, complementar, data_apresentacao, data_fim_prazo, data_origem_externa, data_publicacao, data_ultima_atualizacao, dias_prazo, em_tramitacao, ementa, id, indexacao, ip, link_detail_backend, local_origem_externa, metadata, numero, numero_origem_externa, numero_protocolo, objeto, observacao, polemica, regime_tramitacao, resultado, texto_original, tipo, tipo_apresentacao, tipo_origem_externa, ultima_edicao, user
+
+/api/materia/tipomaterialegislativa/?page_size=5
+  status: OK, 38 registros
+  campos: __str__, descricao, id, link_detail_backend, metadata, num_automatica, quorum_minimo_votacao, sequencia_numeracao, sequencia_regimental, sigla
+
+/api/materia/autoria/?page_size=1
+  status: OK, 27685 registros
+  campos: __str__, autor, id, link_detail_backend, materia, metadata, primeiro_autor
+
+/api/parlamentares/parlamentar/?page_size=1
+  status: OK, 61 registros
+  campos: __str__, ativo, biografia, cropping, email, endereco_web, fotografia, id, link_detail_backend, locais_atuacao, metadata, nivel_instrucao, nome_completo, nome_parlamentar, numero_gab_parlamentar, profissao, sexo, telefone, telefone_celular
+
+/api/parlamentares/legislatura/?page_size=5
+  status: OK, 7 registros
+  campos: __str__, data_eleicao, data_fim, data_inicio, id, link_detail_backend, metadata, numero, observacao
+
+/api/parlamentares/mandato/?page_size=1
+  status: OK, 79 registros
+  campos: __str__, coligacao, data_expedicao_diploma, data_fim_mandato, data_inicio_mandato, id, legislatura, link_detail_backend, metadata, observacao, parlamentar, tipo_afastamento, tipo_causa_fim_mandato, titular, votos_recebidos
+
+/api/parlamentares/filiacao/?page_size=1
+  status: OK, 64 registros
+  campos: __str__, data, data_desfiliacao, id, link_detail_backend, metadata, parlamentar, partido
+
+/api/sessao/sessaoplenaria/?page_size=1
+  status: OK, 786 registros
+  campos: __str__, cod_andamento_sessao, correspondencias, data_fim, data_inicio, data_ultima_atualizacao, finalizada, hora_fim, hora_inicio, id, iniciada, interativa, legislatura, link_detail_backend, metadata, numero, painel_aberto, publicar_pauta, sessao_legislativa, tema_solene, tipo, upload_anexo, upload_ata, upload_pauta, url_audio, url_video
+
+/api/sessao/tiposessaoplenaria/?page_size=20
+  status: OK, 6 registros
+  campos: __str__, id, link_detail_backend, metadata, nome, quorum_minimo, tipo_numeracao
+
+/api/sessao/ordemdia/?page_size=1
+  status: OK, 28352 registros
+  campos: __str__, data_ordem, id, link_detail_backend, materia, metadata, numero_ordem, observacao, registro_aberto, resultado, sessao_plenaria, tipo_votacao, tramitacao, votacao_aberta
+
+/api/sessao/expedientemateria/?page_size=1
+  status: OK, 129 registros
+  campos: __str__, data_ordem, id, link_detail_backend, materia, metadata, numero_ordem, observacao, registro_aberto, resultado, sessao_plenaria, tipo_votacao, tramitacao, votacao_aberta
+
+/api/sessao/registrovotacao/?page_size=1
+  status: OK, 23564 registros
+  campos: __str__, data_hora, expediente, id, ip, link_detail_backend, materia, metadata, numero_abstencoes, numero_votos_nao, numero_votos_sim, observacao, ordem, tipo_resultado_votacao, user
+
+/api/sessao/votoparlamentar/?page_size=1
+  status: OK, 226809 registros
+  campos: __str__, data_hora, expediente, id, ip, link_detail_backend, metadata, ordem, parlamentar, user, votacao, voto
+
+/api/sessao/tiporesultadovotacao/?page_size=20
+  status: OK, 5 registros
+  campos: __str__, id, link_detail_backend, metadata, natureza, nome
+
+/api/sessao/presencaordemdia/?page_size=1
+  status: OK, 8249 registros
+  campos: __str__, id, link_detail_backend, metadata, parlamentar, sessao_plenaria
+
+/api/sessao/sessaoplenariapresenca/?page_size=1
+  status: OK, 8424 registros
+  campos: __str__, data_sessao, id, link_detail_backend, metadata, parlamentar, sessao_plenaria
+
+/api/sessao/justificativaausencia/?page_size=1
+  status: OK, 60 registros
+  campos: __str__, ausencia, data, hora, id, link_detail_backend, materias_da_ordem_do_dia, materias_do_expediente, metadata, observacao, parlamentar, sessao_plenaria, tipo_ausencia, upload_anexo
+
+/api/sessao/tipojustificativa/?page_size=20
+  status: OK, 2 registros
+  campos: __str__, descricao, id, link_detail_backend, metadata
+
+/api/sessao/integrantemesa/?page_size=1
+  status: OK, 2562 registros
+  campos: __str__, cargo, id, link_detail_backend, metadata, parlamentar, sessao_plenaria

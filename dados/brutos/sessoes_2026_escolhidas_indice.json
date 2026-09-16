@@ -1,0 +1,75 @@
+{
+  "consultado_em": "2026-09-14T21:25:03-03:00",
+  "nota_sessao_776": "A sessao 776 ficou so com sessaoplenaria e ordemdia porque tem 65 itens com resultado de votacao e isso estouraria o teto de pedidos. Arquivos parciais foram mantidos sem alteracao.",
+  "sessoes": [
+    {
+      "sessao_id": 771,
+      "status": "completa_na_coleta_anterior",
+      "arquivos": [
+        "sessao_771_integrantemesa.json",
+        "sessao_771_justificativaausencia.json",
+        "sessao_771_materias.json",
+        "sessao_771_ordemdia.json",
+        "sessao_771_parlamentares.json",
+        "sessao_771_presencaordemdia.json",
+        "sessao_771_registrovotacao.json",
+        "sessao_771_sessaoplenaria.json",
+        "sessao_771_sessaoplenariapresenca.json",
+        "sessao_771_votoparlamentar.json",
+        "sessao_771_votos.csv"
+      ]
+    },
+    {
+      "sessao_id": 768,
+      "arquivos": [
+        "sessao_768_sessaoplenaria.json",
+        "sessao_768_ordemdia.json",
+        "sessao_768_registrovotacao.json",
+        "sessao_768_votoparlamentar.json",
+        "sessao_768_presencaordemdia.json",
+        "sessao_768_sessaoplenariapresenca.json",
+        "sessao_768_integrantemesa.json",
+        "sessao_768_justificativaausencia.json",
+        "sessao_768_materias.json",
+        "sessao_768_parlamentares.json",
+        "sessao_768_votos.csv"
+      ],
+      "n_itens_ordem_com_resultado_de_votacao": 1,
+      "data_inicio": "2026-01-26",
+      "rotulo": "1ª EXTRAORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_registros": 1,
+      "n_votos": 13,
+      "valores_voto": {
+        "Não Votou": 1,
+        "Sim": 12
+      },
+      "n_justificativas": 2
+    },
+    {
+      "sessao_id": 769,
+      "arquivos": [
+        "sessao_769_sessaoplenaria.json",
+        "sessao_769_ordemdia.json",
+        "sessao_769_registrovotacao.json",
+        "sessao_769_votoparlamentar.json",
+        "sessao_769_presencaordemdia.json",
+        "sessao_769_sessaoplenariapresenca.json",
+        "sessao_769_integrantemesa.json",
+        "sessao_769_justificativaausencia.json",
+        "sessao_769_materias.json",
+        "sessao_769_parlamentares.json",
+        "sessao_769_votos.csv"
+      ],
+      "n_itens_ordem_com_resultado_de_votacao": 10,
+      "data_inicio": "2026-02-03",
+      "rotulo": "1ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_registros": 10,
+      "n_votos": 150,
+      "valores_voto": {
+        "Não Votou": 9,
+        "Sim": 141
+      },
+      "n_justificativas": 0
+    }
+  ]
+}

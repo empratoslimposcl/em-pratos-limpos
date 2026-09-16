@@ -1,0 +1,153 @@
+{
+  "pagination": {
+    "links": {
+      "next": null,
+      "previous": null
+    },
+    "previous_page": null,
+    "next_page": null,
+    "start_index": 1,
+    "end_index": 15,
+    "total_entries": 15,
+    "total_pages": 1,
+    "page": 1
+  },
+  "results": [
+    {
+      "id": 9074,
+      "__str__": "SessaoPlenariaPresenca object (9074)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 790,
+      "parlamentar": 50
+    },
+    {
+      "id": 9075,
+      "__str__": "SessaoPlenariaPresenca object (9075)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 790,
+      "parlamentar": 51
+    },
+    {
+      "id": 9076,
+      "__str__": "SessaoPlenariaPresenca object (9076)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 790,
+      "parlamentar": 62
+    },
+    {
+      "id": 9077,
+      "__str__": "SessaoPlenariaPresenca object (9077)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 790,
+      "parlamentar": 49
+    },
+    {
+      "id": 9078,
+      "__str__": "SessaoPlenariaPresenca object (9078)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 790,
+      "parlamentar": 61
+    },
+    {
+      "id": 9079,
+      "__str__": "SessaoPlenariaPresenca object (9079)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 790,
+      "parlamentar": 60
+    },
+    {
+      "id": 9080,
+      "__str__": "SessaoPlenariaPresenca object (9080)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 790,
+      "parlamentar": 53
+    },
+    {
+      "id": 9081,
+      "__str__": "SessaoPlenariaPresenca object (9081)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 790,
+      "parlamentar": 56
+    },
+    {
+      "id": 9082,
+      "__str__": "SessaoPlenariaPresenca object (9082)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 790,
+      "parlamentar": 58
+    },
+    {
+      "id": 9083,
+      "__str__": "SessaoPlenariaPresenca object (9083)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 790,
+      "parlamentar": 47
+    },
+    {
+      "id": 9084,
+      "__str__": "SessaoPlenariaPresenca object (9084)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 790,
+      "parlamentar": 57
+    },
+    {
+      "id": 9085,
+      "__str__": "SessaoPlenariaPresenca object (9085)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 790,
+      "parlamentar": 55
+    },
+    {
+      "id": 9086,
+      "__str__": "SessaoPlenariaPresenca object (9086)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 790,
+      "parlamentar": 63
+    },
+    {
+      "id": 9087,
+      "__str__": "SessaoPlenariaPresenca object (9087)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 790,
+      "parlamentar": 64
+    },
+    {
+      "id": 9088,
+      "__str__": "SessaoPlenariaPresenca object (9088)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 790,
+      "parlamentar": 59
+    }
+  ],
+  "total": 15
+}

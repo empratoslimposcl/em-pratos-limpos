@@ -1,0 +1,501 @@
+{
+  "meta": {
+    "gerado_em": "2026-09-15T21:48:21-03:00",
+    "gerado_por": "dados/tratados/gerar_tabela_vereadores.py",
+    "banca_referencia_prova": [
+      47,
+      49,
+      50,
+      51,
+      53,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ],
+    "banca_encontrada": [
+      47,
+      49,
+      50,
+      51,
+      53,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ],
+    "banca_confere": true,
+    "n_ativos_2026": 15,
+    "n_cadastro": 15,
+    "partido_no_cadastro_estruturado": true,
+    "observacao_partido": "O partido vigente veio de api_parlamentares_filiacao.json cruzado com api_parlamentares_partido.json. A foto veio do campo fotografia do cadastro de parlamentar."
+  },
+  "casos_de_atencao": [
+    {
+      "tipo": "nomes_parecidos",
+      "titulo": "Dois vereadores chamados Rogério",
+      "detalhe": "ROGERIO DAS TINTAS (número 47, nome completo ROGÉRIO BAUMEL) não é a mesma pessoa que ROGÉRIO DA VIAÇÃO (número 57, nome completo PAULO ROGÉRIO ALVES). No cadastro, o primeiro aparece sem acento no nome de urna (ROGERIO DAS TINTAS) e o segundo com acento (ROGÉRIO DA VIAÇÃO). São duas pessoas. Não misturar.",
+      "ids_sapl": [
+        47,
+        57
+      ]
+    },
+    {
+      "tipo": "nomes_parecidos",
+      "titulo": "Dois vereadores com Luiz no nome",
+      "detalhe": "LUIZ SCERVENSKI (número 53, nome completo LUIZ CARLOS SCERVENSKI JUNIOR) não é a mesma pessoa que GUSTAVO TORRES (número 61, nome completo LUIZ GUSTAVO TORRES). O segundo usa Gustavo como nome de urna, não Luiz.",
+      "ids_sapl": [
+        53,
+        61
+      ]
+    },
+    {
+      "tipo": "nomes_parecidos",
+      "titulo": "Três vereadores com Junior no nome de registro",
+      "detalhe": "POLACO PRETO (número 56, nome completo JOÃO ADÃO JASKIEVICZ JUNIOR), JUNIOR ANDREASSA (número 60, nome completo DARCI ANTONIO ANDREASSA JUNIOR) e SENSEI CLOVIS (número 63, nome completo CLOVIS LUIZ CIPRIANO JUNIOR) são três pessoas. A palavra Junior sozinha não identifica ninguém.",
+      "ids_sapl": [
+        56,
+        60,
+        63
+      ]
+    }
+  ],
+  "autorias_que_nao_sao_vereador": [
+    {
+      "grafia": "MAURICIO ROBERTO RIVABEM",
+      "vezes_no_csv": 60
+    },
+    {
+      "grafia": "Mesa Executiva",
+      "vezes_no_csv": 19
+    },
+    {
+      "grafia": "Tribunal de Contas",
+      "vezes_no_csv": 1
+    }
+  ],
+  "vereadores": [
+    {
+      "id_sapl": 47,
+      "slug_codigo": "rogerio-das-tintas",
+      "nome_oficial": "ROGÉRIO BAUMEL",
+      "nome_parlamentar": "ROGERIO DAS TINTAS",
+      "partido": null,
+      "partido_sigla": "PL",
+      "partido_nome": "PARTIDO LIBERAL",
+      "foto_url": "http://sapl.campolargo.pr.leg.br/media/sapl/public/parlamentar/47/rogerio-das-tintas.png",
+      "apelidos": [
+        "ROGÉRIO BAUMEL",
+        "ROGERIO DAS TINTAS"
+      ],
+      "apelidos_origem": {
+        "ROGERIO DAS TINTAS": [
+          "autoria",
+          "cadastro",
+          "presenca_ordem_dia",
+          "voto"
+        ],
+        "ROGÉRIO BAUMEL": [
+          "cadastro"
+        ]
+      },
+      "ativo_2026": true,
+      "link_sapl": "https://sapl.campolargo.pr.leg.br/parlamentar/47"
+    },
+    {
+      "id_sapl": 49,
+      "slug_codigo": "genesio-da-vital",
+      "nome_oficial": "GENÉSIO FRANCISCO OLIVEIRA DOS SANTOS",
+      "nome_parlamentar": "GENÉSIO DA VITAL",
+      "partido": null,
+      "partido_sigla": "MDB",
+      "partido_nome": "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+      "foto_url": "http://sapl.campolargo.pr.leg.br/media/sapl/public/parlamentar/49/genesio-da-vital.png",
+      "apelidos": [
+        "GENÉSIO DA VITAL",
+        "GENÉSIO FRANCISCO OLIVEIRA DOS SANTOS"
+      ],
+      "apelidos_origem": {
+        "GENÉSIO DA VITAL": [
+          "autoria",
+          "cadastro",
+          "presenca_ordem_dia",
+          "voto"
+        ],
+        "GENÉSIO FRANCISCO OLIVEIRA DOS SANTOS": [
+          "cadastro"
+        ]
+      },
+      "ativo_2026": true,
+      "link_sapl": "https://sapl.campolargo.pr.leg.br/parlamentar/49"
+    },
+    {
+      "id_sapl": 50,
+      "slug_codigo": "alexandre-guimaraes",
+      "nome_oficial": "ALEXANDRE MARCEL KUSTER GUIMARÃES",
+      "nome_parlamentar": "ALEXANDRE GUIMARÃES",
+      "partido": null,
+      "partido_sigla": "PDT",
+      "partido_nome": "Partido Democrático Trabalhista",
+      "foto_url": "http://sapl.campolargo.pr.leg.br/media/sapl/public/parlamentar/50/alexandre-g.png",
+      "apelidos": [
+        "ALEXANDRE GUIMARÃES",
+        "ALEXANDRE MARCEL KUSTER GUIMARÃES"
+      ],
+      "apelidos_origem": {
+        "ALEXANDRE GUIMARÃES": [
+          "autoria",
+          "cadastro",
+          "mesa",
+          "presenca_ordem_dia",
+          "voto"
+        ],
+        "ALEXANDRE MARCEL KUSTER GUIMARÃES": [
+          "cadastro"
+        ]
+      },
+      "ativo_2026": true,
+      "link_sapl": "https://sapl.campolargo.pr.leg.br/parlamentar/50"
+    },
+    {
+      "id_sapl": 51,
+      "slug_codigo": "andre-gabardo",
+      "nome_oficial": "ANDRÉ TREVISAN GABARDO",
+      "nome_parlamentar": "ANDRÉ GABARDO",
+      "partido": null,
+      "partido_sigla": "NOVO",
+      "partido_nome": "NOVO",
+      "foto_url": "http://sapl.campolargo.pr.leg.br/media/sapl/public/parlamentar/51/andre-gabardo.png",
+      "apelidos": [
+        "ANDRÉ GABARDO",
+        "ANDRÉ TREVISAN GABARDO"
+      ],
+      "apelidos_origem": {
+        "ANDRÉ GABARDO": [
+          "autoria",
+          "cadastro",
+          "presenca_ordem_dia",
+          "voto"
+        ],
+        "ANDRÉ TREVISAN GABARDO": [
+          "cadastro"
+        ]
+      },
+      "ativo_2026": true,
+      "link_sapl": "https://sapl.campolargo.pr.leg.br/parlamentar/51"
+    },
+    {
+      "id_sapl": 53,
+      "slug_codigo": "luiz-scervenski",
+      "nome_oficial": "LUIZ CARLOS SCERVENSKI JUNIOR",
+      "nome_parlamentar": "LUIZ SCERVENSKI",
+      "partido": null,
+      "partido_sigla": "MDB",
+      "partido_nome": "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+      "foto_url": "http://sapl.campolargo.pr.leg.br/media/sapl/public/parlamentar/53/luiz-scervenski.png",
+      "apelidos": [
+        "LUIZ CARLOS SCERVENSKI JUNIOR",
+        "LUIZ SCERVENSKI"
+      ],
+      "apelidos_origem": {
+        "LUIZ CARLOS SCERVENSKI JUNIOR": [
+          "cadastro"
+        ],
+        "LUIZ SCERVENSKI": [
+          "autoria",
+          "cadastro",
+          "mesa",
+          "presenca_ordem_dia",
+          "voto"
+        ]
+      },
+      "ativo_2026": true,
+      "link_sapl": "https://sapl.campolargo.pr.leg.br/parlamentar/53"
+    },
+    {
+      "id_sapl": 55,
+      "slug_codigo": "sargento-leandro-chrestani",
+      "nome_oficial": "LEANDRO CHRESTANI",
+      "nome_parlamentar": "SARGENTO LEANDRO CHRESTANI",
+      "partido": null,
+      "partido_sigla": "SDD",
+      "partido_nome": "SOLIDARIEDADE",
+      "foto_url": "http://sapl.campolargo.pr.leg.br/media/sapl/public/parlamentar/55/sgt.-chrestani.png",
+      "apelidos": [
+        "LEANDRO CHRESTANI",
+        "SARGENTO LEANDRO CHRESTANI"
+      ],
+      "apelidos_origem": {
+        "LEANDRO CHRESTANI": [
+          "cadastro"
+        ],
+        "SARGENTO LEANDRO CHRESTANI": [
+          "autoria",
+          "cadastro",
+          "presenca_ordem_dia",
+          "voto"
+        ]
+      },
+      "ativo_2026": true,
+      "link_sapl": "https://sapl.campolargo.pr.leg.br/parlamentar/55"
+    },
+    {
+      "id_sapl": 56,
+      "slug_codigo": "polaco-preto",
+      "nome_oficial": "JOÃO ADÃO JASKIEVICZ JUNIOR",
+      "nome_parlamentar": "POLACO PRETO",
+      "partido": null,
+      "partido_sigla": "PSD",
+      "partido_nome": "Partido Social Democratico",
+      "foto_url": "http://sapl.campolargo.pr.leg.br/media/sapl/public/parlamentar/56/polaco-preto.png",
+      "apelidos": [
+        "JOÃO ADÃO JASKIEVICZ JUNIOR",
+        "POLACO PRETO"
+      ],
+      "apelidos_origem": {
+        "JOÃO ADÃO JASKIEVICZ JUNIOR": [
+          "cadastro"
+        ],
+        "POLACO PRETO": [
+          "autoria",
+          "cadastro",
+          "mesa",
+          "presenca_ordem_dia",
+          "voto"
+        ]
+      },
+      "ativo_2026": true,
+      "link_sapl": "https://sapl.campolargo.pr.leg.br/parlamentar/56"
+    },
+    {
+      "id_sapl": 57,
+      "slug_codigo": "rogerio-da-viacao",
+      "nome_oficial": "PAULO ROGÉRIO ALVES",
+      "nome_parlamentar": "ROGÉRIO DA VIAÇÃO",
+      "partido": null,
+      "partido_sigla": "PSD",
+      "partido_nome": "Partido Social Democratico",
+      "foto_url": "http://sapl.campolargo.pr.leg.br/media/sapl/public/parlamentar/57/rogerio-da-viacao.png",
+      "apelidos": [
+        "PAULO ROGÉRIO ALVES",
+        "ROGÉRIO DA VIAÇÃO"
+      ],
+      "apelidos_origem": {
+        "PAULO ROGÉRIO ALVES": [
+          "cadastro"
+        ],
+        "ROGÉRIO DA VIAÇÃO": [
+          "autoria",
+          "cadastro",
+          "mesa",
+          "presenca_ordem_dia",
+          "voto"
+        ]
+      },
+      "ativo_2026": true,
+      "link_sapl": "https://sapl.campolargo.pr.leg.br/parlamentar/57"
+    },
+    {
+      "id_sapl": 58,
+      "slug_codigo": "rafael-freitas",
+      "nome_oficial": "RAFAEL DIEGO DE FREITAS",
+      "nome_parlamentar": "RAFAEL FREITAS",
+      "partido": null,
+      "partido_sigla": "UNIÃO",
+      "partido_nome": "União Brasil",
+      "foto_url": "http://sapl.campolargo.pr.leg.br/media/sapl/public/parlamentar/58/gm-rafael.png",
+      "apelidos": [
+        "RAFAEL DIEGO DE FREITAS",
+        "RAFAEL FREITAS"
+      ],
+      "apelidos_origem": {
+        "RAFAEL DIEGO DE FREITAS": [
+          "cadastro"
+        ],
+        "RAFAEL FREITAS": [
+          "autoria",
+          "cadastro",
+          "mesa",
+          "presenca_ordem_dia",
+          "voto"
+        ]
+      },
+      "ativo_2026": true,
+      "link_sapl": "https://sapl.campolargo.pr.leg.br/parlamentar/58"
+    },
+    {
+      "id_sapl": 59,
+      "slug_codigo": "victor-bini",
+      "nome_oficial": "VICTOR AUGUSTO BINI",
+      "nome_parlamentar": "VICTOR BINI",
+      "partido": null,
+      "partido_sigla": "UNIÃO",
+      "partido_nome": "União Brasil",
+      "foto_url": "http://sapl.campolargo.pr.leg.br/media/sapl/public/parlamentar/59/victor-bini.png",
+      "apelidos": [
+        "VICTOR AUGUSTO BINI",
+        "VICTOR BINI"
+      ],
+      "apelidos_origem": {
+        "VICTOR AUGUSTO BINI": [
+          "cadastro"
+        ],
+        "VICTOR BINI": [
+          "autoria",
+          "cadastro",
+          "presenca_ordem_dia",
+          "voto"
+        ]
+      },
+      "ativo_2026": true,
+      "link_sapl": "https://sapl.campolargo.pr.leg.br/parlamentar/59"
+    },
+    {
+      "id_sapl": 60,
+      "slug_codigo": "junior-andreassa",
+      "nome_oficial": "DARCI ANTONIO ANDREASSA JUNIOR",
+      "nome_parlamentar": "JUNIOR ANDREASSA",
+      "partido": null,
+      "partido_sigla": "PODE",
+      "partido_nome": "PODEMOS",
+      "foto_url": "http://sapl.campolargo.pr.leg.br/media/sapl/public/parlamentar/60/junior-andreassa.png",
+      "apelidos": [
+        "DARCI ANTONIO ANDREASSA JUNIOR",
+        "JUNIOR ANDREASSA"
+      ],
+      "apelidos_origem": {
+        "DARCI ANTONIO ANDREASSA JUNIOR": [
+          "cadastro"
+        ],
+        "JUNIOR ANDREASSA": [
+          "autoria",
+          "cadastro",
+          "presenca_ordem_dia",
+          "voto"
+        ]
+      },
+      "ativo_2026": true,
+      "link_sapl": "https://sapl.campolargo.pr.leg.br/parlamentar/60"
+    },
+    {
+      "id_sapl": 61,
+      "slug_codigo": "gustavo-torres",
+      "nome_oficial": "LUIZ GUSTAVO TORRES",
+      "nome_parlamentar": "GUSTAVO TORRES",
+      "partido": null,
+      "partido_sigla": "REPUBLICANOS",
+      "partido_nome": "REPUBLICANOS",
+      "foto_url": "http://sapl.campolargo.pr.leg.br/media/sapl/public/parlamentar/61/gustavo-torres.png",
+      "apelidos": [
+        "GUSTAVO TORRES",
+        "LUIZ GUSTAVO TORRES"
+      ],
+      "apelidos_origem": {
+        "GUSTAVO TORRES": [
+          "autoria",
+          "cadastro",
+          "presenca_ordem_dia",
+          "voto"
+        ],
+        "LUIZ GUSTAVO TORRES": [
+          "cadastro"
+        ]
+      },
+      "ativo_2026": true,
+      "link_sapl": "https://sapl.campolargo.pr.leg.br/parlamentar/61"
+    },
+    {
+      "id_sapl": 62,
+      "slug_codigo": "athos-martinez",
+      "nome_oficial": "ATHOS OLIVEIRA DE MARTINEZ",
+      "nome_parlamentar": "ATHOS MARTINEZ",
+      "partido": null,
+      "partido_sigla": "PL",
+      "partido_nome": "PARTIDO LIBERAL",
+      "foto_url": "http://sapl.campolargo.pr.leg.br/media/sapl/public/parlamentar/62/athos-martinez.png",
+      "apelidos": [
+        "ATHOS MARTINEZ",
+        "ATHOS OLIVEIRA DE MARTINEZ"
+      ],
+      "apelidos_origem": {
+        "ATHOS MARTINEZ": [
+          "autoria",
+          "cadastro",
+          "presenca_ordem_dia",
+          "voto"
+        ],
+        "ATHOS OLIVEIRA DE MARTINEZ": [
+          "cadastro"
+        ]
+      },
+      "ativo_2026": true,
+      "link_sapl": "https://sapl.campolargo.pr.leg.br/parlamentar/62"
+    },
+    {
+      "id_sapl": 63,
+      "slug_codigo": "sensei-clovis",
+      "nome_oficial": "CLOVIS LUIZ CIPRIANO JUNIOR",
+      "nome_parlamentar": "SENSEI CLOVIS",
+      "partido": null,
+      "partido_sigla": "PP",
+      "partido_nome": "Partido Popular",
+      "foto_url": "http://sapl.campolargo.pr.leg.br/media/sapl/public/parlamentar/63/sensei-clovis.png",
+      "apelidos": [
+        "CLOVIS LUIZ CIPRIANO JUNIOR",
+        "SENSEI CLOVIS"
+      ],
+      "apelidos_origem": {
+        "CLOVIS LUIZ CIPRIANO JUNIOR": [
+          "cadastro"
+        ],
+        "SENSEI CLOVIS": [
+          "autoria",
+          "cadastro",
+          "presenca_ordem_dia",
+          "voto"
+        ]
+      },
+      "ativo_2026": true,
+      "link_sapl": "https://sapl.campolargo.pr.leg.br/parlamentar/63"
+    },
+    {
+      "id_sapl": 64,
+      "slug_codigo": "tomazina",
+      "nome_oficial": "VALDEMIR INOCENCIO DA ROSA",
+      "nome_parlamentar": "TOMAZINA",
+      "partido": null,
+      "partido_sigla": "PDT",
+      "partido_nome": "Partido Democrático Trabalhista",
+      "foto_url": "http://sapl.campolargo.pr.leg.br/media/sapl/public/parlamentar/64/tomazina.png",
+      "apelidos": [
+        "TOMAZINA",
+        "VALDEMIR INOCENCIO DA ROSA"
+      ],
+      "apelidos_origem": {
+        "TOMAZINA": [
+          "autoria",
+          "cadastro",
+          "presenca_ordem_dia",
+          "voto"
+        ],
+        "VALDEMIR INOCENCIO DA ROSA": [
+          "cadastro"
+        ]
+      },
+      "ativo_2026": true,
+      "link_sapl": "https://sapl.campolargo.pr.leg.br/parlamentar/64"
+    }
+  ]
+}

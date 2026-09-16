@@ -1,0 +1,4 @@
+{
+  "consultado_em": "2026-09-14T21:25:03-03:00",
+  "aviso": "Em valores_voto_por_ano.json, a chave '(vazio)' veio de pedir voto= sem texto. A porta devolveu o total geral de votos, nao uma palavra de voto vazia. Isso nao e um valor real de voto."
+}

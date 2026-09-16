@@ -1,0 +1,18 @@
+{
+  "consulta": "/api/sessao/votoparlamentar/?voto=Ausente&data_hora__year=2018&page_size=1",
+  "quando": "2026-09-14T21:14:54-03:00",
+  "registro": {
+    "id": 30528,
+    "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 11 - REQUERIMENTO nº 1194 de 2014 em 24ª ORDINÁRIA da 2ª Sessão Legislativa da 38ª Legislatura - Votação: UNANIMIDADE - Parlamentar: DARCI ANDREASSA",
+    "link_detail_backend": "",
+    "metadata": {},
+    "voto": "Ausente",
+    "ip": "",
+    "data_hora": "2018-06-12T17:03:32.408834-03:00",
+    "votacao": 3794,
+    "parlamentar": 16,
+    "user": null,
+    "ordem": null,
+    "expediente": null
+  }
+}

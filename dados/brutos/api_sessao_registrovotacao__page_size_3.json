@@ -1,0 +1,68 @@
+{
+  "pagination": {
+    "links": {
+      "next": "http://sapl.campolargo.pr.leg.br/api/sessao/registrovotacao/?page=2&page_size=3",
+      "previous": null
+    },
+    "previous_page": null,
+    "next_page": 2,
+    "start_index": 1,
+    "end_index": 3,
+    "total_entries": 23564,
+    "total_pages": 7855,
+    "page": 1
+  },
+  "results": [
+    {
+      "id": 1,
+      "__str__": "Ordem: Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 15 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA",
+      "link_detail_backend": "",
+      "metadata": {},
+      "numero_votos_sim": 9,
+      "numero_votos_nao": 0,
+      "numero_abstencoes": 1,
+      "observacao": "Veredaor Sergio Schmidt - como Presidente não vota.",
+      "ip": "",
+      "data_hora": "2019-05-15T16:36:46.643751-03:00",
+      "tipo_resultado_votacao": 3,
+      "materia": 1438,
+      "ordem": 1646,
+      "expediente": null,
+      "user": null
+    },
+    {
+      "id": 2,
+      "__str__": "Ordem: Ordem do Dia/Expediente: 3 - REQUERIMENTO nº 259 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura - Votação: UNANIMIDADE",
+      "link_detail_backend": "",
+      "metadata": {},
+      "numero_votos_sim": 11,
+      "numero_votos_nao": 0,
+      "numero_abstencoes": 0,
+      "observacao": "Vereador Sergio Schmidt, como Presidente não vota.",
+      "ip": "",
+      "data_hora": "2019-05-15T16:36:46.643751-03:00",
+      "tipo_resultado_votacao": 1,
+      "materia": 1437,
+      "ordem": 1648,
+      "expediente": null,
+      "user": null
+    },
+    {
+      "id": 3,
+      "__str__": "Ordem: Ordem do Dia/Expediente: 4 - REQUERIMENTO nº 248 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura - Votação: UNANIMIDADE",
+      "link_detail_backend": "",
+      "metadata": {},
+      "numero_votos_sim": 11,
+      "numero_votos_nao": 0,
+      "numero_abstencoes": 0,
+      "observacao": "Vereador Sergio Schmidt, como Presidente não vota.",
+      "ip": "",
+      "data_hora": "2019-05-15T16:36:46.643751-03:00",
+      "tipo_resultado_votacao": 1,
+      "materia": 1416,
+      "ordem": 1649,
+      "expediente": null,
+      "user": null
+    }
+  ]
+}

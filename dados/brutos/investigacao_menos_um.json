@@ -1,0 +1,272 @@
+{
+  "consultado_em": "2026-09-14T21:16:09-03:00",
+  "anos_com_menos_um": [
+    2018
+  ],
+  "contagem_por_ano": {
+    "2018": 6548
+  },
+  "total_geral": 6548,
+  "exemplos": [
+    {
+      "voto_individual": {
+        "id": 10,
+        "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 15 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA - Parlamentar: SERGIO SCHMIDT",
+        "link_detail_backend": "",
+        "metadata": {},
+        "voto": "-1",
+        "ip": "",
+        "data_hora": "2018-06-12T17:03:31.702015-03:00",
+        "votacao": 1,
+        "parlamentar": 22,
+        "user": null,
+        "ordem": null,
+        "expediente": null
+      },
+      "registro_votacao": {
+        "id": 1,
+        "__str__": "Ordem: Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 15 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA",
+        "link_detail_backend": "",
+        "metadata": {},
+        "numero_votos_sim": 9,
+        "numero_votos_nao": 0,
+        "numero_abstencoes": 1,
+        "observacao": "Veredaor Sergio Schmidt - como Presidente não vota.",
+        "ip": "",
+        "data_hora": "2019-05-15T16:36:46.643751-03:00",
+        "tipo_resultado_votacao": 3,
+        "materia": 1438,
+        "ordem": 1646,
+        "expediente": null,
+        "user": null
+      },
+      "ordem": {
+        "id": 1646,
+        "__str__": "Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 15 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura",
+        "link_detail_backend": "/sessao/ordemdia/1646",
+        "metadata": {},
+        "data_ordem": "2010-06-07",
+        "observacao": "",
+        "numero_ordem": 1,
+        "resultado": "",
+        "tipo_votacao": 2,
+        "votacao_aberta": false,
+        "registro_aberto": null,
+        "sessao_plenaria": 2,
+        "materia": 1438,
+        "tramitacao": null
+      },
+      "sessao_id": 2,
+      "mesa": [
+        {
+          "id": 1,
+          "__str__": "PRESIDENTE - SERGIO SCHMIDT",
+          "link_detail_backend": "",
+          "metadata": {},
+          "sessao_plenaria": 2,
+          "cargo": 1,
+          "parlamentar": 22
+        },
+        {
+          "id": 2,
+          "__str__": "1º SECRETÁRIO - SANDRA MARCON",
+          "link_detail_backend": "",
+          "metadata": {},
+          "sessao_plenaria": 2,
+          "cargo": 4,
+          "parlamentar": 14
+        },
+        {
+          "id": 3,
+          "__str__": "2º VICE-PRESIDENTE - LUCIR MARCHIORI",
+          "link_detail_backend": "",
+          "metadata": {},
+          "sessao_plenaria": 2,
+          "cargo": 3,
+          "parlamentar": 20
+        }
+      ],
+      "parlamentar_do_voto": 22,
+      "ids_presidente_na_mesa": [
+        22
+      ],
+      "coincide_com_presidente": true,
+      "observacao_do_registro": "Veredaor Sergio Schmidt - como Presidente não vota."
+    },
+    {
+      "voto_individual": {
+        "id": 18,
+        "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 34 de 2011 em 100ª ORDINÁRIA da 2ª Sessão Legislativa da 37ª Legislatura - Votação: UNANIMIDADE - Parlamentar: JOSLEY   ANDRADE",
+        "link_detail_backend": "",
+        "metadata": {},
+        "voto": "-1",
+        "ip": "",
+        "data_hora": "2018-06-12T17:03:31.702217-03:00",
+        "votacao": 924,
+        "parlamentar": 18,
+        "user": null,
+        "ordem": null,
+        "expediente": null
+      },
+      "registro_votacao": {
+        "id": 924,
+        "__str__": "Ordem: Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 34 de 2011 em 100ª ORDINÁRIA da 2ª Sessão Legislativa da 37ª Legislatura - Votação: UNANIMIDADE",
+        "link_detail_backend": "",
+        "metadata": {},
+        "numero_votos_sim": 10,
+        "numero_votos_nao": 0,
+        "numero_abstencoes": 0,
+        "observacao": "O vereador Josley Andrade não vota como Presidente.",
+        "ip": "",
+        "data_hora": "2019-05-15T16:36:46.643751-03:00",
+        "tipo_resultado_votacao": 1,
+        "materia": 2407,
+        "ordem": 2866,
+        "expediente": null,
+        "user": null
+      },
+      "ordem": {
+        "id": 2866,
+        "__str__": "Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 34 de 2011 em 100ª ORDINÁRIA da 2ª Sessão Legislativa da 37ª Legislatura",
+        "link_detail_backend": "/sessao/ordemdia/2866",
+        "metadata": {},
+        "data_ordem": "2011-11-07",
+        "observacao": "",
+        "numero_ordem": 1,
+        "resultado": "",
+        "tipo_votacao": 2,
+        "votacao_aberta": false,
+        "registro_aberto": null,
+        "sessao_plenaria": 87,
+        "materia": 2407,
+        "tramitacao": null
+      },
+      "sessao_id": 87,
+      "mesa": [
+        {
+          "id": 229,
+          "__str__": "PRESIDENTE - JOSLEY   ANDRADE",
+          "link_detail_backend": "",
+          "metadata": {},
+          "sessao_plenaria": 87,
+          "cargo": 1,
+          "parlamentar": 18
+        },
+        {
+          "id": 230,
+          "__str__": "1º SECRETÁRIO - LINDAMIR IVANOSKI",
+          "link_detail_backend": "",
+          "metadata": {},
+          "sessao_plenaria": 87,
+          "cargo": 4,
+          "parlamentar": 19
+        },
+        {
+          "id": 231,
+          "__str__": "1º VICE-PRESIDENTE - SANDRA MARCON",
+          "link_detail_backend": "",
+          "metadata": {},
+          "sessao_plenaria": 87,
+          "cargo": 2,
+          "parlamentar": 14
+        }
+      ],
+      "parlamentar_do_voto": 18,
+      "ids_presidente_na_mesa": [
+        18
+      ],
+      "coincide_com_presidente": true,
+      "observacao_do_registro": "O vereador Josley Andrade não vota como Presidente."
+    },
+    {
+      "voto_individual": {
+        "id": 29,
+        "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 3 - PROJETO DE LEI DO EXECUTIVO nº 60 de 2011 em 100ª ORDINÁRIA da 2ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA - Parlamentar: JOSLEY   ANDRADE",
+        "link_detail_backend": "",
+        "metadata": {},
+        "voto": "-1",
+        "ip": "",
+        "data_hora": "2018-06-12T17:03:31.702555-03:00",
+        "votacao": 925,
+        "parlamentar": 18,
+        "user": null,
+        "ordem": null,
+        "expediente": null
+      },
+      "registro_votacao": {
+        "id": 925,
+        "__str__": "Ordem: Ordem do Dia/Expediente: 3 - PROJETO DE LEI DO EXECUTIVO nº 60 de 2011 em 100ª ORDINÁRIA da 2ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA",
+        "link_detail_backend": "",
+        "metadata": {},
+        "numero_votos_sim": 9,
+        "numero_votos_nao": 0,
+        "numero_abstencoes": 1,
+        "observacao": "O vereador Josley Andrade não vota como Presidente.",
+        "ip": "",
+        "data_hora": "2019-05-15T16:36:46.643751-03:00",
+        "tipo_resultado_votacao": 3,
+        "materia": 2369,
+        "ordem": 2868,
+        "expediente": null,
+        "user": null
+      },
+      "ordem": {
+        "id": 2868,
+        "__str__": "Ordem do Dia/Expediente: 3 - PROJETO DE LEI DO EXECUTIVO nº 60 de 2011 em 100ª ORDINÁRIA da 2ª Sessão Legislativa da 37ª Legislatura",
+        "link_detail_backend": "/sessao/ordemdia/2868",
+        "metadata": {},
+        "data_ordem": "2011-11-07",
+        "observacao": "",
+        "numero_ordem": 3,
+        "resultado": "",
+        "tipo_votacao": 2,
+        "votacao_aberta": false,
+        "registro_aberto": null,
+        "sessao_plenaria": 87,
+        "materia": 2369,
+        "tramitacao": null
+      },
+      "sessao_id": 87,
+      "mesa": [
+        {
+          "id": 229,
+          "__str__": "PRESIDENTE - JOSLEY   ANDRADE",
+          "link_detail_backend": "",
+          "metadata": {},
+          "sessao_plenaria": 87,
+          "cargo": 1,
+          "parlamentar": 18
+        },
+        {
+          "id": 230,
+          "__str__": "1º SECRETÁRIO - LINDAMIR IVANOSKI",
+          "link_detail_backend": "",
+          "metadata": {},
+          "sessao_plenaria": 87,
+          "cargo": 4,
+          "parlamentar": 19
+        },
+        {
+          "id": 231,
+          "__str__": "1º VICE-PRESIDENTE - SANDRA MARCON",
+          "link_detail_backend": "",
+          "metadata": {},
+          "sessao_plenaria": 87,
+          "cargo": 2,
+          "parlamentar": 14
+        }
+      ],
+      "parlamentar_do_voto": 18,
+      "ids_presidente_na_mesa": [
+        18
+      ],
+      "coincide_com_presidente": true,
+      "observacao_do_registro": "O vereador Josley Andrade não vota como Presidente."
+    }
+  ],
+  "sempre_presidente": "nos_exemplos_sim_mas_nao_prova_total",
+  "afirmacao": "Nos 3 exemplos checados, -1 coincidiu com o presidente da mesa. Nao da para afirmar que SEMPRE e assim sem varrer todos.",
+  "o_que_faltaria": "Varredura completa de todos os votos -1 cruzados com integrantemesa de cada sessao.",
+  "ultimo_ano_com_menos_um": 2018,
+  "primeiro_ano_com_menos_um": 2018
+}

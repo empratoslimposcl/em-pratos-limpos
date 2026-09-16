@@ -1,0 +1,29 @@
+{
+  "consultado_em": "2026-09-14T21:28:30-03:00",
+  "tres_ordinarias_completas": [
+    {
+      "id": 771,
+      "data": "2026-02-19",
+      "por_que": "ordinaria com votos Nao",
+      "planilha": "sessao_771_votos.csv"
+    },
+    {
+      "id": 769,
+      "data": "2026-02-03",
+      "por_que": "ordinaria em data diferente",
+      "planilha": "sessao_769_votos.csv"
+    },
+    {
+      "id": 786,
+      "data": "2026-06-08",
+      "por_que": "ordinaria em data diferente, tamanho cabivel no teto",
+      "planilha": "sessao_786_votos.csv"
+    }
+  ],
+  "extra_com_ausencia_justificada": {
+    "id": 768,
+    "data": "2026-01-26",
+    "tipo": "extraordinaria",
+    "nota": "Nao conta como uma das tres ordinarias. Serve de prova de justificativa em 2026 porque as ordinarias com ausencia (776 e 777) eram grandes demais para baixar inteiras no teto de pedidos."
+  }
+}

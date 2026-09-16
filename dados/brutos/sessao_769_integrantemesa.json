@@ -1,0 +1,62 @@
+{
+  "pagination": {
+    "links": {
+      "next": null,
+      "previous": null
+    },
+    "previous_page": null,
+    "next_page": null,
+    "start_index": 1,
+    "end_index": 5,
+    "total_entries": 5,
+    "total_pages": 1,
+    "page": 1
+  },
+  "results": [
+    {
+      "id": 2482,
+      "__str__": "PRESIDENTE - ALEXANDRE GUIMARÃES",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 769,
+      "cargo": 1,
+      "parlamentar": 50
+    },
+    {
+      "id": 2483,
+      "__str__": "1º VICE-PRESIDENTE - LUIZ SCERVENSKI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 769,
+      "cargo": 2,
+      "parlamentar": 53
+    },
+    {
+      "id": 2484,
+      "__str__": "2º VICE-PRESIDENTE - ROGÉRIO DA VIAÇÃO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 769,
+      "cargo": 3,
+      "parlamentar": 57
+    },
+    {
+      "id": 2485,
+      "__str__": "1º SECRETÁRIO - POLACO PRETO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 769,
+      "cargo": 4,
+      "parlamentar": 56
+    },
+    {
+      "id": 2486,
+      "__str__": "2º SECRETÁRIO - RAFAEL FREITAS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 769,
+      "cargo": 5,
+      "parlamentar": 58
+    }
+  ]
+}

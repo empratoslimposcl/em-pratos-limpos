@@ -1,0 +1,180 @@
+{
+  "consultado_em": "2026-09-14T21:24:06-03:00",
+  "escopo": "sessoes ordinarias (tipo=1) com data_inicio em 2026",
+  "metodo": "Para cada sessao, baixei a ordem do dia e contei itens cujo campo resultado indica votacao (ignorei 'Materia Lida'). O tipo da materia foi lido do texto de descricao do item da ordem do dia, sem pedido extra por materia.",
+  "n_sessoes_ordinarias_2026": 26,
+  "sessoes": [
+    {
+      "id": 769,
+      "data": "2026-02-03",
+      "rotulo": "1ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 10
+    },
+    {
+      "id": 770,
+      "data": "2026-02-09",
+      "rotulo": "2ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 67
+    },
+    {
+      "id": 771,
+      "data": "2026-02-19",
+      "rotulo": "3ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 3
+    },
+    {
+      "id": 772,
+      "data": "2026-02-23",
+      "rotulo": "4ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 0
+    },
+    {
+      "id": 773,
+      "data": "2026-03-02",
+      "rotulo": "5ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 59
+    },
+    {
+      "id": 774,
+      "data": "2026-03-09",
+      "rotulo": "6ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 64
+    },
+    {
+      "id": 775,
+      "data": "2026-03-16",
+      "rotulo": "7ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 54
+    },
+    {
+      "id": 776,
+      "data": "2026-03-23",
+      "rotulo": "8ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 65
+    },
+    {
+      "id": 777,
+      "data": "2026-04-06",
+      "rotulo": "9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 67
+    },
+    {
+      "id": 778,
+      "data": "2026-04-13",
+      "rotulo": "10ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 73
+    },
+    {
+      "id": 779,
+      "data": "2026-04-22",
+      "rotulo": "11ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 69
+    },
+    {
+      "id": 780,
+      "data": "2026-04-27",
+      "rotulo": "12ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 12
+    },
+    {
+      "id": 781,
+      "data": "2026-05-04",
+      "rotulo": "13ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 69
+    },
+    {
+      "id": 782,
+      "data": "2026-05-11",
+      "rotulo": "14ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 79
+    },
+    {
+      "id": 783,
+      "data": "2026-05-18",
+      "rotulo": "15ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 72
+    },
+    {
+      "id": 784,
+      "data": "2026-05-25",
+      "rotulo": "16ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 53
+    },
+    {
+      "id": 785,
+      "data": "2026-06-01",
+      "rotulo": "17ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 64
+    },
+    {
+      "id": 786,
+      "data": "2026-06-08",
+      "rotulo": "18ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 11
+    },
+    {
+      "id": 787,
+      "data": "2026-06-15",
+      "rotulo": "19ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 66
+    },
+    {
+      "id": 788,
+      "data": "2026-06-22",
+      "rotulo": "20ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 59
+    },
+    {
+      "id": 790,
+      "data": "2026-08-03",
+      "rotulo": "21ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 71
+    },
+    {
+      "id": 791,
+      "data": "2026-08-10",
+      "rotulo": "22ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 69
+    },
+    {
+      "id": 792,
+      "data": "2026-08-17",
+      "rotulo": "23ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 68
+    },
+    {
+      "id": 793,
+      "data": "2026-08-24",
+      "rotulo": "24ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 69
+    },
+    {
+      "id": 794,
+      "data": "2026-09-08",
+      "rotulo": "25ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 95
+    },
+    {
+      "id": 795,
+      "data": "2026-09-14",
+      "rotulo": "26ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura",
+      "n_votacoes": 0
+    }
+  ],
+  "total_votacoes": 1388,
+  "por_tipo_materia": {
+    "NAO_IDENTIFICADO_NO_TEXTO": 22,
+    "PROJETO DE LEI": 173,
+    "PROJETO DE RESOLUCAO": 8,
+    "REQUERIMENTO": 1144,
+    "VETO": 4,
+    "MOCAO": 37
+  },
+  "por_texto_resultado": {
+    "UNANIMIDADE": 1375,
+    "REJEITADO": 5,
+    "MAIORIA ABSOLUTA": 8
+  },
+  "pedidos_desta_continuacao": 79,
+  "observacao": "Isso conta itens da ordem do dia com resultado de votacao. Em tese coincide com registros de votacao, mas a prova fina e o arquivo registrovotacao de cada sessao baixada."
+}

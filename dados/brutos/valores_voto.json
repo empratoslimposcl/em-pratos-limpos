@@ -1,0 +1,66 @@
+{
+  "counts": {
+    "'Sim'": 889,
+    "'Abstenção'": 3,
+    "'-1'": 97,
+    "'Não'": 11
+  },
+  "samples": {
+    "'Sim'": {
+      "id": 1,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 15 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA - Parlamentar: CELSINHO AÇOUGUEIRO.",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "",
+      "data_hora": "2018-06-12T17:03:31.701788-03:00",
+      "votacao": 1,
+      "parlamentar": 15,
+      "user": null,
+      "ordem": null,
+      "expediente": null
+    },
+    "'Abstenção'": {
+      "id": 8,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 15 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA - Parlamentar: NELSON DE SOUZA",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Abstenção",
+      "ip": "",
+      "data_hora": "2018-06-12T17:03:31.701975-03:00",
+      "votacao": 1,
+      "parlamentar": 21,
+      "user": null,
+      "ordem": null,
+      "expediente": null
+    },
+    "'-1'": {
+      "id": 10,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 15 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA - Parlamentar: SERGIO SCHMIDT",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "-1",
+      "ip": "",
+      "data_hora": "2018-06-12T17:03:31.702015-03:00",
+      "votacao": 1,
+      "parlamentar": 22,
+      "user": null,
+      "ordem": null,
+      "expediente": null
+    },
+    "'Não'": {
+      "id": 757,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 13 - PROJETO DE DECRETO LEGISLATIVO nº 5 de 2010 em 107ª ORDINÁRIA da 2ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA - Parlamentar: BETINHO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Não",
+      "ip": "",
+      "data_hora": "2018-06-12T17:03:31.721175-03:00",
+      "votacao": 997,
+      "parlamentar": 25,
+      "user": null,
+      "ordem": null,
+      "expediente": null
+    }
+  }
+}

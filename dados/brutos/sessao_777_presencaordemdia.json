@@ -1,0 +1,130 @@
+{
+  "pagination": {
+    "links": {
+      "next": null,
+      "previous": null
+    },
+    "previous_page": null,
+    "next_page": null,
+    "start_index": 1,
+    "end_index": 14,
+    "total_entries": 14,
+    "total_pages": 1,
+    "page": 1
+  },
+  "results": [
+    {
+      "id": 8529,
+      "__str__": "Sessão: 9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ALEXANDRE GUIMARÃES",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 777,
+      "parlamentar": 50
+    },
+    {
+      "id": 8530,
+      "__str__": "Sessão: 9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ATHOS MARTINEZ",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 777,
+      "parlamentar": 62
+    },
+    {
+      "id": 8531,
+      "__str__": "Sessão: 9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: GENÉSIO DA VITAL",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 777,
+      "parlamentar": 49
+    },
+    {
+      "id": 8532,
+      "__str__": "Sessão: 9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: GUSTAVO TORRES",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 777,
+      "parlamentar": 61
+    },
+    {
+      "id": 8533,
+      "__str__": "Sessão: 9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: JUNIOR ANDREASSA",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 777,
+      "parlamentar": 60
+    },
+    {
+      "id": 8534,
+      "__str__": "Sessão: 9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: LUIZ SCERVENSKI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 777,
+      "parlamentar": 53
+    },
+    {
+      "id": 8535,
+      "__str__": "Sessão: 9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: POLACO PRETO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 777,
+      "parlamentar": 56
+    },
+    {
+      "id": 8536,
+      "__str__": "Sessão: 9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: RAFAEL FREITAS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 777,
+      "parlamentar": 58
+    },
+    {
+      "id": 8537,
+      "__str__": "Sessão: 9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ROGERIO DAS TINTAS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 777,
+      "parlamentar": 47
+    },
+    {
+      "id": 8538,
+      "__str__": "Sessão: 9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: ROGÉRIO DA VIAÇÃO",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 777,
+      "parlamentar": 57
+    },
+    {
+      "id": 8539,
+      "__str__": "Sessão: 9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: SARGENTO LEANDRO CHRESTANI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 777,
+      "parlamentar": 55
+    },
+    {
+      "id": 8540,
+      "__str__": "Sessão: 9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: SENSEI CLOVIS",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 777,
+      "parlamentar": 63
+    },
+    {
+      "id": 8541,
+      "__str__": "Sessão: 9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: TOMAZINA",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 777,
+      "parlamentar": 64
+    },
+    {
+      "id": 8542,
+      "__str__": "Sessão: 9ª ORDINÁRIA da 2ª Sessão Legislativa da 41ª Legislatura Parlamentar: VICTOR BINI",
+      "link_detail_backend": "",
+      "metadata": {},
+      "sessao_plenaria": 777,
+      "parlamentar": 59
+    }
+  ],
+  "total": 14
+}

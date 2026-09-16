@@ -1,0 +1,59 @@
+{
+  "pagination": {
+    "links": {
+      "next": "http://sapl.campolargo.pr.leg.br/api/sessao/votoparlamentar/?page=2&page_size=3",
+      "previous": null
+    },
+    "previous_page": null,
+    "next_page": 2,
+    "start_index": 1,
+    "end_index": 3,
+    "total_entries": 226809,
+    "total_pages": 75603,
+    "page": 1
+  },
+  "results": [
+    {
+      "id": 1,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 15 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA - Parlamentar: CELSINHO AÇOUGUEIRO.",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "",
+      "data_hora": "2018-06-12T17:03:31.701788-03:00",
+      "votacao": 1,
+      "parlamentar": 15,
+      "user": null,
+      "ordem": null,
+      "expediente": null
+    },
+    {
+      "id": 2,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 15 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA - Parlamentar: DARCI ANDREASSA",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "",
+      "data_hora": "2018-06-12T17:03:31.701822-03:00",
+      "votacao": 1,
+      "parlamentar": 16,
+      "user": null,
+      "ordem": null,
+      "expediente": null
+    },
+    {
+      "id": 3,
+      "__str__": "Votação: Ordem: Ordem do Dia/Expediente: 1 - ATA SESSÃO ORDINÁRIA nº 15 de 2010 em 16ª ORDINÁRIA da 1ª Sessão Legislativa da 37ª Legislatura - Votação: MAIORIA ABSOLUTA - Parlamentar: DIRCEU MOCELIN",
+      "link_detail_backend": "",
+      "metadata": {},
+      "voto": "Sim",
+      "ip": "",
+      "data_hora": "2018-06-12T17:03:31.701844-03:00",
+      "votacao": 1,
+      "parlamentar": 13,
+      "user": null,
+      "ordem": null,
+      "expediente": null
+    }
+  ]
+}

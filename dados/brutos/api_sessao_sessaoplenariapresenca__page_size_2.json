@@ -1,0 +1,35 @@
+{
+  "pagination": {
+    "links": {
+      "next": "http://sapl.campolargo.pr.leg.br/api/sessao/sessaoplenariapresenca/?page=2&page_size=2",
+      "previous": null
+    },
+    "previous_page": null,
+    "next_page": 2,
+    "start_index": 1,
+    "end_index": 2,
+    "total_entries": 8424,
+    "total_pages": 4212,
+    "page": 1
+  },
+  "results": [
+    {
+      "id": 5631,
+      "__str__": "SessaoPlenariaPresenca object (5631)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 540,
+      "parlamentar": 50
+    },
+    {
+      "id": 5620,
+      "__str__": "SessaoPlenariaPresenca object (5620)",
+      "link_detail_backend": "",
+      "metadata": {},
+      "data_sessao": null,
+      "sessao_plenaria": 539,
+      "parlamentar": 50
+    }
+  ]
+}

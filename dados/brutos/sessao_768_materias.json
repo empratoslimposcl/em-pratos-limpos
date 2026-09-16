@@ -1,0 +1,41 @@
+{
+  "25496": {
+    "id": 25496,
+    "__str__": "PROJETO DE LEI DO EXECUTIVO nº 7 de 2026",
+    "link_detail_backend": "/materia/25496",
+    "metadata": {},
+    "numero": 7,
+    "ano": 2026,
+    "numero_protocolo": null,
+    "data_apresentacao": "2026-01-23",
+    "tipo_apresentacao": "E",
+    "data_publicacao": null,
+    "numero_origem_externa": "",
+    "ano_origem_externa": null,
+    "data_origem_externa": null,
+    "apelido": "",
+    "dias_prazo": null,
+    "data_fim_prazo": null,
+    "em_tramitacao": true,
+    "polemica": false,
+    "objeto": "",
+    "complementar": false,
+    "ementa": "PRORROGA O PRAZO PARA ADESÃO AO PROGRAMA MUNICIPAL DE RECUPERAÇÃO FISCAL DE CAMPO LARGO - REFIS 2025, INSTITUÍDO PELA LEI MUNICIAL Nº 3903, DE 25 DE SETEMBRO DE 2025, E DÁ OUTRAS PROVIDÊNCIAS.",
+    "indexacao": "",
+    "observacao": "",
+    "resultado": "",
+    "texto_original": "http://sapl.campolargo.pr.leg.br/media/sapl/public/materialegislativa/2026/25496/07_2026_projeto_de_lei_texto_integral.pdf",
+    "data_ultima_atualizacao": "2026-02-05T14:20:58.797189-03:00",
+    "ip": "177.99.178.66",
+    "ultima_edicao": "2026-01-23T10:32:50.615402-03:00",
+    "tipo": 1,
+    "regime_tramitacao": 1,
+    "tipo_origem_externa": null,
+    "local_origem_externa": null,
+    "user": 36,
+    "anexadas": [],
+    "autores": [
+      53
+    ]
+  }
+}

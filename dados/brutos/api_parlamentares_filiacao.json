@@ -1,0 +1,657 @@
+{
+  "pagination": {
+    "links": {
+      "next": null,
+      "previous": null
+    },
+    "previous_page": null,
+    "next_page": null,
+    "start_index": 1,
+    "end_index": 64,
+    "total_entries": 64,
+    "total_pages": 1,
+    "page": 1
+  },
+  "results": [
+    {
+      "id": 50,
+      "__str__": "ALEXANDRE GUIMARÃES - PDT - Partido Democrático Trabalhista",
+      "link_detail_backend": "/parlamentar/filiacao/50",
+      "metadata": {},
+      "data": "2024-04-05",
+      "data_desfiliacao": null,
+      "parlamentar": 50,
+      "partido": 5
+    },
+    {
+      "id": 34,
+      "__str__": "ALEXANDRE GUIMARÃES - PSD - Partido Social Democratico",
+      "link_detail_backend": "/parlamentar/filiacao/34",
+      "metadata": {},
+      "data": "2021-01-01",
+      "data_desfiliacao": "2024-04-05",
+      "parlamentar": 50,
+      "partido": 13
+    },
+    {
+      "id": 48,
+      "__str__": "ANDRÉ GABARDO - NOVO - NOVO",
+      "link_detail_backend": "/parlamentar/filiacao/48",
+      "metadata": {},
+      "data": "2024-03-16",
+      "data_desfiliacao": null,
+      "parlamentar": 51,
+      "partido": 33
+    },
+    {
+      "id": 39,
+      "__str__": "ANDRÉ GABARDO - PODE - PODEMOS",
+      "link_detail_backend": "/parlamentar/filiacao/39",
+      "metadata": {},
+      "data": "2021-01-01",
+      "data_desfiliacao": "2024-03-16",
+      "parlamentar": 51,
+      "partido": 31
+    },
+    {
+      "id": 62,
+      "__str__": "ATHOS MARTINEZ - PL - PARTIDO LIBERAL",
+      "link_detail_backend": "/parlamentar/filiacao/62",
+      "metadata": {},
+      "data": "2024-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 62,
+      "partido": 35
+    },
+    {
+      "id": 27,
+      "__str__": "BENTO VIDAL - DEM - DEMOCRATAS",
+      "link_detail_backend": "/parlamentar/filiacao/27",
+      "metadata": {},
+      "data": "2016-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 42,
+      "partido": 16
+    },
+    {
+      "id": 20,
+      "__str__": "BETE DAMACENO - PP - Partido Popular",
+      "link_detail_backend": "/parlamentar/filiacao/20",
+      "metadata": {},
+      "data": "2016-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 34,
+      "partido": 12
+    },
+    {
+      "id": 30,
+      "__str__": "BETINHO - PMDB - Partido do Movimento Democrático Brasileiro",
+      "link_detail_backend": "/parlamentar/filiacao/30",
+      "metadata": {},
+      "data": "2016-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 44,
+      "partido": 2
+    },
+    {
+      "id": 11,
+      "__str__": "BETINHO - PMDB - Partido do Movimento Democrático Brasileiro",
+      "link_detail_backend": "/parlamentar/filiacao/11",
+      "metadata": {},
+      "data": "2011-08-04",
+      "data_desfiliacao": null,
+      "parlamentar": 25,
+      "partido": 2
+    },
+    {
+      "id": 1,
+      "__str__": "CELSINHO AÇOUGUEIRO. - PSDB - Partido Social Democrata Brasileiro",
+      "link_detail_backend": "/parlamentar/filiacao/1",
+      "metadata": {},
+      "data": "2009-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 15,
+      "partido": 3
+    },
+    {
+      "id": 32,
+      "__str__": "CLAIRTON ALEMÃO - PSL - Partido Social Liberal",
+      "link_detail_backend": "/parlamentar/filiacao/32",
+      "metadata": {},
+      "data": "2020-03-16",
+      "data_desfiliacao": null,
+      "parlamentar": 35,
+      "partido": 11
+    },
+    {
+      "id": 21,
+      "__str__": "CLAIRTON ALEMÃO - SDD - SOLIDARIEDADE",
+      "link_detail_backend": "/parlamentar/filiacao/21",
+      "metadata": {},
+      "data": "2016-01-01",
+      "data_desfiliacao": "2020-03-15",
+      "parlamentar": 35,
+      "partido": 17
+    },
+    {
+      "id": 22,
+      "__str__": "CLEA OLIVEIRA - PSB - Partido Socialista Brasileiro",
+      "link_detail_backend": "/parlamentar/filiacao/22",
+      "metadata": {},
+      "data": "2016-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 40,
+      "partido": 9
+    },
+    {
+      "id": 13,
+      "__str__": "CLÉA OLIVEIRA - PSB - Partido Socialista Brasileiro",
+      "link_detail_backend": "/parlamentar/filiacao/13",
+      "metadata": {},
+      "data": "2013-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 27,
+      "partido": 9
+    },
+    {
+      "id": 2,
+      "__str__": "DARCI ANDREASSA - PSD - Partido Social Democratico",
+      "link_detail_backend": "/parlamentar/filiacao/2",
+      "metadata": {},
+      "data": "2016-03-15",
+      "data_desfiliacao": null,
+      "parlamentar": 16,
+      "partido": 13
+    },
+    {
+      "id": 29,
+      "__str__": "DARCI ANDREASSA - PSD - Partido Social Democratico",
+      "link_detail_backend": "/parlamentar/filiacao/29",
+      "metadata": {},
+      "data": "2016-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 43,
+      "partido": 13
+    },
+    {
+      "id": 3,
+      "__str__": "DIRCEU MOCELIN - PMDB - Partido do Movimento Democrático Brasileiro",
+      "link_detail_backend": "/parlamentar/filiacao/3",
+      "metadata": {},
+      "data": "2009-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 13,
+      "partido": 2
+    },
+    {
+      "id": 53,
+      "__str__": "DR. JOÃO FREITA - AVANTE - AVANTE",
+      "link_detail_backend": "/parlamentar/filiacao/53",
+      "metadata": {},
+      "data": "2024-04-05",
+      "data_desfiliacao": null,
+      "parlamentar": 54,
+      "partido": 34
+    },
+    {
+      "id": 43,
+      "__str__": "DR. JOÃO FREITA - UNIÃO - União Brasil",
+      "link_detail_backend": "/parlamentar/filiacao/43",
+      "metadata": {},
+      "data": "2022-01-01",
+      "data_desfiliacao": "2024-04-05",
+      "parlamentar": 54,
+      "partido": 32
+    },
+    {
+      "id": 41,
+      "__str__": "DR. JOÃO FREITA - PSL - Partido Social Liberal",
+      "link_detail_backend": "/parlamentar/filiacao/41",
+      "metadata": {},
+      "data": "2021-01-01",
+      "data_desfiliacao": "2021-12-31",
+      "parlamentar": 54,
+      "partido": 11
+    },
+    {
+      "id": 19,
+      "__str__": "FERNANDA DO NELSÃO - PSD - Partido Social Democratico",
+      "link_detail_backend": "/parlamentar/filiacao/19",
+      "metadata": {},
+      "data": "2015-10-01",
+      "data_desfiliacao": null,
+      "parlamentar": 31,
+      "partido": 13
+    },
+    {
+      "id": 51,
+      "__str__": "GENÉSIO DA VITAL - MDB - MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+      "link_detail_backend": "/parlamentar/filiacao/51",
+      "metadata": {},
+      "data": "2024-04-05",
+      "data_desfiliacao": null,
+      "parlamentar": 49,
+      "partido": 30
+    },
+    {
+      "id": 47,
+      "__str__": "GENÉSIO DA VITAL - PODE - PODEMOS",
+      "link_detail_backend": "/parlamentar/filiacao/47",
+      "metadata": {},
+      "data": "2023-06-15",
+      "data_desfiliacao": "2024-04-05",
+      "parlamentar": 49,
+      "partido": 31
+    },
+    {
+      "id": 35,
+      "__str__": "GENÉSIO DA VITAL - PSC - Partido Social Cristão",
+      "link_detail_backend": "/parlamentar/filiacao/35",
+      "metadata": {},
+      "data": "2021-01-01",
+      "data_desfiliacao": "2023-06-15",
+      "parlamentar": 49,
+      "partido": 10
+    },
+    {
+      "id": 38,
+      "__str__": "GERMANINHO - PSDB - Partido Social Democrata Brasileiro",
+      "link_detail_backend": "/parlamentar/filiacao/38",
+      "metadata": {},
+      "data": "2021-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 52,
+      "partido": 3
+    },
+    {
+      "id": 23,
+      "__str__": "GIOVANI MARCON - PSC - Partido Social Cristão",
+      "link_detail_backend": "/parlamentar/filiacao/23",
+      "metadata": {},
+      "data": "2016-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 37,
+      "partido": 10
+    },
+    {
+      "id": 64,
+      "__str__": "GUSTAVO TORRES - REPUBLICANOS - REPUBLICANOS",
+      "link_detail_backend": "/parlamentar/filiacao/64",
+      "metadata": {},
+      "data": "2026-03-27",
+      "data_desfiliacao": null,
+      "parlamentar": 61,
+      "partido": 36
+    },
+    {
+      "id": 59,
+      "__str__": "GUSTAVO TORRES - PP - Partido Popular",
+      "link_detail_backend": "/parlamentar/filiacao/59",
+      "metadata": {},
+      "data": "2024-01-01",
+      "data_desfiliacao": "2026-03-26",
+      "parlamentar": 61,
+      "partido": 12
+    },
+    {
+      "id": 31,
+      "__str__": "HENRIQUE SEGEDI - DEM - DEMOCRATAS",
+      "link_detail_backend": "/parlamentar/filiacao/31",
+      "metadata": {},
+      "data": "2016-12-01",
+      "data_desfiliacao": null,
+      "parlamentar": 46,
+      "partido": 16
+    },
+    {
+      "id": 52,
+      "__str__": "JOÃO D'ÁGUA - MDB - MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+      "link_detail_backend": "/parlamentar/filiacao/52",
+      "metadata": {},
+      "data": "2024-04-05",
+      "data_desfiliacao": null,
+      "parlamentar": 41,
+      "partido": 30
+    },
+    {
+      "id": 44,
+      "__str__": "JOÃO D'ÁGUA - UNIÃO - União Brasil",
+      "link_detail_backend": "/parlamentar/filiacao/44",
+      "metadata": {},
+      "data": "2022-01-01",
+      "data_desfiliacao": "2024-04-05",
+      "parlamentar": 41,
+      "partido": 32
+    },
+    {
+      "id": 28,
+      "__str__": "JOÃO D'ÁGUA - DEM - DEMOCRATAS",
+      "link_detail_backend": "/parlamentar/filiacao/28",
+      "metadata": {},
+      "data": "2016-01-01",
+      "data_desfiliacao": "2021-12-31",
+      "parlamentar": 41,
+      "partido": 16
+    },
+    {
+      "id": 15,
+      "__str__": "JOÃO MARCOS - PR - PARTIDO DA REPÚBLICA",
+      "link_detail_backend": "/parlamentar/filiacao/15",
+      "metadata": {},
+      "data": "2013-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 29,
+      "partido": 15
+    },
+    {
+      "id": 4,
+      "__str__": "JORGE JULIO - PSB - Partido Socialista Brasileiro",
+      "link_detail_backend": "/parlamentar/filiacao/4",
+      "metadata": {},
+      "data": "2009-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 17,
+      "partido": 9
+    },
+    {
+      "id": 5,
+      "__str__": "JOSLEY   ANDRADE - PSC - Partido Social Cristão",
+      "link_detail_backend": "/parlamentar/filiacao/5",
+      "metadata": {},
+      "data": "2009-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 18,
+      "partido": 10
+    },
+    {
+      "id": 58,
+      "__str__": "JUNIOR ANDREASSA - PODE - PODEMOS",
+      "link_detail_backend": "/parlamentar/filiacao/58",
+      "metadata": {},
+      "data": "2024-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 60,
+      "partido": 31
+    },
+    {
+      "id": 16,
+      "__str__": "JUNIOR TORRES - DEM - DEMOCRATAS",
+      "link_detail_backend": "/parlamentar/filiacao/16",
+      "metadata": {},
+      "data": "2013-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 30,
+      "partido": 16
+    },
+    {
+      "id": 6,
+      "__str__": "LINDAMIR IVANOSKI - PSL - Partido Social Liberal",
+      "link_detail_backend": "/parlamentar/filiacao/6",
+      "metadata": {},
+      "data": "2009-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 19,
+      "partido": 11
+    },
+    {
+      "id": 7,
+      "__str__": "LUCIR MARCHIORI - PEN - Partido Ecologico Nacional",
+      "link_detail_backend": "/parlamentar/filiacao/7",
+      "metadata": {},
+      "data": "2012-07-16",
+      "data_desfiliacao": null,
+      "parlamentar": 20,
+      "partido": 14
+    },
+    {
+      "id": 17,
+      "__str__": "LUIZ  ROSSATTO - REDE - REDE - SUSTENTABILIDADE",
+      "link_detail_backend": "/parlamentar/filiacao/17",
+      "metadata": {},
+      "data": "2013-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 32,
+      "partido": 28
+    },
+    {
+      "id": 40,
+      "__str__": "LUIZ SCERVENSKI - MDB - MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+      "link_detail_backend": "/parlamentar/filiacao/40",
+      "metadata": {},
+      "data": "2021-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 53,
+      "partido": 30
+    },
+    {
+      "id": 49,
+      "__str__": "MARCIO BERALDO - PSB - Partido Socialista Brasileiro",
+      "link_detail_backend": "/parlamentar/filiacao/49",
+      "metadata": {},
+      "data": "2024-04-04",
+      "data_desfiliacao": null,
+      "parlamentar": 38,
+      "partido": 9
+    },
+    {
+      "id": 45,
+      "__str__": "MARCIO BERALDO - UNIÃO - União Brasil",
+      "link_detail_backend": "/parlamentar/filiacao/45",
+      "metadata": {},
+      "data": "2022-01-01",
+      "data_desfiliacao": "2024-04-04",
+      "parlamentar": 38,
+      "partido": 32
+    },
+    {
+      "id": 36,
+      "__str__": "MARCIO BERALDO - DEM - DEMOCRATAS",
+      "link_detail_backend": "/parlamentar/filiacao/36",
+      "metadata": {},
+      "data": "2021-01-01",
+      "data_desfiliacao": "2021-12-31",
+      "parlamentar": 38,
+      "partido": 16
+    },
+    {
+      "id": 24,
+      "__str__": "MARCIO BERALDO - PP - Partido Popular",
+      "link_detail_backend": "/parlamentar/filiacao/24",
+      "metadata": {},
+      "data": "2016-01-01",
+      "data_desfiliacao": "2020-12-31",
+      "parlamentar": 38,
+      "partido": 12
+    },
+    {
+      "id": 18,
+      "__str__": "MÁRCIO BERALDO - PP - Partido Popular",
+      "link_detail_backend": "/parlamentar/filiacao/18",
+      "metadata": {},
+      "data": "2013-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 33,
+      "partido": 12
+    },
+    {
+      "id": 8,
+      "__str__": "NELSON DE SOUZA - PMDB - Partido do Movimento Democrático Brasileiro",
+      "link_detail_backend": "/parlamentar/filiacao/8",
+      "metadata": {},
+      "data": "2009-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 21,
+      "partido": 2
+    },
+    {
+      "id": 46,
+      "__str__": "PEDRINHO BARAUSSE - UNIÃO - União Brasil",
+      "link_detail_backend": "/parlamentar/filiacao/46",
+      "metadata": {},
+      "data": "2022-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 48,
+      "partido": 32
+    },
+    {
+      "id": 37,
+      "__str__": "PEDRINHO BARAUSSE - DEM - DEMOCRATAS",
+      "link_detail_backend": "/parlamentar/filiacao/37",
+      "metadata": {},
+      "data": "2021-01-01",
+      "data_desfiliacao": "2021-12-31",
+      "parlamentar": 48,
+      "partido": 16
+    },
+    {
+      "id": 54,
+      "__str__": "POLACO PRETO - PSD - Partido Social Democratico",
+      "link_detail_backend": "/parlamentar/filiacao/54",
+      "metadata": {},
+      "data": "2024-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 56,
+      "partido": 13
+    },
+    {
+      "id": 56,
+      "__str__": "RAFAEL FREITAS - UNIÃO - União Brasil",
+      "link_detail_backend": "/parlamentar/filiacao/56",
+      "metadata": {},
+      "data": "2024-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 58,
+      "partido": 32
+    },
+    {
+      "id": 63,
+      "__str__": "ROGERIO DAS TINTAS - PL - PARTIDO LIBERAL",
+      "link_detail_backend": "/parlamentar/filiacao/63",
+      "metadata": {},
+      "data": "2024-02-06",
+      "data_desfiliacao": null,
+      "parlamentar": 47,
+      "partido": 35
+    },
+    {
+      "id": 33,
+      "__str__": "ROGERIO DAS TINTAS - PSC - Partido Social Cristão",
+      "link_detail_backend": "/parlamentar/filiacao/33",
+      "metadata": {},
+      "data": "2016-04-10",
+      "data_desfiliacao": "2024-02-05",
+      "parlamentar": 47,
+      "partido": 10
+    },
+    {
+      "id": 55,
+      "__str__": "ROGÉRIO DA VIAÇÃO - PSD - Partido Social Democratico",
+      "link_detail_backend": "/parlamentar/filiacao/55",
+      "metadata": {},
+      "data": "2024-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 57,
+      "partido": 13
+    },
+    {
+      "id": 12,
+      "__str__": "SANDRA MARCON - PSD - Partido Social Democratico",
+      "link_detail_backend": "/parlamentar/filiacao/12",
+      "metadata": {},
+      "data": "2012-03-28",
+      "data_desfiliacao": null,
+      "parlamentar": 14,
+      "partido": 13
+    },
+    {
+      "id": 42,
+      "__str__": "SARGENTO LEANDRO CHRESTANI - SDD - SOLIDARIEDADE",
+      "link_detail_backend": "/parlamentar/filiacao/42",
+      "metadata": {},
+      "data": "2021-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 55,
+      "partido": 17
+    },
+    {
+      "id": 60,
+      "__str__": "SENSEI CLOVIS - PP - Partido Popular",
+      "link_detail_backend": "/parlamentar/filiacao/60",
+      "metadata": {},
+      "data": "2024-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 63,
+      "partido": 12
+    },
+    {
+      "id": 9,
+      "__str__": "SERGIO SCHMIDT - PDT - Partido Democrático Trabalhista",
+      "link_detail_backend": "/parlamentar/filiacao/9",
+      "metadata": {},
+      "data": "2009-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 22,
+      "partido": 5
+    },
+    {
+      "id": 14,
+      "__str__": "SUELI GUARNIERI - PSB - Partido Socialista Brasileiro",
+      "link_detail_backend": "/parlamentar/filiacao/14",
+      "metadata": {},
+      "data": "2013-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 28,
+      "partido": 9
+    },
+    {
+      "id": 25,
+      "__str__": "TADEU DE PAULA - DEM - DEMOCRATAS",
+      "link_detail_backend": "/parlamentar/filiacao/25",
+      "metadata": {},
+      "data": "2016-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 39,
+      "partido": 16
+    },
+    {
+      "id": 61,
+      "__str__": "TOMAZINA - PDT - Partido Democrático Trabalhista",
+      "link_detail_backend": "/parlamentar/filiacao/61",
+      "metadata": {},
+      "data": "2024-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 64,
+      "partido": 5
+    },
+    {
+      "id": 26,
+      "__str__": "TONINHO FERREIRA - PTC - PARTIDO TRABALHISTA CRISTÃO",
+      "link_detail_backend": "/parlamentar/filiacao/26",
+      "metadata": {},
+      "data": "2016-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 36,
+      "partido": 29
+    },
+    {
+      "id": 57,
+      "__str__": "VICTOR BINI - UNIÃO - União Brasil",
+      "link_detail_backend": "/parlamentar/filiacao/57",
+      "metadata": {},
+      "data": "2024-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 59,
+      "partido": 32
+    },
+    {
+      "id": 10,
+      "__str__": "WILSON ANDRADE - PSB - Partido Socialista Brasileiro",
+      "link_detail_backend": "/parlamentar/filiacao/10",
+      "metadata": {},
+      "data": "2009-01-01",
+      "data_desfiliacao": null,
+      "parlamentar": 23,
+      "partido": 9
+    }
+  ]
+}
