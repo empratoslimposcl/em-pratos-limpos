@@ -36,3 +36,6 @@ ENV/
 Thumbs.db
 ehthumbs.db
 [Dd]esktop.ini
+
+# Scratch/local-only
+scratch/

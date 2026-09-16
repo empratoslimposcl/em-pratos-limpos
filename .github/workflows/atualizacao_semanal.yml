@@ -38,8 +38,8 @@ jobs:
 
       - name: Publicar alterações
         run: |
-          git config user.name "LaBottegaContadina"
-          git config user.email "322325978+LaBottegaContadina@users.noreply.github.com"
+          git config user.name "empratoslimposcl"
+          git config user.email "329830204+empratoslimposcl@users.noreply.github.com"
           if [[ -n $(git status --porcelain) ]]; then
             git add dados/
             git commit -m "Atualizacao automatica: novos registros do SAPL"

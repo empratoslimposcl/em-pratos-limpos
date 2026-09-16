@@ -2,7 +2,7 @@
 
 Painel cívico e aberto sobre a atuação legislativa da Câmara Municipal de Campo Largo (PR).
 
-Acesse o painel online: **https://labottegacontadina.github.io/em-pratos-limpos/**
+Acesse o painel online: **https://empratoslimposcl.github.io/em-pratos-limpos/**
 
 ---
 
