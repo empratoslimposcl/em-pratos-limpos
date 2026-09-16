@@ -1212,11 +1212,16 @@
     color: var(--app-azul, #007aff);
     text-decoration: none;
   }
-  .painel-camara-interno,
+  .painel-camara-interno {
+    display: none;
+  }
   .painel-camara-interno.ativo {
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+  .painel-camara-interno[hidden] {
+    display: none !important;
   }
   .card-app {
     background: var(--superficie);
