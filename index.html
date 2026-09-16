@@ -1817,7 +1817,9 @@
   "use strict";
 
   var STORAGE_TEMA = "dashboard-campo-largo-tema";
-  var JSON_URL = "../../dados/tratados/atuacao_vereadores_2026.json";
+  var JSON_URL = window.location.pathname.indexOf("/docs/") !== -1
+    ? "../../dados/tratados/atuacao_vereadores_2026.json"
+    : "dados/tratados/atuacao_vereadores_2026.json";
   var POR_PAGINA = 20;
 
   var ROTULOS_VOTO = {
