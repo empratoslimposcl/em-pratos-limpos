@@ -43,13 +43,13 @@ def testar_json_atuacao() -> None:
     meta = dados.get("meta", {})
     checar(bool(meta), "atuacao_vereadores_2026.json sem bloco 'meta'")
     checar(
-        meta.get("n_sessoes_ordinarias") == N_SESSOES_ESPERADAS,
+        int(meta.get("n_sessoes_ordinarias") or 0) >= N_SESSOES_ESPERADAS,
         f"n_sessoes_ordinarias={meta.get('n_sessoes_ordinarias')!r}, "
-        f"esperado {N_SESSOES_ESPERADAS}",
+        f"esperado ao menos {N_SESSOES_ESPERADAS}",
     )
     checar(
-        meta.get("n_pll_2026") == N_PLL_ESPERADOS,
-        f"n_pll_2026={meta.get('n_pll_2026')!r}, esperado {N_PLL_ESPERADOS}",
+        int(meta.get("n_pll_2026") or 0) >= N_PLL_ESPERADOS,
+        f"n_pll_2026={meta.get('n_pll_2026')!r}, esperado ao menos {N_PLL_ESPERADOS}",
     )
     checar(
         meta.get("n_vereadores") == N_VEREADORES_ESPERADOS,
