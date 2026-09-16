@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   atualizar:
@@ -36,14 +37,61 @@ jobs:
         run: |
           python dados/tratados/gerar_atuacao_vereadores_2026.py
 
-      - name: Publicar alterações
+      - name: Validar sanidade dos dados gerados
+        run: |
+          python coletor/testes_sanidade.py
+
+      - name: Verificar alterações
+        id: alteracoes
+        run: |
+          if [[ -n $(git status --porcelain -- dados/) ]]; then
+            echo "houve_mudanca=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "houve_mudanca=false" >> "$GITHUB_OUTPUT"
+            echo "Nenhuma alteracao detectada no SAPL."
+          fi
+
+      - name: Empacotar backup versionado de dados/
+        if: steps.alteracoes.outputs.houve_mudanca == 'true'
+        run: |
+          mkdir -p backups
+          data_hora=$(date -u +"%Y%m%d-%H%M%S")
+          nome_backup="dados-${data_hora}"
+          echo "NOME_BACKUP=${nome_backup}" >> "$GITHUB_ENV"
+          tar -czf "backups/${nome_backup}.tar.gz" dados/
+
+      - name: Publicar backup como artefato
+        if: steps.alteracoes.outputs.houve_mudanca == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.NOME_BACKUP }}
+          path: backups/${{ env.NOME_BACKUP }}.tar.gz
+          retention-days: 90
+
+      - name: Publicar alterações em branch dedicado (Pull Request)
+        if: steps.alteracoes.outputs.houve_mudanca == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "empratoslimposcl"
           git config user.email "329830204+empratoslimposcl@users.noreply.github.com"
-          if [[ -n $(git status --porcelain) ]]; then
-            git add dados/
-            git commit -m "Atualizacao automatica: novos registros do SAPL"
-            git push
-          else
-            echo "Nenhuma alteracao detectada no SAPL."
-          fi
+
+          branch_atualizacao="atualizacao-dados/$(date -u +"%Y%m%d-%H%M%S")"
+          git checkout -b "$branch_atualizacao"
+          git add dados/
+          git commit -m "Atualizacao automatica: novos registros do SAPL"
+          git push origin "$branch_atualizacao"
+
+          gh pr create \
+            --title "Atualizacao automatica: novos registros do SAPL" \
+            --body "Dados coletados e validados automaticamente pela esteira semanal. Revisar antes de publicar em main." \
+            --base main \
+            --head "$branch_atualizacao"
+
+      - name: Registrar falha do coletor
+        if: failure()
+        run: |
+          echo "::error::A esteira de atualizacao semanal falhou. Verifique os logs das etapas acima (coletor, processamento ou validacao de sanidade) antes de tentar novamente."
+          echo "Job: ${{ github.job }}"
+          echo "Run: ${{ github.run_id }} (tentativa ${{ github.run_attempt }})"
+          echo "Commit: ${{ github.sha }}"
