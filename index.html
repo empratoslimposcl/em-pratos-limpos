@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light dark">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; child-src 'none'; worker-src 'none'; img-src 'self' https://sapl.campolargo.pr.leg.br; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'none'; upgrade-insecure-requests;">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Em Pratos Limpos — o que a Câmara de Campo Largo vota</title>
+<title>Em Pratos Limpos: o que a Câmara de Campo Largo vota</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -224,10 +224,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    min-height: 38px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
     padding: 0;
     border: none;
     background: var(--superficie);
@@ -240,6 +240,54 @@
 
   .alternar-tema:hover {
     background: var(--superficie-2);
+  }
+
+  .acoes-civicas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .acao-civica {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border: 1px solid var(--linha);
+    border-radius: 12px;
+    padding: 8px 10px;
+    background: var(--superficie);
+    color: var(--texto);
+    font: 700 12px/1.2 "Noto Sans", system-ui, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  .acao-civica:hover {
+    background: var(--superficie-2);
+  }
+
+  .acao-civica svg {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+  }
+
+  .acao-civica-compartilhar {
+    border-color: var(--marca);
+    color: var(--texto);
+  }
+
+  .acao-civica-compartilhar svg {
+    color: var(--marca);
+  }
+
+  .cabecalho-impressao {
+    display: none;
   }
 
   .alternar-tema svg {
@@ -659,7 +707,7 @@
     font-size: 11.5px;
     font-weight: 600;
     padding: 7px 4px;
-    min-height: 36px;
+    min-height: 44px;
     border: none;
     border-radius: 12px;
     background: var(--linha);
@@ -878,6 +926,7 @@
     background: var(--superficie-2);
     color: var(--texto);
     cursor: pointer;
+    min-height: 44px;
   }
 
   .paginacao button:disabled {
@@ -921,7 +970,7 @@
     font-size: 12.5px;
     font-weight: 600;
     padding: 7px 8px;
-    min-height: 36px;
+    min-height: 44px;
     border-radius: 11px;
     background: transparent;
     color: var(--texto-suave);
@@ -961,7 +1010,7 @@
     font-size: 12.5px;
     font-weight: 600;
     padding: 7px 4px;
-    min-height: 36px;
+    min-height: 44px;
     border-radius: 11px;
     background: transparent;
     color: var(--texto-suave);
@@ -1191,7 +1240,7 @@
     fill: var(--texto-suave);
   }
 
-  /* Cards Direção 3 — estrutura idêntica ao preview_direcao_app.html */
+  /* Cards Direção 3, estrutura idêntica ao preview_direcao_app.html */
   .secao-titulo-linha {
     display: flex;
     justify-content: space-between;
@@ -1495,10 +1544,26 @@
     padding: 11px 0;
     border-bottom: 1px solid var(--fundo);
     gap: 10px;
-    text-decoration: none;
     color: inherit;
   }
   .item-votado:last-child { border-bottom: none; }
+  .materia-link {
+    min-width: 0;
+    min-height: 44px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: inherit;
+    text-decoration: none;
+  }
+  .materia-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
   .item-votado .materia-titulo {
     font-size: 13.5px;
     font-weight: 700;
@@ -1524,9 +1589,157 @@
   [data-tema="escuro"] .badge-unanimidade { background: #143322; color: #86efac; }
   [data-tema="escuro"] .badge-maioria { background: #2a2840; color: #c4b5fd; }
 
+  .compartilhar-materia {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex: 0 0 auto;
+    padding: 7px 9px;
+    border: 1px solid var(--linha);
+    border-radius: 10px;
+    color: var(--texto);
+    background: var(--marca-fundo);
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .compartilhar-materia:hover {
+    border-color: var(--marca);
+  }
+
+  .compartilhar-materia svg {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto;
+    color: var(--marca);
+  }
+
   @media (min-width: 520px) {
     body { padding: 16px 0; }
     .pagina { border-radius: 20px; overflow: hidden; }
+  }
+
+  @page {
+    size: A4;
+    margin: 13mm;
+  }
+
+  @media print {
+    html,
+    body {
+      background: #ffffff !important;
+      color: #000000 !important;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10pt;
+      line-height: 1.35;
+    }
+
+    body {
+      padding: 0 !important;
+    }
+
+    .pagina {
+      max-width: none;
+      min-height: 0;
+      margin: 0;
+      background: #ffffff !important;
+    }
+
+    .cabecalho-impressao {
+      display: block;
+      margin-bottom: 8mm;
+      padding-bottom: 4mm;
+      border-bottom: 2px solid #000000;
+    }
+
+    .cabecalho-impressao h1 {
+      margin: 0 0 2mm;
+      font-size: 17pt;
+      line-height: 1.2;
+    }
+
+    .cabecalho-impressao p {
+      margin: 1mm 0 0;
+      font-size: 9pt;
+    }
+
+    .cabecalho-impressao a {
+      color: #000000 !important;
+      overflow-wrap: anywhere;
+    }
+
+    .topo-fixo,
+    .acoes-civicas,
+    .filtros-materia,
+    .busca-materia-wrap,
+    .compartilhar-materia,
+    .controles,
+    .paginacao {
+      display: none !important;
+    }
+
+    .conteudo {
+      padding: 0;
+    }
+
+    .painel-camara-interno.ativo,
+    .painel-vereadores.ativo {
+      display: block !important;
+    }
+
+    .card-app,
+    .secao,
+    .perfil,
+    .item-votado,
+    .status-cartao,
+    .status-capsula {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .card-app,
+    .secao {
+      margin-bottom: 5mm;
+      padding: 4mm;
+      border: 1px solid #b8b8b8;
+      border-radius: 0;
+      background: #ffffff !important;
+      box-shadow: none !important;
+    }
+
+    .card-app *,
+    .secao *,
+    .rodape-coleta * {
+      color: #000000 !important;
+      text-shadow: none !important;
+    }
+
+    .grafico-anel-box,
+    .barra-trilho,
+    .barra-status-trilho,
+    .barra-tema-cam,
+    .barra-tema-sessao {
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .item-votado {
+      border-bottom-color: #d0d0d0;
+    }
+
+    .materia-link {
+      min-height: 0;
+    }
+
+    .rodape-coleta {
+      margin-top: 4mm;
+      border-top: 1px solid #b8b8b8;
+      color: #000000 !important;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -1536,6 +1749,11 @@
 </head>
 <body>
 <div class="pagina">
+  <section class="cabecalho-impressao" aria-label="Cabeçalho do boletim impresso">
+    <h1>Em Pratos Limpos: Boletim Cívico da Câmara Municipal de Campo Largo</h1>
+    <p>Dados oficiais coletados em <strong>14/09/2026</strong>.</p>
+    <p>Consulte o painel oficial: <a href="https://empratoslimposcl.github.io/em-pratos-limpos/">https://empratoslimposcl.github.io/em-pratos-limpos/</a></p>
+  </section>
   <header class="topo-fixo">
     <div class="topo-util">
       <span class="topo-local">Câmara Municipal · Campo Largo</span>
@@ -1548,6 +1766,16 @@
       <p class="titulo-site">Em Pratos Limpos</p>
       <div class="selo-sapl"><span class="ponto-status" aria-hidden="true"></span>Dados oficiais do SAPL</div>
       <p class="subtitulo-site">O que a Câmara de Campo Largo vota, e como cada vereador votou</p>
+    </div>
+    <div class="acoes-civicas" aria-label="Ações de compartilhamento">
+      <a class="acao-civica acao-civica-compartilhar" href="https://api.whatsapp.com/send?text=Conhe%C3%A7a%20o%20Em%20Pratos%20Limpos%2C%20painel%20com%20dados%20oficiais%20da%20C%C3%A2mara%20Municipal%20de%20Campo%20Largo%3A%20https%3A%2F%2Fempratoslimposcl.github.io%2Fem-pratos-limpos%2F" target="_blank" rel="noopener noreferrer">
+        <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"></path></svg>
+        <span>Compartilhar Painel</span>
+      </a>
+      <button type="button" class="acao-civica" id="btn-imprimir">
+        <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        <span>Boletim para Impressão / PDF</span>
+      </button>
     </div>
     <nav class="nav-principal" id="nav-principal" aria-label="Navegação principal">
       <button type="button" class="ativo" data-secao="camara" aria-current="page">Câmara</button>
@@ -1900,6 +2128,8 @@
   }
 
   var SAPL_ORIGEM = "https://sapl.campolargo.pr.leg.br";
+  var PORTAL_OFICIAL = "https://empratoslimposcl.github.io/em-pratos-limpos/";
+  var WHATSAPP_COMPARTILHAR = "https://api.whatsapp.com/send?text=";
 
   function esc(texto) {
     if (texto == null) return "";
@@ -1946,7 +2176,7 @@
 
   function renderBadgePartido(v) {
     if (!v.partido_sigla && !v.partido_nome) return "";
-    var sigla = v.partido_sigla || "—";
+    var sigla = v.partido_sigla || "Não informado";
     var nome = v.partido_nome || "";
     return '<p class="badge-partido" aria-label="Partido: ' + esc(nome || sigla) + '">' +
       '<span class="sigla">' + esc(sigla) + "</span>" +
@@ -2585,15 +2815,43 @@
     return "";
   }
 
+  function resultadoCompartilhamento(m) {
+    var prefixo = m.resultado === "maioria"
+      ? "Aprovado por maioria"
+      : "Aprovado por unanimidade";
+    var match = m.placar.match(/(\d+)\s*a favor,\s*(\d+)\s*contra/);
+    if (!match) return prefixo + ".";
+    var resultado = prefixo + ": " + match[1] + " a favor";
+    if (match[2] !== "0") resultado += ", " + match[2] + " contra";
+    return resultado + ".";
+  }
+
+  function linkCompartilhamentoMateria(m) {
+    var linkSap = SAPL_ORIGEM + "/materia/" + encodeURIComponent(String(m.id));
+    var texto = "Em Pratos Limpos\n\n" +
+      m.tipo + "\n" +
+      m.ementa + "\n" +
+      "Resultado oficial: " + resultadoCompartilhamento(m) + "\n\n" +
+      "Fonte oficial no SAPL: " + linkSap + "\n" +
+      "Painel oficial: " + PORTAL_OFICIAL;
+    return WHATSAPP_COMPARTILHAR + encodeURIComponent(texto);
+  }
+
   function renderCardMateria(m) {
     var badgeClass = m.resultado === "maioria" ? "badge-maioria" : "badge-unanimidade";
     var placar = placarResumido(m.placar);
-    return '<a class="item-votado materia" href="https://sapl.campolargo.pr.leg.br/materia/' + esc(m.id) +
+    var linkSap = SAPL_ORIGEM + "/materia/" + encodeURIComponent(String(m.id));
+    return '<article class="item-votado materia" data-resultado="' + esc(m.resultado) + '">' +
+      '<a class="materia-link" href="' + esc(linkSap) +
       '" target="_blank" rel="noopener noreferrer" data-resultado="' + esc(m.resultado) + '">' +
       '<div class="materia-info"><span class="materia-titulo">' + esc(m.tipo) +
       '</span><span class="materia-ementa">' + esc(m.ementa) + "</span></div>" +
       (placar ? '<span class="badge-status ' + badgeClass + '">' + esc(placar) + "</span>" : "") +
-      "</a>";
+      '</a><a class="compartilhar-materia" href="' + esc(linkCompartilhamentoMateria(m)) +
+      '" target="_blank" rel="noopener noreferrer" aria-label="Compartilhar ' + esc(m.tipo) + ' no WhatsApp">' +
+      '<svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">' +
+      '<circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle>' +
+      '<path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"></path></svg><span>Compartilhar</span></a></article>';
   }
 
   function materiasFiltradas(periodo) {
@@ -2770,6 +3028,10 @@
 
     document.getElementById("btn-tema").addEventListener("click", function () {
       alternarTema();
+    });
+
+    document.getElementById("btn-imprimir").addEventListener("click", function () {
+      window.print();
     });
 
     if (window.location.hash === "#vereadores") {
