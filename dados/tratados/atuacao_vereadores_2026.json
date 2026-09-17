@@ -1,8 +1,8 @@
 {
   "meta": {
-    "gerado_em": "2026-09-16T01:19:42-03:00",
+    "gerado_em": "2026-09-16T21:13:43-03:00",
     "gerado_por": "dados/tratados/gerar_atuacao_vereadores_2026.py",
-    "dado_coletado_em": "2026-09-16T04:19:42+00:00",
+    "dado_coletado_em": "2026-09-17T00:13:42+00:00",
     "fonte_data_coleta": "dados/brutos/_resumo_coleta_vereadores_2026.json",
     "n_sessoes_ordinarias": 26,
     "n_vereadores": 15,

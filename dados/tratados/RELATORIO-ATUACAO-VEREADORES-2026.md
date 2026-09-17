@@ -1,7 +1,7 @@
 # Atuação dos vereadores nas sessões ordinárias de 2026
 
-Gerado em: 2026-09-16T01:19:42-03:00
-Dado coletado em: 2026-09-16T04:19:42+00:00
+Gerado em: 2026-09-16T21:13:43-03:00
+Dado coletado em: 2026-09-17T00:13:42+00:00
 Script: `dados/tratados/gerar_atuacao_vereadores_2026.py`
 Fonte: arquivos oficiais guardados em `dados/brutos/` e a tabela única `dados/tratados/vereadores.json`. Nada foi inventado na mão.
 
