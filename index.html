@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; child-src 'none'; worker-src 'none'; img-src 'self' https://sapl.campolargo.pr.leg.br; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'none'; upgrade-insecure-requests;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src https://challenges.cloudflare.com; child-src 'none'; worker-src 'none'; img-src 'self' https://sapl.campolargo.pr.leg.br; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com; connect-src 'self' https://em-pratos-limpos-votacao.workers.dev https://challenges.cloudflare.com; form-action 'none'; upgrade-insecure-requests;">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Em Pratos Limpos: o que a Câmara de Campo Largo vota</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2126,6 +2126,418 @@
     flex: 0 0 auto;
   }
 
+  .btn-votar-fab {
+    position: fixed;
+    z-index: 50;
+    right: max(16px, calc(50% - 195px + 16px));
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 44px;
+    min-height: 48px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 14px;
+    background: var(--marca-solida);
+    color: #ffffff;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08), 0 10px 22px rgba(0, 0, 0, 0.16);
+    transition: background-color 0.16s ease, transform 0.16s ease, box-shadow 0.16s ease;
+  }
+  .btn-votar-fab:hover {
+    background: var(--primaria);
+  }
+  .btn-votar-fab:active {
+    transform: translateY(1px);
+  }
+  .btn-votar-fab[hidden] { display: none !important; }
+  .btn-votar-fab svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .votacao-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.48);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.22s ease, visibility 0.22s ease;
+  }
+  .votacao-overlay.ativo {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .votacao-modal {
+    width: 100%;
+    max-width: 390px;
+    max-height: min(92vh, 760px);
+    background: var(--fundo);
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.2);
+    transform: translateY(100%);
+    transition: transform 0.28s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .votacao-overlay.ativo .votacao-modal {
+    transform: translateY(0);
+  }
+  .votacao-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px 10px;
+    background: var(--superficie);
+    border-bottom: 1px solid var(--linha);
+    flex-shrink: 0;
+  }
+  .votacao-cabecalho h2 {
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--texto);
+  }
+  .votacao-corpo {
+    overflow: auto;
+    padding: 16px 16px 20px;
+    flex: 1;
+  }
+  .votacao-intro {
+    margin: 0 0 14px;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--texto-suave);
+  }
+  .votacao-termos {
+    margin: 0 0 16px;
+    padding: 12px 14px;
+    background: var(--superficie);
+    border: 1px solid var(--linha);
+    border-radius: 12px;
+  }
+  .votacao-termos h3 {
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--texto);
+  }
+  .votacao-termos-texto {
+    margin: 0 0 12px;
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--texto);
+    max-height: 140px;
+    overflow: auto;
+  }
+  .votacao-termos-texto p { margin: 0 0 8px; }
+  .votacao-termos-texto p:last-child { margin-bottom: 0; }
+  .votacao-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--texto);
+    cursor: pointer;
+  }
+  .votacao-check input {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    margin-top: 1px;
+    accent-color: var(--marca-solida);
+  }
+  .votacao-lista {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .votacao-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+    background: var(--superficie);
+    border: 1px solid var(--linha);
+    border-radius: 10px;
+  }
+  .votacao-item-status {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    border-radius: 50%;
+    border: 2px solid var(--linha);
+    background: var(--superficie-2);
+    color: var(--texto);
+    font-size: 12px;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+  .votacao-item.ok .votacao-item-status {
+    border-color: var(--ok);
+    background: var(--ok-fundo);
+    color: var(--ok);
+  }
+  .votacao-item.erro .votacao-item-status {
+    border-color: var(--nao);
+    background: var(--nao-fundo);
+    color: var(--nao);
+  }
+  .votacao-item-texto strong {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 700;
+  }
+  .votacao-item-texto span {
+    display: block;
+    font-size: 12px;
+    color: var(--texto-suave);
+    margin-top: 2px;
+  }
+  .votacao-aviso {
+    margin: 0 0 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: var(--aviso-fundo);
+    border: 1px solid var(--aviso-borda);
+    color: var(--aviso-texto);
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .votacao-aviso:empty { display: none; }
+  .votacao-erro {
+    margin: 0 0 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: var(--nao-fundo);
+    color: var(--nao);
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .votacao-erro:empty { display: none; }
+  .votacao-acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .btn-votar-primario,
+  .btn-votar-secundario {
+    min-height: 48px;
+    width: 100%;
+    border-radius: 12px;
+    font-family: "Noto Sans", system-ui, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 12px 16px;
+  }
+  .btn-votar-primario {
+    border: none;
+    background: var(--marca-solida);
+    color: #ffffff;
+  }
+  .btn-votar-primario:hover:not(:disabled) {
+    background: var(--primaria);
+  }
+  .btn-votar-primario:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+  .btn-votar-secundario {
+    border: 1px solid var(--linha);
+    background: var(--superficie);
+    color: var(--texto);
+  }
+  .votacao-ajuda-botao {
+    margin: 0;
+    font-size: 12px;
+    color: var(--texto-suave);
+    line-height: 1.4;
+  }
+  .voto-progresso {
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--texto-suave);
+    font-variant-numeric: tabular-nums;
+  }
+  .voto-swipe-palco {
+    position: relative;
+    min-height: 320px;
+    margin-bottom: 16px;
+    touch-action: none;
+  }
+  .voto-swipe-card {
+    position: relative;
+    min-height: 320px;
+    background: var(--superficie);
+    border: 1px solid var(--linha);
+    border-radius: 16px;
+    padding: 22px 18px 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 14px 28px rgba(0, 0, 0, 0.08);
+    user-select: none;
+    will-change: transform;
+  }
+  .voto-swipe-selo {
+    position: absolute;
+    top: 18px;
+    padding: 4px 10px;
+    border: 3px solid;
+    border-radius: 8px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .voto-swipe-selo.util {
+    left: 16px;
+    color: var(--ok);
+    border-color: var(--ok);
+    transform: rotate(-11deg);
+  }
+  .voto-swipe-selo.inutil {
+    right: 16px;
+    color: var(--nao);
+    border-color: var(--nao);
+    transform: rotate(11deg);
+  }
+  .voto-card-tipo {
+    margin: 0 0 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--marca);
+  }
+  .voto-card-titulo {
+    margin: 0 0 10px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    text-wrap: balance;
+    color: var(--texto);
+  }
+  .voto-card-ementa {
+    margin: 0 0 14px;
+    font-size: 14.5px;
+    line-height: 1.45;
+    color: var(--texto);
+  }
+  .voto-card-meta {
+    margin: 0;
+    font-size: 13px;
+    color: var(--texto-suave);
+    line-height: 1.45;
+  }
+  .voto-botoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 16px;
+    padding: 0 8px 4px;
+  }
+  .btn-swipe {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-height: 44px;
+    padding: 8px;
+    border: none;
+    background: transparent;
+    color: var(--texto);
+    font-family: "Noto Sans", system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .btn-swipe-circulo {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid var(--linha);
+    background: var(--superficie);
+  }
+  .btn-swipe.reprovar .btn-swipe-circulo {
+    color: var(--nao);
+    border-color: var(--nao);
+    background: var(--nao-fundo);
+  }
+  .btn-swipe.aprovar .btn-swipe-circulo {
+    color: var(--ok);
+    border-color: var(--ok);
+    background: var(--ok-fundo);
+  }
+  .btn-swipe svg {
+    width: 26px;
+    height: 26px;
+  }
+  .voto-popular {
+    margin-top: 8px;
+    width: 100%;
+  }
+    .voto-popular-nums {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--texto-suave);
+    margin-bottom: 4px;
+  }
+  .voto-popular-nums .util { color: var(--ok); }
+  .voto-popular-nums .inutil { color: var(--nao); }
+  .voto-popular-trilho {
+    display: flex;
+    height: 6px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--nao-fundo);
+  }
+  .voto-popular-util {
+    height: 100%;
+    background: var(--ok);
+  }
+  .cf-turnstile-slot {
+    min-height: 0;
+    overflow: hidden;
+  }
+
   @media (min-width: 520px) {
     body { padding: 16px 0; }
     .pagina { border-radius: 20px; }
@@ -2133,6 +2545,16 @@
     .nav-principal {
       bottom: 16px;
       border-radius: 0 0 20px 20px;
+    }
+    .btn-votar-fab {
+      bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+    }
+    .votacao-overlay {
+      align-items: center;
+    }
+    .votacao-modal {
+      border-radius: 18px;
+      max-height: min(88vh, 740px);
     }
   }
 
@@ -2202,6 +2624,8 @@
     .nav-principal,
     .share-sheet-backdrop,
     .resumo-sheet-backdrop,
+    .votacao-overlay,
+    .btn-votar-fab,
     .filtros-materia,
     .busca-materia-wrap,
     .compartilhar-materia,
@@ -2283,6 +2707,10 @@
     .share-sheet,
     .resumo-sheet-backdrop,
     .resumo-sheet,
+    .votacao-overlay,
+    .votacao-modal,
+    .btn-votar-fab,
+    .voto-swipe-card,
     .nav-principal button,
     .card-detalhes summary::after {
       transition: none;
@@ -2674,11 +3102,157 @@
   </div>
 </div>
 
+<button type="button" class="btn-votar-fab" id="btn-votar-fab" aria-haspopup="dialog" aria-controls="votacao-overlay">
+  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M9 11l3 3L22 4"></path>
+    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+  </svg>
+  <span>Votar</span>
+</button>
+
+<div class="votacao-overlay" id="votacao-overlay" aria-hidden="true">
+  <div class="votacao-modal" role="dialog" aria-modal="true" aria-labelledby="votacao-titulo" id="votacao-dialog">
+    <div class="share-sheet-grabber" aria-hidden="true"></div>
+    <div class="votacao-cabecalho">
+      <h2 id="votacao-titulo">Opinião da população</h2>
+      <button type="button" class="share-sheet-fechar" id="btn-fechar-votacao" aria-label="Fechar votação">
+        <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="votacao-corpo" id="votacao-corpo">
+      <div id="votacao-etapa-verificacao">
+        <p class="votacao-intro">Diga se os projetos da última sessão são úteis para Campo Largo. Só quem está no município pode participar, e cada endereço de internet vota uma vez por sessão.</p>
+        <div class="votacao-termos">
+          <h3>Termos de uso</h3>
+          <div class="votacao-termos-texto" id="votacao-termos-texto">
+            <p>Esta consulta popular não substitui o voto oficial da Câmara Municipal.</p>
+            <p>Você pode enviar uma opinião por endereço de internet, por sessão. Depois de enviar, não dá para mudar.</p>
+            <p>Pedimos localização só para confirmar que você está em Campo Largo. Não pedimos nome, CPF nem e-mail.</p>
+            <p>Os números vêm do SAPL da Câmara. O autor do projeto fica oculto durante a votação, para não influenciar a opinião.</p>
+          </div>
+          <label class="votacao-check" for="check-termos-votacao">
+            <input type="checkbox" id="check-termos-votacao">
+            <span>Li e aceito os termos de uso desta consulta popular.</span>
+          </label>
+        </div>
+        <ul class="votacao-lista" aria-live="polite">
+          <li class="votacao-item" id="verif-captcha">
+            <span class="votacao-item-status" aria-hidden="true">1</span>
+            <div class="votacao-item-texto">
+              <strong>Verificação humana</strong>
+              <span>Captcha invisível do Cloudflare. Roda sozinho, sem quebra-cabeça.</span>
+            </div>
+          </li>
+          <li class="votacao-item" id="verif-ip">
+            <span class="votacao-item-status" aria-hidden="true">2</span>
+            <div class="votacao-item-texto">
+              <strong>Endereço de acesso</strong>
+              <span>Confirma se este aparelho já votou nesta sessão.</span>
+            </div>
+          </li>
+          <li class="votacao-item" id="verif-geo">
+            <span class="votacao-item-status" aria-hidden="true">3</span>
+            <div class="votacao-item-texto">
+              <strong>Localização em Campo Largo</strong>
+              <span>O navegador pede sua localização para confirmar o município.</span>
+            </div>
+          </li>
+        </ul>
+        <div class="cf-turnstile-slot" id="cf-turnstile" aria-hidden="true"></div>
+        <p class="votacao-aviso" id="votacao-aviso" role="status"></p>
+        <p class="votacao-erro" id="votacao-erro-verificacao" role="alert"></p>
+        <div class="votacao-acoes">
+          <button type="button" class="btn-votar-primario" id="btn-iniciar-votacao" disabled>Iniciar votação</button>
+          <p class="votacao-ajuda-botao" id="votacao-ajuda-botao">O botão libera quando você aceitar os termos e as três verificações estiverem ok.</p>
+        </div>
+      </div>
+
+      <div id="votacao-etapa-cards" hidden>
+        <p class="voto-progresso" id="voto-progresso" aria-live="polite"></p>
+        <div class="voto-swipe-palco" id="voto-swipe-palco">
+          <article class="voto-swipe-card" id="voto-swipe-card">
+            <div class="voto-swipe-selo util" id="selo-util">Útil</div>
+            <div class="voto-swipe-selo inutil" id="selo-inutil">Inútil</div>
+            <p class="voto-card-tipo" id="voto-card-tipo"></p>
+            <h3 class="voto-card-titulo" id="voto-card-titulo"></h3>
+            <p class="voto-card-ementa" id="voto-card-ementa"></p>
+            <p class="voto-card-meta" id="voto-card-meta"></p>
+          </article>
+        </div>
+        <div class="voto-botoes">
+          <button type="button" class="btn-swipe reprovar" id="btn-reprovar" aria-label="Reprovar, marcar como inútil">
+            <span class="btn-swipe-circulo" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>
+            </span>
+            <span>Inútil</span>
+          </button>
+          <button type="button" class="btn-swipe aprovar" id="btn-aprovar" aria-label="Aprovar, marcar como útil">
+            <span class="btn-swipe-circulo" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+            </span>
+            <span>Útil</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="votacao-etapa-confirmacao" hidden>
+        <p class="votacao-intro" id="votacao-resumo-confirmacao"></p>
+        <p class="votacao-aviso">Depois de enviar, estes votos não podem ser alterados.</p>
+        <p class="votacao-erro" id="votacao-erro-envio" role="alert"></p>
+        <div class="votacao-acoes">
+          <button type="button" class="btn-votar-primario" id="btn-enviar-votos">Enviar opinião</button>
+        </div>
+      </div>
+
+      <div id="votacao-etapa-fim" hidden>
+        <p class="votacao-intro" id="votacao-texto-fim">Opinião enviada. Obrigado. Os percentuais de útil e inútil agora aparecem em cada projeto da última sessão.</p>
+        <div class="votacao-acoes">
+          <button type="button" class="btn-votar-primario" id="btn-fechar-fim">Ver resultados</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 (function () {
   "use strict";
 
   var STORAGE_TEMA = "dashboard-campo-largo-tema";
+  var STORAGE_VOTOU = "epl-votacao-ja-votou";
+  var STORAGE_RESULTADOS = "epl-votacao-resultados-local";
+  var API_VOTACAO = "https://muddy-moon-e7ad.empratoslimposcl.workers.dev";
+  var TURNSTILE_SITEKEY = "0x4AAAAAAE7BBd7br5JwQB2f";
+  var SESSAO_VOTACAO_ID = 794;
+  var REQUER_GEOLOCALIZACAO = true;
+  var COOKIE_MODO_TESTE = "epl-modo-teste";
+  var COOKIE_SECRETO = "v7Xk2mN9pQ4wR8tY";
+  var GEO_CAMPO_LARGO = {
+    latMin: -25.68,
+    latMax: -25.28,
+    lonMin: -49.78,
+    lonMax: -49.32
+  };
+  var estadoVotacao = {
+    aberto: false,
+    etapa: "verificacao",
+    termos: false,
+    captcha: false,
+    ip: false,
+    geo: false,
+    token: "",
+    ipHash: "",
+    sessaoId: SESSAO_VOTACAO_ID,
+    jaVotou: false,
+    resultadosVisiveis: false,
+    resultados: {},
+    projetos: [],
+    indice: 0,
+    votos: [],
+    widgetTurnstile: null,
+    arrasto: { ativo: false, x0: 0, dx: 0, id: null },
+    gatilho: null
+  };
   var JSON_URL = window.location.pathname.indexOf("/docs/") !== -1
     ? "../../dados/tratados/atuacao_vereadores_2026.json"
     : "dados/tratados/atuacao_vereadores_2026.json";
@@ -3901,7 +4475,8 @@
       '" aria-haspopup="dialog" aria-controls="resumo-sheet" aria-label="Abrir resumo de ' + esc(m.tipo) + '">' +
       '<div class="materia-info"><span class="materia-titulo">' + esc(m.tipo) +
       '</span>' + htmlTagsMateria(m.id) +
-      '<span class="materia-ementa">' + esc(m.ementa) + "</span></div>" +
+      '<span class="materia-ementa">' + esc(m.ementa) + "</span>" +
+      htmlResultadoPopular(m.id) + "</div>" +
       (placar ? '<span class="badge-status ' + badgeClass + '">' + esc(placar) + "</span>" : "") +
       "</button></article>";
   }
@@ -4062,8 +4637,26 @@
     return !!(el && el.classList.contains("ativo"));
   }
 
+  function folhaVotacaoAberta() {
+    var el = document.getElementById("votacao-overlay");
+    return !!(el && el.classList.contains("ativo"));
+  }
+
   function atualizarOverflowFolhas() {
-    document.body.style.overflow = (folhaShareAberta() || folhaResumoAberta()) ? "hidden" : "";
+    document.body.style.overflow = (folhaShareAberta() || folhaResumoAberta() || folhaVotacaoAberta()) ? "hidden" : "";
+  }
+
+  function htmlResultadoPopular(id) {
+    if (!estadoVotacao.resultadosVisiveis) return "";
+    var r = estadoVotacao.resultados[id] || estadoVotacao.resultados[String(id)];
+    if (!r) return "";
+    var util = Number(r.percentual_util) || 0;
+    var inutil = Number(r.percentual_inutil) || 0;
+    return '<div class="voto-popular" aria-label="Opinião popular: ' + esc(util) + '% útil e ' + esc(inutil) + '% inútil">' +
+      '<div class="voto-popular-nums">' +
+      '<span class="util">' + esc(util) + "% útil</span>" +
+      '<span class="inutil">' + esc(inutil) + "% inútil</span></div>" +
+      '<div class="voto-popular-trilho"><span class="voto-popular-util" style="width:' + esc(util) + '%"></span></div></div>';
   }
 
   var resumoContexto = { dados: null, periodo: "sessao" };
@@ -4090,6 +4683,12 @@
       html += '<div class="resumo-campo">' +
         '<p class="resumo-campo-rotulo">Categoria</p>' +
         '<p class="resumo-campo-valor"><span class="tag-categoria">' + esc(m.categoria) + "</span></p></div>";
+    }
+    var popular = htmlResultadoPopular(m.id);
+    if (popular) {
+      html += '<div class="resumo-campo">' +
+        '<p class="resumo-campo-rotulo">Opinião da população</p>' +
+        '<div class="resumo-campo-valor">' + popular + "</div></div>";
     }
     html += '<a class="resumo-link-sapl" href="' + esc(linkSap) +
       '" target="_blank" rel="noopener noreferrer">' +
@@ -4406,6 +5005,698 @@
     }
   }
 
+  function origemDeTeste() {
+    var h = location.hostname;
+    return h === "localhost" || h === "127.0.0.1";
+  }
+
+  function leituraVotouLocal() {
+    try {
+      var bruto = localStorage.getItem(STORAGE_VOTOU);
+      if (!bruto) return null;
+      return JSON.parse(bruto);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function gravarVotouLocal(sessaoId) {
+    localStorage.setItem(STORAGE_VOTOU, JSON.stringify({
+      sessao_id: sessaoId,
+      em: Date.now()
+    }));
+  }
+
+  function leituraResultadosLocal() {
+    try {
+      var bruto = localStorage.getItem(STORAGE_RESULTADOS);
+      if (!bruto) return {};
+      return JSON.parse(bruto);
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function aplicarMapaResultados(lista) {
+    estadoVotacao.resultados = {};
+    (lista || []).forEach(function (item) {
+      var id = item.projeto_id != null ? item.projeto_id : item.id;
+      if (id == null) return;
+      estadoVotacao.resultados[id] = {
+        percentual_util: item.percentual_util,
+        percentual_inutil: item.percentual_inutil
+      };
+    });
+  }
+
+  function mostrarFabVotar(mostrar) {
+    var fab = document.getElementById("btn-votar-fab");
+    if (!fab) return;
+    if (mostrar) fab.removeAttribute("hidden");
+    else fab.setAttribute("hidden", "hidden");
+  }
+
+  function setVerificacao(id, estado, detalhe) {
+    var item = document.getElementById(id);
+    if (!item) return;
+    item.classList.remove("ok", "erro");
+    if (estado) item.classList.add(estado);
+    var span = item.querySelector(".votacao-item-texto span");
+    if (span && detalhe) span.textContent = detalhe;
+    var marca = item.querySelector(".votacao-item-status");
+    if (marca) {
+      if (estado === "ok") marca.textContent = "ok";
+      else if (estado === "erro") marca.textContent = "!";
+    }
+  }
+
+  function atualizarBotaoIniciar() {
+    var btn = document.getElementById("btn-iniciar-votacao");
+    var ajuda = document.getElementById("votacao-ajuda-botao");
+    var pronto = estadoVotacao.termos && estadoVotacao.captcha && estadoVotacao.ip && estadoVotacao.geo && !estadoVotacao.jaVotou;
+    if (btn) btn.disabled = !pronto;
+    if (ajuda) {
+      ajuda.textContent = pronto
+        ? "Tudo certo. Você pode iniciar."
+        : "O botão libera quando você aceitar os termos e as três verificações estiverem ok.";
+    }
+  }
+
+  function mostrarEtapa(nome) {
+    estadoVotacao.etapa = nome;
+    ["verificacao", "cards", "confirmacao", "fim"].forEach(function (id) {
+      var el = document.getElementById("votacao-etapa-" + id);
+      if (el) el.hidden = id !== nome;
+    });
+    var titulo = document.getElementById("votacao-titulo");
+    if (titulo) {
+      if (nome === "cards") titulo.textContent = "Este projeto é útil?";
+      else if (nome === "confirmacao") titulo.textContent = "Confirmar opinião";
+      else if (nome === "fim") titulo.textContent = "Opinião enviada";
+      else titulo.textContent = "Opinião da população";
+    }
+  }
+
+  function projetosLocaisSemAutor() {
+    return (MATERIAS_CAMARA.sessao || []).map(function (m) {
+      var resultado = m.resultado === "maioria"
+        ? "Aprovado por maioria na Câmara"
+        : "Aprovado por unanimidade na Câmara";
+      return {
+        projeto_id: m.id,
+        titulo: m.tipo,
+        ementa: m.ementa,
+        tipo: m.tipo,
+        resultado: resultado,
+        sessao_id: SESSAO_VOTACAO_ID,
+        data_sessao: DATA_ULTIMA_SESSAO
+      };
+    });
+  }
+
+  function normalizarProjetosApi(lista) {
+    return (lista || []).map(function (p) {
+      return {
+        projeto_id: p.projeto_id,
+        titulo: p.titulo || p.tipo || "",
+        ementa: p.ementa || "",
+        tipo: p.tipo || p.titulo || "",
+        resultado: p.resultado || "",
+        sessao_id: p.sessao_id || SESSAO_VOTACAO_ID,
+        data_sessao: p.data_sessao || DATA_ULTIMA_SESSAO
+      };
+    });
+  }
+
+  function apiJson(caminho, opcoes) {
+    return fetch(API_VOTACAO + caminho, opcoes).then(function (res) {
+      return res.json().then(function (corpo) {
+        if (!res.ok) {
+          var erro = new Error((corpo && corpo.error) || "A consulta não pôde ser concluída.");
+          erro.status = res.status;
+          erro.corpo = corpo;
+          throw erro;
+        }
+        return corpo;
+      });
+    });
+  }
+
+  function pontoEmCampoLargo(lat, lon) {
+    return lat >= GEO_CAMPO_LARGO.latMin && lat <= GEO_CAMPO_LARGO.latMax &&
+      lon >= GEO_CAMPO_LARGO.lonMin && lon <= GEO_CAMPO_LARGO.lonMax;
+  }
+
+  function pedirGeolocalizacao() {
+    return new Promise(function (resolve, reject) {
+      if (!navigator.geolocation) {
+        reject(new Error("Este navegador não informa localização."));
+        return;
+      }
+      navigator.geolocation.getCurrentPosition(function (pos) {
+        resolve(pos.coords);
+      }, function (err) {
+        if (err && err.code === 1) {
+          reject(new Error("A permissão de localização foi negada. Ative no navegador e tente de novo."));
+        } else if (err && err.code === 2) {
+          reject(new Error("Não foi possível obter a localização agora."));
+        } else {
+          reject(new Error("A localização demorou demais. Tente de novo em um lugar aberto."));
+        }
+      }, { enableHighAccuracy: false, timeout: 12000, maximumAge: 60000 });
+    });
+  }
+
+  function carregarTurnstile() {
+    return new Promise(function (resolve, reject) {
+      if (window.turnstile) {
+        resolve(window.turnstile);
+        return;
+      }
+      var existente = document.getElementById("script-turnstile");
+      if (existente) {
+        existente.addEventListener("load", function () { resolve(window.turnstile); });
+        existente.addEventListener("error", function () { reject(new Error("Não foi possível carregar a verificação humana.")); });
+        return;
+      }
+      var s = document.createElement("script");
+      s.id = "script-turnstile";
+      s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      s.async = true;
+      s.onload = function () { resolve(window.turnstile); };
+      s.onerror = function () { reject(new Error("Não foi possível carregar a verificação humana.")); };
+      document.head.appendChild(s);
+    });
+  }
+
+  function resetarTurnstile() {
+    if (window.turnstile && estadoVotacao.widgetTurnstile != null) {
+      try { window.turnstile.reset(estadoVotacao.widgetTurnstile); } catch (e) {}
+    }
+    estadoVotacao.token = "";
+    estadoVotacao.captcha = false;
+  }
+
+  function montarTurnstile() {
+    var slot = document.getElementById("cf-turnstile");
+    if (!slot) return Promise.reject(new Error("Área do captcha ausente."));
+    function fallbackLocal() {
+      estadoVotacao.token = "token-teste-local";
+      estadoVotacao.captcha = true;
+      setVerificacao("verif-captcha", "ok", "Verificação humana em modo de teste local.");
+      atualizarBotaoIniciar();
+      return estadoVotacao.token;
+    }
+    return carregarTurnstile().then(function (ts) {
+      if (!ts) throw new Error("Verificação humana indisponível.");
+      if (estadoVotacao.widgetTurnstile != null) {
+        try { ts.remove(estadoVotacao.widgetTurnstile); } catch (e) {}
+        estadoVotacao.widgetTurnstile = null;
+        slot.innerHTML = "";
+      }
+      return new Promise(function (resolve, reject) {
+        estadoVotacao.widgetTurnstile = ts.render(slot, {
+          sitekey: TURNSTILE_SITEKEY,
+          size: "invisible",
+          callback: function (token) {
+            estadoVotacao.token = token || "";
+            estadoVotacao.captcha = !!token;
+            setVerificacao("verif-captcha", "ok", "Verificação humana concluída.");
+            atualizarBotaoIniciar();
+            resolve(token);
+          },
+          "error-callback": function () {
+            if (origemDeTeste()) {
+              resolve(fallbackLocal());
+              return;
+            }
+            estadoVotacao.captcha = false;
+            setVerificacao("verif-captcha", "erro", "A verificação humana falhou. Recarregue a página.");
+            atualizarBotaoIniciar();
+            reject(new Error("A verificação humana falhou."));
+          },
+          "expired-callback": function () {
+            estadoVotacao.captcha = false;
+            estadoVotacao.token = "";
+            setVerificacao("verif-captcha", "erro", "A verificação expirou. Aceite os termos de novo.");
+            atualizarBotaoIniciar();
+          }
+        });
+        try { ts.execute(estadoVotacao.widgetTurnstile); } catch (e) {}
+        setTimeout(function () {
+          if (!estadoVotacao.captcha && origemDeTeste()) resolve(fallbackLocal());
+        }, 2500);
+      });
+    }).catch(function (err) {
+      if (origemDeTeste()) return fallbackLocal();
+      throw err;
+    });
+  }
+
+  function verificarApi(token) {
+    return apiJson("/api/verificar", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ token: token })
+    }).then(function (dados) {
+      estadoVotacao.ipHash = dados.ip_hash || "";
+      estadoVotacao.sessaoId = dados.sessao_id || SESSAO_VOTACAO_ID;
+      estadoVotacao.jaVotou = !!dados.ja_votou;
+      estadoVotacao.ip = true;
+      var cidade = dados.geolocalizacao || "não identificada";
+      setVerificacao("verif-ip", "ok", estadoVotacao.jaVotou
+        ? "Este endereço já enviou opinião nesta sessão."
+        : "Endereço de acesso verificado (" + cidade + ").");
+      return dados;
+    }).catch(function (err) {
+      if (origemDeTeste()) {
+        estadoVotacao.ip = true;
+        estadoVotacao.ipHash = "teste-local";
+        estadoVotacao.sessaoId = SESSAO_VOTACAO_ID;
+        var local = leituraVotouLocal();
+        estadoVotacao.jaVotou = !!(local && local.sessao_id === SESSAO_VOTACAO_ID);
+        setVerificacao("verif-ip", "ok", estadoVotacao.jaVotou
+          ? "Este aparelho já enviou opinião nesta sessão (teste local)."
+          : "Endereço de acesso verificado em modo de teste local.");
+        return { sucesso_local: true };
+      }
+      estadoVotacao.ip = false;
+      setVerificacao("verif-ip", "erro", err.message || "Não foi possível verificar o endereço de acesso.");
+      throw err;
+    });
+  }
+
+  function carregarProjetos() {
+    return apiJson("/api/projetos", { method: "GET" }).then(function (dados) {
+      var lista = normalizarProjetosApi(dados.projetos || []);
+      if (!lista.length) lista = projetosLocaisSemAutor();
+      estadoVotacao.projetos = lista;
+      return lista;
+    }).catch(function () {
+      estadoVotacao.projetos = projetosLocaisSemAutor();
+      return estadoVotacao.projetos;
+    });
+  }
+
+  function carregarResultadosRemotos() {
+    return apiJson("/api/resultados", { method: "GET" }).then(function (dados) {
+      aplicarMapaResultados(dados.resultados || []);
+      estadoVotacao.resultadosVisiveis = true;
+      ["sessao", "mes", "todo"].forEach(renderBlocoVotado);
+    }).catch(function () {
+      var local = leituraResultadosLocal();
+      var lista = [];
+      Object.keys(local).forEach(function (id) {
+        lista.push({
+          projeto_id: id,
+          percentual_util: local[id].percentual_util,
+          percentual_inutil: local[id].percentual_inutil
+        });
+      });
+      if (lista.length) {
+        aplicarMapaResultados(lista);
+        estadoVotacao.resultadosVisiveis = true;
+        ["sessao", "mes", "todo"].forEach(renderBlocoVotado);
+      }
+    });
+  }
+
+  function enviarVotosApi() {
+    var payload = {
+      ip_hash: estadoVotacao.ipHash,
+      sessao_id: estadoVotacao.sessaoId,
+      token: estadoVotacao.token,
+      votos: estadoVotacao.votos
+    };
+    return apiJson("/api/votar", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }).catch(function (err) {
+      if (!origemDeTeste()) throw err;
+      var mapa = leituraResultadosLocal();
+      estadoVotacao.votos.forEach(function (v) {
+        var atual = mapa[v.projeto_id] || { util: 0, inutil: 0 };
+        if (v.voto === "util") atual.util += 1;
+        else atual.inutil += 1;
+        var total = atual.util + atual.inutil;
+        atual.percentual_util = total ? Math.round((atual.util / total) * 100) : 0;
+        atual.percentual_inutil = total ? 100 - atual.percentual_util : 0;
+        mapa[v.projeto_id] = atual;
+      });
+      localStorage.setItem(STORAGE_RESULTADOS, JSON.stringify(mapa));
+      return { success: true, local: true };
+    });
+  }
+
+  function textoErro(elId, msg) {
+    var el = document.getElementById(elId);
+    if (el) el.textContent = msg || "";
+  }
+
+  function textoAviso(msg) {
+    var el = document.getElementById("votacao-aviso");
+    if (el) el.textContent = msg || "";
+  }
+
+  function iniciarVerificacoes() {
+    textoErro("votacao-erro-verificacao", "");
+    textoAviso("");
+    estadoVotacao.captcha = false;
+    estadoVotacao.ip = false;
+    estadoVotacao.geo = false;
+    setVerificacao("verif-captcha", "", "Captcha invisível do Cloudflare. Roda sozinho, sem quebra-cabeça.");
+    setVerificacao("verif-ip", "", "Confirma se este aparelho já votou nesta sessão.");
+    setVerificacao("verif-geo", "", "O navegador pede sua localização para confirmar o município.");
+    atualizarBotaoIniciar();
+
+    var pCaptcha = montarTurnstile().then(function (token) {
+      return verificarApi(token);
+    }).catch(function (err) {
+      textoErro("votacao-erro-verificacao", err.message || "Não foi possível concluir as verificações.");
+    });
+
+    // Verificar cookie de modo teste
+    var cookieMatch = document.cookie.match(new RegExp(COOKIE_MODO_TESTE + "=([^;]+)"));
+    var modoTeste = cookieMatch && cookieMatch[1] === COOKIE_SECRETO;
+
+    var pGeo;
+    if (modoTeste || !REQUER_GEOLOCALIZACAO) {
+      estadoVotacao.geo = true;
+      setVerificacao("verif-geo", "ok", modoTeste
+        ? "Modo teste ativo (cookie)."
+        : "Verificação de localização desativada.");
+      atualizarBotaoIniciar();
+      pGeo = Promise.resolve();
+    } else {
+      pGeo = pedirGeolocalizacao().then(function (coords) {
+        if (!pontoEmCampoLargo(coords.latitude, coords.longitude)) {
+          estadoVotacao.geo = false;
+          setVerificacao("verif-geo", "erro", "A localização não está em Campo Largo. Esta consulta é só para quem está no município.");
+          atualizarBotaoIniciar();
+          return;
+        }
+        estadoVotacao.geo = true;
+        setVerificacao("verif-geo", "ok", "Localização confirmada em Campo Largo.");
+        atualizarBotaoIniciar();
+      }).catch(function (err) {
+        estadoVotacao.geo = false;
+        setVerificacao("verif-geo", "erro", err.message);
+        atualizarBotaoIniciar();
+      });
+    }
+
+    return Promise.all([pCaptcha, pGeo]).then(function () {
+      if (estadoVotacao.jaVotou) {
+        textoAviso("Você já enviou sua opinião nesta sessão. Os percentuais aparecem nos cards dos projetos.");
+        mostrarFabVotar(false);
+        estadoVotacao.resultadosVisiveis = true;
+        carregarResultadosRemotos();
+      }
+      atualizarBotaoIniciar();
+    });
+  }
+
+  function preencherCardAtual() {
+    var p = estadoVotacao.projetos[estadoVotacao.indice];
+    var card = document.getElementById("voto-swipe-card");
+    if (!p || !card) return;
+    card.style.transition = "none";
+    card.style.transform = "translateX(0) rotate(0deg)";
+    document.getElementById("selo-util").style.opacity = "0";
+    document.getElementById("selo-inutil").style.opacity = "0";
+    document.getElementById("voto-card-tipo").textContent = p.tipo || "";
+    document.getElementById("voto-card-titulo").textContent = p.titulo || p.tipo || "Projeto";
+    document.getElementById("voto-card-ementa").textContent = p.ementa || "Ementa não informada no SAPL.";
+    document.getElementById("voto-card-meta").textContent =
+      "Resultado na Câmara: " + (p.resultado || "não informado") +
+      ". Sessão de " + (p.data_sessao || DATA_ULTIMA_SESSAO) + ".";
+    document.getElementById("voto-progresso").textContent =
+      "Projeto " + (estadoVotacao.indice + 1) + " de " + estadoVotacao.projetos.length + ".";
+    if (window.requestAnimationFrame) {
+      window.requestAnimationFrame(function () {
+        card.style.transition = "";
+      });
+    }
+  }
+
+  function aplicarArrasto(dx) {
+    var card = document.getElementById("voto-swipe-card");
+    if (!card) return;
+    var rot = dx / 18;
+    card.style.transform = "translateX(" + dx + "px) rotate(" + rot + "deg)";
+    var util = document.getElementById("selo-util");
+    var inutil = document.getElementById("selo-inutil");
+    if (util) util.style.opacity = dx > 24 ? String(Math.min(1, (dx - 24) / 80)) : "0";
+    if (inutil) inutil.style.opacity = dx < -24 ? String(Math.min(1, (-dx - 24) / 80)) : "0";
+  }
+
+  function animarSaida(direcao, depois) {
+    var card = document.getElementById("voto-swipe-card");
+    if (!card) {
+      depois();
+      return;
+    }
+    var reduzir = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduzir) {
+      depois();
+      return;
+    }
+    card.style.transition = "transform 0.22s ease-out, opacity 0.22s ease-out";
+    card.style.transform = "translateX(" + (direcao * 460) + "px) rotate(" + (direcao * 18) + "deg)";
+    card.style.opacity = "0";
+    setTimeout(function () {
+      card.style.opacity = "1";
+      depois();
+    }, 220);
+  }
+
+  function registrarVotoCard(voto) {
+    var p = estadoVotacao.projetos[estadoVotacao.indice];
+    if (!p) return;
+    estadoVotacao.votos.push({
+      projeto_id: p.projeto_id,
+      voto: voto
+    });
+    var direcao = voto === "util" ? 1 : -1;
+    animarSaida(direcao, function () {
+      estadoVotacao.indice += 1;
+      if (estadoVotacao.indice >= estadoVotacao.projetos.length) {
+        mostrarConfirmacao();
+        return;
+      }
+      preencherCardAtual();
+    });
+  }
+
+  function mostrarConfirmacao() {
+    var uteis = estadoVotacao.votos.filter(function (v) { return v.voto === "util"; }).length;
+    var inuteis = estadoVotacao.votos.length - uteis;
+    var el = document.getElementById("votacao-resumo-confirmacao");
+    if (el) {
+      el.textContent = "Você opinou sobre " + estadoVotacao.votos.length +
+        " projetos. Marcados como úteis: " + uteis +
+        ". Marcados como inúteis: " + inuteis + ".";
+    }
+    textoErro("votacao-erro-envio", "");
+    mostrarEtapa("confirmacao");
+    var btn = document.getElementById("btn-enviar-votos");
+    if (btn) btn.focus();
+  }
+
+  function abrirVotacao() {
+    var overlay = document.getElementById("votacao-overlay");
+    if (!overlay) return;
+    estadoVotacao.gatilho = document.activeElement;
+    estadoVotacao.aberto = true;
+    estadoVotacao.indice = 0;
+    estadoVotacao.votos = [];
+    estadoVotacao.termos = false;
+    var check = document.getElementById("check-termos-votacao");
+    if (check) check.checked = false;
+    overlay.classList.add("ativo");
+    overlay.setAttribute("aria-hidden", "false");
+    mostrarEtapa("verificacao");
+    atualizarOverflowFolhas();
+    atualizarBotaoIniciar();
+    var fechar = document.getElementById("btn-fechar-votacao");
+    if (fechar) fechar.focus();
+  }
+
+  function fecharVotacao() {
+    var overlay = document.getElementById("votacao-overlay");
+    if (!overlay) return;
+    overlay.classList.remove("ativo");
+    overlay.setAttribute("aria-hidden", "true");
+    estadoVotacao.aberto = false;
+    atualizarOverflowFolhas();
+    if (estadoVotacao.gatilho && estadoVotacao.gatilho.focus) estadoVotacao.gatilho.focus();
+  }
+
+  function prenderFocoVotacao(e) {
+    var overlay = document.getElementById("votacao-overlay");
+    if (!overlay) return;
+    var alvo = overlay.querySelectorAll("button:not([disabled]), input, a[href], [tabindex]:not([tabindex='-1'])");
+    var visiveis = [];
+    alvo.forEach(function (n) {
+      if (!n.hidden && n.offsetParent !== null) visiveis.push(n);
+    });
+    if (!visiveis.length) return;
+    var primeiro = visiveis[0];
+    var ultimo = visiveis[visiveis.length - 1];
+    if (e.shiftKey && document.activeElement === primeiro) {
+      e.preventDefault();
+      ultimo.focus();
+    } else if (!e.shiftKey && document.activeElement === ultimo) {
+      e.preventDefault();
+      primeiro.focus();
+    }
+  }
+
+  function onPointerDownCard(e) {
+    if (estadoVotacao.etapa !== "cards") return;
+    estadoVotacao.arrasto.ativo = true;
+    estadoVotacao.arrasto.x0 = e.clientX;
+    estadoVotacao.arrasto.dx = 0;
+    estadoVotacao.arrasto.id = e.pointerId;
+    var card = document.getElementById("voto-swipe-card");
+    if (card && card.setPointerCapture) card.setPointerCapture(e.pointerId);
+  }
+
+  function onPointerMoveCard(e) {
+    if (!estadoVotacao.arrasto.ativo) return;
+    estadoVotacao.arrasto.dx = e.clientX - estadoVotacao.arrasto.x0;
+    aplicarArrasto(estadoVotacao.arrasto.dx);
+  }
+
+  function onPointerUpCard() {
+    if (!estadoVotacao.arrasto.ativo) return;
+    var dx = estadoVotacao.arrasto.dx;
+    estadoVotacao.arrasto.ativo = false;
+    if (dx > 80) {
+      registrarVotoCard("util");
+      return;
+    }
+    if (dx < -80) {
+      registrarVotoCard("inutil");
+      return;
+    }
+    var card = document.getElementById("voto-swipe-card");
+    if (card) {
+      card.style.transition = "transform 0.18s ease-out";
+      card.style.transform = "translateX(0) rotate(0deg)";
+    }
+    document.getElementById("selo-util").style.opacity = "0";
+    document.getElementById("selo-inutil").style.opacity = "0";
+  }
+
+  function initVotacaoPopular() {
+    var fab = document.getElementById("btn-votar-fab");
+    var overlay = document.getElementById("votacao-overlay");
+    var check = document.getElementById("check-termos-votacao");
+    var btnIniciar = document.getElementById("btn-iniciar-votacao");
+    var btnFechar = document.getElementById("btn-fechar-votacao");
+    var btnReprovar = document.getElementById("btn-reprovar");
+    var btnAprovar = document.getElementById("btn-aprovar");
+    var btnEnviar = document.getElementById("btn-enviar-votos");
+    var btnFim = document.getElementById("btn-fechar-fim");
+    var card = document.getElementById("voto-swipe-card");
+    if (!fab || !overlay) return;
+
+    var local = leituraVotouLocal();
+    if (local && local.sessao_id === SESSAO_VOTACAO_ID) {
+      estadoVotacao.jaVotou = true;
+      mostrarFabVotar(false);
+      carregarResultadosRemotos();
+    } else {
+      mostrarFabVotar(true);
+    }
+
+    fab.addEventListener("click", abrirVotacao);
+    if (btnFechar) btnFechar.addEventListener("click", fecharVotacao);
+    if (btnFim) btnFim.addEventListener("click", fecharVotacao);
+
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay && estadoVotacao.etapa === "verificacao") fecharVotacao();
+    });
+
+    if (check) {
+      check.addEventListener("change", function () {
+        estadoVotacao.termos = !!check.checked;
+        atualizarBotaoIniciar();
+        if (estadoVotacao.termos) iniciarVerificacoes();
+      });
+    }
+
+    if (btnIniciar) {
+      btnIniciar.addEventListener("click", function () {
+        if (btnIniciar.disabled) return;
+        carregarProjetos().then(function (lista) {
+          if (!lista.length) {
+            textoErro("votacao-erro-verificacao", "Não há projetos da última sessão para opinar agora.");
+            return;
+          }
+          estadoVotacao.indice = 0;
+          estadoVotacao.votos = [];
+          mostrarEtapa("cards");
+          preencherCardAtual();
+          if (btnAprovar) btnAprovar.focus();
+        });
+      });
+    }
+
+    if (btnReprovar) btnReprovar.addEventListener("click", function () { registrarVotoCard("inutil"); });
+    if (btnAprovar) btnAprovar.addEventListener("click", function () { registrarVotoCard("util"); });
+
+    if (card) {
+      card.addEventListener("pointerdown", onPointerDownCard);
+      card.addEventListener("pointermove", onPointerMoveCard);
+      card.addEventListener("pointerup", onPointerUpCard);
+      card.addEventListener("pointercancel", onPointerUpCard);
+    }
+
+    if (btnEnviar) {
+      btnEnviar.addEventListener("click", function () {
+        btnEnviar.disabled = true;
+        textoErro("votacao-erro-envio", "");
+        enviarVotosApi().then(function () {
+          gravarVotouLocal(estadoVotacao.sessaoId);
+          estadoVotacao.jaVotou = true;
+          mostrarFabVotar(false);
+          return carregarResultadosRemotos();
+        }).then(function () {
+          mostrarEtapa("fim");
+          if (btnFim) btnFim.focus();
+        }).catch(function (err) {
+          textoErro("votacao-erro-envio", err.message || "Não foi possível enviar. Tente de novo.");
+        }).then(function () {
+          btnEnviar.disabled = false;
+        });
+      });
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (!folhaVotacaoAberta()) return;
+      if (e.key === "Escape") {
+        fecharVotacao();
+        return;
+      }
+      if (e.key === "Tab") {
+        prenderFocoVotacao(e);
+        return;
+      }
+      if (estadoVotacao.etapa === "cards") {
+        if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          registrarVotoCard("inutil");
+        } else if (e.key === "ArrowRight") {
+          e.preventDefault();
+          registrarVotoCard("util");
+        }
+      }
+    });
+  }
+
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (e) {
     if (!localStorage.getItem(STORAGE_TEMA)) {
       aplicarTema(e.matches ? "escuro" : "claro");
@@ -4417,6 +5708,7 @@
   initResumoSheet();
   initMateriasCamara();
   initNavegacao();
+  initVotacaoPopular();
   carregar();
 })();
 </script>
