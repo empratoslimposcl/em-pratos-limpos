@@ -57,7 +57,7 @@ def main():
 
     # 5. Higiene de travessoes em documentacao
     print("\nVerificando ausencia de caracteres de travessao proibidos...")
-    arquivos_norma = ["AGENTS.md", "CLAUDE.md", ".cursorrules", "PROCESSO_DESENVOLVIMENTO_E_GOVERNANCA.md"]
+    arquivos_norma = ["AGENTS.md", "CLAUDE.md", ".cursorrules", "PROCESSO_DESENVOLVIMENTO_E_GOVERNANCA.md", "index.html"]
     for nome in arquivos_norma:
         arq = ROOT / nome
         if arq.exists():

@@ -762,10 +762,10 @@ def temas_globais(projetos: list[dict]) -> dict[str, int]:
 
 
 def escrever_json(payload: dict) -> None:
-    ARQUIVO_JSON.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
+    texto = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+    texto = texto.replace("\r\n", "\n").replace("\r", "\n")
+    with ARQUIVO_JSON.open("w", encoding="utf-8", newline="\n") as f:
+        f.write(texto)
 
 
 def escrever_csv(vereadores: list[dict]) -> None:
@@ -1228,7 +1228,9 @@ def escrever_relatorio(payload: dict) -> None:
             "",
         ]
     )
-    ARQUIVO_RELATORIO.write_text("\n".join(linhas), encoding="utf-8")
+    texto_relatorio = "\n".join(linhas).replace("\r\n", "\n").replace("\r", "\n")
+    with ARQUIVO_RELATORIO.open("w", encoding="utf-8", newline="\n") as f:
+        f.write(texto_relatorio)
 
 
 def main() -> None:
@@ -1298,7 +1300,7 @@ def main() -> None:
     dado_coletado_em, fonte_data_coleta = ler_dado_coletado_em()
     payload = {
         "meta": {
-            "gerado_em": agora_iso(),
+            "gerado_em": dado_coletado_em,
             "gerado_por": "dados/tratados/gerar_atuacao_vereadores_2026.py",
             "dado_coletado_em": dado_coletado_em,
             "fonte_data_coleta": fonte_data_coleta,

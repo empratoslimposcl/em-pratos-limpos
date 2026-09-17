@@ -39,3 +39,4 @@ ehthumbs.db
 
 # Scratch/local-only
 scratch/
+.aider*

@@ -37,9 +37,14 @@ jobs:
         run: |
           python dados/tratados/gerar_atuacao_vereadores_2026.py
 
+      - name: Regenerar hash de integridade SHA-256
+        run: |
+          python coletor/gerar_hash_integridade.py
+
       - name: Validar sanidade dos dados gerados
         run: |
           python coletor/testes_sanidade.py
+          python -m unittest tests/test_sanidade_dados.py
 
       - name: Verificar alterações
         id: alteracoes

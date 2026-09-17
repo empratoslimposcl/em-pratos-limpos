@@ -2,11 +2,11 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; child-src 'none'; worker-src 'none'; img-src 'self' https://sapl.campolargo.pr.leg.br; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'none'; upgrade-insecure-requests;">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Em Pratos Limpos — o que a Câmara de Campo Largo vota</title>
+<title>Em Pratos Limpos: o que a Câmara de Campo Largo vota</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -18,14 +18,15 @@
     --texto: #1c1c1e;
     --texto-suave: #636366;
     --linha: #e5e5ea;
-    --marca: #007aff;
+    --marca: #0051c7;
     --marca-fundo: #e5f1ff;
-    --link: #007aff;
+    --marca-solida: #0051c7;
+    --link: #0051c7;
     --ok: #1e7e34;
     --ok-fundo: #e8f8ed;
     --nao: #991b1b;
     --nao-fundo: #fdecec;
-    --neutro: #8e8e93;
+    --neutro: #5c5c60;
     --neutro-fundo: #e5e5ea;
     --aviso-fundo: #fff8e1;
     --aviso-borda: #9a7b1a;
@@ -57,13 +58,14 @@
     --barra-veto: #be123c;
     --barra-ni: #64748b;
     --sombra: 0 2px 8px rgba(0, 0, 0, 0.04);
-    --primaria: #007aff;
+    --primaria: #0051c7;
     --borda: #e5e5ea;
     --fundo-card: #ffffff;
-    --app-laranja: #ff9500;
-    --app-azul: #007aff;
-    --app-verde: #34c759;
-    --app-roxo: #5856d6;
+    --app-laranja: #9a3412;
+    --app-azul: #0051c7;
+    --app-verde: #166534;
+    --app-roxo: #4338ca;
+    --maioria-texto: #4338ca;
     --capsula-verde: #e8f8ed;
     --capsula-roxa: #eeedfa;
   }
@@ -75,9 +77,10 @@
     --texto: #f2f2f7;
     --texto-suave: #aeaeb2;
     --linha: #38383a;
-    --marca: #0a84ff;
+    --marca: #60a5fa;
     --marca-fundo: #1a3055;
-    --link: #0a84ff;
+    --marca-solida: #1d4ed8;
+    --link: #93c5fd;
     --ok: #86efac;
     --ok-fundo: #143322;
     --nao: #fca5a5;
@@ -114,11 +117,16 @@
     --barra-veto: #fb7185;
     --barra-ni: #94a3b8;
     --sombra: 0 2px 8px rgba(0, 0, 0, 0.25);
-    --primaria: #0a84ff;
+    --primaria: #60a5fa;
     --borda: #38383a;
     --fundo-card: #2c2c2e;
     --capsula-verde: #143322;
     --capsula-roxa: #2a2840;
+    --app-laranja: #fdba74;
+    --app-azul: #93c5fd;
+    --app-verde: #86efac;
+    --app-roxo: #c4b5fd;
+    --maioria-texto: #c4b5fd;
   }
 
   * { box-sizing: border-box; }
@@ -134,7 +142,7 @@
   }
 
   a { color: var(--link); }
-  a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible {
+  a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible {
     outline: 3px solid var(--marca);
     outline-offset: 2px;
   }
@@ -160,6 +168,74 @@
     align-items: center;
     padding-top: 4px;
     margin-bottom: 10px;
+  }
+
+  .topo-acoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .btn-compartilhar-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--texto);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .btn-compartilhar-icone:hover {
+    background: var(--superficie-2);
+  }
+
+  .btn-compartilhar-icone svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+  }
+
+  .tag-categoria {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: var(--marca-fundo);
+    color: var(--marca);
+  }
+
+  .titulo-acoes-direita {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-shrink: 0;
+  }
+
+  .sessao-titulo-linha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+
+  .sessao-titulo-linha .sessao-titulo,
+  .sessao-titulo-linha .titulo-vereadores {
+    margin: 0;
+  }
+
+  .sub-vereadores .sessao-titulo-linha {
+    margin-bottom: 6px;
   }
 
   .topo-local {
@@ -224,10 +300,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    min-height: 38px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
     padding: 0;
     border: none;
     background: var(--superficie);
@@ -240,6 +316,299 @@
 
   .alternar-tema:hover {
     background: var(--superficie-2);
+  }
+
+  .share-sheet-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  .share-sheet-backdrop.ativo {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .share-sheet {
+    width: 100%;
+    max-width: 390px;
+    max-height: 85vh;
+    background: var(--superficie);
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.18);
+    transform: translateY(100%);
+    transition: transform 0.25s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .share-sheet-grabber {
+    display: block;
+    width: 36px;
+    height: 5px;
+    margin: 8px auto 0;
+    border-radius: 3px;
+    background: #c7c7cc;
+    flex-shrink: 0;
+  }
+
+  [data-tema="escuro"] .share-sheet-grabber {
+    background: #636366;
+  }
+
+  .share-sheet-backdrop.ativo .share-sheet {
+    transform: translateY(0);
+  }
+
+  .share-sheet-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px 8px;
+    border-bottom: 1px solid var(--linha);
+  }
+
+  .share-sheet-cabecalho h2 {
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--texto);
+  }
+
+  .share-sheet-fechar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    background: var(--superficie-2);
+    color: var(--texto);
+    cursor: pointer;
+  }
+
+  .share-sheet-fechar svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .share-sheet-opcoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 12px 16px 20px;
+    overflow-y: auto;
+  }
+
+  .share-sheet-opcao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 88px;
+    padding: 12px 8px;
+    border: 1px solid var(--linha);
+    border-radius: 14px;
+    background: var(--superficie-2);
+    color: var(--texto);
+    font: 600 11.5px/1.25 "Noto Sans", system-ui, sans-serif;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .share-sheet-opcao:hover,
+  .share-sheet-opcao:focus-visible {
+    border-color: var(--marca);
+    background: var(--marca-fundo);
+    outline: 2px solid var(--marca);
+    outline-offset: 2px;
+  }
+
+  .share-sheet-opcao svg {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+
+  .share-sheet-opcao-larga {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    min-height: 52px;
+    gap: 12px;
+    justify-content: flex-start;
+    padding: 12px 16px;
+    text-align: left;
+  }
+
+  .share-sheet-opcao-larga svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .share-sheet-feedback {
+    margin: 0;
+    padding: 0 16px 12px;
+    font-size: 12px;
+    color: var(--ok);
+    text-align: center;
+    min-height: 0;
+  }
+
+  .share-sheet-feedback:empty {
+    display: none;
+  }
+
+  .resumo-sheet-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  .resumo-sheet-backdrop.ativo {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .resumo-sheet {
+    width: 100%;
+    max-width: 390px;
+    max-height: 85vh;
+    background: var(--superficie);
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.18);
+    transform: translateY(100%);
+    transition: transform 0.25s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .resumo-sheet-backdrop.ativo .resumo-sheet {
+    transform: translateY(0);
+  }
+
+  .resumo-sheet-cabecalho {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px 8px 8px 16px;
+    border-bottom: 1px solid var(--linha);
+  }
+
+  .resumo-sheet-cabecalho h2 {
+    margin: 0;
+    padding-top: 10px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--texto);
+    line-height: 1.25;
+  }
+
+  .resumo-sheet-acoes {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .resumo-sheet-corpo {
+    padding: 14px 16px 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .resumo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .resumo-campo-rotulo {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--texto-suave);
+  }
+
+  .resumo-campo-valor {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--texto);
+  }
+
+  .resumo-link-sapl {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 44px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--link);
+    text-decoration: none;
+  }
+
+  .resumo-link-sapl svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 520px) {
+    .share-sheet-backdrop,
+    .resumo-sheet-backdrop {
+      align-items: flex-end;
+      padding: 0;
+    }
+
+    .share-sheet,
+    .resumo-sheet {
+      max-width: 390px;
+      border-radius: 16px 16px 0 0;
+      transform: translateY(100%);
+    }
+
+    .share-sheet-backdrop.ativo .share-sheet,
+    .resumo-sheet-backdrop.ativo .resumo-sheet {
+      transform: translateY(0);
+    }
+  }
+
+  .cabecalho-impressao {
+    display: none;
   }
 
   .alternar-tema svg {
@@ -268,6 +637,16 @@
     letter-spacing: -0.02em;
   }
 
+  .titulo-vereadores {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.15;
+    margin: 0 0 6px;
+    letter-spacing: -0.02em;
+    color: var(--texto);
+  }
+
   .coleta {
     font-size: 12px;
     color: var(--texto-suave);
@@ -290,13 +669,14 @@
     font-size: 14px;
     font-weight: 600;
     padding: 10px 12px;
+    min-height: 44px;
     border: 1px solid var(--linha);
     border-radius: 10px;
     background: var(--superficie-2);
     color: var(--texto);
   }
 
-  .conteudo { padding: 0 16px 40px; }
+  .conteudo { padding: 0 16px calc(88px + env(safe-area-inset-bottom, 0px)); }
 
   .aviso, .aviso-ia {
     border-radius: 10px;
@@ -404,7 +784,9 @@
   .perfil-detalhe strong { color: var(--texto); }
 
   .link-oficial {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
     font-size: 13px;
     font-weight: 700;
     margin-top: 4px;
@@ -560,10 +942,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .status-cartao-votadas { background: #fff4e5; color: #c93400; }
+  .status-cartao-votadas { background: #fff4e5; color: #9a3412; }
   .status-cartao-lidas { background: var(--neutro-fundo); }
-  .status-cartao-unanimidade { background: var(--capsula-verde, #e8f8ed); color: #1e7e34; }
-  .status-cartao-maioria { background: var(--capsula-roxa, #eeedfa); color: #4338ca; }
+  .status-cartao-unanimidade { background: var(--capsula-verde, #e8f8ed); color: var(--ok); }
+  .status-cartao-maioria { background: var(--capsula-roxa, #eeedfa); color: var(--maioria-texto); }
+  [data-tema="escuro"] .status-cartao-votadas { background: #3a2410; color: #fdba74; }
 
   .barra-status-trilho + .status-cartoes {
     margin-top: 14px;
@@ -583,7 +966,7 @@
     border: none;
   }
 
-  .status-cartao-aprovado { background: var(--capsula-verde, #e8f8ed); color: #1e7e34; }
+  .status-cartao-aprovado { background: var(--capsula-verde, #e8f8ed); color: var(--ok); }
   .status-cartao-tramitacao { background: var(--marca-fundo); }
   .status-cartao-rejeitado { background: var(--graf-rejeitado-fundo); }
 
@@ -645,8 +1028,8 @@
 
   .filtros-materia button[aria-pressed="true"],
   .filtros-pll button[aria-pressed="true"] {
-    background: var(--app-azul, #007aff);
-    border-color: var(--app-azul, #007aff);
+    background: var(--marca-solida);
+    border-color: var(--marca-solida);
     color: #ffffff;
   }
 
@@ -656,19 +1039,23 @@
   .btn-filtro-materia,
   .btn-filtro-pll {
     font: inherit;
-    font-size: 11.5px;
+    font-size: 11px;
     font-weight: 600;
-    padding: 7px 4px;
-    min-height: 36px;
+    padding: 6px 3px;
+    min-height: 44px;
     border: none;
     border-radius: 12px;
     background: var(--linha);
     color: var(--texto);
     cursor: pointer;
-    white-space: nowrap;
+    white-space: normal;
+    line-height: 1.2;
     text-align: center;
     width: 100%;
     min-width: 0;
+    overflow: hidden;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   .atalhos-voto button,
@@ -686,7 +1073,7 @@
   }
 
   .atalhos-voto button[aria-pressed="true"] {
-    background: var(--app-azul, #007aff);
+    background: var(--marca-solida);
     color: #ffffff;
   }
 
@@ -738,6 +1125,11 @@
   }
 
   .rodape-coleta strong { color: var(--texto); }
+  .rodape-coleta a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
 
   .item-pll {
     padding: 10px 0;
@@ -784,6 +1176,14 @@
     color: var(--texto-suave);
   }
 
+  .item-pll a,
+  .faltas-lista a,
+  .lista-votos a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
   .votos-resumo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -824,6 +1224,7 @@
     font: inherit;
     font-size: 13px;
     padding: 8px 10px;
+    min-height: 44px;
     border: 1px solid var(--linha);
     border-radius: 8px;
     background: var(--superficie-2);
@@ -843,6 +1244,13 @@
     font-size: 12px;
     color: var(--texto-suave);
     margin-bottom: 2px;
+  }
+
+  .lista-votos .materia-titulo {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--texto);
+    margin: 2px 0 0;
   }
 
   .lista-votos .voto-selo {
@@ -878,6 +1286,7 @@
     background: var(--superficie-2);
     color: var(--texto);
     cursor: pointer;
+    min-height: 44px;
   }
 
   .paginacao button:disabled {
@@ -906,34 +1315,54 @@
   }
 
   .nav-principal {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 40;
+    width: 100%;
+    max-width: 390px;
     display: flex;
     gap: 0;
-    margin-bottom: 12px;
-    background: var(--superficie-2);
-    border-radius: 14px;
-    padding: 3px;
+    margin: 0;
+    background: var(--superficie);
+    border-top: 1px solid var(--linha);
+    border-radius: 0;
+    padding: 4px 8px calc(6px + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
   }
 
   .nav-principal button {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
     border: none;
     font-family: "Noto Sans", system-ui, sans-serif;
-    font-size: 12.5px;
+    font-size: 10px;
     font-weight: 600;
-    padding: 7px 8px;
-    min-height: 36px;
-    border-radius: 11px;
+    padding: 6px 4px 4px;
+    min-height: 49px;
+    border-radius: 10px;
     background: transparent;
     color: var(--texto-suave);
     line-height: 1.2;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: color 0.18s ease, background-color 0.18s ease;
+  }
+
+  .nav-principal button svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
   }
 
   .nav-principal button.ativo {
-    background: var(--superficie);
-    color: var(--texto);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    background: transparent;
+    color: var(--marca);
+    box-shadow: none;
   }
 
   .secao-camara-titulo {
@@ -961,7 +1390,7 @@
     font-size: 12.5px;
     font-weight: 600;
     padding: 7px 4px;
-    min-height: 36px;
+    min-height: 44px;
     border-radius: 11px;
     background: transparent;
     color: var(--texto-suave);
@@ -1017,7 +1446,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    color: var(--app-azul, #007aff);
+    color: var(--link);
     line-height: 1.2;
   }
 
@@ -1036,7 +1465,7 @@
     content: "";
     width: 10px;
     height: 12px;
-    border: 2px solid var(--app-azul, #007aff);
+    border: 2px solid var(--marca);
     border-top: none;
     border-radius: 0 0 2px 2px;
   }
@@ -1070,7 +1499,7 @@
 
   .materia:last-child { border-bottom: none; }
 
-  .materia:hover .materia-tipo { color: var(--app-azul, #007aff); }
+  .materia:hover .materia-tipo { color: var(--link); }
 
   .materia-topo {
     display: contents;
@@ -1100,10 +1529,10 @@
     flex-shrink: 0;
   }
 
-  .badge-unanimidade { background: var(--capsula-verde, #e8f8ed); color: #1e7e34; }
-  .badge-maioria { background: var(--capsula-roxa, #eeedfa); color: #4338ca; }
+  .badge-unanimidade { background: var(--capsula-verde, #e8f8ed); color: var(--ok); }
+  .badge-maioria { background: var(--capsula-roxa, #eeedfa); color: var(--maioria-texto); }
 
-  .selo.maioria { background: var(--capsula-roxa, #eeedfa); color: #4338ca; }
+  .selo.maioria { background: var(--capsula-roxa, #eeedfa); color: var(--maioria-texto); }
 
   .materia-ementa {
     margin: 0;
@@ -1171,6 +1600,7 @@
     font-size: 12px;
     font-weight: 700;
     padding: 8px 10px;
+    min-height: 44px;
     border: 1px solid var(--linha);
     border-radius: 8px;
     background: var(--superficie-2);
@@ -1191,11 +1621,11 @@
     fill: var(--texto-suave);
   }
 
-  /* Cards Direção 3 — estrutura idêntica ao preview_direcao_app.html */
+  /* Cards Direção 3, estrutura idêntica ao preview_direcao_app.html */
   .secao-titulo-linha {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     padding: 4px 4px 0;
     margin-bottom: 12px;
   }
@@ -1207,9 +1637,12 @@
     margin: 0;
   }
   .secao-sub {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
     font-size: 12px;
     font-weight: 600;
-    color: var(--app-azul, #007aff);
+    color: var(--link);
     text-decoration: none;
   }
   .painel-camara-interno {
@@ -1219,6 +1652,12 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    animation: fadePeriodo 0.22s ease-out;
+  }
+
+  @keyframes fadePeriodo {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
   .painel-camara-interno[hidden] {
     display: none !important;
@@ -1226,11 +1665,59 @@
   .card-app {
     background: var(--superficie);
     border-radius: 20px;
-    padding: 16px 18px;
+    padding: 18px 20px;
     box-shadow: var(--sombra);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 18px;
+  }
+
+  .card-detalhes {
+    border-top: 1px solid var(--linha);
+    margin-top: 2px;
+    padding-top: 4px;
+  }
+
+  .card-detalhes summary {
+    list-style: none;
+    cursor: pointer;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--marca);
+    user-select: none;
+  }
+
+  .card-detalhes summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .card-detalhes summary::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--marca);
+    border-bottom: 2px solid var(--marca);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+    margin-right: 4px;
+    transition: transform 0.18s ease;
+  }
+
+  .card-detalhes[open] summary::after {
+    transform: rotate(-135deg);
+    margin-top: 4px;
+  }
+
+  .card-detalhes-corpo {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 8px 0 4px;
   }
   .card-header {
     display: flex;
@@ -1245,10 +1732,10 @@
     font-size: 13.5px;
     font-weight: 700;
   }
-  .cat-laranja { color: #ff9500; }
-  .cat-azul { color: #007aff; }
-  .cat-verde { color: #34c759; }
-  .cat-roxo { color: #5856d6; }
+  .cat-laranja { color: var(--app-laranja); }
+  .cat-azul { color: var(--app-azul); }
+  .cat-verde { color: var(--app-verde); }
+  .cat-roxo { color: var(--app-roxo); }
   .card-icone {
     width: 26px;
     height: 26px;
@@ -1258,19 +1745,24 @@
     justify-content: center;
     flex-shrink: 0;
   }
-  .icone-laranja { background: #fff4e5; color: #ff9500; }
-  .icone-azul { background: #e5f1ff; color: #007aff; }
-  .icone-verde { background: #e8f8ed; color: #34c759; }
-  .icone-roxo { background: #eeedfa; color: #5856d6; }
+  .icone-laranja { background: #fff4e5; color: #9a3412; }
+  .icone-azul { background: #e5f1ff; color: #0051c7; }
+  .icone-verde { background: #e8f8ed; color: #166534; }
+  .icone-roxo { background: #eeedfa; color: #4338ca; }
+  [data-tema="escuro"] .icone-laranja { background: #3a2410; color: #fdba74; }
+  [data-tema="escuro"] .icone-azul { background: #1a3055; color: #93c5fd; }
+  [data-tema="escuro"] .icone-verde { background: #143322; color: #86efac; }
+  [data-tema="escuro"] .icone-roxo { background: #2a2840; color: #c4b5fd; }
   .card-meta {
     font-size: 12px;
     font-weight: 500;
     color: var(--neutro);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 4px;
     text-decoration: none;
     flex-shrink: 0;
+    min-height: 44px;
   }
   .card-corpo {
     display: flex;
@@ -1319,6 +1811,10 @@
     text-transform: uppercase;
     letter-spacing: 0.03em;
   }
+  .det-rotulo-unanimidade,
+  .det-valor-unanimidade { color: var(--ok); }
+  .det-rotulo-maioria,
+  .det-valor-maioria { color: var(--maioria-texto); }
   .det-valor {
     font-family: "Space Grotesk", sans-serif;
     font-size: 15px;
@@ -1402,8 +1898,8 @@
     flex-direction: column;
     gap: 2px;
   }
-  .capsula-verde { background: #e8f8ed; color: #1e7e34; }
-  .capsula-roxa { background: #eeedfa; color: #4338ca; }
+  .capsula-verde { background: #e8f8ed; color: var(--ok); }
+  .capsula-roxa { background: #eeedfa; color: var(--maioria-texto); }
   .capsula-neutro { background: #f2f2f7; color: #636366; }
   [data-tema="escuro"] .capsula-neutro { background: #2c2c2e; color: #aeaeb2; }
   .card-legenda {
@@ -1484,7 +1980,7 @@
   }
   .btn-filtro.ativo,
   .btn-filtro[aria-pressed="true"] {
-    background: var(--app-azul, #007aff);
+    background: var(--marca-solida);
     color: #ffffff;
   }
   .lista-itens { display: flex; flex-direction: column; }
@@ -1495,10 +1991,38 @@
     padding: 11px 0;
     border-bottom: 1px solid var(--fundo);
     gap: 10px;
-    text-decoration: none;
     color: inherit;
   }
   .item-votado:last-child { border-bottom: none; }
+  .materia-link {
+    min-width: 0;
+    min-height: 44px;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  .materia-link:hover .materia-titulo {
+    color: var(--marca);
+  }
+  .materia-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
   .item-votado .materia-titulo {
     font-size: 13.5px;
     font-weight: 700;
@@ -1519,40 +2043,275 @@
     white-space: nowrap;
     flex-shrink: 0;
   }
-  .badge-unanimidade { background: #e8f8ed; color: #1e7e34; }
-  .badge-maioria { background: #eeedfa; color: #4338ca; }
+  .badge-unanimidade { background: #e8f8ed; color: var(--ok); }
+  .badge-maioria { background: #eeedfa; color: var(--maioria-texto); }
   [data-tema="escuro"] .badge-unanimidade { background: #143322; color: #86efac; }
   [data-tema="escuro"] .badge-maioria { background: #2a2840; color: #c4b5fd; }
 
+  .materia-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 4px;
+  }
+
+  .tag-tipo,
+  .tag-categoria {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .tag-tipo {
+    background: var(--marca-fundo);
+    color: #0056b3;
+    border: 1px solid rgba(0, 122, 255, 0.25);
+  }
+
+  .tag-categoria {
+    background: var(--neutro-fundo);
+    color: var(--texto-suave);
+    border: 1px solid var(--linha);
+  }
+
+  [data-tema="escuro"] .tag-tipo {
+    background: #1a3055;
+    color: #7ec8ff;
+    border-color: rgba(10, 132, 255, 0.35);
+  }
+
+  [data-tema="escuro"] .tag-categoria {
+    background: #2a3140;
+    color: #c8ced8;
+    border-color: #38383a;
+  }
+
+  .lista-votos .materia-tags {
+    margin: 4px 0 6px;
+  }
+
+  .compartilhar-materia {
+    min-width: 44px;
+    min-height: 44px;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    padding: 0;
+    border: 1px solid var(--marca);
+    border-radius: 12px;
+    color: var(--marca);
+    background: var(--marca-fundo);
+    cursor: pointer;
+  }
+
+  .compartilhar-materia:hover {
+    background: var(--superficie-2);
+  }
+
+  .compartilhar-materia svg {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+  }
+
   @media (min-width: 520px) {
     body { padding: 16px 0; }
-    .pagina { border-radius: 20px; overflow: hidden; }
+    .pagina { border-radius: 20px; }
+    .topo-fixo { border-radius: 20px 20px 0 0; }
+    .nav-principal {
+      bottom: 16px;
+      border-radius: 0 0 20px 20px;
+    }
+  }
+
+  @media (max-height: 500px) {
+    .topo-fixo { padding: 6px 16px 8px; }
+    .topo-util { margin-bottom: 4px; padding-top: 0; }
+    .cabecalho-bloco { margin-bottom: 4px; gap: 0; }
+    .titulo-site { font-size: 22px; }
+    .subtitulo-site,
+    .selo-sapl { display: none; }
+    .nav-principal { padding-top: 2px; padding-bottom: calc(4px + env(safe-area-inset-bottom, 0px)); }
+    .nav-principal button { min-height: 44px; }
+    .seletor-periodo { margin-top: 4px; }
+    .secao-camara-titulo { font-size: 16px; }
+  }
+
+  @page {
+    size: A4;
+    margin: 13mm;
+  }
+
+  @media print {
+    html,
+    body {
+      background: #ffffff !important;
+      color: #000000 !important;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10pt;
+      line-height: 1.35;
+    }
+
+    body {
+      padding: 0 !important;
+    }
+
+    .pagina {
+      max-width: none;
+      min-height: 0;
+      margin: 0;
+      background: #ffffff !important;
+    }
+
+    .cabecalho-impressao {
+      display: block;
+      margin-bottom: 8mm;
+      padding-bottom: 4mm;
+      border-bottom: 2px solid #000000;
+    }
+
+    .cabecalho-impressao h1 {
+      margin: 0 0 2mm;
+      font-size: 17pt;
+      line-height: 1.2;
+    }
+
+    .cabecalho-impressao p {
+      margin: 1mm 0 0;
+      font-size: 9pt;
+    }
+
+    .cabecalho-impressao a {
+      color: #000000 !important;
+      overflow-wrap: anywhere;
+    }
+
+    .topo-fixo,
+    .nav-principal,
+    .share-sheet-backdrop,
+    .resumo-sheet-backdrop,
+    .filtros-materia,
+    .busca-materia-wrap,
+    .compartilhar-materia,
+    .btn-compartilhar-icone,
+    .controles,
+    .paginacao,
+    .card-detalhes summary {
+      display: none !important;
+    }
+
+    .card-detalhes > *:not(summary) {
+      display: flex !important;
+    }
+
+    .conteudo {
+      padding: 0;
+    }
+
+    .painel-camara-interno.ativo,
+    .painel-vereadores.ativo {
+      display: block !important;
+    }
+
+    .card-app,
+    .secao,
+    .perfil,
+    .item-votado,
+    .status-cartao,
+    .status-capsula {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .card-app,
+    .secao {
+      margin-bottom: 5mm;
+      padding: 4mm;
+      border: 1px solid #b8b8b8;
+      border-radius: 0;
+      background: #ffffff !important;
+      box-shadow: none !important;
+    }
+
+    .card-app *,
+    .secao *,
+    .rodape-coleta * {
+      color: #000000 !important;
+      text-shadow: none !important;
+    }
+
+    .grafico-anel-box,
+    .barra-trilho,
+    .barra-status-trilho,
+    .barra-tema-cam,
+    .barra-tema-sessao {
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .item-votado {
+      border-bottom-color: #d0d0d0;
+    }
+
+    .materia-link {
+      min-height: 0;
+    }
+
+    .rodape-coleta {
+      margin-top: 4mm;
+      border-top: 1px solid #b8b8b8;
+      color: #000000 !important;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .alternar-tema .bola { transition: none; }
+    .painel-camara-interno.ativo { animation: none; }
+    .share-sheet-backdrop,
+    .share-sheet,
+    .resumo-sheet-backdrop,
+    .resumo-sheet,
+    .nav-principal button,
+    .card-detalhes summary::after {
+      transition: none;
+    }
   }
 </style>
 </head>
 <body>
 <div class="pagina">
+  <section class="cabecalho-impressao" aria-label="Cabeçalho do boletim impresso">
+    <h1>Em Pratos Limpos: Boletim Cívico da Câmara Municipal de Campo Largo</h1>
+    <p>Dados oficiais coletados em <strong>14/09/2026</strong>.</p>
+    <p>Consulte o painel oficial: <a href="https://empratoslimposcl.github.io/em-pratos-limpos/">https://empratoslimposcl.github.io/em-pratos-limpos/</a></p>
+  </section>
   <header class="topo-fixo">
     <div class="topo-util">
       <span class="topo-local">Câmara Municipal · Campo Largo</span>
-      <button type="button" class="alternar-tema" id="btn-tema" aria-pressed="false" aria-label="Alternar para modo escuro">
-        <svg class="icone-lua" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        <svg class="icone-sol" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-      </button>
+      <div class="topo-acoes">
+        <button type="button" class="alternar-tema" id="btn-tema" aria-pressed="false" aria-label="Alternar para modo escuro">
+          <svg class="icone-lua" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icone-sol" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+      </div>
     </div>
     <div class="cabecalho-bloco">
-      <p class="titulo-site">Em Pratos Limpos</p>
+      <h1 class="titulo-site">Em Pratos Limpos</h1>
       <div class="selo-sapl"><span class="ponto-status" aria-hidden="true"></span>Dados oficiais do SAPL</div>
       <p class="subtitulo-site">O que a Câmara de Campo Largo vota, e como cada vereador votou</p>
     </div>
-    <nav class="nav-principal" id="nav-principal" aria-label="Navegação principal">
-      <button type="button" class="ativo" data-secao="camara" aria-current="page">Câmara</button>
-      <button type="button" data-secao="vereadores">Vereadores</button>
-    </nav>
     <div class="sub-camara ativo" id="sub-camara">
       <h2 class="secao-camara-titulo">O que a Câmara votou</h2>
       <div class="seletor-periodo" role="tablist" aria-label="Período de consulta">
@@ -1562,7 +2321,12 @@
       </div>
     </div>
     <div class="sub-vereadores" id="sub-vereadores">
-      <h1>Atuação do seu Vereador</h1>
+      <div class="sessao-titulo-linha">
+        <h2 class="titulo-vereadores">Atuação do seu Vereador</h2>
+        <button type="button" class="btn-compartilhar-icone btn-abrir-share" data-share="vereador" aria-label="Compartilhar perfil parlamentar" aria-haspopup="dialog" aria-controls="share-sheet">
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
       <div id="seletor-vereador-wrap"></div>
     </div>
   </header>
@@ -1573,7 +2337,12 @@
       <div class="painel-camara-interno ativo" id="painel-periodo-sessao" role="tabpanel" aria-labelledby="tab-periodo-sessao">
         <div class="secao-titulo-linha">
           <h2 class="secao-titulo">Votações em Plenário</h2>
-          <a class="secao-sub" href="https://sapl.campolargo.pr.leg.br/sessao/786" target="_blank" rel="noopener noreferrer">18ª Ordinária</a>
+          <div class="titulo-acoes-direita">
+            <a class="secao-sub" href="https://sapl.campolargo.pr.leg.br/sessao/794" target="_blank" rel="noopener noreferrer">25ª Ordinária</a>
+            <button type="button" class="btn-compartilhar-icone btn-abrir-share" data-periodo="sessao" aria-label="Compartilhar votações da última sessão" aria-haspopup="dialog" aria-controls="share-sheet">
+<svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+          </div>
         </div>
 
         <div class="card-app" id="card-votacoes-sessao" aria-labelledby="tit-votacoes-sessao">
@@ -1584,8 +2353,8 @@
               </div>
               <span id="tit-votacoes-sessao">Votações da Sessão</span>
             </div>
-            <a class="card-meta" href="https://sapl.campolargo.pr.leg.br/sessao/786" target="_blank" rel="noopener noreferrer">
-              08/06/2026
+            <a class="card-meta" href="https://sapl.campolargo.pr.leg.br/sessao/794" target="_blank" rel="noopener noreferrer">
+              08/09/2026
               <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
             </a>
           </div>
@@ -1597,12 +2366,12 @@
               </div>
               <div class="metrica-detalhes">
                 <div class="item-detalhe">
-                  <span class="det-rotulo" style="color:#34c759">Unanimidade</span>
-                  <span class="det-valor" style="color:#1e7e34">10 <small style="font-size:11px;font-weight:500">(91%)</small></span>
+                  <span class="det-rotulo det-rotulo-unanimidade">Unanimidade</span>
+                  <span class="det-valor det-valor-unanimidade">10 <small style="font-size:11px;font-weight:500">(91%)</small></span>
                 </div>
                 <div class="item-detalhe det-separador">
-                  <span class="det-rotulo" style="color:#5856d6">Por Maioria</span>
-                  <span class="det-valor" style="color:#4338ca">1 <small style="font-size:11px;font-weight:500">(9%)</small></span>
+                  <span class="det-rotulo det-rotulo-maioria">Por Maioria</span>
+                  <span class="det-valor det-valor-maioria">1 <small style="font-size:11px;font-weight:500">(9%)</small></span>
                 </div>
               </div>
             </div>
@@ -1615,6 +2384,9 @@
               <span class="anel-porcento">100%</span>
             </div>
           </div>
+          <details class="card-detalhes">
+            <summary>Ver como se divide o resultado</summary>
+            <div class="card-detalhes-corpo">
           <div class="barra-trilho" role="img" aria-label="91% unanimidade, 9% maioria">
             <div class="barra-seg-unanimidade"></div>
             <div class="barra-seg-maioria"></div>
@@ -1629,6 +2401,8 @@
               <span class="capsula-valor">1 projeto</span>
             </div>
           </div>
+            </div>
+          </details>
         </div>
 
         <div class="card-app" id="card-presenca-sessao" aria-labelledby="tit-presenca-sessao">
@@ -1639,7 +2413,7 @@
               </div>
               <span id="tit-presenca-sessao">Presença dos vereadores</span>
             </div>
-            <a class="card-meta" href="https://sapl.campolargo.pr.leg.br/sessao/786" target="_blank" rel="noopener noreferrer">
+            <a class="card-meta" href="https://sapl.campolargo.pr.leg.br/sessao/794" target="_blank" rel="noopener noreferrer">
               15 parlamentares
               <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
             </a>
@@ -1659,6 +2433,9 @@
               <span class="anel-porcento">100%</span>
             </div>
           </div>
+          <details class="card-detalhes">
+            <summary>Ver detalhe da presença</summary>
+            <div class="card-detalhes-corpo">
           <div class="barra-trilho" role="img" aria-label="15 presentes, 0 faltas">
             <div class="barra-seg-presenca"></div>
           </div>
@@ -1675,6 +2452,8 @@
           <div class="lista-faltas" id="lista-faltas-sessao">
             <p class="nota-presenca">Todos os 15 vereadores compareceram. Nenhuma falta registrada nesta sessão.</p>
           </div>
+            </div>
+          </details>
         </div>
 
         <div class="card-app" id="card-temas-sessao" aria-labelledby="tit-temas-sessao">
@@ -1690,6 +2469,9 @@
             </span>
           </div>
           <p class="card-legenda">Temas das 11 matérias votadas nesta sessão.</p>
+          <details class="card-detalhes">
+            <summary>Ver lista de temas</summary>
+            <div class="card-detalhes-corpo">
           <div class="barra-tema-sessao" role="img" aria-label="Distribuição temática das 11 matérias votadas">
             <div class="barra-tema-linha">
               <span class="nome">Homenagens, nomes e datas</span>
@@ -1722,14 +2504,21 @@
               <span class="meta-linha">1 matéria (9,1%)</span>
             </div>
           </div>
+            </div>
+          </details>
         </div>
 
         <div class="card-app bloco-votado" id="bloco-votado-sessao" data-periodo="sessao"></div>
-        <footer class="rodape-coleta" aria-label="Informações sobre a coleta de dados"><p>Dado coletado em <strong>14/09/2026</strong>. Fonte: <a href="https://sapl.campolargo.pr.leg.br/sessao/786" target="_blank" rel="noopener noreferrer">SAPL da Câmara de Campo Largo</a>.</p></footer>
+        <footer class="rodape-coleta" aria-label="Informações sobre a coleta de dados"><p>Dado coletado em <strong>14/09/2026</strong>. Fonte: <a href="https://sapl.campolargo.pr.leg.br/sessao/794" target="_blank" rel="noopener noreferrer">SAPL da Câmara de Campo Largo</a>.</p></footer>
       </div>
 
       <div class="painel-camara-interno" id="painel-periodo-mes" role="tabpanel" aria-labelledby="tab-periodo-mes" hidden>
-        <h2 class="sessao-titulo">Junho de 2026</h2>
+        <div class="sessao-titulo-linha">
+          <h2 class="sessao-titulo">Junho de 2026</h2>
+          <button type="button" class="btn-compartilhar-icone btn-abrir-share" data-periodo="mes" aria-label="Compartilhar votações de junho de 2026" aria-haspopup="dialog" aria-controls="share-sheet">
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
         <p class="sessao-meta">4 sessões ordinárias, 200 votações.</p>
         <section class="secao" aria-labelledby="tit-resultado-mes">
           <h2 id="tit-resultado-mes">Como terminaram as 200 votações?</h2>
@@ -1759,7 +2548,12 @@
       </div>
 
       <div class="painel-camara-interno" id="painel-periodo-todo" role="tabpanel" aria-labelledby="tab-periodo-todo" hidden>
-        <h2 class="sessao-titulo">Ano de 2026</h2>
+        <div class="sessao-titulo-linha">
+          <h2 class="sessao-titulo">Ano de 2026</h2>
+          <button type="button" class="btn-compartilhar-icone btn-abrir-share" data-periodo="todo" aria-label="Compartilhar votações de 2026" aria-haspopup="dialog" aria-controls="share-sheet">
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
         <p class="sessao-meta">26 sessões ordinárias, 1.388 votações.</p>
         <section class="secao" aria-labelledby="tit-tipos-todo">
           <h2 id="tit-tipos-todo">Quantas votações por tipo?</h2>
@@ -1815,6 +2609,69 @@
       <div id="conteudo-vereadores"><div class="carregando">Carregando dados oficiais…</div></div>
     </div>
   </main>
+  <nav class="nav-principal" id="nav-principal" aria-label="Navegação principal">
+    <button type="button" class="ativo" data-secao="camara" aria-current="page">
+      <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"></path><path d="M5 21V8l7-5 7 5v13"></path><path d="M9 21v-6h6v6"></path></svg>
+      <span>Câmara</span>
+    </button>
+    <button type="button" data-secao="vereadores">
+      <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      <span>Vereadores</span>
+    </button>
+  </nav>
+</div>
+
+<div class="share-sheet-backdrop" id="share-sheet-backdrop" aria-hidden="true">
+  <div class="share-sheet" role="dialog" aria-modal="true" aria-labelledby="share-sheet-titulo" id="share-sheet">
+    <div class="share-sheet-grabber" aria-hidden="true"></div>
+    <div class="share-sheet-cabecalho">
+      <h2 id="share-sheet-titulo">Compartilhar</h2>
+      <button type="button" class="share-sheet-fechar" id="btn-fechar-share" aria-label="Fechar painel de compartilhamento">
+        <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <p class="share-sheet-feedback" id="share-sheet-feedback" role="status" aria-live="polite"></p>
+    <div class="share-sheet-opcoes" role="group" aria-label="Opções de compartilhamento">
+      <button type="button" class="share-sheet-opcao" id="share-opcao-whatsapp" data-canal="whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
+        <span>WhatsApp</span>
+      </button>
+      <button type="button" class="share-sheet-opcao" id="share-opcao-instagram" data-canal="instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        <span>Instagram</span>
+      </button>
+      <button type="button" class="share-sheet-opcao" id="share-opcao-stories" data-canal="stories">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4" fill="currentColor" stroke="none"></circle></svg>
+        <span>Instagram Stories</span>
+      </button>
+      <button type="button" class="share-sheet-opcao" id="share-opcao-tiktok" data-canal="tiktok">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.2a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V9.01a8.28 8.28 0 0 0 4.76 1.52V7.08a4.84 4.84 0 0 1-1-.39z"></path></svg>
+        <span>TikTok</span>
+      </button>
+      <button type="button" class="share-sheet-opcao share-sheet-opcao-larga" id="share-opcao-imprimir" data-canal="imprimir">
+        <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        <span>Gerar PDF / Imprimir</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="resumo-sheet-backdrop" id="resumo-sheet-backdrop" aria-hidden="true">
+  <div class="resumo-sheet" role="dialog" aria-modal="true" aria-labelledby="resumo-sheet-titulo" id="resumo-sheet">
+    <div class="share-sheet-grabber" aria-hidden="true"></div>
+    <div class="resumo-sheet-cabecalho">
+      <h2 id="resumo-sheet-titulo">Resumo da matéria</h2>
+      <div class="resumo-sheet-acoes">
+        <button type="button" class="btn-compartilhar-icone" id="btn-share-resumo" aria-label="Compartilhar esta matéria" aria-haspopup="dialog" aria-controls="share-sheet">
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <button type="button" class="btn-compartilhar-icone" id="btn-fechar-resumo" aria-label="Fechar resumo da matéria">
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+    <div class="resumo-sheet-corpo" id="resumo-sheet-corpo"></div>
+  </div>
 </div>
 
 <script>
@@ -1854,7 +2711,29 @@
     listaPLLVisivel: false,
     pagina: 1,
     indiceEmentas: {},
+    indiceMaterias: {},
     linksSessao: {}
+  };
+
+  var estadoUI = {
+    secao: "camara"
+  };
+
+  var DATA_ULTIMA_SESSAO = "08/09/2026";
+
+  var MAPA_TIPO_SIGLA = {
+    PLL: "PLL",
+    PLE: "PLE",
+    PR: "PR",
+    PDL: "PDL",
+    PELO: "PELO",
+    MOC: "Moção",
+    REQ: "Requerimento",
+    IND: "Indicação",
+    EMENTA: "Emenda",
+    SUBST: "Substitutivo",
+    VETO: "Veto",
+    PC: "Prestação de Contas"
   };
 
   function temaInicial() {
@@ -1900,6 +2779,8 @@
   }
 
   var SAPL_ORIGEM = "https://sapl.campolargo.pr.leg.br";
+  var PORTAL_OFICIAL = "https://empratoslimposcl.github.io/em-pratos-limpos/";
+  var WHATSAPP_COMPARTILHAR = "https://api.whatsapp.com/send?text=";
 
   function esc(texto) {
     if (texto == null) return "";
@@ -1913,6 +2794,13 @@
       return "&#" + c.charCodeAt(0) + ";";
     });
     return s;
+  }
+
+  function normalizarTexto(texto) {
+    return String(texto || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
   }
 
   function urlSegura(url) {
@@ -1946,7 +2834,7 @@
 
   function renderBadgePartido(v) {
     if (!v.partido_sigla && !v.partido_nome) return "";
-    var sigla = v.partido_sigla || "—";
+    var sigla = v.partido_sigla || "Não informado";
     var nome = v.partido_nome || "";
     return '<p class="badge-partido" aria-label="Partido: ' + esc(nome || sigla) + '">' +
       '<span class="sigla">' + esc(sigla) + "</span>" +
@@ -2242,10 +3130,14 @@
     var filtrados = nominais.filter(function (n) {
       if (estado.filtroClassificacao && n.classificacao !== estado.filtroClassificacao) return false;
       if (estado.filtroTexto) {
-        var busca = estado.filtroTexto.toLowerCase();
+        var busca = normalizarTexto(estado.filtroTexto);
         var ementa = ementaVotacao(n);
-        var texto = (ementa || "") + " " + (n.materia_id || "") + " " + n.data_sessao;
-        if (texto.toLowerCase().indexOf(busca) === -1) return false;
+        var tagsBusca = n.materia_id ? tagsMateria(n.materia_id) : null;
+        var tipoNumeroBusca = tipoNumeroDoVoto(n);
+        var texto = (ementa || "") + " " + (n.materia_id || "") + " " + n.data_sessao +
+          " " + (tipoNumeroBusca || "");
+        if (tagsBusca) texto += " " + tagsBusca.tag_tipo + " " + tagsBusca.tag_tema;
+        if (normalizarTexto(texto).indexOf(busca) === -1) return false;
       }
       return true;
     });
@@ -2271,15 +3163,19 @@
     var itens = fatia.map(function (n) {
       var ementa = ementaVotacao(n);
       var textoEmenta = ementa
-        ? esc(ementa.length > 180 ? ementa.slice(0, 177) + "…" : ementa)
+        ? esc(ementa.length > 180 ? ementa.slice(0, 177) + "..." : ementa)
         : (n.materia_id
           ? "Matéria " + esc(n.materia_id) + " (" + linkExt(linkMateria(n.materia_id), "ementa no SAPL") + ")"
           : "Matéria não identificada no registro");
       var linkSess = estado.linksSessao[n.sessao_id] ||
-        ("https://sapl.campolargo.pr.leg.br/sessao/" + n.sessao_id);
+        (SAPL_ORIGEM + "/sessao/" + n.sessao_id);
+      var tagsHtml = n.materia_id ? htmlTagsMateria(n.materia_id) : "";
+      var tipoNumero = tipoNumeroDoVoto(n);
       return "<li>" +
         '<div class="data-voto">' + esc(formatarData(n.data_sessao)) +
-        " · Sessão " + esc(n.sessao_id) + "</div>" +
+        ", sessão " + esc(n.sessao_id) + "</div>" +
+        (tipoNumero ? '<div class="materia-titulo">' + esc(tipoNumero) + "</div>" : "") +
+        (tagsHtml ? tagsHtml : "") +
         '<span class="voto-selo ' + classeVotoSelo(n.classificacao) + '">' +
         esc(rotuloVoto(n)) + "</span>" +
         "<span>" + textoEmenta + "</span> " +
@@ -2477,6 +3373,8 @@
       estado.pagina = 1;
       renderApp();
     });
+
+    atualizarRotuloBotaoShare();
   }
 
   function prepararIndices(dados) {
@@ -2485,8 +3383,10 @@
       estado.linksSessao[s.id] = s.link_sapl;
     });
     estado.indiceEmentas = {};
+    estado.indiceMaterias = {};
     (dados.projetos_lei_legislativo || []).forEach(function (p) {
       estado.indiceEmentas[p.id] = p.ementa;
+      estado.indiceMaterias[p.id] = p;
     });
   }
 
@@ -2554,21 +3454,35 @@
     ]
   };
 
+  var MATERIAS_TAGS = {
+    26120: { tag_tipo: "PLL", tag_tema: "Administração e Gestão Pública" },
+    26418: { tag_tipo: "Moção", tag_tema: "Homenagens, nomes e datas" },
+    26040: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26405: { tag_tipo: "PLL", tag_tema: "Finanças e Orçamento" },
+    26515: { tag_tipo: "PLE", tag_tema: "Finanças e Orçamento" },
+    25871: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26020: { tag_tipo: "PLL", tag_tema: "Saúde" },
+    26288: { tag_tipo: "PLL", tag_tema: "Agropecuária e Meio Ambiente" },
+    26306: { tag_tipo: "PLL", tag_tema: "Segurança Pública" },
+    26348: { tag_tipo: "PLL", tag_tema: "Proteção Animal" },
+    26123: { tag_tipo: "PR", tag_tema: "Administração e Gestão Pública" }
+  };
+
   var FILTROS_MATERIA = {
     sessao: [
       { id: "", rotulo: "Todos", qtd: 11 },
-      { id: "unanimidade", rotulo: "Unanimidade", qtd: 10 },
+      { id: "unanimidade", rotulo: "Unanimes", qtd: 10 },
       { id: "maioria", rotulo: "Maioria", qtd: 1 }
     ],
     mes: [
       { id: "", rotulo: "Todos", qtd: 4 },
-      { id: "unanimidade", rotulo: "Por unanimidade", qtd: 3 },
-      { id: "maioria", rotulo: "Por maioria", qtd: 1 }
+      { id: "unanimidade", rotulo: "Unanimes", qtd: 3 },
+      { id: "maioria", rotulo: "Maioria", qtd: 1 }
     ],
     todo: [
       { id: "", rotulo: "Todos", qtd: 11 },
-      { id: "unanimidade", rotulo: "Por unanimidade", qtd: 10 },
-      { id: "maioria", rotulo: "Por maioria", qtd: 1 }
+      { id: "unanimidade", rotulo: "Unanimes", qtd: 10 },
+      { id: "maioria", rotulo: "Maioria", qtd: 1 }
     ]
   };
 
@@ -2576,7 +3490,7 @@
     periodo: "sessao",
     filtro: "",
     busca: "",
-    listaVisivel: { sessao: true, mes: false, todo: false }
+    listaVisivel: { sessao: true, mes: true, todo: true }
   };
 
   function placarResumido(placar) {
@@ -2585,26 +3499,424 @@
     return "";
   }
 
+  function resultadoCompartilhamento(m) {
+    var prefixo = m.resultado === "maioria"
+      ? "Aprovado por maioria"
+      : "Aprovado por unanimidade";
+    var match = m.placar.match(/(\d+)\s*a favor,\s*(\d+)\s*contra/);
+    if (!match) return prefixo + ".";
+    var resultado = prefixo + ": " + match[1] + " a favor";
+    if (match[2] !== "0") resultado += ", " + match[2] + " contra";
+    return resultado + ".";
+  }
+
+  function tagTipoDeSigla(sigla, descricao) {
+    if (sigla) {
+      var chave = String(sigla).toUpperCase();
+      if (MAPA_TIPO_SIGLA[chave]) return MAPA_TIPO_SIGLA[chave];
+    }
+    var fonte = String(descricao || "").toLowerCase();
+    if (fonte.indexOf("projeto de lei do legislativo") !== -1) return "PLL";
+    if (fonte.indexOf("projeto de lei do executivo") !== -1) return "PLE";
+    if (fonte.indexOf("projeto de resolução") !== -1 || fonte.indexOf("projeto de resolucao") !== -1) return "PR";
+    if (fonte.indexOf("moção") !== -1 || fonte.indexOf("mocao") !== -1) return "Moção";
+    if (fonte.indexOf("requerimento") !== -1) return "Requerimento";
+    if (fonte.indexOf("indicação") !== -1 || fonte.indexOf("indicacao") !== -1) return "Indicação";
+    if (descricao) return "Outros";
+    return "";
+  }
+
+  function tagsMateria(id) {
+    if (id == null || id === "") return null;
+    var n = parseInt(id, 10);
+    var direto = MATERIAS_TAGS[n] || MATERIAS_TAGS[id];
+    if (direto) return direto;
+    var catalogo = estado.indiceMaterias && (estado.indiceMaterias[n] || estado.indiceMaterias[id]);
+    if (catalogo) {
+      return {
+        tag_tipo: tagTipoDeSigla(catalogo.tipo_sigla, catalogo.tipo_descricao) || "PLL",
+        tag_tema: catalogo.categoria || "Tema não classificado"
+      };
+    }
+    return {
+      tag_tipo: "Tipo não classificado",
+      tag_tema: "Tema não classificado"
+    };
+  }
+
+  function htmlTagsMateria(id) {
+    var tags = tagsMateria(id);
+    if (!tags) return "";
+    return '<div class="materia-tags">' +
+      '<span class="tag-tipo">' + esc(tags.tag_tipo) + "</span>" +
+      '<span class="tag-categoria">' + esc(tags.tag_tema) + "</span></div>";
+  }
+
+  function tipoNumeroMateriaCamara(id) {
+    var n = parseInt(id, 10);
+    var periodos = ["sessao", "mes", "todo"];
+    for (var i = 0; i < periodos.length; i++) {
+      var lista = MATERIAS_CAMARA[periodos[i]] || [];
+      for (var j = 0; j < lista.length; j++) {
+        if (lista[j].id === n || lista[j].id === id) return lista[j].tipo;
+      }
+    }
+    return "";
+  }
+
+  function tipoNumeroDoVoto(n) {
+    if (!n || n.materia_id == null || n.materia_id === "") return "";
+    var daCamara = tipoNumeroMateriaCamara(n.materia_id);
+    if (daCamara) return daCamara;
+    var catalogo = estado.indiceMaterias && estado.indiceMaterias[n.materia_id];
+    if (catalogo && catalogo.numero && catalogo.ano) {
+      var tipo = tagTipoDeSigla(catalogo.tipo_sigla, catalogo.tipo_descricao) || catalogo.tipo_sigla || "PLL";
+      return tipo + " " + catalogo.numero + "/" + catalogo.ano;
+    }
+    return "";
+  }
+
+  function temaParaShare(id) {
+    var tags = tagsMateria(id);
+    if (!tags || !tags.tag_tema) return "";
+    if (tags.tag_tema === "Tema não classificado") return "";
+    return tags.tag_tema;
+  }
+
+  function resultadoOficial(m) {
+    return m.resultado === "maioria"
+      ? "Aprovado por maioria"
+      : "Aprovado por unanimidade";
+  }
+
+  function extrairPlacar(placar) {
+    if (!placar) return "";
+    var match = String(placar).match(/(\d+)\s*a favor,\s*(\d+)\s*contra(?:,\s*(\d+)\s*abstenções)?/i);
+    if (!match) return "";
+    var texto = match[1] + " a favor, " + match[2] + " contra";
+    if (match[3] != null) texto += ", " + match[3] + " abstenções";
+    return texto;
+  }
+
+  function dataSessaoMateria(m, periodo) {
+    if (m && m.data_sessao) return formatarData(m.data_sessao);
+    if (periodo === "sessao") return DATA_ULTIMA_SESSAO;
+    if (m && m.placar && /8 de junho/i.test(m.placar)) return DATA_ULTIMA_SESSAO;
+    return "";
+  }
+
+  function rotuloPeriodoShare(periodo) {
+    if (periodo === "sessao") return "última sessão ordinária (" + DATA_ULTIMA_SESSAO + ")";
+    if (periodo === "mes") return "junho de 2026";
+    return "sessões ordinárias de 2026";
+  }
+
+  function periodoVereadorShare() {
+    var dados = estado.dados;
+    if (!dados || !dados.sessoes || !dados.sessoes.length) {
+      return "sessões ordinárias de 2026";
+    }
+    var ultima = dados.sessoes[dados.sessoes.length - 1];
+    var data = formatarData(ultima.data);
+    if (!data) return "sessões ordinárias de 2026";
+    return "sessões ordinárias de 2026 até " + data;
+  }
+
+  function urlPortalVereador() {
+    return PORTAL_OFICIAL + "#vereadores";
+  }
+
+  function juntarLinhasShare(linhas) {
+    return linhas.filter(function (l) {
+      return l !== null && l !== undefined;
+    }).join("\n").replace(/\n{3,}/g, "\n\n");
+  }
+
+  function textoSharePortal() {
+    return "Em Pratos Limpos\n\n" +
+      "Dados oficiais da Câmara Municipal de Campo Largo reunidos em um portal cívico de transparência.\n\n" +
+      "Consulte: " + PORTAL_OFICIAL;
+  }
+
+  function textoShareMateriaWhatsApp(m, periodo) {
+    var linkSap = SAPL_ORIGEM + "/materia/" + encodeURIComponent(String(m.id));
+    var data = dataSessaoMateria(m, periodo);
+    var placar = extrairPlacar(m.placar);
+    var tema = temaParaShare(m.id);
+    var resultadoLinha = data
+      ? "Resultado oficial em " + data + ": " + resultadoOficial(m) + "."
+      : "Resultado oficial: " + resultadoOficial(m) + ".";
+    var linhas = ["Em Pratos Limpos", "", m.tipo];
+    if (tema) linhas.push("Tema: " + tema);
+    linhas.push("", m.ementa, "", resultadoLinha);
+    if (placar) linhas.push("Placar: " + placar + ".");
+    linhas.push("", "Fonte oficial no SAPL: " + linkSap, "Consulte no portal: " + PORTAL_OFICIAL);
+    return juntarLinhasShare(linhas);
+  }
+
+  function textoShareMateriaInstagram(m, periodo) {
+    var linkSap = SAPL_ORIGEM + "/materia/" + encodeURIComponent(String(m.id));
+    var data = dataSessaoMateria(m, periodo);
+    var placar = extrairPlacar(m.placar);
+    var tema = temaParaShare(m.id);
+    var resultadoLinha = data
+      ? "Resultado oficial em " + data + ": " + resultadoOficial(m) + "."
+      : "Resultado oficial: " + resultadoOficial(m) + ".";
+    var linhas = ["O que a Câmara de Campo Largo votou", "", m.tipo];
+    if (tema) linhas.push("Tema: " + tema);
+    linhas.push("", m.ementa, "", resultadoLinha);
+    if (placar) linhas.push("Placar: " + placar + ".");
+    linhas.push("", "Fonte oficial: SAPL da Câmara Municipal de Campo Largo.",
+      "Consulte a matéria: " + linkSap,
+      "Veja os dados reunidos no Em Pratos Limpos: " + PORTAL_OFICIAL,
+      "", "#EmPratosLimpos #CampoLargo #CamaraMunicipal #TransparenciaPublica");
+    return juntarLinhasShare(linhas);
+  }
+
+  function textoShareMateriaStories(m, periodo) {
+    var ementa = m.ementa.length > 180 ? m.ementa.slice(0, 177) + "..." : m.ementa;
+    var placar = extrairPlacar(m.placar);
+    var tema = temaParaShare(m.id);
+    var linhas = [m.tipo, "", ementa, "", resultadoOficial(m)];
+    if (placar) linhas.push(placar);
+    if (tema) linhas.push("", "Tema: " + tema);
+    linhas.push("Fonte: SAPL da Câmara de Campo Largo", "Ver matéria no SAPL", "", "Dados reunidos pelo Em Pratos Limpos");
+    return juntarLinhasShare(linhas);
+  }
+
+  function textoShareMateriaTikTok(m, periodo) {
+    var linkSap = SAPL_ORIGEM + "/materia/" + encodeURIComponent(String(m.id));
+    var data = dataSessaoMateria(m, periodo);
+    var placar = extrairPlacar(m.placar);
+    var tema = temaParaShare(m.id);
+    var linhas = [m.tipo, resultadoOficial(m)];
+    if (placar) linhas.push(placar);
+    linhas.push("");
+    var votou = "A Câmara Municipal de Campo Largo votou " + m.tipo;
+    if (data) votou += " em " + data;
+    linhas.push(votou + ".");
+    if (tema) linhas.push("Tema: " + tema + ".");
+    linhas.push(m.ementa, "");
+    var resultadoLinha = "Resultado oficial: " + resultadoOficial(m) + ".";
+    if (placar) resultadoLinha += " Placar: " + placar + ".";
+    linhas.push(resultadoLinha, "", "Fonte oficial: SAPL da Câmara Municipal de Campo Largo.", linkSap,
+      "", "#EmPratosLimpos #CampoLargo #CamaraMunicipal #TransparenciaPublica");
+    return juntarLinhasShare(linhas);
+  }
+
+  function textoSharePeriodoWhatsApp(periodo) {
+    var lista = MATERIAS_CAMARA[periodo] || [];
+    var linhas = ["Em Pratos Limpos", "", "O que a Câmara de Campo Largo votou",
+      "Período: " + rotuloPeriodoShare(periodo), ""];
+    lista.forEach(function (m) {
+      var tema = temaParaShare(m.id);
+      var linha = m.tipo + ". " + resultadoOficial(m) + ".";
+      if (tema) linha = m.tipo + ". Tema: " + tema + ". " + resultadoOficial(m) + ".";
+      linhas.push(linha);
+    });
+    linhas.push("", "Fonte oficial: SAPL da Câmara Municipal de Campo Largo.",
+      "Consulte no portal: " + PORTAL_OFICIAL);
+    return juntarLinhasShare(linhas);
+  }
+
+  function textoSharePeriodoInstagram(periodo) {
+    var lista = MATERIAS_CAMARA[periodo] || [];
+    var linhas = ["O que a Câmara de Campo Largo votou", "",
+      "Período: " + rotuloPeriodoShare(periodo), ""];
+    lista.forEach(function (m) {
+      var tema = temaParaShare(m.id);
+      var linha = m.tipo + ". " + resultadoOficial(m) + ".";
+      if (tema) linha = m.tipo + ". Tema: " + tema + ". " + resultadoOficial(m) + ".";
+      linhas.push(linha);
+    });
+    linhas.push("", "Fonte oficial: SAPL da Câmara Municipal de Campo Largo.",
+      "Veja os dados reunidos no Em Pratos Limpos: " + PORTAL_OFICIAL,
+      "", "#EmPratosLimpos #CampoLargo #CamaraMunicipal #TransparenciaPublica");
+    return juntarLinhasShare(linhas);
+  }
+
+  function textoSharePeriodoStories(periodo) {
+    var lista = MATERIAS_CAMARA[periodo] || [];
+    var linhas = ["O que a Câmara votou", rotuloPeriodoShare(periodo), ""];
+    lista.forEach(function (m) {
+      linhas.push(m.tipo + ": " + resultadoOficial(m));
+    });
+    linhas.push("", "Fonte: SAPL da Câmara de Campo Largo", "", "Dados reunidos pelo Em Pratos Limpos");
+    return juntarLinhasShare(linhas);
+  }
+
+  function textoSharePeriodoTikTok(periodo) {
+    var lista = MATERIAS_CAMARA[periodo] || [];
+    var linhas = ["O que a Câmara de Campo Largo votou", rotuloPeriodoShare(periodo), ""];
+    lista.forEach(function (m) {
+      var tema = temaParaShare(m.id);
+      linhas.push(m.tipo + (tema ? " (" + tema + ")" : "") + ": " + resultadoOficial(m) + ".");
+    });
+    linhas.push("", "Fonte oficial: SAPL da Câmara Municipal de Campo Largo.",
+      PORTAL_OFICIAL, "", "#EmPratosLimpos #CampoLargo #CamaraMunicipal #TransparenciaPublica");
+    return juntarLinhasShare(linhas);
+  }
+
+  function rotuloFalta(qtd, comJustificativa) {
+    var n = Number(qtd) || 0;
+    if (comJustificativa) {
+      return n === 1 ? "Falta com justificativa: 1." : "Faltas com justificativa: " + n + ".";
+    }
+    return n === 1 ? "Falta sem justificativa: 1." : "Faltas sem justificativa: " + n + ".";
+  }
+
+  function dadosShareVereador(v) {
+    var p = v.presenca || {};
+    var vo = v.votos || {};
+    var pl = v.projetos_lei || {};
+    return {
+      nome: v.nome_parlamentar || "",
+      partido: v.partido_sigla || "",
+      periodo: periodoVereadorShare(),
+      presencas: p.presencas,
+      total: p.sessoes_ordinarias,
+      faltasJust: p.faltas_com_justificativa,
+      faltasSem: p.faltas_sem_justificativa,
+      plls: pl.total_propostos,
+      sim: vo.sim,
+      nao: vo.nao,
+      abstencao: vo.abstencao,
+      presNaoVotou: vo.presidente_nao_votou,
+      sapl: urlSegura(v.link_sapl),
+      portal: urlPortalVereador()
+    };
+  }
+
+  function textoShareVereadorWhatsApp(v) {
+    var d = dadosShareVereador(v);
+    var linhas = ["Em Pratos Limpos", "",
+      "Perfil parlamentar: " + d.nome + (d.partido ? " (" + d.partido + ")" : ""),
+      "Período: " + d.periodo, "",
+      "Presença: " + d.presencas + " de " + d.total + " sessões.",
+      rotuloFalta(d.faltasJust, true),
+      rotuloFalta(d.faltasSem, false),
+      "PLLs de autoria ou coautoria: " + d.plls + ".",
+      "Votos nominais registrados: " + d.sim + " Sim, " + d.nao + " Não e " + d.abstencao + " abstenções.",
+      "Registros como presidente que não votou: " + d.presNaoVotou + ".",
+      "",
+      "Ausência não é voto. O presidente pode não votar conforme a regra da sessão.",
+      ""];
+    if (d.sapl) linhas.push("Perfil oficial no SAPL: " + d.sapl);
+    linhas.push("Consulte os dados: " + d.portal);
+    return juntarLinhasShare(linhas);
+  }
+
+  function textoShareVereadorInstagram(v) {
+    var d = dadosShareVereador(v);
+    var linhas = ["Atuação parlamentar em dados", "",
+      d.nome + (d.partido ? " (" + d.partido + ")" : ""),
+      "Período: " + d.periodo, "",
+      "Presença: " + d.presencas + " de " + d.total + " sessões.",
+      rotuloFalta(d.faltasJust, true),
+      rotuloFalta(d.faltasSem, false),
+      "PLLs de autoria ou coautoria: " + d.plls + ".",
+      "Votos nominais: " + d.sim + " Sim, " + d.nao + " Não e " + d.abstencao + " abstenções.",
+      "Como presidente, não votou em " + d.presNaoVotou + " registros.",
+      "",
+      "Os números descrevem registros oficiais e não representam nota, ranking ou avaliação. Ausência não é voto.",
+      "",
+      "Fonte oficial: SAPL da Câmara Municipal de Campo Largo."];
+    if (d.sapl) linhas.push("Perfil no SAPL: " + d.sapl);
+    linhas.push("Dados reunidos no Em Pratos Limpos: " + d.portal,
+      "", "#EmPratosLimpos #CampoLargo #CamaraMunicipal #TransparenciaPublica");
+    return juntarLinhasShare(linhas);
+  }
+
+  function textoShareVereadorStories(v) {
+    var d = dadosShareVereador(v);
+    return juntarLinhasShare([
+      "Perfil parlamentar",
+      d.nome,
+      d.partido,
+      d.periodo,
+      "",
+      "Presença",
+      d.presencas + " de " + d.total + " sessões",
+      "Faltas com justificativa: " + d.faltasJust,
+      "Faltas sem justificativa: " + d.faltasSem,
+      "",
+      "Registros legislativos",
+      "PLLs de autoria ou coautoria: " + d.plls,
+      "Votos Sim: " + d.sim,
+      "Votos Não: " + d.nao,
+      "Abstenções: " + d.abstencao,
+      "Presidente que não votou: " + d.presNaoVotou,
+      "",
+      "Dados oficiais do SAPL",
+      "Ausência não é voto.",
+      "Estes dados não são nota nem ranking.",
+      "",
+      "Consultar perfil"
+    ]);
+  }
+
+  function textoShareVereadorTikTok(v) {
+    var d = dadosShareVereador(v);
+    var linhas = [
+      "Perfil parlamentar",
+      d.nome + (d.partido ? " (" + d.partido + ")" : ""),
+      "",
+      "Presença",
+      d.presencas + " de " + d.total + " sessões",
+      "",
+      "PLLs de autoria ou coautoria",
+      String(d.plls),
+      "",
+      "Votos nominais",
+      d.sim + " Sim",
+      d.nao + " Não",
+      d.abstencao + " abstenções",
+      "",
+      "Dados oficiais do SAPL",
+      "Sem nota e sem ranking",
+      "",
+      "Registros de " + d.nome + (d.partido ? " (" + d.partido + ")" : "") + " em " + d.periodo + ".",
+      "Presença: " + d.presencas + " de " + d.total + " sessões.",
+      rotuloFalta(d.faltasJust, true),
+      rotuloFalta(d.faltasSem, false),
+      "PLLs de autoria ou coautoria: " + d.plls + ".",
+      "Votos nominais: " + d.sim + " Sim, " + d.nao + " Não e " + d.abstencao + " abstenções.",
+      "",
+      "Os números descrevem registros oficiais. Não são nota nem ranking. Ausência não é voto.",
+      "",
+      "Fonte oficial: SAPL da Câmara Municipal de Campo Largo.",
+      d.portal,
+      "",
+      "#EmPratosLimpos #CampoLargo #CamaraMunicipal #TransparenciaPublica"
+    ];
+    return juntarLinhasShare(linhas);
+  }
+
   function renderCardMateria(m) {
     var badgeClass = m.resultado === "maioria" ? "badge-maioria" : "badge-unanimidade";
     var placar = placarResumido(m.placar);
-    return '<a class="item-votado materia" href="https://sapl.campolargo.pr.leg.br/materia/' + esc(m.id) +
-      '" target="_blank" rel="noopener noreferrer" data-resultado="' + esc(m.resultado) + '">' +
+    return '<article class="item-votado materia" data-resultado="' + esc(m.resultado) + '">' +
+      '<button type="button" class="materia-link" data-materia-id="' + esc(m.id) +
+      '" data-resultado="' + esc(m.resultado) +
+      '" aria-haspopup="dialog" aria-controls="resumo-sheet" aria-label="Abrir resumo de ' + esc(m.tipo) + '">' +
       '<div class="materia-info"><span class="materia-titulo">' + esc(m.tipo) +
-      '</span><span class="materia-ementa">' + esc(m.ementa) + "</span></div>" +
+      '</span>' + htmlTagsMateria(m.id) +
+      '<span class="materia-ementa">' + esc(m.ementa) + "</span></div>" +
       (placar ? '<span class="badge-status ' + badgeClass + '">' + esc(placar) + "</span>" : "") +
-      "</a>";
+      "</button></article>";
   }
 
   function materiasFiltradas(periodo) {
     var lista = MATERIAS_CAMARA[periodo] || [];
     var filtro = estadoMaterias.filtro;
-    var busca = (estadoMaterias.busca || "").toLowerCase().trim();
+    var busca = normalizarTexto(estadoMaterias.busca || "").trim();
     return lista.filter(function (m) {
       if (filtro && m.resultado !== filtro) return false;
       if (busca) {
-        var texto = (m.tipo + " " + m.ementa + " " + m.id).toLowerCase();
-        if (texto.indexOf(busca) === -1) return false;
+        var tags = tagsMateria(m.id);
+        var texto = m.tipo + " " + m.ementa + " " + m.id;
+        if (tags) texto += " " + String(tags.tag_tipo) + " " + String(tags.tag_tema);
+        if (normalizarTexto(texto).indexOf(busca) === -1) return false;
       }
       return true;
     });
@@ -2702,24 +4014,337 @@
         }
       });
     }
+
+    bloco.querySelectorAll(".materia-link").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var id = parseInt(btn.getAttribute("data-materia-id"), 10);
+        var materia = (MATERIAS_CAMARA[periodo] || []).find(function (m) { return m.id === id; });
+        if (materia) abrirResumoSheet(materia, periodo);
+      });
+    });
+  }
+
+  var shareContexto = { tipo: "portal" };
+  var shareGatilhoAnterior = null;
+
+  function contextoShareAtivo() {
+    if (estadoUI.secao === "vereadores") {
+      var v = vereadorAtual();
+      if (v) return { tipo: "vereador", dados: v };
+      return { tipo: "portal" };
+    }
+    return { tipo: "periodo", periodo: estadoMaterias.periodo || "sessao" };
+  }
+
+  function tituloShareSheet(ctx) {
+    if (ctx.tipo === "materia" && ctx.dados) return "Compartilhar matéria";
+    if (ctx.tipo === "vereador" && ctx.dados) return "Compartilhar perfil";
+    if (ctx.tipo === "periodo") return "Compartilhar o que foi votado";
+    return "Compartilhar portal";
+  }
+
+  function atualizarRotuloBotaoShare() {
+    var btn = document.querySelector('.btn-abrir-share[data-share="vereador"]');
+    if (!btn) return;
+    var v = vereadorAtual();
+    btn.setAttribute("aria-label", v
+      ? "Compartilhar perfil de " + v.nome_parlamentar
+      : "Compartilhar perfil parlamentar");
+  }
+
+  function folhaShareAberta() {
+    var el = document.getElementById("share-sheet-backdrop");
+    return !!(el && el.classList.contains("ativo"));
+  }
+
+  function folhaResumoAberta() {
+    var el = document.getElementById("resumo-sheet-backdrop");
+    return !!(el && el.classList.contains("ativo"));
+  }
+
+  function atualizarOverflowFolhas() {
+    document.body.style.overflow = (folhaShareAberta() || folhaResumoAberta()) ? "hidden" : "";
+  }
+
+  var resumoContexto = { dados: null, periodo: "sessao" };
+  var resumoGatilhoAnterior = null;
+
+  function htmlResumoCorpo(m) {
+    var linkSap = SAPL_ORIGEM + "/materia/" + encodeURIComponent(String(m.id));
+    var resultado = resultadoCompartilhamento(m);
+    var html = '<div class="resumo-campo">' +
+      '<p class="resumo-campo-rotulo">Tipo</p>' +
+      '<p class="resumo-campo-valor">' + esc(m.tipo) + "</p></div>";
+    if (m.autores && m.autores.length > 0) {
+      html += '<div class="resumo-campo">' +
+        '<p class="resumo-campo-rotulo">Autor</p>' +
+        '<p class="resumo-campo-valor">' + esc(m.autores.map(function(a) { return a.nome_parlamentar || a.nome; }).join(", ")) + "</p></div>";
+    }
+    html += '<div class="resumo-campo">' +
+      '<p class="resumo-campo-rotulo">Ementa (resumo oficial)</p>' +
+      '<p class="resumo-campo-valor">' + esc(m.ementa) + "</p></div>" +
+      '<div class="resumo-campo">' +
+      '<p class="resumo-campo-rotulo">Resultado da votação</p>' +
+      '<p class="resumo-campo-valor">' + esc(resultado) + "</p></div>";
+    if (m.categoria) {
+      html += '<div class="resumo-campo">' +
+        '<p class="resumo-campo-rotulo">Categoria</p>' +
+        '<p class="resumo-campo-valor"><span class="tag-categoria">' + esc(m.categoria) + "</span></p></div>";
+    }
+    html += '<a class="resumo-link-sapl" href="' + esc(linkSap) +
+      '" target="_blank" rel="noopener noreferrer">' +
+      "Ver página oficial no SAPL" +
+      '<svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg></a>';
+    return html;
+  }
+
+  function abrirResumoSheet(materia, periodo) {
+    var backdrop = document.getElementById("resumo-sheet-backdrop");
+    var titulo = document.getElementById("resumo-sheet-titulo");
+    var corpo = document.getElementById("resumo-sheet-corpo");
+    var btnShare = document.getElementById("btn-share-resumo");
+    if (!backdrop || !materia) return;
+    resumoContexto = { dados: materia, periodo: periodo || estadoMaterias.periodo || "sessao" };
+    resumoGatilhoAnterior = document.activeElement;
+    if (titulo) titulo.textContent = materia.tipo || "Resumo da matéria";
+    if (corpo) corpo.innerHTML = htmlResumoCorpo(materia);
+    if (btnShare) {
+      btnShare.setAttribute("aria-label", "Compartilhar " + (materia.tipo || "matéria"));
+    }
+    backdrop.classList.add("ativo");
+    backdrop.setAttribute("aria-hidden", "false");
+    atualizarOverflowFolhas();
+    var fechar = document.getElementById("btn-fechar-resumo");
+    if (fechar) fechar.focus();
+  }
+
+  function fecharResumoSheet() {
+    var backdrop = document.getElementById("resumo-sheet-backdrop");
+    if (!backdrop) return;
+    backdrop.classList.remove("ativo");
+    backdrop.setAttribute("aria-hidden", "true");
+    atualizarOverflowFolhas();
+    if (resumoGatilhoAnterior && resumoGatilhoAnterior.focus) resumoGatilhoAnterior.focus();
+  }
+
+  function abrirShareSheet(ctx) {
+    shareContexto = ctx || contextoShareAtivo();
+    var backdrop = document.getElementById("share-sheet-backdrop");
+    var titulo = document.getElementById("share-sheet-titulo");
+    var feedback = document.getElementById("share-sheet-feedback");
+    if (!backdrop) return;
+    shareGatilhoAnterior = document.activeElement;
+    if (titulo) titulo.textContent = tituloShareSheet(shareContexto);
+    if (feedback) feedback.textContent = "";
+    backdrop.classList.add("ativo");
+    backdrop.setAttribute("aria-hidden", "false");
+    atualizarOverflowFolhas();
+    var fechar = document.getElementById("btn-fechar-share");
+    if (fechar) fechar.focus();
+  }
+
+  function fecharShareSheet() {
+    var backdrop = document.getElementById("share-sheet-backdrop");
+    if (!backdrop) return;
+    backdrop.classList.remove("ativo");
+    backdrop.setAttribute("aria-hidden", "true");
+    var feedback = document.getElementById("share-sheet-feedback");
+    if (feedback) feedback.textContent = "";
+    atualizarOverflowFolhas();
+    if (shareGatilhoAnterior && shareGatilhoAnterior.focus) shareGatilhoAnterior.focus();
+  }
+
+  function copiarFallback(texto) {
+    var ta = document.createElement("textarea");
+    ta.value = texto;
+    ta.setAttribute("readonly", "readonly");
+    ta.style.position = "fixed";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function copiarTextoShare(texto, mensagem) {
+    var feedback = document.getElementById("share-sheet-feedback");
+    function mostrarOk() {
+      if (feedback) {
+        feedback.style.color = "";
+        feedback.textContent = mensagem || "Texto copiado. Cole no aplicativo escolhido.";
+      }
+    }
+    function mostrarFalha() {
+      if (feedback) {
+        feedback.style.color = "var(--nao)";
+        feedback.textContent = "Não foi possível copiar automaticamente. Tente copiar o texto manualmente.";
+      }
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texto).then(mostrarOk).catch(function () {
+        if (copiarFallback(texto)) mostrarOk();
+        else mostrarFalha();
+      });
+      return;
+    }
+    if (copiarFallback(texto)) mostrarOk();
+    else mostrarFalha();
+  }
+
+  function abrirUrlHttps(url) {
+    if (!url || url.indexOf("https://") !== 0) return;
+    var a = document.createElement("a");
+    a.href = url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  function textoShareDoContexto(canal) {
+    var ctx = shareContexto;
+    var periodo = ctx.periodo || estadoMaterias.periodo;
+    if (ctx.tipo === "materia" && ctx.dados) {
+      if (canal === "whatsapp") return textoShareMateriaWhatsApp(ctx.dados, periodo);
+      if (canal === "instagram") return textoShareMateriaInstagram(ctx.dados, periodo);
+      if (canal === "stories") return textoShareMateriaStories(ctx.dados, periodo);
+      if (canal === "tiktok") return textoShareMateriaTikTok(ctx.dados, periodo);
+    }
+    if (ctx.tipo === "vereador" && ctx.dados) {
+      if (canal === "whatsapp") return textoShareVereadorWhatsApp(ctx.dados);
+      if (canal === "instagram") return textoShareVereadorInstagram(ctx.dados);
+      if (canal === "stories") return textoShareVereadorStories(ctx.dados);
+      if (canal === "tiktok") return textoShareVereadorTikTok(ctx.dados);
+    }
+    if (ctx.tipo === "periodo") {
+      if (canal === "whatsapp") return textoSharePeriodoWhatsApp(periodo);
+      if (canal === "instagram") return textoSharePeriodoInstagram(periodo);
+      if (canal === "stories") return textoSharePeriodoStories(periodo);
+      if (canal === "tiktok") return textoSharePeriodoTikTok(periodo);
+    }
+    return textoSharePortal();
+  }
+
+  function executarShareCanal(canal) {
+    if (canal === "imprimir") {
+      fecharShareSheet();
+      window.print();
+      return;
+    }
+    var texto = textoShareDoContexto(canal);
+    if (canal === "whatsapp") {
+      abrirUrlHttps(WHATSAPP_COMPARTILHAR + encodeURIComponent(texto));
+      return;
+    }
+    var rotulos = { instagram: "Instagram", stories: "Instagram Stories", tiktok: "TikTok" };
+    copiarTextoShare(texto, "Texto copiado para " + (rotulos[canal] || "compartilhamento") + ".");
+  }
+
+  function prenderFocoNaFolha(backdrop, e) {
+    var focoaveis = backdrop.querySelectorAll("button, a[href]");
+    if (!focoaveis.length) return;
+    var primeiro = focoaveis[0];
+    var ultimo = focoaveis[focoaveis.length - 1];
+    if (e.shiftKey && document.activeElement === primeiro) {
+      e.preventDefault();
+      ultimo.focus();
+    } else if (!e.shiftKey && document.activeElement === ultimo) {
+      e.preventDefault();
+      primeiro.focus();
+    }
+  }
+
+  function initShareSheet() {
+    var backdrop = document.getElementById("share-sheet-backdrop");
+    var btnFechar = document.getElementById("btn-fechar-share");
+    if (!backdrop) return;
+
+    document.querySelectorAll(".btn-abrir-share").forEach(function (btnAbrir) {
+      btnAbrir.addEventListener("click", function () {
+        var periodo = btnAbrir.getAttribute("data-periodo");
+        if (periodo) {
+          abrirShareSheet({ tipo: "periodo", periodo: periodo });
+          return;
+        }
+        abrirShareSheet(contextoShareAtivo());
+      });
+    });
+    if (btnFechar) btnFechar.addEventListener("click", fecharShareSheet);
+
+    backdrop.addEventListener("click", function (e) {
+      if (e.target === backdrop) fecharShareSheet();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (!folhaShareAberta()) return;
+      if (e.key === "Escape") {
+        fecharShareSheet();
+        return;
+      }
+      if (e.key === "Tab") prenderFocoNaFolha(backdrop, e);
+    });
+
+    backdrop.querySelectorAll(".share-sheet-opcao").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        executarShareCanal(btn.getAttribute("data-canal"));
+      });
+    });
+  }
+
+  function initResumoSheet() {
+    var backdrop = document.getElementById("resumo-sheet-backdrop");
+    var btnFechar = document.getElementById("btn-fechar-resumo");
+    var btnShare = document.getElementById("btn-share-resumo");
+    if (!backdrop) return;
+
+    if (btnFechar) btnFechar.addEventListener("click", fecharResumoSheet);
+    if (btnShare) {
+      btnShare.addEventListener("click", function () {
+        if (!resumoContexto.dados) return;
+        abrirShareSheet({
+          tipo: "materia",
+          dados: resumoContexto.dados,
+          periodo: resumoContexto.periodo
+        });
+      });
+    }
+
+    backdrop.addEventListener("click", function (e) {
+      if (e.target === backdrop && !folhaShareAberta()) fecharResumoSheet();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (!folhaResumoAberta() || folhaShareAberta()) return;
+      if (e.key === "Escape") {
+        fecharResumoSheet();
+        return;
+      }
+      if (e.key === "Tab") prenderFocoNaFolha(backdrop, e);
+    });
   }
 
   function initMateriasCamara() {
-    ["sessao", "mes", "todo"].forEach(renderBlocoVotado);
+    ["sessao", "mes", "todo"].forEach(function (periodo) {
+      estadoMaterias.listaVisivel[periodo] = true;
+      renderBlocoVotado(periodo);
+    });
   }
 
   function resetMateriasPeriodo(periodo) {
     estadoMaterias.periodo = periodo;
     estadoMaterias.filtro = "";
     estadoMaterias.busca = "";
-    estadoMaterias.listaVisivel.sessao = periodo === "sessao";
+    estadoMaterias.listaVisivel.sessao = false;
     estadoMaterias.listaVisivel.mes = false;
     estadoMaterias.listaVisivel.todo = false;
+    estadoMaterias.listaVisivel[periodo] = true;
     renderBlocoVotado(periodo);
   }
 
   function initNavegacao() {
-    var secaoAtual = "camara";
     var navBtns = document.querySelectorAll("#nav-principal button");
     var painelCamara = document.getElementById("painel-camara");
     var painelVereadores = document.getElementById("painel-vereadores");
@@ -2727,7 +4352,7 @@
     var subVereadores = document.getElementById("sub-vereadores");
 
     function trocarSecao(secao) {
-      secaoAtual = secao;
+      estadoUI.secao = secao;
       navBtns.forEach(function (btn) {
         var ativo = btn.getAttribute("data-secao") === secao;
         btn.classList.toggle("ativo", ativo);
@@ -2737,6 +4362,7 @@
       painelVereadores.classList.toggle("ativo", secao === "vereadores");
       subCamara.classList.toggle("ativo", secao === "camara");
       subVereadores.classList.toggle("ativo", secao === "vereadores");
+      atualizarRotuloBotaoShare();
     }
 
     navBtns.forEach(function (btn) {
@@ -2765,6 +4391,7 @@
           paineisPeriodo[k].hidden = !ativo;
         });
         resetMateriasPeriodo(id);
+        atualizarRotuloBotaoShare();
       });
     });
 
@@ -2774,6 +4401,8 @@
 
     if (window.location.hash === "#vereadores") {
       trocarSecao("vereadores");
+    } else {
+      atualizarRotuloBotaoShare();
     }
   }
 
@@ -2784,6 +4413,8 @@
   });
 
   aplicarTema(temaInicial());
+  initShareSheet();
+  initResumoSheet();
   initMateriasCamara();
   initNavegacao();
   carregar();
