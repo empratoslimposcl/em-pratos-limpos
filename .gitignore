@@ -40,3 +40,40 @@ ehthumbs.db
 # Scratch/local-only
 scratch/
 .aider*
+
+# Secrets and credentials
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.json
+secrets.json
+config.local.*
+token.txt
+
+# IDE and editor
+.idea/
+.vscode/
+*.code-workspace
+*.swp
+
+# Node
+node_modules/
+
+# Python test/coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Backups
+backups/local/
+*.tar.gz
+*.bak
+
+# Wrangler
+.wrangler/
+
+# Cloudflare worker (secrets in wrangler.toml)
+cloudflare-worker/wrangler.toml

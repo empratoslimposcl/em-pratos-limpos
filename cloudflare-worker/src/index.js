@@ -73,18 +73,6 @@ async function verifyTurnstile(token, secretKey, ip) {
   }
 }
 
-// Função para verificar geolocalização (Campo Largo)
-async function verifyGeolocation(ip) {
-  try {
-    // Usar API de geolocalização do Cloudflare
-    // A geolocalização já vem no request.cf
-    return { city: 'Campo Largo', region: 'PR', country: 'BR' };
-  } catch (error) {
-    return null;
-  }
-}
-
-// Função para obter projetos da última sessão
 async function getProjetos(db) {
   const result = await db.prepare(`
     SELECT 
@@ -118,43 +106,39 @@ async function checkVotou(db, ipHash, sessaoId) {
   return !!(result && result.count > 0);
 }
 
-// Função para registrar votos
 async function registrarVotos(db, ipHash, votos, sessaoId, geolocation) {
-  // Verificar se já votou
   const jaVotou = await checkVotou(db, ipHash, sessaoId);
   if (jaVotou) {
     return { success: false, error: 'Você já votou nesta sessão' };
   }
 
-  // Registrar cada voto
+  const statements = [];
   for (const voto of votos) {
-    await db.prepare(`
-      INSERT INTO votos (projeto_id, sessao_id, ip_hash, voto, geolocalizacao)
-      VALUES (?, ?, ?, ?, ?)
-    `).bind(voto.projeto_id, sessaoId, ipHash, voto.voto, geolocation).run();
-
-    // Atualizar contagem no projeto
+    if (!voto.projeto_id || typeof voto.voto !== 'string') {
+      continue;
+    }
+    statements.push(
+      db.prepare('INSERT INTO votos (projeto_id, sessao_id, ip_hash, voto, geolocalizacao) VALUES (?, ?, ?, ?, ?)')
+        .bind(voto.projeto_id, sessaoId, ipHash, voto.voto, geolocation)
+    );
     if (voto.voto === 'util') {
-      await db.prepare(`
-        UPDATE projetos_votacao 
-        SET total_util = total_util + 1 
-        WHERE projeto_id = ?
-      `).bind(voto.projeto_id).run();
+      statements.push(
+        db.prepare('UPDATE projetos_votacao SET total_util = total_util + 1 WHERE projeto_id = ?')
+          .bind(voto.projeto_id)
+      );
     } else {
-      await db.prepare(`
-        UPDATE projetos_votacao 
-        SET total_inutil = total_inutil + 1 
-        WHERE projeto_id = ?
-      `).bind(voto.projeto_id).run();
+      statements.push(
+        db.prepare('UPDATE projetos_votacao SET total_inutil = total_inutil + 1 WHERE projeto_id = ?')
+          .bind(voto.projeto_id)
+      );
     }
   }
+  statements.push(
+    db.prepare('INSERT INTO votantes (ip_hash, sessao_id) VALUES (?, ?)')
+      .bind(ipHash, sessaoId)
+  );
 
-  // Registrar que votou
-  await db.prepare(`
-    INSERT INTO votantes (ip_hash, sessao_id)
-    VALUES (?, ?)
-  `).bind(ipHash, sessaoId).run();
-
+  await db.batch(statements);
   return { success: true };
 }
 
@@ -277,8 +261,20 @@ export default {
 
       // POST /api/votar
       if (path === '/api/votar' && request.method === 'POST') {
-        const body = await request.json();
-        const { ip_hash, votos, sessao_id, token } = body;
+        let body = {};
+        try {
+          body = await request.json();
+        } catch (e) {
+          return jsonResponse({ success: false, error: 'Pedido inválido' }, 400, env);
+        }
+        const { ip_hash, votos, token } = body;
+
+        if (!Array.isArray(votos) || votos.length === 0) {
+          return jsonResponse({ success: false, error: 'Votos inválidos' }, 400, env);
+        }
+
+        const sessao = await env.DB.prepare('SELECT MAX(sessao_id) as sessao_id FROM projetos_votacao').first();
+        const sessaoId = sessao && sessao.sessao_id;
 
         // Verificar Turnstile novamente
         const ipParaTurnstile = ipDoPedido(request);
@@ -300,7 +296,7 @@ export default {
         // Registrar votos
         const geo = request.cf;
         const geolocation = geo ? `${geo.city}, ${geo.region}` : 'Desconhecida';
-        const resultado = await registrarVotos(env.DB, ip_hash, votos, sessao_id, geolocation);
+        const resultado = await registrarVotos(env.DB, ip_hash, votos, sessaoId, geolocation);
 
         if (!resultado.success) {
           return jsonResponse({ success: false, error: resultado.error }, 400, env);
@@ -322,7 +318,6 @@ export default {
       console.error('Worker:', error);
       return jsonResponse({
         error: 'Erro interno do servidor',
-        detalhe: String((error && error.message) || error),
       }, 500, env);
     }
   },
