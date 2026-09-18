@@ -267,7 +267,7 @@ export default {
         } catch (e) {
           return jsonResponse({ success: false, error: 'Pedido inválido' }, 400, env);
         }
-        const { ip_hash, votos, token } = body;
+        const { ip_hash, votos } = body;
 
         if (!Array.isArray(votos) || votos.length === 0) {
           return jsonResponse({ success: false, error: 'Votos inválidos' }, 400, env);
@@ -275,13 +275,6 @@ export default {
 
         const sessao = await env.DB.prepare('SELECT MAX(sessao_id) as sessao_id FROM projetos_votacao').first();
         const sessaoId = sessao && sessao.sessao_id;
-
-        // Verificar Turnstile novamente
-        const ipParaTurnstile = ipDoPedido(request);
-        const turnstileValid = await verifyTurnstile(token, env.TURNSTILE_SECRET_KEY, ipParaTurnstile);
-        if (!turnstileValid) {
-          return jsonResponse({ success: false, error: 'Captcha inválido' }, 400, env);
-        }
 
         // Verificar IP
         const ip = ipDoPedido(request);
