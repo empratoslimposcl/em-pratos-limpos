@@ -1474,6 +1474,20 @@
     box-shadow: var(--sombra);
   }
 
+  .lista-votados { display: flex; flex-direction: column; gap: 12px; }
+  .item-votado { padding: 12px; border: 1px solid var(--borda); border-radius: 12px; background: var(--fundo-card, var(--fundo)); }
+  .item-votado .cab { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .item-votado .tipo { font-weight: 600; font-size: 14px; }
+  .item-votado .selo { font-size: 11px; padding: 2px 8px; border-radius: 999px; font-weight: 600; }
+  .selo-unanimidade { background: #d1fae5; color: #065f46; }
+  .selo-maioria { background: #fef3c7; color: #92400e; }
+  .item-votado .ementa { font-size: 13px; color: var(--texto-secundario); margin: 0; line-height: 1.4; }
+  .item-votado .placar { font-size: 12px; color: var(--texto-terciario); margin: 4px 0 0; }
+  .paginacao { display: flex; justify-content: center; gap: 6px; margin-top: 12px; }
+  .btn-pagina { padding: 6px 12px; border: 1px solid var(--borda); border-radius: 8px; background: var(--fundo); color: var(--texto); font-size: 13px; cursor: pointer; }
+  .btn-pagina.ativo { background: var(--primaria, #007aff); color: #fff; border-color: var(--primaria, #007aff); }
+  .btn-pagina:hover { opacity: 0.8; }
+
   .titulo-votado {
     font-family: "Space Grotesk", sans-serif;
     font-size: 15px;
@@ -2933,14 +2947,14 @@
             <div class="status-grade">
               <div class="status-capsula capsula-verde">
                 <span class="capsula-rotulo">Presentes</span>
-                <span class="capsula-valor">15 vereadores</span>
+                <span class="capsula-valor">15</span>
               </div>
               <div class="status-capsula capsula-neutro">
                 <span class="capsula-rotulo">Faltas</span>
-                <span class="capsula-valor">0 faltas</span>
+                <span class="capsula-valor">0</span>
               </div>
             </div>
-            <p class="nota-presenca">Todos os 15 vereadores compareceram. Nenhuma falta registrada nesta sessão.</p>
+
           </div>
         </div>
 
@@ -4012,8 +4026,7 @@
     mes: [
       { id: 26405, tipo: "PLL 60/2026", resultado: "maioria", ementa: "Concede recomposição salarial ao prefeito, vice-prefeito e secretários municipais.", placar: "Sessão de 8 de junho. Placar: 13 a favor, 1 contra." },
       { id: 26020, tipo: "PLL 31/2026", resultado: "unanimidade", ementa: "Institui o programa educativo e preventivo Samuzinho, sobre prevenção de acidentes e uso dos serviços de emergência.", placar: "Sessão de 8 de junho. Placar: 14 a favor, 0 contra." },
-      { id: 26288, tipo: "PLL 57/2026", resultado: "unanimidade", ementa: "Institui a política municipal de incentivo à agroindústria familiar em Campo Largo.", placar: "Sessão de 8 de junho. Placar: 14 a favor, 0 contra." },
-      { id: 26418, tipo: "Moção 3/2026", resultado: "unanimidade", ementa: "Moção de aplausos e congratulações ao atleta campo-larguense Gabriel Ionam Naruên dos Santos.", placar: "Sessão de 8 de junho. Placar: 14 a favor, 0 contra." }
+      { id: 26288, tipo: "PLL 57/2026", resultado: "unanimidade", ementa: "Institui a política municipal de incentivo à agroindústria familiar em Campo Largo.", placar: "Sessão de 8 de junho. Placar: 14 a favor, 0 contra." }
     ],
     todo: [
       { id: 26457, tipo: "PLL 62/2026", resultado: "unanimidade", ementa: "Institui o Programa Protetores Mirins no Município de Campo Largo, e dá outras providências.", placar: "Placar: 14 a favor, 0 contra, 0 abstenções. O presidente não votou." },
@@ -4043,6 +4056,18 @@
 
     var elAria = document.querySelector("#card-votacoes-sessao .grafico-anel-box");
     if (elAria) elAria.setAttribute("aria-label", total + " matérias votadas: " + unanimes + " por unanimidade e " + maioria + " por maioria");
+
+    var circ = 2 * Math.PI * 23;
+    var circUni = document.querySelector("#card-votacoes-sessao .anel-progresso-unanimidade");
+    var circMai = document.querySelector("#card-votacoes-sessao .anel-progresso-maioria");
+    if (circUni) {
+      circUni.style.strokeDasharray = (pctUni / 100 * circ) + " " + circ;
+      circUni.style.strokeDashoffset = "0";
+    }
+    if (circMai) {
+      circMai.style.strokeDasharray = (pctMai / 100 * circ) + " " + circ;
+      circMai.style.strokeDashoffset = -(pctUni / 100 * circ);
+    }
   }
 
   function atualizarPainelMes() {
@@ -4675,7 +4700,7 @@
         estadoMaterias.periodo = p;
         estadoMaterias.filtro = f;
         estadoMaterias.listaVisivel[p] = true;
-        renderBlocoVotado(p);
+        renderBlocoVotadoPeriodo(p);
       });
     });
 
@@ -4685,7 +4710,7 @@
         var p = inputBusca.getAttribute("data-periodo");
         estadoMaterias.busca = e.target.value;
         estadoMaterias.listaVisivel[p] = true;
-        renderBlocoVotado(p);
+        renderBlocoVotadoPeriodo(p);
         var novo = document.getElementById("busca-materia-" + p);
         if (novo) {
           novo.focus();
@@ -5032,7 +5057,7 @@
   function initMateriasCamara() {
     ["sessao", "mes", "todo"].forEach(function (periodo) {
       estadoMaterias.listaVisivel[periodo] = true;
-      renderBlocoVotado(periodo);
+      renderBlocoVotadoPeriodo(periodo);
     });
   }
 
@@ -5044,7 +5069,7 @@
     estadoMaterias.listaVisivel.mes = false;
     estadoMaterias.listaVisivel.todo = false;
     estadoMaterias.listaVisivel[periodo] = true;
-    renderBlocoVotado(periodo);
+    renderBlocoVotadoPeriodo(periodo);
   }
 
   function initNavegacao() {

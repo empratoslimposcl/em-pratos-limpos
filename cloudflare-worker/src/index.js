@@ -14,13 +14,22 @@ function origemPermitida(env) {
   return (env && env.ALLOWED_ORIGIN) || '*';
 }
 
+function checarOrigem(request, env, origem) {
+  var origin = request.headers.get('Origin') || '';
+  var permitidas = (origemPermitida(env) || '').split(',').map(function(s) { return s.trim(); });
+  if (permitidas.indexOf('*') !== -1) return '*';
+  if (permitidas.indexOf(origin) !== -1) return origin;
+  return permitidas[0] || '*';
+}
+
 // Função para criar resposta JSON com CORS
-function jsonResponse(data, status = 200, env) {
+function jsonResponse(data, status, env, origem) {
+  status = status || 200;
   return new Response(JSON.stringify(data), {
     status,
     headers: {
       'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': origemPermitida(env),
+      'Access-Control-Allow-Origin': origem || '*',
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
     },
@@ -162,11 +171,12 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname;
 
-    // CORS preflight
+    var origem = checarOrigem(request, env, origem);
+
     if (request.method === 'OPTIONS') {
       return new Response(null, {
         headers: {
-          'Access-Control-Allow-Origin': origemPermitida(env),
+          'Access-Control-Allow-Origin': origem,
           'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
           'Access-Control-Allow-Headers': 'Content-Type',
         },
@@ -180,7 +190,7 @@ export default {
         try {
           body = await request.json();
         } catch (e) {
-          return jsonResponse({ success: false, error: 'Pedido inválido' }, 400, env);
+          return jsonResponse({ success: false, error: 'Pedido inválido' }, 400, env, origem);
         }
         const token = body && body.token;
 
@@ -189,11 +199,11 @@ export default {
         // Verificar Turnstile
         const turnstileValid = await verifyTurnstile(token, env.TURNSTILE_SECRET_KEY, ip);
         if (!turnstileValid) {
-          return jsonResponse({ success: false, error: 'Captcha inválido' }, 400, env);
+          return jsonResponse({ success: false, error: 'Captcha inválido' }, 400, env, origem);
         }
 
         if (!ip) {
-          return jsonResponse({ success: false, error: 'Não foi possível identificar o endereço de acesso' }, 400, env);
+          return jsonResponse({ success: false, error: 'Não foi possível identificar o endereço de acesso' }, 400, env, origem);
         }
 
         const ipHash = await hashIP(ip);
@@ -216,7 +226,7 @@ export default {
           geolocalizacao: isCampoLargo ? 'Campo Largo' : ((geo && geo.city) || 'Desconhecida'),
           ja_votou: jaVotou,
           sessao_id: sessao && sessao.sessao_id,
-        }, 200, env);
+        }, 200, env, origem);
       }
 
       // POST ou GET /api/verificar-modo-teste
@@ -239,7 +249,7 @@ export default {
           }
         }
         const modoTeste = !!(secret && valor && valor === secret);
-        return jsonResponse({ modo_teste: modoTeste }, 200, env);
+        return jsonResponse({ modo_teste: modoTeste }, 200, env, origem);
       }
 
       // GET /api/projetos
@@ -256,7 +266,7 @@ export default {
           sessao_id: p.sessao_id,
         }));
 
-        return jsonResponse({ success: true, projetos: projetosSemVereador }, 200, env);
+        return jsonResponse({ success: true, projetos: projetosSemVereador }, 200, env, origem);
       }
 
       // POST /api/votar
@@ -265,12 +275,12 @@ export default {
         try {
           body = await request.json();
         } catch (e) {
-          return jsonResponse({ success: false, error: 'Pedido inválido' }, 400, env);
+          return jsonResponse({ success: false, error: 'Pedido inválido' }, 400, env, origem);
         }
         const { ip_hash, votos } = body;
 
         if (!Array.isArray(votos) || votos.length === 0) {
-          return jsonResponse({ success: false, error: 'Votos inválidos' }, 400, env);
+          return jsonResponse({ success: false, error: 'Votos inválidos' }, 400, env, origem);
         }
 
         const sessao = await env.DB.prepare('SELECT MAX(sessao_id) as sessao_id FROM projetos_votacao').first();
@@ -279,11 +289,11 @@ export default {
         // Verificar IP
         const ip = ipDoPedido(request);
         if (!ip) {
-          return jsonResponse({ success: false, error: 'Não foi possível identificar o endereço de acesso' }, 400, env);
+          return jsonResponse({ success: false, error: 'Não foi possível identificar o endereço de acesso' }, 400, env, origem);
         }
         const ipHashAtual = await hashIP(ip);
         if (ipHashAtual !== ip_hash) {
-          return jsonResponse({ success: false, error: 'IP não corresponde' }, 400, env);
+          return jsonResponse({ success: false, error: 'IP não corresponde' }, 400, env, origem);
         }
 
         // Registrar votos
@@ -292,26 +302,26 @@ export default {
         const resultado = await registrarVotos(env.DB, ip_hash, votos, sessaoId, geolocation);
 
         if (!resultado.success) {
-          return jsonResponse({ success: false, error: resultado.error }, 400, env);
+          return jsonResponse({ success: false, error: resultado.error }, 400, env, origem);
         }
 
-        return jsonResponse({ success: true, message: 'Votos registrados com sucesso' }, 200, env);
+        return jsonResponse({ success: true, message: 'Votos registrados com sucesso' }, 200, env, origem);
       }
 
       // GET /api/resultados
       if (path === '/api/resultados' && request.method === 'GET') {
         const resultados = await getResultados(env.DB);
-        return jsonResponse({ success: true, resultados }, 200, env);
+        return jsonResponse({ success: true, resultados }, 200, env, origem);
       }
 
       // Rota não encontrada
-      return jsonResponse({ error: 'Rota não encontrada' }, 404, env);
+      return jsonResponse({ error: 'Rota não encontrada' }, 404, env, origem);
 
     } catch (error) {
       console.error('Worker:', error);
       return jsonResponse({
         error: 'Erro interno do servidor',
-      }, 500, env);
+      }, 500, env, origem);
     }
   },
 };

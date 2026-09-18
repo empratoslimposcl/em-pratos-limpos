@@ -10,7 +10,7 @@ database_id = "1acc1d0c-44a6-4c74-8e64-57925a302836"
 
 # Variaveis de ambiente (nao-secretas)
 [vars]
-ALLOWED_ORIGIN = "https://empratoslimposcl.github.io"
+ALLOWED_ORIGIN = "https://empratoslimposcl.github.io,https://empratoslimpos.pages.dev"
 
 # Segredos devem ser cadastrados via CLI, nunca em arquivo:
 #   wrangler secret put TURNSTILE_SECRET_KEY
