@@ -80,3 +80,7 @@ cloudflare-worker/wrangler.toml
 
 # Cloudflare Pages
 _wrangler/
+
+.dev.vars*
+!.dev.vars.example
+!.env.example
