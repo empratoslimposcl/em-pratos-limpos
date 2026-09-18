@@ -1326,6 +1326,10 @@
     cursor: not-allowed;
   }
 
+  .btn-pagina { padding: 6px 12px; border: 1px solid var(--linha); border-radius: 8px; background: var(--superficie-2); color: var(--texto); font-size: 13px; cursor: pointer; }
+  .btn-pagina.ativo { background: var(--primaria); color: #fff; border-color: var(--primaria); }
+  .btn-pagina:hover { opacity: 0.8; }
+
   .carregando, .erro-carga {
     padding: 40px 16px;
     text-align: center;
@@ -2309,6 +2313,7 @@
     flex-direction: column;
     gap: 8px;
   }
+  .votacao-lista-oculta { display: none; }
   .votacao-item {
     display: flex;
     align-items: flex-start;
@@ -2773,7 +2778,6 @@
   </section>
   <header class="topo-fixo">
     <div class="topo-util">
-      <span class="topo-local">Câmara Municipal · Campo Largo</span>
       <div class="topo-acoes">
         <button type="button" class="alternar-tema" id="btn-tema" aria-pressed="false" aria-label="Alternar para modo escuro">
           <svg class="icone-lua" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
@@ -2858,76 +2862,6 @@
               <span class="anel-porcento">100%</span>
             </div>
           </div>
-          <details class="card-detalhes">
-            <summary>Ver como se divide o resultado</summary>
-            <div class="card-detalhes-corpo">
-          <div class="barra-trilho" role="img" aria-label="100% unanimidade, 0% maioria">
-            <div class="barra-seg-unanimidade"></div>
-            <div class="barra-seg-maioria"></div>
-          </div>
-          <div class="status-grade">
-            <div class="status-capsula capsula-verde">
-              <span class="capsula-rotulo">Aprovados Unânimes</span>
-              <span class="capsula-valor">2 projetos</span>
-            </div>
-            <div class="status-capsula capsula-roxa">
-              <span class="capsula-rotulo">Aprovados por Maioria</span>
-              <span class="capsula-valor">0 projetos</span>
-            </div>
-          </div>
-            </div>
-          </details>
-        </div>
-
-        <div class="card-app" id="card-presenca-sessao" aria-labelledby="tit-presenca-sessao">
-          <div class="card-header">
-            <div class="card-categoria cat-verde">
-              <div class="card-icone icone-verde" aria-hidden="true">
-                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
-              </div>
-              <span id="tit-presenca-sessao">Presença dos vereadores</span>
-            </div>
-            <a class="card-meta" href="https://sapl.campolargo.pr.leg.br/sessao/794" target="_blank" rel="noopener noreferrer">
-              15 parlamentares
-              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
-            </a>
-          </div>
-          <div class="card-corpo">
-            <div class="metricas-bloco">
-              <div class="metrica-destaque">
-                <span class="metrica-numero">15</span>
-                <span class="metrica-rotulo">presentes de 15 vereadores</span>
-              </div>
-            </div>
-            <div class="grafico-anel-box" role="img" aria-label="100% de presença na sessão">
-              <svg class="anel-svg" viewBox="0 0 58 58" aria-hidden="true">
-                <circle class="anel-fundo" cx="29" cy="29" r="23"></circle>
-                <circle class="anel-progresso-presenca" cx="29" cy="29" r="23"></circle>
-              </svg>
-              <span class="anel-porcento">100%</span>
-            </div>
-          </div>
-          <details class="card-detalhes">
-            <summary>Ver detalhe da presença</summary>
-            <div class="card-detalhes-corpo">
-          <div class="barra-trilho" role="img" aria-label="15 presentes, 0 faltas">
-            <div class="barra-seg-presenca"></div>
-          </div>
-          <div class="status-grade">
-            <div class="status-capsula capsula-verde">
-              <span class="capsula-rotulo">Presentes</span>
-              <span class="capsula-valor">15 vereadores</span>
-            </div>
-            <div class="status-capsula capsula-neutro">
-              <span class="capsula-rotulo">Faltas</span>
-              <span class="capsula-valor">0 faltas</span>
-            </div>
-          </div>
-          <div class="lista-faltas" id="lista-faltas-sessao">
-            <p class="nota-presenca">Todos os 15 vereadores compareceram. Nenhuma falta registrada nesta sessão.</p>
-          </div>
-            </div>
-          </details>
         </div>
 
         <div class="card-app" id="card-temas-sessao" aria-labelledby="tit-temas-sessao">
@@ -2943,7 +2877,7 @@
             </span>
           </div>
           <p class="card-legenda">Temas das 11 matérias votadas nesta sessão.</p>
-          <details class="card-detalhes">
+          <details class="card-detalhes" open>
             <summary>Ver lista de temas</summary>
             <div class="card-detalhes-corpo">
           <div class="barra-tema-sessao" role="img" aria-label="Distribuição temática das 11 matérias votadas">
@@ -2980,6 +2914,34 @@
           </div>
             </div>
           </details>
+        </div>
+
+        <div class="card-app" id="card-presenca-sessao" aria-labelledby="tit-presenca-sessao">
+          <div class="card-header">
+            <div class="card-categoria cat-verde">
+              <div class="card-icone icone-verde" aria-hidden="true">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
+              </div>
+              <span id="tit-presenca-sessao">Presença dos vereadores</span>
+            </div>
+            <a class="card-meta" href="https://sapl.campolargo.pr.leg.br/sessao/794" target="_blank" rel="noopener noreferrer">
+              15 parlamentares
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
+            </a>
+          </div>
+          <div class="card-corpo">
+            <div class="status-grade">
+              <div class="status-capsula capsula-verde">
+                <span class="capsula-rotulo">Presentes</span>
+                <span class="capsula-valor">15 vereadores</span>
+              </div>
+              <div class="status-capsula capsula-neutro">
+                <span class="capsula-rotulo">Faltas</span>
+                <span class="capsula-valor">0 faltas</span>
+              </div>
+            </div>
+            <p class="nota-presenca">Todos os 15 vereadores compareceram. Nenhuma falta registrada nesta sessão.</p>
+          </div>
         </div>
 
         <div class="card-app bloco-votado" id="bloco-votado-sessao" data-periodo="sessao"></div>
@@ -3168,39 +3130,41 @@
     <div class="votacao-corpo" id="votacao-corpo">
       <div id="votacao-etapa-verificacao">
         <p class="votacao-intro">Diga se os projetos da última sessão são úteis para Campo Largo. Só quem está no município pode participar, e cada endereço de internet vota uma vez por sessão.</p>
-        <div class="votacao-termos">
-          <h3>Termos de uso</h3>
-          <div class="votacao-termos-texto" id="votacao-termos-texto">
+        <details class="votacao-termos">
+          <summary>Ver termos de uso</summary>
+          <div class="votacao-termos-texto">
             <p>Esta consulta popular não substitui o voto oficial da Câmara Municipal.</p>
             <p>Você pode enviar uma opinião por endereço de internet, por sessão. Depois de enviar, não dá para mudar.</p>
             <p>Pedimos localização só para confirmar que você está em Campo Largo. Não pedimos nome, CPF nem e-mail.</p>
             <p>Os números vêm do SAPL da Câmara. O autor do projeto fica oculto durante a votação, para não influenciar a opinião.</p>
           </div>
-          <label class="votacao-check" for="check-termos-votacao">
-            <input type="checkbox" id="check-termos-votacao">
-            <span>Li e aceito os termos de uso desta consulta popular.</span>
-          </label>
-        </div>
+        </details>
+        <label class="votacao-check" for="check-termos-votacao">
+          <input type="checkbox" id="check-termos-votacao">
+          <span>Li e aceito os termos de uso desta consulta popular.</span>
+        </label>
         <ul class="votacao-lista" aria-live="polite">
-          <li class="votacao-item" id="verif-captcha">
-            <span class="votacao-item-status" aria-hidden="true">1</span>
-            <div class="votacao-item-texto">
-              <strong>Verificação humana</strong>
-              <span>Captcha invisível do Cloudflare. Roda sozinho, sem quebra-cabeça.</span>
-            </div>
-          </li>
-          <li class="votacao-item" id="verif-ip">
-            <span class="votacao-item-status" aria-hidden="true">2</span>
-            <div class="votacao-item-texto">
-              <strong>Endereço de acesso</strong>
-              <span>Confirma se este aparelho já votou nesta sessão.</span>
-            </div>
-          </li>
           <li class="votacao-item" id="verif-geo">
-            <span class="votacao-item-status" aria-hidden="true">3</span>
+            <span class="votacao-item-status" aria-hidden="true">1</span>
             <div class="votacao-item-texto">
               <strong>Localização em Campo Largo</strong>
               <span>O navegador pede sua localização para confirmar o município.</span>
+            </div>
+          </li>
+        </ul>
+        <ul class="votacao-lista votacao-lista-oculta" aria-hidden="true">
+          <li class="votacao-item" id="verif-captcha">
+            <span class="votacao-item-status" aria-hidden="true">2</span>
+            <div class="votacao-item-texto">
+              <strong>Verificação humana</strong>
+              <span></span>
+            </div>
+          </li>
+          <li class="votacao-item" id="verif-ip">
+            <span class="votacao-item-status" aria-hidden="true">3</span>
+            <div class="votacao-item-texto">
+              <strong>Endereço de acesso</strong>
+              <span></span>
             </div>
           </li>
         </ul>
@@ -3209,7 +3173,7 @@
         <p class="votacao-erro" id="votacao-erro-verificacao" role="alert"></p>
         <div class="votacao-acoes">
           <button type="button" class="btn-votar-primario" id="btn-iniciar-votacao" disabled>Iniciar votação</button>
-          <p class="votacao-ajuda-botao" id="votacao-ajuda-botao">O botão libera quando você aceitar os termos e as três verificações estiverem ok.</p>
+          <p class="votacao-ajuda-botao" id="votacao-ajuda-botao">O botão libera quando você aceitar os termos e a verificação de localização estiver ok.</p>
         </div>
       </div>
 
@@ -3270,7 +3234,7 @@
   var API_VOTACAO = "https://muddy-moon-e7ad.empratoslimposcl.workers.dev";
   var TURNSTILE_SITEKEY = "0x4AAAAAAE7BBd7br5JwQB2f";
   var SESSAO_VOTACAO_ID = 794;
-  var REQUER_GEOLOCALIZACAO = true;
+  var REQUER_GEOLOCALIZACAO = false;
   var COOKIE_MODO_TESTE = "epl-modo-teste";
   var GEO_CAMPO_LARGO = {
     latMin: -25.68,
@@ -4027,6 +3991,8 @@
           estado.vereadorId = gabardo ? gabardo.id_sapl : dados.vereadores[0].id_sapl;
         }
         renderApp();
+        atualizarCardVotacoes();
+        atualizarPainelMes();
       })
       .catch(function (err) {
         document.getElementById("conteudo-vereadores").innerHTML =
@@ -4054,6 +4020,65 @@
       { id: 26772, tipo: "PLL 85/2026", resultado: "unanimidade", ementa: "Institui a Semana Municipal de Proteção das Nascentes no Município de Campo Largo e dá outras providências.", placar: "Placar: 14 a favor, 0 contra, 0 abstenções. O presidente não votou." }
     ]
   };
+
+  function atualizarCardVotacoes() {
+    var lista = MATERIAS_CAMARA.sessao || [];
+    var total = lista.length;
+    var unanimes = lista.filter(function(m) { return m.resultado === "unanimidade"; }).length;
+    var maioria = total - unanimes;
+    var pctUni = total > 0 ? Math.round((unanimes / total) * 100) : 0;
+    var pctMai = total > 0 ? Math.round((maioria / total) * 100) : 0;
+
+    var elNum = document.querySelector("#card-votacoes-sessao .metrica-numero");
+    if (elNum) elNum.textContent = total;
+
+    var elUni = document.querySelector("#card-votacoes-sessao .det-valor-unanimidade");
+    if (elUni) elUni.innerHTML = unanimes + ' <small style="font-size:11px;font-weight:500">(' + pctUni + '%)</small>';
+
+    var elMai = document.querySelector("#card-votacoes-sessao .det-valor-maioria");
+    if (elMai) elMai.innerHTML = maioria + ' <small style="font-size:11px;font-weight:500">(' + pctMai + '%)</small>';
+
+    var elPct = document.querySelector("#card-votacoes-sessao .anel-porcento");
+    if (elPct) elPct.textContent = pctUni + '%';
+
+    var elAria = document.querySelector("#card-votacoes-sessao .grafico-anel-box");
+    if (elAria) elAria.setAttribute("aria-label", total + " matérias votadas: " + unanimes + " por unanimidade e " + maioria + " por maioria");
+  }
+
+  function atualizarPainelMes() {
+    var meta = estado.dados && estado.dados.meta;
+    if (!meta) return;
+
+    var sessoes = estado.dados.sessoes || [];
+
+    var datasSessao = sessoes.map(function(s) { return s.data; }).filter(Boolean).sort();
+    var ultimaData = datasSessao[datasSessao.length - 1] || "2026-09-08";
+
+    var partes = ultimaData.split("-");
+    var ano = parseInt(partes[0]);
+    var mes = parseInt(partes[1]);
+    var mesAnterior = mes - 1;
+    var anoAnterior = ano;
+    if (mesAnterior < 1) { mesAnterior = 12; anoAnterior--; }
+
+    var sessoesMes = sessoes.filter(function(s) {
+      if (!s.data) return false;
+      var p = s.data.split("-");
+      return parseInt(p[0]) === anoAnterior && parseInt(p[1]) === mesAnterior;
+    });
+
+    var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+    var nomeMes = meses[mesAnterior - 1] + " de " + anoAnterior;
+
+    var titulo = document.querySelector("#painel-periodo-mes .sessao-titulo");
+    if (titulo) titulo.textContent = nomeMes;
+
+    var metaEl = document.querySelector("#painel-periodo-mes .sessao-meta");
+    if (metaEl) metaEl.textContent = sessoesMes.length + " sessões ordinárias.";
+
+    var btnShare = document.querySelector("#painel-periodo-mes .btn-compartilhar-icone");
+    if (btnShare) btnShare.setAttribute("aria-label", "Compartilhar votações de " + nomeMes.toLowerCase());
+  }
 
   var MATERIAS_TAGS = {
     26457: { tag_tipo: "PLL", tag_tema: "Proteção Animal" },
@@ -4523,6 +4548,67 @@
       return "Principais matérias votadas em junho. Toque abre a página oficial no SAPL.";
     }
     return "Amostra de matérias votadas em 2026. Toque abre a página oficial no SAPL.";
+  }
+
+  var estadoVotadoPagina = { sessao: 1, mes: 1, todo: 1 };
+  var ITENS_POR_PAGINA = 10;
+
+  function renderBlocoVotadoPeriodo(periodo) {
+    var lista = MATERIAS_CAMARA[periodo] || [];
+    var total = lista.length;
+    var totalPaginas = Math.ceil(total / ITENS_POR_PAGINA);
+    var pagina = estadoVotadoPagina[periodo] || 1;
+    if (pagina > totalPaginas) pagina = totalPaginas;
+    if (pagina < 1) pagina = 1;
+    estadoVotadoPagina[periodo] = pagina;
+
+    var inicio = (pagina - 1) * ITENS_POR_PAGINA;
+    var fim = Math.min(inicio + ITENS_POR_PAGINA, total);
+    var paginaItens = lista.slice(inicio, fim);
+
+    var html = "";
+    if (total === 0) {
+      html = '<p class="estado-vazio">Nenhum projeto votado neste período.</p>';
+    } else {
+      html = '<div class="lista-votados">';
+      paginaItens.forEach(function(m) {
+        var resultado = m.resultado === "maioria" ? "Maioria" : "Unanimidade";
+        var seloClass = m.resultado === "maioria" ? "selo-maioria" : "selo-unanimidade";
+        html += '<article class="item-votado">' +
+          '<div class="cab"><span class="tipo">' + esc(m.tipo) + '</span>' +
+          '<span class="selo ' + seloClass + '">' + resultado + '</span></div>' +
+          '<p class="ementa">' + esc(m.ementa) + '</p>' +
+          (m.placar ? '<p class="placar">' + esc(m.placar) + '</p>' : '') +
+          '</article>';
+      });
+      html += '</div>';
+
+      if (totalPaginas > 1) {
+        html += '<div class="paginacao">';
+        if (pagina > 1) {
+          html += '<button type="button" class="btn-pagina" data-periodo="' + periodo + '" data-pagina="' + (pagina - 1) + '">&laquo;</button>';
+        }
+        for (var i = 1; i <= totalPaginas; i++) {
+          var ativo = i === pagina ? ' aria-current="page"' : '';
+          html += '<button type="button" class="btn-pagina' + (i === pagina ? ' ativo' : '') + '" data-periodo="' + periodo + '" data-pagina="' + i + '"' + ativo + '>' + i + '</button>';
+        }
+        if (pagina < totalPaginas) {
+          html += '<button type="button" class="btn-pagina" data-periodo="' + periodo + '" data-pagina="' + (pagina + 1) + '">&raquo;</button>';
+        }
+        html += '</div>';
+      }
+    }
+
+    var bloco = document.getElementById("bloco-votado-" + periodo);
+    if (bloco) bloco.innerHTML = html;
+
+    var botoes = document.querySelectorAll(".btn-pagina[data-periodo='" + periodo + "']");
+    botoes.forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        estadoVotadoPagina[periodo] = parseInt(this.getAttribute("data-pagina"));
+        renderBlocoVotadoPeriodo(periodo);
+      });
+    });
   }
 
   function renderBlocoVotado(periodo) {
@@ -5288,6 +5374,7 @@
             resolve(token);
           },
           "error-callback": function () {
+            console.error("Turnstile error-callback fired");
             if (origemDeTeste()) {
               resolve(fallbackLocal());
               return;
@@ -5308,6 +5395,12 @@
         setTimeout(function () {
           if (!estadoVotacao.captcha && origemDeTeste()) resolve(fallbackLocal());
         }, 2500);
+        setTimeout(function () {
+          if (!estadoVotacao.captcha) {
+            setVerificacao("verif-captcha", "erro", "A verificação humana demorou. Verifique sua conexão e recarregue a página.");
+            atualizarBotaoIniciar();
+          }
+        }, 10000);
       });
     }).catch(function (err) {
       if (origemDeTeste()) return fallbackLocal();
@@ -5364,7 +5457,7 @@
     return apiJson("/api/resultados", { method: "GET" }).then(function (dados) {
       aplicarMapaResultados(dados.resultados || []);
       estadoVotacao.resultadosVisiveis = true;
-      ["sessao", "mes", "todo"].forEach(renderBlocoVotado);
+      ["sessao", "mes", "todo"].forEach(renderBlocoVotadoPeriodo);
     }).catch(function () {
       var local = leituraResultadosLocal();
       var lista = [];
@@ -5378,7 +5471,7 @@
       if (lista.length) {
         aplicarMapaResultados(lista);
         estadoVotacao.resultadosVisiveis = true;
-        ["sessao", "mes", "todo"].forEach(renderBlocoVotado);
+        ["sessao", "mes", "todo"].forEach(renderBlocoVotadoPeriodo);
       }
     });
   }
