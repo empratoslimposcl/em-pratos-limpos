@@ -2288,7 +2288,6 @@
   .votacao-termos-texto p { margin: 0 0 8px; }
   .votacao-termos-texto p:last-child { margin-bottom: 0; }
   .votacao-check {
-    margin-top: 16px;
     display: flex;
     align-items: flex-start;
     gap: 10px;
@@ -2308,7 +2307,7 @@
   }
   .votacao-lista {
     list-style: none;
-    margin: 12px 0 16px;
+    margin: 0 0 16px;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -4018,11 +4017,7 @@
     ],
     todo: [
       { id: 26457, tipo: "PLL 62/2026", resultado: "unanimidade", ementa: "Institui o Programa Protetores Mirins no Município de Campo Largo, e dá outras providências.", placar: "Placar: 14 a favor, 0 contra, 0 abstenções. O presidente não votou." },
-      { id: 26772, tipo: "PLL 85/2026", resultado: "unanimidade", ementa: "Institui a Semana Municipal de Proteção das Nascentes no Município de Campo Largo e dá outras providências.", placar: "Placar: 14 a favor, 0 contra, 0 abstenções. O presidente não votou." },
-      { id: 26405, tipo: "PLL 60/2026", resultado: "maioria", ementa: "Concede recomposição salarial ao prefeito, vice-prefeito e secretários municipais.", placar: "Sessão de 8 de junho. Placar: 13 a favor, 1 contra." },
-      { id: 26020, tipo: "PLL 31/2026", resultado: "unanimidade", ementa: "Institui o programa educativo e preventivo Samuzinho, sobre prevenção de acidentes e uso dos serviços de emergência.", placar: "Sessão de 8 de junho. Placar: 14 a favor, 0 contra." },
-      { id: 26288, tipo: "PLL 57/2026", resultado: "unanimidade", ementa: "Institui a política municipal de incentivo à agroindústria familiar em Campo Largo.", placar: "Sessão de 8 de junho. Placar: 14 a favor, 0 contra." },
-      { id: 26418, tipo: "Moção 3/2026", resultado: "unanimidade", ementa: "Moção de aplausos e congratulações ao atleta campo-larguense Gabriel Ionam Naruên dos Santos.", placar: "Sessão de 8 de junho. Placar: 14 a favor, 0 contra." }
+      { id: 26772, tipo: "PLL 85/2026", resultado: "unanimidade", ementa: "Institui a Semana Municipal de Proteção das Nascentes no Município de Campo Largo e dá outras providências.", placar: "Placar: 14 a favor, 0 contra, 0 abstenções. O presidente não votou." }
     ]
   };
 
@@ -4048,18 +4043,6 @@
 
     var elAria = document.querySelector("#card-votacoes-sessao .grafico-anel-box");
     if (elAria) elAria.setAttribute("aria-label", total + " matérias votadas: " + unanimes + " por unanimidade e " + maioria + " por maioria");
-
-    var circ = 2 * Math.PI * 23;
-    var elUniSvg = document.querySelector("#card-votacoes-sessao .anel-progresso-unanimidade");
-    var elMaiSvg = document.querySelector("#card-votacoes-sessao .anel-progresso-maioria");
-    if (elUniSvg) {
-      elUniSvg.style.strokeDasharray = (pctUni / 100 * circ) + " " + circ;
-      elUniSvg.style.strokeDashoffset = "0";
-    }
-    if (elMaiSvg) {
-      elMaiSvg.style.strokeDasharray = (pctMai / 100 * circ) + " " + circ;
-      elMaiSvg.style.strokeDashoffset = -(pctUni / 100 * circ);
-    }
   }
 
   function atualizarPainelMes() {
@@ -4114,9 +4097,9 @@
       { id: "maioria", rotulo: "Maioria", qtd: 1 }
     ],
     todo: [
-      { id: "", rotulo: "Todos", qtd: 6 },
-      { id: "unanimidade", rotulo: "Unânimes", qtd: 5 },
-      { id: "maioria", rotulo: "Maioria", qtd: 1 }
+      { id: "", rotulo: "Todos", qtd: 2 },
+      { id: "unanimidade", rotulo: "Unânimes", qtd: 2 },
+      { id: "maioria", rotulo: "Maioria", qtd: 0 }
     ]
   };
 
@@ -5050,7 +5033,6 @@
     ["sessao", "mes", "todo"].forEach(function (periodo) {
       estadoMaterias.listaVisivel[periodo] = true;
       renderBlocoVotado(periodo);
-      renderBlocoVotadoPeriodo(periodo);
     });
   }
 
