@@ -1,6 +1,6 @@
 {
   "pedidos": 3170,
-  "atualizado_em": "2026-09-16T04:19:42+00:00",
+  "atualizado_em": "2026-09-16T21:40:49-03:00",
   "metodo": {
     "registrovotacao": "filtro ordem=<id do item da ordem do dia>; sessao_plenaria e ignorado pelo servidor",
     "votoparlamentar": "filtro votacao=<id do registrovotacao>; sessao_plenaria e registrovotacao sao ignorados",
