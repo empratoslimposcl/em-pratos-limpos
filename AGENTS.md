@@ -63,3 +63,18 @@ Qualquer agente que realize alterações deve validar localmente:
    * O rate-limiting de 2.5 segundos entre requisições ao SAPL no coletor Python **nunca** pode ser reduzido, contornado ou paralelizado.
 5. **Execução Local:**
    * Testar sempre via servidor HTTP local (`python -m http.server 8000`), nunca via protocolo `file://`.
+
+---
+
+## Proibições absolutas para agentes de IA
+
+1. NUNCA faça merge em main sem aprovação expressa de Vinicius
+2. NUNCA aprove seu próprio PR
+3. NUNCA faça deploy para produção sem aprovação de Vinicius
+4. NUNCA crie, edite ou exclua secrets sem aprovação de Vinicius
+5. NUNCA faça rollback sem aprovação de Vinicius
+6. NUNCA ignore o checklist pré-deploy (seção 5.2 do PROCESSO_DESENVOLVIMENTO_E_GOVERNANCA.md)
+
+Violação de qualquer regra acima é considerada incidente de governança e deve ser revertida imediatamente.
+
+**Classificação:** Violação de governança, não urgência. A urgência justifica prioridade de revisão, jamais a supressão da revisão.

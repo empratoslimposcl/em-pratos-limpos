@@ -723,6 +723,23 @@ O Pull Request é reprovado sem necessidade de análise adicional quando:
 
 Esta regra é absoluta e não comporta exceção por urgência, por horário, por feriado ou por simplicidade aparente da mudança. Não existe "aprovação automática", não existe "auto-merge", não existe aprovação por agente de IA. A automação pode preparar, testar, empacotar e propor. A decisão de publicar em nome da transparência pública de Campo Largo é humana, nominal e rastreável.
 
+### 4.7.1 Proibições explícitas para agentes de IA
+
+Nenhum agente de IA (Claude, Cursor, Grok, DeepSeek, Copilot, ou qualquer outro) pode executar as ações abaixo sem aprovação expressa e registrada de Vinicius:
+
+| Ação | Exigência |
+| :--- | :--- |
+| Merge de PR para `main` | Aprovação expressa de Vinicius no PR |
+| Aprovação de PR próprio | Proibido. Nenhum agente aprova seu próprio PR |
+| Deploy para produção | Aprovação expressa de Vinicius |
+| Criação, edição ou exclusão de secrets | Aprovação expressa de Vinicius |
+| Rollback | Aprovação expressa de Vinicius |
+| Push forçado | Proibido em qualquer circunstância |
+
+**Classificação de violação:** Qualquer ação acima sem aprovação registrada é classificada como **violação de governança** (não como "urgência"). A resposta é revert imediato + registro do incidente.
+
+**Prevenção:** Todo PR aberto por agente de IA deve conter, na descrição, a confirmação de que a aprovação de Vinicius foi solicitada antes de abrir o PR.
+
 ---
 
 ## 5. PROCESSO DE PUBLICAÇÃO E DEPLOY EM PRODUÇÃO
@@ -897,7 +914,33 @@ Princípio central da esteira: **valida antes de publicar e nunca faz push cego 
 
 ---
 
-## 6. Anexos
+## 6. Incidentes de Governança
+
+### 6.1 Classificação
+
+| Tipo | Descrição | Resposta |
+| :--- | :--- | :--- |
+| Violação de merge | Merge em `main` sem aprovação de Vinicius | Revert imediato + incidente |
+| Violação de segredo | Segredo exposto em commit, PR ou documento público | Revogar primeiro, limpar depois, registrar |
+| Violação de OPSEC | Dado pessoal do mantenedor exposto | Remover + registrar |
+
+### 6.2 Registro
+
+Todo incidente deve ser registrado em `historico/handoffs/` com:
+- Data e hora
+- O que aconteceu
+- O que foi feito para corrigir
+- O que mudou para prevenir reincidência
+
+### 6.3 Prevenção
+
+- As proibições da seção 4.7.1 devem ser replicadas em `AGENTS.md`, `CLAUDE.md` e `GUIA_DO_ORQUESTRADOR.md`
+- Checklist pré-PR obrigatório (seção 4.5.1) deve ser verificado antes de todo PR
+- Nenhum agente pode ignorar estas regras por "urgência" ou "simplicidade"
+
+---
+
+## 7. Anexos
 
 ### 6.1 Checklist consolidado de release
 
