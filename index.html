@@ -5394,6 +5394,18 @@
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
+    }).then(function (resultado) {
+      if (resultado && resultado.success && window.__cfBeacon) {
+        estadoVotacao.votos.forEach(function (v) {
+          window.__cfBeacon.push(['event', {
+            action: 'vote',
+            category: 'voting',
+            label: 'projeto_' + v.projeto_id,
+            value: v.voto === 'util' ? 1 : 0
+          }]);
+        });
+      }
+      return resultado;
     }).catch(function (err) {
       if (!origemDeTeste()) throw err;
       var mapa = leituraResultadosLocal();
@@ -5775,5 +5787,6 @@
   carregar();
 })();
 </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": ""}'></script>
 </body>
 </html>
