@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src https://challenges.cloudflare.com; child-src 'none'; worker-src 'none'; img-src 'self' https://sapl.campolargo.pr.leg.br; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com; connect-src 'self' https://em-pratos-limpos-votacao.workers.dev https://challenges.cloudflare.com; form-action 'none'; upgrade-insecure-requests;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src https://challenges.cloudflare.com; child-src 'none'; worker-src 'none'; img-src 'self' https://sapl.campolargo.pr.leg.br; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com; connect-src 'self' https://muddy-moon-e7ad.empratoslimposcl.workers.dev https://challenges.cloudflare.com; form-action 'none'; upgrade-insecure-requests;">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Em Pratos Limpos: o que a Câmara de Campo Largo vota</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -147,6 +147,38 @@
     outline-offset: 2px;
   }
 
+  .pular-conteudo {
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    z-index: 3000;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    background: var(--marca-solida);
+    color: #ffffff;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+  .pular-conteudo:focus,
+  .pular-conteudo:focus-visible {
+    width: auto;
+    height: auto;
+    clip: auto;
+    overflow: visible;
+    padding: 10px 14px;
+    min-height: 44px;
+    outline: 3px solid var(--marca);
+    outline-offset: 2px;
+  }
+
   .pagina {
     max-width: 390px;
     margin: 0 auto;
@@ -181,10 +213,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-    min-height: 36px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
     padding: 0;
     border: none;
     border-radius: 10px;
@@ -199,8 +231,8 @@
   }
 
   .btn-compartilhar-icone svg {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     display: block;
   }
 
@@ -676,7 +708,7 @@
     color: var(--texto);
   }
 
-  .conteudo { padding: 0 16px calc(88px + env(safe-area-inset-bottom, 0px)); }
+  .conteudo { padding: 0 16px calc(148px + env(safe-area-inset-bottom, 0px)); }
 
   .aviso, .aviso-ia {
     border-radius: 10px;
@@ -2261,11 +2293,13 @@
     cursor: pointer;
   }
   .votacao-check input {
-    width: 20px;
-    height: 20px;
-    min-width: 20px;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
     margin-top: 1px;
     accent-color: var(--marca-solida);
+    flex-shrink: 0;
   }
   .votacao-lista {
     list-style: none;
@@ -2549,6 +2583,9 @@
     .btn-votar-fab {
       bottom: calc(88px + env(safe-area-inset-bottom, 0px));
     }
+    .conteudo {
+      padding-bottom: calc(168px + env(safe-area-inset-bottom, 0px));
+    }
     .votacao-overlay {
       align-items: center;
     }
@@ -2559,16 +2596,23 @@
   }
 
   @media (max-height: 500px) {
-    .topo-fixo { padding: 6px 16px 8px; }
-    .topo-util { margin-bottom: 4px; padding-top: 0; }
-    .cabecalho-bloco { margin-bottom: 4px; gap: 0; }
-    .titulo-site { font-size: 22px; }
+    .topo-fixo { padding: 4px 16px 6px; }
+    .topo-util { margin-bottom: 2px; padding-top: 0; }
+    .topo-local,
+    .cabecalho-bloco,
     .subtitulo-site,
-    .selo-sapl { display: none; }
+    .selo-sapl,
+    .secao-camara-titulo,
+    .titulo-vereadores,
+    .seletor-vereador label,
+    .nav-vereador { display: none; }
     .nav-principal { padding-top: 2px; padding-bottom: calc(4px + env(safe-area-inset-bottom, 0px)); }
     .nav-principal button { min-height: 44px; }
-    .seletor-periodo { margin-top: 4px; }
-    .secao-camara-titulo { font-size: 16px; }
+    .seletor-periodo { margin-top: 0; }
+    .seletor-periodo button { padding: 4px; font-size: 12px; }
+    .seletor-vereador select { padding: 6px 10px; }
+    .btn-votar-fab { display: none !important; }
+    .conteudo { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
   }
 
   @page {
@@ -2620,6 +2664,7 @@
       overflow-wrap: anywhere;
     }
 
+    .pular-conteudo,
     .topo-fixo,
     .nav-principal,
     .share-sheet-backdrop,
@@ -2719,6 +2764,7 @@
 </style>
 </head>
 <body>
+<a class="pular-conteudo" href="#conteudo-principal">Pular para conteúdo</a>
 <div class="pagina">
   <section class="cabecalho-impressao" aria-label="Cabeçalho do boletim impresso">
     <h1>Em Pratos Limpos: Boletim Cívico da Câmara Municipal de Campo Largo</h1>
@@ -2743,23 +2789,23 @@
     <div class="sub-camara ativo" id="sub-camara">
       <h2 class="secao-camara-titulo">O que a Câmara votou</h2>
       <div class="seletor-periodo" role="tablist" aria-label="Período de consulta">
-        <button type="button" class="ativo" role="tab" aria-selected="true" aria-controls="painel-periodo-sessao" id="tab-periodo-sessao" data-periodo="sessao">Última sessão</button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="painel-periodo-mes" id="tab-periodo-mes" data-periodo="mes">Último mês</button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="painel-periodo-todo" id="tab-periodo-todo" data-periodo="todo">Todo o período</button>
+        <button type="button" class="ativo" role="tab" aria-selected="true" tabindex="0" aria-controls="painel-periodo-sessao" id="tab-periodo-sessao" data-periodo="sessao">Última sessão</button>
+        <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="painel-periodo-mes" id="tab-periodo-mes" data-periodo="mes">Último mês</button>
+        <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="painel-periodo-todo" id="tab-periodo-todo" data-periodo="todo">Todo o período</button>
       </div>
     </div>
     <div class="sub-vereadores" id="sub-vereadores">
       <div class="sessao-titulo-linha">
         <h2 class="titulo-vereadores">Atuação do seu Vereador</h2>
         <button type="button" class="btn-compartilhar-icone btn-abrir-share" data-share="vereador" aria-label="Compartilhar perfil parlamentar" aria-haspopup="dialog" aria-controls="share-sheet">
-          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
         </button>
       </div>
       <div id="seletor-vereador-wrap"></div>
     </div>
   </header>
 
-  <main class="conteudo">
+  <main class="conteudo" id="conteudo-principal" tabindex="-1">
     <div class="painel-camara ativo" id="painel-camara">
 
       <div class="painel-camara-interno ativo" id="painel-periodo-sessao" role="tabpanel" aria-labelledby="tab-periodo-sessao">
@@ -2768,7 +2814,7 @@
           <div class="titulo-acoes-direita">
             <a class="secao-sub" href="https://sapl.campolargo.pr.leg.br/sessao/794" target="_blank" rel="noopener noreferrer">25ª Ordinária</a>
             <button type="button" class="btn-compartilhar-icone btn-abrir-share" data-periodo="sessao" aria-label="Compartilhar votações da última sessão" aria-haspopup="dialog" aria-controls="share-sheet">
-<svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+<svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
             </button>
           </div>
         </div>
@@ -2944,7 +2990,7 @@
         <div class="sessao-titulo-linha">
           <h2 class="sessao-titulo">Junho de 2026</h2>
           <button type="button" class="btn-compartilhar-icone btn-abrir-share" data-periodo="mes" aria-label="Compartilhar votações de junho de 2026" aria-haspopup="dialog" aria-controls="share-sheet">
-            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
           </button>
         </div>
         <p class="sessao-meta">4 sessões ordinárias, 200 votações.</p>
@@ -2979,7 +3025,7 @@
         <div class="sessao-titulo-linha">
           <h2 class="sessao-titulo">Ano de 2026</h2>
           <button type="button" class="btn-compartilhar-icone btn-abrir-share" data-periodo="todo" aria-label="Compartilhar votações de 2026" aria-haspopup="dialog" aria-controls="share-sheet">
-            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
           </button>
         </div>
         <p class="sessao-meta">26 sessões ordinárias, 1.388 votações.</p>
@@ -3091,7 +3137,7 @@
       <h2 id="resumo-sheet-titulo">Resumo da matéria</h2>
       <div class="resumo-sheet-acoes">
         <button type="button" class="btn-compartilhar-icone" id="btn-share-resumo" aria-label="Compartilhar esta matéria" aria-haspopup="dialog" aria-controls="share-sheet">
-          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
         </button>
         <button type="button" class="btn-compartilhar-icone" id="btn-fechar-resumo" aria-label="Fechar resumo da matéria">
           <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -3226,7 +3272,6 @@
   var SESSAO_VOTACAO_ID = 794;
   var REQUER_GEOLOCALIZACAO = true;
   var COOKIE_MODO_TESTE = "epl-modo-teste";
-  var COOKIE_SECRETO = "v7Xk2mN9pQ4wR8tY";
   var GEO_CAMPO_LARGO = {
     latMin: -25.68,
     latMax: -25.28,
@@ -3412,7 +3457,7 @@
     var nome = v.partido_nome || "";
     return '<p class="badge-partido" aria-label="Partido: ' + esc(nome || sigla) + '">' +
       '<span class="sigla">' + esc(sigla) + "</span>" +
-      (nome ? '<span class="nome-partido">' + esc(nome) + "</span>" : "") +
+      (nome && nome.toUpperCase() !== String(sigla).toUpperCase() ? '<span class="nome-partido">' + esc(nome) + "</span>" : "") +
       "</p>";
   }
 
@@ -4045,17 +4090,17 @@
   var FILTROS_MATERIA = {
     sessao: [
       { id: "", rotulo: "Todos", qtd: 11 },
-      { id: "unanimidade", rotulo: "Unanimes", qtd: 10 },
+      { id: "unanimidade", rotulo: "Unânimes", qtd: 10 },
       { id: "maioria", rotulo: "Maioria", qtd: 1 }
     ],
     mes: [
       { id: "", rotulo: "Todos", qtd: 4 },
-      { id: "unanimidade", rotulo: "Unanimes", qtd: 3 },
+      { id: "unanimidade", rotulo: "Unânimes", qtd: 3 },
       { id: "maioria", rotulo: "Maioria", qtd: 1 }
     ],
     todo: [
       { id: "", rotulo: "Todos", qtd: 11 },
-      { id: "unanimidade", rotulo: "Unanimes", qtd: 10 },
+      { id: "unanimidade", rotulo: "Unânimes", qtd: 10 },
       { id: "maioria", rotulo: "Maioria", qtd: 1 }
     ]
   };
@@ -4971,28 +5016,52 @@
     });
 
     var tabsPeriodo = document.querySelectorAll(".seletor-periodo button");
+    var tablistPeriodo = document.querySelector(".seletor-periodo");
     var paineisPeriodo = {
       sessao: document.getElementById("painel-periodo-sessao"),
       mes: document.getElementById("painel-periodo-mes"),
       todo: document.getElementById("painel-periodo-todo")
     };
+    function ativarAbaPeriodo(tab, focar) {
+      if (!tab) return;
+      var id = tab.getAttribute("data-periodo");
+      tabsPeriodo.forEach(function (t) {
+        var ativo = t === tab;
+        t.classList.toggle("ativo", ativo);
+        t.setAttribute("aria-selected", ativo ? "true" : "false");
+        t.setAttribute("tabindex", ativo ? "0" : "-1");
+      });
+      Object.keys(paineisPeriodo).forEach(function (k) {
+        var ativo = k === id;
+        paineisPeriodo[k].classList.toggle("ativo", ativo);
+        paineisPeriodo[k].hidden = !ativo;
+      });
+      resetMateriasPeriodo(id);
+      atualizarRotuloBotaoShare();
+      if (focar && tab.focus) tab.focus();
+    }
     tabsPeriodo.forEach(function (tab) {
       tab.addEventListener("click", function () {
-        var id = tab.getAttribute("data-periodo");
-        tabsPeriodo.forEach(function (t) {
-          var ativo = t === tab;
-          t.classList.toggle("ativo", ativo);
-          t.setAttribute("aria-selected", ativo ? "true" : "false");
-        });
-        Object.keys(paineisPeriodo).forEach(function (k) {
-          var ativo = k === id;
-          paineisPeriodo[k].classList.toggle("ativo", ativo);
-          paineisPeriodo[k].hidden = !ativo;
-        });
-        resetMateriasPeriodo(id);
-        atualizarRotuloBotaoShare();
+        ativarAbaPeriodo(tab, false);
       });
     });
+    if (tablistPeriodo) {
+      tablistPeriodo.addEventListener("keydown", function (e) {
+        if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+        var tabs = Array.prototype.slice.call(tabsPeriodo);
+        if (!tabs.length) return;
+        var atual = tabs.indexOf(document.activeElement);
+        if (atual < 0) {
+          atual = tabs.findIndex(function (t) { return t.classList.contains("ativo"); });
+        }
+        if (atual < 0) atual = 0;
+        var proximo = e.key === "ArrowRight"
+          ? (atual + 1) % tabs.length
+          : (atual - 1 + tabs.length) % tabs.length;
+        e.preventDefault();
+        ativarAbaPeriodo(tabs[proximo], true);
+      });
+    }
 
     document.getElementById("btn-tema").addEventListener("click", function () {
       alternarTema();
@@ -5142,6 +5211,25 @@
     });
   }
 
+  function lerCookieModoTeste() {
+    var cookieMatch = document.cookie.match(new RegExp("(?:^|; )" + COOKIE_MODO_TESTE + "=([^;]*)"));
+    return cookieMatch ? cookieMatch[1].trim() : "";
+  }
+
+  function verificarModoTesteRemoto() {
+    var valor = lerCookieModoTeste();
+    if (!valor) return Promise.resolve(false);
+    return apiJson("/api/verificar-modo-teste", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ cookie: valor })
+    }).then(function (corpo) {
+      return !!(corpo && corpo.modo_teste);
+    }).catch(function () {
+      return false;
+    });
+  }
+
   function pontoEmCampoLargo(lat, lon) {
     return lat >= GEO_CAMPO_LARGO.latMin && lat <= GEO_CAMPO_LARGO.latMax &&
       lon >= GEO_CAMPO_LARGO.lonMin && lon <= GEO_CAMPO_LARGO.lonMax;
@@ -5217,7 +5305,8 @@
       return new Promise(function (resolve, reject) {
         estadoVotacao.widgetTurnstile = ts.render(slot, {
           sitekey: TURNSTILE_SITEKEY,
-          size: "invisible",
+          size: "compact",
+          theme: document.documentElement.getAttribute("data-tema") === "escuro" ? "dark" : "light",
           callback: function (token) {
             estadoVotacao.token = token || "";
             estadoVotacao.captcha = !!token;
@@ -5376,20 +5465,16 @@
       textoErro("votacao-erro-verificacao", err.message || "Não foi possível concluir as verificações.");
     });
 
-    // Verificar cookie de modo teste
-    var cookieMatch = document.cookie.match(new RegExp(COOKIE_MODO_TESTE + "=([^;]+)"));
-    var modoTeste = cookieMatch && cookieMatch[1] === COOKIE_SECRETO;
-
-    var pGeo;
-    if (modoTeste || !REQUER_GEOLOCALIZACAO) {
-      estadoVotacao.geo = true;
-      setVerificacao("verif-geo", "ok", modoTeste
-        ? "Modo teste ativo (cookie)."
-        : "Verificação de localização desativada.");
-      atualizarBotaoIniciar();
-      pGeo = Promise.resolve();
-    } else {
-      pGeo = pedirGeolocalizacao().then(function (coords) {
+    var pGeo = verificarModoTesteRemoto().then(function (modoTeste) {
+      if (modoTeste || !REQUER_GEOLOCALIZACAO) {
+        estadoVotacao.geo = true;
+        setVerificacao("verif-geo", "ok", modoTeste
+          ? "Modo teste ativo (cookie)."
+          : "Verificação de localização desativada.");
+        atualizarBotaoIniciar();
+        return;
+      }
+      return pedirGeolocalizacao().then(function (coords) {
         if (!pontoEmCampoLargo(coords.latitude, coords.longitude)) {
           estadoVotacao.geo = false;
           setVerificacao("verif-geo", "erro", "A localização não está em Campo Largo. Esta consulta é só para quem está no município.");
@@ -5404,7 +5489,7 @@
         setVerificacao("verif-geo", "erro", err.message);
         atualizarBotaoIniciar();
       });
-    }
+    });
 
     return Promise.all([pCaptcha, pGeo]).then(function () {
       if (estadoVotacao.jaVotou) {
@@ -5429,8 +5514,7 @@
     document.getElementById("voto-card-titulo").textContent = p.titulo || p.tipo || "Projeto";
     document.getElementById("voto-card-ementa").textContent = p.ementa || "Ementa não informada no SAPL.";
     document.getElementById("voto-card-meta").textContent =
-      "Resultado na Câmara: " + (p.resultado || "não informado") +
-      ". Sessão de " + (p.data_sessao || DATA_ULTIMA_SESSAO) + ".";
+      "Sessão de " + (p.data_sessao || DATA_ULTIMA_SESSAO) + ".";
     document.getElementById("voto-progresso").textContent =
       "Projeto " + (estadoVotacao.indice + 1) + " de " + estadoVotacao.projetos.length + ".";
     if (window.requestAnimationFrame) {
