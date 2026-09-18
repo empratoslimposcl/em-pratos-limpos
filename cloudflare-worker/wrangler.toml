@@ -1,0 +1,17 @@
+name = "muddy-moon-e7ad"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# Configuracao do D1
+[[d1_databases]]
+binding = "DB"
+database_name = "em-pratos-limpos-votos"
+database_id = "1acc1d0c-44a6-4c74-8e64-57925a302836"
+
+# Variaveis de ambiente (nao-secretas)
+[vars]
+ALLOWED_ORIGIN = "https://empratoslimposcl.github.io"
+
+# Segredos devem ser cadastrados via CLI, nunca em arquivo:
+#   wrangler secret put TURNSTILE_SECRET_KEY
+#   wrangler secret put MODO_TESTE_SECRETO
