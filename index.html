@@ -2877,55 +2877,7 @@
         </div>
 
         <div class="card-app" id="card-temas-sessao" aria-labelledby="tit-temas-sessao">
-          <div class="card-header">
-            <div class="card-categoria cat-roxo">
-              <div class="card-icone icone-roxo" aria-hidden="true">
-                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-              </div>
-              <span id="tit-temas-sessao">Do que tratam os itens votados</span>
-            </div>
-            <span class="card-meta">11 matérias
-              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
-            </span>
-          </div>
-          <p class="card-legenda">Temas das 11 matérias votadas nesta sessão.</p>
-          <details class="card-detalhes" open>
-            <summary>Ver lista de temas</summary>
-            <div class="card-detalhes-corpo">
-          <div class="barra-tema-sessao" role="img" aria-label="Distribuição temática das 11 matérias votadas">
-            <div class="barra-tema-linha">
-              <span class="nome">Homenagens, nomes e datas</span>
-              <div class="trilho"><div class="preenchido" style="width:100%;background:#7c3aed"></div></div>
-              <span class="meta-linha">3 matérias (27,3%)</span>
-            </div>
-            <div class="barra-tema-linha">
-              <span class="nome">Gestão pública e parcerias</span>
-              <div class="trilho"><div class="preenchido" style="width:66.7%;background:#5856d6"></div></div>
-              <span class="meta-linha">2 matérias (18,2%)</span>
-            </div>
-            <div class="barra-tema-linha">
-              <span class="nome">Saúde e prevenção</span>
-              <div class="trilho"><div class="preenchido" style="width:66.7%;background:#34c759"></div></div>
-              <span class="meta-linha">2 matérias (18,2%)</span>
-            </div>
-            <div class="barra-tema-linha">
-              <span class="nome">Agroindústria e desenvolvimento</span>
-              <div class="trilho"><div class="preenchido" style="width:66.7%;background:#ff9500"></div></div>
-              <span class="meta-linha">2 matérias (18,2%)</span>
-            </div>
-            <div class="barra-tema-linha">
-              <span class="nome">Meio ambiente e animais</span>
-              <div class="trilho"><div class="preenchido" style="width:33.3%;background:#30b0c7"></div></div>
-              <span class="meta-linha">1 matéria (9,1%)</span>
-            </div>
-            <div class="barra-tema-linha">
-              <span class="nome">Administração e finanças</span>
-              <div class="trilho"><div class="preenchido" style="width:33.3%;background:#007aff"></div></div>
-              <span class="meta-linha">1 matéria (9,1%)</span>
-            </div>
-          </div>
-            </div>
-          </details>
+          <div id="temas-distribuicao-sessao"></div>
         </div>
 
         <div class="card-app" id="card-presenca-sessao" aria-labelledby="tit-presenca-sessao">
@@ -2963,34 +2915,24 @@
       <div class="painel-camara-interno" id="painel-periodo-mes" role="tabpanel" aria-labelledby="tab-periodo-mes" hidden>
         <div class="sessao-titulo-linha">
           <h2 class="sessao-titulo">Agosto de 2026</h2>
-          <button type="button" class="btn-compartilhar-icone btn-abrir-share" data-periodo="mes" aria-label="Compartilhar votações de junho de 2026" aria-haspopup="dialog" aria-controls="share-sheet">
+          <button type="button" class="btn-compartilhar-icone btn-abrir-share" data-periodo="mes" aria-label="Compartilhar votações do último mês" aria-haspopup="dialog" aria-controls="share-sheet">
             <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
           </button>
         </div>
-        <p class="sessao-meta">4 sessões ordinárias, 200 votações.</p>
-        <section class="secao" aria-labelledby="tit-resultado-mes">
-          <h2 id="tit-resultado-mes">Como terminaram as 200 votações?</h2>
-          <p class="legenda">Resultado das votações em junho de 2026.</p>
-          <div class="barra-status-trilho" role="img" aria-label="198 unanimidade, 2 maioria absoluta, 0 rejeitado">
-            <div class="segmento segmento-unanimidade" style="width:99%"></div>
-            <div class="segmento segmento-maioria" style="width:1%"></div>
-          </div>
-          <div class="status-cartoes">
-            <div class="status-cartao status-cartao-unanimidade"><span class="indicador" style="background:var(--barra-unanimidade)"></span><span class="num">198</span><span class="pct">99%</span><span class="rot">Unanimidade</span></div>
-            <div class="status-cartao status-cartao-maioria"><span class="indicador" style="background:var(--barra-maioria)"></span><span class="num">2</span><span class="pct">1%</span><span class="rot">Maioria</span></div>
-            <div class="status-cartao status-cartao-rejeitado"><span class="indicador" style="background:var(--graf-rejeitado)"></span><span class="num">0</span><span class="pct">0%</span><span class="rot">Rejeitadas</span></div>
-          </div>
-        </section>
+        <p class="sessao-meta">4 sessões ordinárias.</p>
+        <div class="card-app" id="card-votacoes-mes" aria-labelledby="tit-votacoes-mes">
+          <div id="votacoes-mes-conteudo"></div>
+        </div>
         <section class="secao" aria-labelledby="tit-tipos-mes">
           <h2 id="tit-tipos-mes">Quantas votações por tipo?</h2>
-          <p class="legenda">Cada barra é um tipo oficial de matéria em junho.</p>
-          <div class="barra-tema-cam barra-temas">
-            <div class="barra-tema"><span class="nome">Requerimento</span><div class="trilho"><div class="preenchido" style="width:100%;background:var(--barra-req)"></div></div><span class="qtd">164</span></div>
-            <div class="barra-tema"><span class="nome">Projeto de lei</span><div class="trilho"><div class="preenchido" style="width:17.7%;background:var(--barra-pl)"></div></div><span class="qtd">29</span></div>
-            <div class="barra-tema"><span class="nome">Moção</span><div class="trilho"><div class="preenchido" style="width:2.4%;background:var(--barra-moc);min-width:4px"></div></div><span class="qtd">4</span></div>
-            <div class="barra-tema"><span class="nome">Projeto de resolução</span><div class="trilho"><div class="preenchido" style="width:1.8%;background:var(--barra-pr);min-width:4px"></div></div><span class="qtd">3</span></div>
+          <p class="legenda">Cada barra é um tipo oficial de matéria votada no período.</p>
+          <div class="barra-tema-cam barra-temas" id="tipos-mes-barras">
+            <div class="barra-tema"><span class="nome">Projeto de Lei do Legislativo</span><div class="trilho"><div class="preenchido" style="width:100%;background:var(--barra-pl)"></div></div><span class="qtd">9</span></div>
           </div>
         </section>
+        <div class="card-app" id="card-temas-mes" aria-labelledby="tit-temas-mes">
+          <div id="temas-distribuicao-mes"></div>
+        </div>
         <div class="card-app bloco-votado" id="bloco-votado-mes" data-periodo="mes"></div>
         <footer class="rodape-coleta" aria-label="Informações sobre a coleta de dados"><p>Dado coletado em <strong>14/09/2026</strong>. Fonte: SAPL da Câmara de Campo Largo.</p></footer>
       </div>
@@ -3002,52 +2944,30 @@
             <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
           </button>
         </div>
-        <p class="sessao-meta">26 sessões ordinárias, 1.388 votações.</p>
+        <p class="sessao-meta">26 sessões ordinárias, 50 PLLs votados.</p>
         <section class="secao" aria-labelledby="tit-tipos-todo">
-          <h2 id="tit-tipos-todo">Quantas votações por tipo?</h2>
-          <p class="legenda">Cada barra é um tipo oficial de matéria.</p>
+          <h2 id="tit-tipos-todo">Quantos projetos foram votados?</h2>
+          <p class="legenda">Projetos de Lei do Legislativo (PLL) votados em sessões ordinárias de 2026.</p>
           <div class="barra-tema-cam barra-temas">
-            <div class="barra-tema"><span class="nome">Requerimento</span><div class="trilho"><div class="preenchido" style="width:100%;background:var(--barra-req)"></div></div><span class="qtd">1144</span></div>
-            <div class="barra-tema"><span class="nome">Projeto de lei</span><div class="trilho"><div class="preenchido" style="width:15.1%;background:var(--barra-pl)"></div></div><span class="qtd">173</span></div>
-            <div class="barra-tema"><span class="nome">Moção</span><div class="trilho"><div class="preenchido" style="width:3.2%;background:var(--barra-moc)"></div></div><span class="qtd">37</span></div>
-            <div class="barra-tema"><span class="nome">Projeto de resolução</span><div class="trilho"><div class="preenchido" style="width:0.7%;background:var(--barra-pr);min-width:4px"></div></div><span class="qtd">8</span></div>
-            <div class="barra-tema"><span class="nome">Veto</span><div class="trilho"><div class="preenchido" style="width:0.35%;background:var(--barra-veto);min-width:4px"></div></div><span class="qtd">4</span></div>
-            <div class="barra-tema"><span class="nome">Sem tipo no texto</span><div class="trilho"><div class="preenchido" style="width:1.9%;background:var(--barra-ni)"></div></div><span class="qtd">22</span></div>
+            <div class="barra-tema"><span class="nome">Projeto de Lei do Legislativo</span><div class="trilho"><div class="preenchido" style="width:100%;background:var(--barra-pl)"></div></div><span class="qtd">50</span></div>
           </div>
         </section>
         <section class="secao" aria-labelledby="tit-resultado-todo">
-          <h2 id="tit-resultado-todo">Como terminaram as votações?</h2>
-          <p class="legenda">Resultado das 1.388 votações em sessões ordinárias de 2026.</p>
-          <div class="barra-status-trilho" role="img" aria-label="1375 unanimidade, 8 maioria absoluta, 5 rejeitado">
-            <div class="segmento segmento-unanimidade" style="width:99.06%"></div>
-            <div class="segmento segmento-maioria" style="width:0.58%"></div>
-            <div class="segmento segmento-rejeitado" style="width:0.36%"></div>
+          <h2 id="tit-resultado-todo">Como terminaram os projetos?</h2>
+          <p class="legenda">Resultado dos 50 PLLs votados em sessões ordinárias de 2026.</p>
+          <div class="barra-status-trilho" role="img" aria-label="49 unanimidade, 1 maioria absoluta, 0 rejeitado">
+            <div class="segmento segmento-unanimidade" style="width:98%"></div>
+            <div class="segmento segmento-maioria" style="width:2%"></div>
           </div>
           <div class="status-cartoes">
-            <div class="status-cartao status-cartao-unanimidade"><span class="indicador" style="background:var(--barra-unanimidade)"></span><span class="num">1375</span><span class="pct">99,1%</span><span class="rot">Unanimidade</span></div>
-            <div class="status-cartao status-cartao-maioria"><span class="indicador" style="background:var(--barra-maioria)"></span><span class="num">8</span><span class="pct">0,6%</span><span class="rot">Maioria</span></div>
-            <div class="status-cartao status-cartao-rejeitado"><span class="indicador" style="background:var(--graf-rejeitado)"></span><span class="num">5</span><span class="pct">0,4%</span><span class="rot">Rejeitadas</span></div>
+            <div class="status-cartao status-cartao-unanimidade"><span class="indicador" style="background:var(--barra-unanimidade)"></span><span class="num">49</span><span class="pct">98%</span><span class="rot">Unanimidade</span></div>
+            <div class="status-cartao status-cartao-maioria"><span class="indicador" style="background:var(--barra-maioria)"></span><span class="num">1</span><span class="pct">2%</span><span class="rot">Maioria</span></div>
+            <div class="status-cartao status-cartao-rejeitado"><span class="indicador" style="background:var(--graf-rejeitado)"></span><span class="num">0</span><span class="pct">0%</span><span class="rot">Rejeitadas</span></div>
           </div>
-          <p class="nota-rodape">Total: 1.388 votações em sessões ordinárias de 2026.</p>
+          <p class="nota-rodape">Total: 50 PLLs votados em sessões ordinárias de 2026.</p>
         </section>
         <section class="secao" aria-labelledby="tit-temas-todo">
-          <h2 id="tit-temas-todo">De que tratam os itens votados?</h2>
-          <p class="legenda">Foi possível classificar 1.369 das 1.388 votações.</p>
-          <div class="barra-tema-cam barra-temas tema-grafico">
-            <div class="barra-tema"><span class="nome">Ruas, trânsito e transporte</span><div class="trilho"><div class="preenchido" style="width:100%;background:var(--graf-cat-1)"></div></div><span class="qtd">552</span></div>
-            <div class="barra-tema"><span class="nome">Iluminação e serviços urbanos</span><div class="trilho"><div class="preenchido" style="width:40.4%;background:var(--graf-cat-2)"></div></div><span class="qtd">223</span></div>
-            <div class="barra-tema"><span class="nome">Outros</span><div class="trilho"><div class="preenchido" style="width:22.1%;background:var(--graf-cat-3)"></div></div><span class="qtd">122</span></div>
-            <div class="barra-tema"><span class="nome">Homenagens, nomes e datas</span><div class="trilho"><div class="preenchido" style="width:17%;background:var(--graf-cat-4)"></div></div><span class="qtd">94</span></div>
-            <div class="barra-tema"><span class="nome">Educação</span><div class="trilho"><div class="preenchido" style="width:14.5%;background:var(--graf-cat-5)"></div></div><span class="qtd">80</span></div>
-            <div class="barra-tema"><span class="nome">Saúde</span><div class="trilho"><div class="preenchido" style="width:13.8%;background:var(--graf-cat-6)"></div></div><span class="qtd">76</span></div>
-            <div class="barra-tema"><span class="nome">Cultura, esporte e lazer</span><div class="trilho"><div class="preenchido" style="width:11.8%;background:var(--graf-cat-7)"></div></div><span class="qtd">65</span></div>
-            <div class="barra-tema"><span class="nome">Meio ambiente e animais</span><div class="trilho"><div class="preenchido" style="width:8.7%;background:var(--graf-cat-1)"></div></div><span class="qtd">48</span></div>
-            <div class="barra-tema"><span class="nome">Administração e finanças</span><div class="trilho"><div class="preenchido" style="width:7.1%;background:var(--graf-cat-2)"></div></div><span class="qtd">39</span></div>
-            <div class="barra-tema"><span class="nome">Segurança pública</span><div class="trilho"><div class="preenchido" style="width:4.7%;background:var(--graf-cat-3)"></div></div><span class="qtd">26</span></div>
-            <div class="barra-tema"><span class="nome">Assistência social e direitos</span><div class="trilho"><div class="preenchido" style="width:3.4%;background:var(--graf-cat-4)"></div></div><span class="qtd">19</span></div>
-            <div class="barra-tema"><span class="nome">Desenvolvimento, moradia e agricultura</span><div class="trilho"><div class="preenchido" style="width:3.4%;background:var(--graf-cat-5)"></div></div><span class="qtd">19</span></div>
-            <div class="barra-tema"><span class="nome">Defesa Civil</span><div class="trilho"><div class="preenchido" style="width:1.1%;background:var(--graf-cat-6);min-width:4px"></div></div><span class="qtd">6</span></div>
-          </div>
+          <div id="temas-distribuicao-todo"></div>
         </section>
         <div class="card-app bloco-votado" id="bloco-votado-todo" data-periodo="todo"></div>
         <footer class="rodape-coleta" aria-label="Informações sobre a coleta de dados"><p>Dado coletado em <strong>14/09/2026</strong>. Fonte: SAPL da Câmara de Campo Largo.</p></footer>
@@ -4005,6 +3925,7 @@
         renderApp();
         atualizarCardVotacoes();
         atualizarPainelMes();
+        atualizarVotacoesMes();
       })
       .catch(function (err) {
         document.getElementById("conteudo-vereadores").innerHTML =
@@ -4016,73 +3937,73 @@
       });
   }
 
-  var MATERIAS_CAMARA = {
+var MATERIAS_CAMARA = {
     sessao: [
-      { id: 26457, tipo: "PLL 62/2026", resultado: "unanimidade", ementa: "Institui o Programa Protetores Mirins no Município de Campo Largo, e Dá Outras Providencias.", placar: "" },
-      { id: 26772, tipo: "PLL 85/2026", resultado: "unanimidade", ementa: "Institui a Semana Municipal de Proteção das Nascentes no Municipio de Campo Largo e Dá Outras Providências.", placar: "" },
+      { id: 26457, tipo: "PLL 62/2026", resultado: "unanimidade", ementa: "Institui o Programa Protetores Mirins no Município de Campo Largo, e Dá Outras Providencias.", categoria: "Meio ambiente e animais", placar: "" },
+      { id: 26772, tipo: "PLL 85/2026", resultado: "unanimidade", ementa: "Institui a Semana Municipal de Proteção das Nascentes no Municipio de Campo Largo e Dá Outras Providências.", categoria: "Homenagens, nomes e datas", placar: "" },
     ],
     mes: [
-      { id: 25717, tipo: "PLL 15/2026", resultado: "unanimidade", ementa: "Altera e Acrescenta Dispositivos À Lei Municipal N° 3582/2023, que Institui a Politica de Transparencia nas Obras Publicas Municipais, para Dispor Sobre a Obrigatoriedade de Inserção de Codigo Qr (qr Code) nas Placas de Obras Públicas, e Dá Outras Providencias.", placar: "" },
-      { id: 26038, tipo: "PLL 33/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal do Trilheiro de Motociclismo no Municipio de Campo Largo e Dá Outras Providencias.", placar: "" },
-      { id: 26221, tipo: "PLL 52/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal da Cultura no Calendáro Oficial de Eventos do Municipio de Campo Largo e Dá Outras Providências.", placar: "" },
-      { id: 26224, tipo: "PLL 54/2026", resultado: "unanimidade", ementa: "Inclui no Calendário Oficial de Eventos do Município de Campo Largo o Dia do Criador de Cavalo Crioulo.", placar: "" },
-      { id: 26532, tipo: "PLL 68/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública a Associação de Pais, Mestres e Funcionários do Colégio Estadual Inove.", placar: "" },
-      { id: 26535, tipo: "PLL 70/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública a Agicamp – Associação Campo-larguense de Ginástica Rítmica.", placar: "" },
-      { id: 26561, tipo: "PLL 73/2026", resultado: "unanimidade", ementa: "Institui a Campanha Municipal de Educação e Conscientização para o Uso Seguro de Veiculos Autopropelidos no Município de Campo Largo e Dá Outras Providências.", placar: "" },
-      { id: 26607, tipo: "PLL 75/2026", resultado: "unanimidade", ementa: "Institui o Programa Municipal de Ginastica Rítmica no Munícipio de Campo Largo e Dá Outras Providências.", placar: "" },
-      { id: 26753, tipo: "PLL 77/2026", resultado: "unanimidade", ementa: "Dispõe Sobre a Forma de Atendimento Acessível Às Pessoas com Deficiência por Estabelecimentos de Saúde e de Caráter Estético Instalados em Edificações Construidas Anteriormente a Vigencia Desta Lei, e Dá Outras Providências.", placar: "" },
+      { id: 25717, tipo: "PLL 15/2026", resultado: "unanimidade", ementa: "Altera e Acrescenta Dispositivos À Lei Municipal N° 3582/2023, que Institui a Politica de Transparencia nas Obras Publicas Municipais, para Dispor Sobre a Obrigatoriedade de Inserção de Codigo Qr (qr Code) nas Placas de Obras Públicas, e Dá Outras Providencias.", categoria: "Outros", placar: "" },
+      { id: 26038, tipo: "PLL 33/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal do Trilheiro de Motociclismo no Municipio de Campo Largo e Dá Outras Providencias.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26221, tipo: "PLL 52/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal da Cultura no Calendáro Oficial de Eventos do Municipio de Campo Largo e Dá Outras Providências.", categoria: "Cultura, esporte e lazer", placar: "" },
+      { id: 26224, tipo: "PLL 54/2026", resultado: "unanimidade", ementa: "Inclui no Calendário Oficial de Eventos do Município de Campo Largo o Dia do Criador de Cavalo Crioulo.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26532, tipo: "PLL 68/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública a Associação de Pais, Mestres e Funcionários do Colégio Estadual Inove.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26535, tipo: "PLL 70/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública a Agicamp – Associação Campo-larguense de Ginástica Rítmica.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26561, tipo: "PLL 73/2026", resultado: "unanimidade", ementa: "Institui a Campanha Municipal de Educação e Conscientização para o Uso Seguro de Veiculos Autopropelidos no Município de Campo Largo e Dá Outras Providências.", categoria: "Educação", placar: "" },
+      { id: 26607, tipo: "PLL 75/2026", resultado: "unanimidade", ementa: "Institui o Programa Municipal de Ginastica Rítmica no Munícipio de Campo Largo e Dá Outras Providências.", categoria: "Outros", placar: "" },
+      { id: 26753, tipo: "PLL 77/2026", resultado: "unanimidade", ementa: "Dispõe Sobre a Forma de Atendimento Acessível Às Pessoas com Deficiência por Estabelecimentos de Saúde e de Caráter Estético Instalados em Edificações Construidas Anteriormente a Vigencia Desta Lei, e Dá Outras Providências.", categoria: "Saúde", placar: "" },
     ],
     todo: [
-      { id: 25507, tipo: "PLL 1/2026", resultado: "unanimidade", ementa: "Institui a Política Municipal de Agroecologia, Produção Orgânica e Alimentação Saudável no Municípiode Campo Largo, Estado do Paraná e Dá Outras Providências.", placar: "" },
-      { id: 25515, tipo: "PLL 2/2026", resultado: "unanimidade", ementa: "Dá Denominação de Rua Como Índia Guaraci Mayer Á Via Pública Localizada no Município de Campo Largo e Dá Outras Providências.", placar: "" },
-      { id: 25582, tipo: "PLL 4/2026", resultado: "unanimidade", ementa: "Dispõe Sobre a Instituição do Dia do Massoterapeuta no Município de Campo Largo - Estado do Paraná e Dá Outras Providências.", placar: "" },
-      { id: 25583, tipo: "PLL 5/2026", resultado: "unanimidade", ementa: "Dá Denominação de Rua Marisa Age Bini o Trecho Indicado no Bairro Jardim Social, Conforme Especifica.", placar: "" },
-      { id: 25645, tipo: "PLL 9/2026", resultado: "unanimidade", ementa: "Institui o Programa Municipal \"plena Mente\" nas Unidades da Rede Pública Municipal de Ensino de Campo Largo e Dá Outras Providências.", placar: "" },
-      { id: 25649, tipo: "PLL 12/2026", resultado: "unanimidade", ementa: "Inclui no Calendário Oficial de Eventos do Município de Campo Largo a \"caminhada de Conscientização do Autismo\", a Ser Realizada Anualmente no Mês de Abril.", placar: "" },
-      { id: 25650, tipo: "PLL 13/2026", resultado: "unanimidade", ementa: "Institui Feriado Municipal o Dia 23 de Fevereiro, em Comemoração À Emancipação Política do Município de Campo Largo.", placar: "" },
-      { id: 25717, tipo: "PLL 15/2026", resultado: "unanimidade", ementa: "Altera e Acrescenta Dispositivos À Lei Municipal N° 3582/2023, que Institui a Politica de Transparencia nas Obras Publicas Municipais, para Dispor Sobre a Obrigatoriedade de Inserção de Codigo Qr (qr Code) nas Placas de Obras Públicas, e Dá Outras Providencias.", placar: "" },
-      { id: 25742, tipo: "PLL 18/2026", resultado: "unanimidade", ementa: "Altera Dispositivo da Lei Municipal N° 3.624, de 2023, para Extinguir o Cargo em Comissão de Tesoureiro e Criar o Cargo Efetivo de Tesoureiro no Quadro de Pessoal da Câmara Municipal de Campo Largo, e Dá Outras Providencias.", placar: "" },
-      { id: 25778, tipo: "PLL 20/2026", resultado: "unanimidade", ementa: "Institui, no Âmbito do Municipio de Campo Largo a Campanha \"fevereiro Laranja\", Dedicada Á Conscientização Sobre a Leucemia.", placar: "" },
-      { id: 25840, tipo: "PLL 21/2026", resultado: "unanimidade", ementa: "Dá a Denominação de Rua Hilda Karman Conforme Especifica.", placar: "" },
-      { id: 25871, tipo: "PLL 22/2026", resultado: "unanimidade", ementa: "Declaração de Utilidade Pública a Associação Batista de Ação Social - Abasc com Sede e Foro no Município de Curitiba.", placar: "" },
-      { id: 25896, tipo: "PLL 24/2026", resultado: "unanimidade", ementa: "Reconhece o Wheeling Bike (grau de Bicicleta) Como Prática Esportiva no Municipio de Campo Largo e Dá Outras Providências.", placar: "" },
-      { id: 25991, tipo: "PLL 28/2026", resultado: "unanimidade", ementa: "Denomina de Destacamento Alexandre Diniz dos Santos o Módulo da Guarda Municipal do Ferraria, no Municipio de Campo Largo.", placar: "" },
-      { id: 26019, tipo: "PLL 30/2026", resultado: "unanimidade", ementa: "Institui no Calendário Municipal de Campo Largo a Festa da Padroeira da Paróquia Nossa Senhora da Piedade.", placar: "" },
-      { id: 26020, tipo: "PLL 31/2026", resultado: "unanimidade", ementa: "Institui no Municipio de Campo Largo o Programa Educativo e Preventivo Samuzinho Voltado À Conscientização Sobre Prevenção de Acidentes e Uso Adequado dos Serviços de Urgência e Emergência, e Dá Outras Providências.", placar: "" },
-      { id: 26021, tipo: "PLL 32/2026", resultado: "unanimidade", ementa: "Altera o Art. 1° da Lei Municipal N° 3.948, de 16 de Dezembro de 2025, Conforme Especifica.", placar: "" },
-      { id: 26038, tipo: "PLL 33/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal do Trilheiro de Motociclismo no Municipio de Campo Largo e Dá Outras Providencias.", placar: "" },
-      { id: 26040, tipo: "PLL 34/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal dos Aventureiros no Municipio de Campo Largo e Dá Outras Providências.", placar: "" },
-      { id: 26073, tipo: "PLL 35/2026", resultado: "unanimidade", ementa: "Dispõe Sobre a Obrigatoriedade de Notificação À Prefeitura dos Casos Confirmados de Zoonoses em Animais Atendidos por Serviços de Saúde e Cuidado Animal, Públicos ou Privados, no Municipio de Campo Largo.", placar: "" },
-      { id: 26074, tipo: "PLL 36/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública Municipal de Campo Largo o Centro de Tradições Gaúchas Poncho Crioulo - Ctg.", placar: "" },
-      { id: 26081, tipo: "PLL 37/2026", resultado: "unanimidade", ementa: "Dá Denominação de Rua da Arca ao Trecho Indicado no Bairro Nossa Senhora do Pilar, Conforme Especifica.", placar: "" },
-      { id: 26103, tipo: "PLL 38/2026", resultado: "unanimidade", ementa: "Institui o Programa Municipal de Apoio e Fomento À Cultura Hip Hop, Cria a Semana Municipal do Hip Hop e Estabelece Diretrizes para Valorização da Cultura Hip Hop no Municipio de Campo Largo.", placar: "" },
-      { id: 26104, tipo: "PLL 39/2026", resultado: "unanimidade", ementa: "Institui o Programa de Incentivo À Pratica do Skate no Municipio de Campo Largo e Dá Outras Providências.", placar: "" },
-      { id: 26120, tipo: "PLL 40/2026", resultado: "unanimidade", ementa: "Altera o Art. 9° da Lei Municipal N° 3.624/2023, para Incluir o Protocolo Legislativo no Âmbito do Setor Legislativo do Departamento Juridico/legislativo da Câmara Municipal de Campo Largo, Conforme Especifica.", placar: "" },
-      { id: 26121, tipo: "PLL 41/2026", resultado: "unanimidade", ementa: "Altera a Lei Municipal N° 3.986/2026, para Adequar o Quantitativo de Cargos de Assessor Parlamentar Constante do Anexo Iii da Lei Municipal N° 3.624/2023, Conforme Especifica.", placar: "" },
-      { id: 26128, tipo: "PLL 42/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública o Sindicato das Industrias de Vidros, Cristais, Espelhos, Cerâmicas de Louça, Porcelana, Pisos e Revestimentos Cerâmicos no Estado do Paraná com Sede e Foro no Municipio de Campo Largo.", placar: "" },
-      { id: 26141, tipo: "PLL 44/2026", resultado: "unanimidade", ementa: "Institui o Selo Pet Seguro no Município de Campo Largo, Conforme Especifica.", placar: "" },
-      { id: 26142, tipo: "PLL 45/2026", resultado: "unanimidade", ementa: "Inclui no Calendário Municipal de Campo Largo a Festa da Padroeira da Paroquia Nossa Senhora Aparecida e a Peregrinação ao Morro do Cal.", placar: "" },
-      { id: 26220, tipo: "PLL 51/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal do Esporte Amador no Calendáro Oficial do Municipio de Campo Largo e Dá Outras Providências.", placar: "" },
-      { id: 26221, tipo: "PLL 52/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal da Cultura no Calendáro Oficial de Eventos do Municipio de Campo Largo e Dá Outras Providências.", placar: "" },
-      { id: 26222, tipo: "PLL 53/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal de Conscientização Sobre a Dislexia no Âmbito do Municipio de Campo Largo e Dá Outras Providências.", placar: "" },
-      { id: 26224, tipo: "PLL 54/2026", resultado: "unanimidade", ementa: "Inclui no Calendário Oficial de Eventos do Município de Campo Largo o Dia do Criador de Cavalo Crioulo.", placar: "" },
-      { id: 26252, tipo: "PLL 55/2026", resultado: "unanimidade", ementa: "Institui o Dia do Zootecnista no Município de Campo Largo, Conforme Especifica.", placar: "" },
-      { id: 26288, tipo: "PLL 57/2026", resultado: "unanimidade", ementa: "Institui a Politica Municipal de Incentivo À Agroindustria Familiar no Municipio de Campo Largo/pr e Dá Outras Providências.", placar: "" },
-      { id: 26306, tipo: "PLL 58/2026", resultado: "unanimidade", ementa: "Institui Politica Municipal de Enfrentamento Às Drogas Ilícitas.", placar: "" },
-      { id: 26348, tipo: "PLL 59/2026", resultado: "unanimidade", ementa: "Institui a Lei Cão Abacate, para Majorar as Multas Administrativas Cominadas À Pratica de Maus-tratos com Crueldade Aos Animais.", placar: "" },
-      { id: 26405, tipo: "PLL 60/2026", resultado: "unanimidade", ementa: "Concede Recomposição Salarial ao Prefeito, Vice-prefeito e Secretários Municipais, Conforme Especifica.", placar: "" },
-      { id: 26453, tipo: "PLL 61/2026", resultado: "unanimidade", ementa: "Altera a Lei 3.624/2023, de 19 de Julho de 2023, que Estabelece a Estrutura Institucional - Organizacional. Dispõe Sobre o Quadro de Pessoal e Institui o Plano de Cargos, Scarreiras e Remunerações da Câmara Municipal de Campo Largo, e Dá Outras Providências.", placar: "" },
-      { id: 26457, tipo: "PLL 62/2026", resultado: "unanimidade", ementa: "Institui o Programa Protetores Mirins no Município de Campo Largo, e Dá Outras Providencias.", placar: "" },
-      { id: 26532, tipo: "PLL 68/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública a Associação de Pais, Mestres e Funcionários do Colégio Estadual Inove.", placar: "" },
-      { id: 26534, tipo: "PLL 69/2026", resultado: "unanimidade", ementa: "Institui o Programa Municipal \"vaca Parada\", Destinado ao Incentivo de Atividades Culturais, Campeiras e Tradicionalistas Voltadas Às Crianças e Adolescentes no Municipio, e Dá Outras Providências.", placar: "" },
-      { id: 26535, tipo: "PLL 70/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública a Agicamp – Associação Campo-larguense de Ginástica Rítmica.", placar: "" },
-      { id: 26561, tipo: "PLL 73/2026", resultado: "unanimidade", ementa: "Institui a Campanha Municipal de Educação e Conscientização para o Uso Seguro de Veiculos Autopropelidos no Município de Campo Largo e Dá Outras Providências.", placar: "" },
-      { id: 26603, tipo: "PLL 74/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal do Associativismo, a Ser Celebrado Anualmente no Dia 15 de Julho.", placar: "" },
-      { id: 26607, tipo: "PLL 75/2026", resultado: "unanimidade", ementa: "Institui o Programa Municipal de Ginastica Rítmica no Munícipio de Campo Largo e Dá Outras Providências.", placar: "" },
-      { id: 26753, tipo: "PLL 77/2026", resultado: "unanimidade", ementa: "Dispõe Sobre a Forma de Atendimento Acessível Às Pessoas com Deficiência por Estabelecimentos de Saúde e de Caráter Estético Instalados em Edificações Construidas Anteriormente a Vigencia Desta Lei, e Dá Outras Providências.", placar: "" },
-      { id: 26769, tipo: "PLL 82/2026", resultado: "unanimidade", ementa: "Institui, no Âmbito do Municipio de Campo Largo, a Semana Municipal do Brechó e da Moda Sustentável a Ser Realizada Anualmente na Última Semana do Mês de Agosto.", placar: "" },
-      { id: 26772, tipo: "PLL 85/2026", resultado: "unanimidade", ementa: "Institui a Semana Municipal de Proteção das Nascentes no Municipio de Campo Largo e Dá Outras Providências.", placar: "" },
-      { id: 26844, tipo: "PLL 90/2026", resultado: "unanimidade", ementa: "Institui a Politica Municipal de Doação de Bens Culturais ao Acervo do Museu Histórico de Campo Largo.", placar: "" },
+      { id: 25507, tipo: "PLL 1/2026", resultado: "unanimidade", ementa: "Institui a Política Municipal de Agroecologia, Produção Orgânica e Alimentação Saudável no Municípiode Campo Largo, Estado do Paraná e Dá Outras Providências.", categoria: "Outros", placar: "" },
+      { id: 25515, tipo: "PLL 2/2026", resultado: "unanimidade", ementa: "Dá Denominação de Rua Como Índia Guaraci Mayer Á Via Pública Localizada no Município de Campo Largo e Dá Outras Providências.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 25582, tipo: "PLL 4/2026", resultado: "unanimidade", ementa: "Dispõe Sobre a Instituição do Dia do Massoterapeuta no Município de Campo Largo - Estado do Paraná e Dá Outras Providências.", categoria: "Outros", placar: "" },
+      { id: 25583, tipo: "PLL 5/2026", resultado: "unanimidade", ementa: "Dá Denominação de Rua Marisa Age Bini o Trecho Indicado no Bairro Jardim Social, Conforme Especifica.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 25645, tipo: "PLL 9/2026", resultado: "unanimidade", ementa: "Institui o Programa Municipal \"plena Mente\" nas Unidades da Rede Pública Municipal de Ensino de Campo Largo e Dá Outras Providências.", categoria: "Educação", placar: "" },
+      { id: 25649, tipo: "PLL 12/2026", resultado: "unanimidade", ementa: "Inclui no Calendário Oficial de Eventos do Município de Campo Largo a \"caminhada de Conscientização do Autismo\", a Ser Realizada Anualmente no Mês de Abril.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 25650, tipo: "PLL 13/2026", resultado: "unanimidade", ementa: "Institui Feriado Municipal o Dia 23 de Fevereiro, em Comemoração À Emancipação Política do Município de Campo Largo.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 25717, tipo: "PLL 15/2026", resultado: "unanimidade", ementa: "Altera e Acrescenta Dispositivos À Lei Municipal N° 3582/2023, que Institui a Politica de Transparencia nas Obras Publicas Municipais, para Dispor Sobre a Obrigatoriedade de Inserção de Codigo Qr (qr Code) nas Placas de Obras Públicas, e Dá Outras Providencias.", categoria: "Outros", placar: "" },
+      { id: 25742, tipo: "PLL 18/2026", resultado: "unanimidade", ementa: "Altera Dispositivo da Lei Municipal N° 3.624, de 2023, para Extinguir o Cargo em Comissão de Tesoureiro e Criar o Cargo Efetivo de Tesoureiro no Quadro de Pessoal da Câmara Municipal de Campo Largo, e Dá Outras Providencias.", categoria: "Administração e finanças", placar: "" },
+      { id: 25778, tipo: "PLL 20/2026", resultado: "unanimidade", ementa: "Institui, no Âmbito do Municipio de Campo Largo a Campanha \"fevereiro Laranja\", Dedicada Á Conscientização Sobre a Leucemia.", categoria: "Outros", placar: "" },
+      { id: 25840, tipo: "PLL 21/2026", resultado: "unanimidade", ementa: "Dá a Denominação de Rua Hilda Karman Conforme Especifica.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 25871, tipo: "PLL 22/2026", resultado: "unanimidade", ementa: "Declaração de Utilidade Pública a Associação Batista de Ação Social - Abasc com Sede e Foro no Município de Curitiba.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 25896, tipo: "PLL 24/2026", resultado: "unanimidade", ementa: "Reconhece o Wheeling Bike (grau de Bicicleta) Como Prática Esportiva no Municipio de Campo Largo e Dá Outras Providências.", categoria: "Cultura, esporte e lazer", placar: "" },
+      { id: 25991, tipo: "PLL 28/2026", resultado: "unanimidade", ementa: "Denomina de Destacamento Alexandre Diniz dos Santos o Módulo da Guarda Municipal do Ferraria, no Municipio de Campo Largo.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26019, tipo: "PLL 30/2026", resultado: "unanimidade", ementa: "Institui no Calendário Municipal de Campo Largo a Festa da Padroeira da Paróquia Nossa Senhora da Piedade.", categoria: "Outros", placar: "" },
+      { id: 26020, tipo: "PLL 31/2026", resultado: "unanimidade", ementa: "Institui no Municipio de Campo Largo o Programa Educativo e Preventivo Samuzinho Voltado À Conscientização Sobre Prevenção de Acidentes e Uso Adequado dos Serviços de Urgência e Emergência, e Dá Outras Providências.", categoria: "Saúde", placar: "" },
+      { id: 26021, tipo: "PLL 32/2026", resultado: "unanimidade", ementa: "Altera o Art. 1° da Lei Municipal N° 3.948, de 16 de Dezembro de 2025, Conforme Especifica.", categoria: "Outros", placar: "" },
+      { id: 26038, tipo: "PLL 33/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal do Trilheiro de Motociclismo no Municipio de Campo Largo e Dá Outras Providencias.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26040, tipo: "PLL 34/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal dos Aventureiros no Municipio de Campo Largo e Dá Outras Providências.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26073, tipo: "PLL 35/2026", resultado: "unanimidade", ementa: "Dispõe Sobre a Obrigatoriedade de Notificação À Prefeitura dos Casos Confirmados de Zoonoses em Animais Atendidos por Serviços de Saúde e Cuidado Animal, Públicos ou Privados, no Municipio de Campo Largo.", categoria: "Saúde", placar: "" },
+      { id: 26074, tipo: "PLL 36/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública Municipal de Campo Largo o Centro de Tradições Gaúchas Poncho Crioulo - Ctg.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26081, tipo: "PLL 37/2026", resultado: "unanimidade", ementa: "Dá Denominação de Rua da Arca ao Trecho Indicado no Bairro Nossa Senhora do Pilar, Conforme Especifica.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26103, tipo: "PLL 38/2026", resultado: "unanimidade", ementa: "Institui o Programa Municipal de Apoio e Fomento À Cultura Hip Hop, Cria a Semana Municipal do Hip Hop e Estabelece Diretrizes para Valorização da Cultura Hip Hop no Municipio de Campo Largo.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26104, tipo: "PLL 39/2026", resultado: "unanimidade", ementa: "Institui o Programa de Incentivo À Pratica do Skate no Municipio de Campo Largo e Dá Outras Providências.", categoria: "Cultura, esporte e lazer", placar: "" },
+      { id: 26120, tipo: "PLL 40/2026", resultado: "unanimidade", ementa: "Altera o Art. 9° da Lei Municipal N° 3.624/2023, para Incluir o Protocolo Legislativo no Âmbito do Setor Legislativo do Departamento Juridico/legislativo da Câmara Municipal de Campo Largo, Conforme Especifica.", categoria: "Outros", placar: "" },
+      { id: 26121, tipo: "PLL 41/2026", resultado: "unanimidade", ementa: "Altera a Lei Municipal N° 3.986/2026, para Adequar o Quantitativo de Cargos de Assessor Parlamentar Constante do Anexo Iii da Lei Municipal N° 3.624/2023, Conforme Especifica.", categoria: "Administração e finanças", placar: "" },
+      { id: 26128, tipo: "PLL 42/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública o Sindicato das Industrias de Vidros, Cristais, Espelhos, Cerâmicas de Louça, Porcelana, Pisos e Revestimentos Cerâmicos no Estado do Paraná com Sede e Foro no Municipio de Campo Largo.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26141, tipo: "PLL 44/2026", resultado: "unanimidade", ementa: "Institui o Selo Pet Seguro no Município de Campo Largo, Conforme Especifica.", categoria: "Outros", placar: "" },
+      { id: 26142, tipo: "PLL 45/2026", resultado: "unanimidade", ementa: "Inclui no Calendário Municipal de Campo Largo a Festa da Padroeira da Paroquia Nossa Senhora Aparecida e a Peregrinação ao Morro do Cal.", categoria: "Outros", placar: "" },
+      { id: 26220, tipo: "PLL 51/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal do Esporte Amador no Calendáro Oficial do Municipio de Campo Largo e Dá Outras Providências.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26221, tipo: "PLL 52/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal da Cultura no Calendáro Oficial de Eventos do Municipio de Campo Largo e Dá Outras Providências.", categoria: "Cultura, esporte e lazer", placar: "" },
+      { id: 26222, tipo: "PLL 53/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal de Conscientização Sobre a Dislexia no Âmbito do Municipio de Campo Largo e Dá Outras Providências.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26224, tipo: "PLL 54/2026", resultado: "unanimidade", ementa: "Inclui no Calendário Oficial de Eventos do Município de Campo Largo o Dia do Criador de Cavalo Crioulo.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26252, tipo: "PLL 55/2026", resultado: "unanimidade", ementa: "Institui o Dia do Zootecnista no Município de Campo Largo, Conforme Especifica.", categoria: "Outros", placar: "" },
+      { id: 26288, tipo: "PLL 57/2026", resultado: "unanimidade", ementa: "Institui a Politica Municipal de Incentivo À Agroindustria Familiar no Municipio de Campo Largo/pr e Dá Outras Providências.", categoria: "Outros", placar: "" },
+      { id: 26306, tipo: "PLL 58/2026", resultado: "unanimidade", ementa: "Institui Politica Municipal de Enfrentamento Às Drogas Ilícitas.", categoria: "Outros", placar: "" },
+      { id: 26348, tipo: "PLL 59/2026", resultado: "unanimidade", ementa: "Institui a Lei Cão Abacate, para Majorar as Multas Administrativas Cominadas À Pratica de Maus-tratos com Crueldade Aos Animais.", categoria: "Meio ambiente e animais", placar: "" },
+      { id: 26405, tipo: "PLL 60/2026", resultado: "unanimidade", ementa: "Concede Recomposição Salarial ao Prefeito, Vice-prefeito e Secretários Municipais, Conforme Especifica.", categoria: "Administração e finanças", placar: "" },
+      { id: 26453, tipo: "PLL 61/2026", resultado: "unanimidade", ementa: "Altera a Lei 3.624/2023, de 19 de Julho de 2023, que Estabelece a Estrutura Institucional - Organizacional. Dispõe Sobre o Quadro de Pessoal e Institui o Plano de Cargos, Scarreiras e Remunerações da Câmara Municipal de Campo Largo, e Dá Outras Providências.", categoria: "Administração e finanças", placar: "" },
+      { id: 26457, tipo: "PLL 62/2026", resultado: "unanimidade", ementa: "Institui o Programa Protetores Mirins no Município de Campo Largo, e Dá Outras Providencias.", categoria: "Meio ambiente e animais", placar: "" },
+      { id: 26532, tipo: "PLL 68/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública a Associação de Pais, Mestres e Funcionários do Colégio Estadual Inove.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26534, tipo: "PLL 69/2026", resultado: "unanimidade", ementa: "Institui o Programa Municipal \"vaca Parada\", Destinado ao Incentivo de Atividades Culturais, Campeiras e Tradicionalistas Voltadas Às Crianças e Adolescentes no Municipio, e Dá Outras Providências.", categoria: "Cultura, esporte e lazer", placar: "" },
+      { id: 26535, tipo: "PLL 70/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública a Agicamp – Associação Campo-larguense de Ginástica Rítmica.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26561, tipo: "PLL 73/2026", resultado: "unanimidade", ementa: "Institui a Campanha Municipal de Educação e Conscientização para o Uso Seguro de Veiculos Autopropelidos no Município de Campo Largo e Dá Outras Providências.", categoria: "Educação", placar: "" },
+      { id: 26603, tipo: "PLL 74/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal do Associativismo, a Ser Celebrado Anualmente no Dia 15 de Julho.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26607, tipo: "PLL 75/2026", resultado: "unanimidade", ementa: "Institui o Programa Municipal de Ginastica Rítmica no Munícipio de Campo Largo e Dá Outras Providências.", categoria: "Outros", placar: "" },
+      { id: 26753, tipo: "PLL 77/2026", resultado: "unanimidade", ementa: "Dispõe Sobre a Forma de Atendimento Acessível Às Pessoas com Deficiência por Estabelecimentos de Saúde e de Caráter Estético Instalados em Edificações Construidas Anteriormente a Vigencia Desta Lei, e Dá Outras Providências.", categoria: "Saúde", placar: "" },
+      { id: 26769, tipo: "PLL 82/2026", resultado: "unanimidade", ementa: "Institui, no Âmbito do Municipio de Campo Largo, a Semana Municipal do Brechó e da Moda Sustentável a Ser Realizada Anualmente na Última Semana do Mês de Agosto.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26772, tipo: "PLL 85/2026", resultado: "unanimidade", ementa: "Institui a Semana Municipal de Proteção das Nascentes no Municipio de Campo Largo e Dá Outras Providências.", categoria: "Homenagens, nomes e datas", placar: "" },
+      { id: 26844, tipo: "PLL 90/2026", resultado: "unanimidade", ementa: "Institui a Politica Municipal de Doação de Bens Culturais ao Acervo do Museu Histórico de Campo Largo.", categoria: "Cultura, esporte e lazer", placar: "" },
     ]
   };
 
@@ -4117,8 +4038,13 @@
       circUni.style.strokeDashoffset = "0";
     }
     if (circMai) {
-      circMai.style.strokeDasharray = (pctMai / 100 * circ) + " " + circ;
-      circMai.style.strokeDashoffset = -(pctUni / 100 * circ);
+      if (pctMai === 0) {
+        circMai.style.display = "none";
+      } else {
+        circMai.style.display = "";
+        circMai.style.strokeDasharray = (pctMai / 100 * circ) + " " + circ;
+        circMai.style.strokeDashoffset = -(pctUni / 100 * circ);
+      }
     }
   }
 
@@ -4157,12 +4083,120 @@
     if (btnShare) btnShare.setAttribute("aria-label", "Compartilhar votações de " + nomeMes.toLowerCase());
   }
 
-  var MATERIAS_TAGS = {
-    26457: { tag_tipo: "PLL", tag_tema: "Proteção Animal" },
-    26772: { tag_tipo: "PLL", tag_tema: "Agropecuária e Meio Ambiente" }
+  function atualizarVotacoesMes() {
+    var container = document.getElementById("votacoes-mes-conteudo");
+    if (!container) return;
+
+    var lista = MATERIAS_CAMARA.mes || [];
+    var total = lista.length;
+    if (total === 0) { container.innerHTML = ""; return; }
+
+    var unanimes = lista.filter(function(m) { return m.resultado === "unanimidade"; }).length;
+    var maioria = total - unanimes;
+    var pctUni = total > 0 ? Math.round((unanimes / total) * 100) : 0;
+    var pctMai = total > 0 ? Math.round((maioria / total) * 100) : 0;
+
+    var rotuloTotal = total === 1 ? "1 projeto votado" : total + " projetos votados";
+
+    container.innerHTML =
+      '<div class="card-header">' +
+      '<div class="card-categoria cat-laranja">' +
+      '<div class="card-icone icone-laranja" aria-hidden="true">' +
+      '<svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 23c6.075 0 11-4.925 11-11 0-4.04-2.18-7.58-5.46-9.52-.39-.23-.88.11-.8.56.57 3.32-.42 6.64-2.74 8.89-2.07-3.04-2.52-6.85-1.2-10.36.17-.46-.3-.9-.73-.69C8.36 2.65 5.5 6.94 5.5 12c0 1.25.21 2.45.59 3.57-1.34-1.2-2.09-2.93-2.09-4.8 0-.48-.56-.76-.92-.44C1.19 12.01 0 14.86 0 18c0 2.76 1.12 5.26 2.93 7.07C4.74 26.88 7.24 28 10 28c.68 0 1.34-.07 1.98-.2-.33-.67-.53-1.42-.53-2.22 0-2.48 2.02-4.5 4.5-4.5h.05c-.39-1.09-.6-2.27-.6-3.5 0-.75.08-1.48.24-2.18-.75.75-1.74 1.28-2.84 1.5-.47.1-.8-.34-.6-.78 1.1-2.4 1.05-5.22-.15-7.58-.23-.46.24-.96.7-.76 2.4 1.03 4.2 3.12 4.7 5.72z"></path></svg></div>' +
+      '<span id="tit-votacoes-mes">Votações do Mês</span></div>' +
+      '<span class="card-meta">' + rotuloTotal + '</span></div>' +
+      '<div class="card-corpo">' +
+      '<div class="metricas-bloco">' +
+      '<div class="metrica-destaque">' +
+      '<span class="metrica-numero">' + total + '</span>' +
+      '<span class="metrica-rotulo">projetos votados</span></div>' +
+      '<div class="metrica-detalhes">' +
+      '<div class="item-detalhe">' +
+      '<span class="det-rotulo det-rotulo-unanimidade">Unanimidade</span>' +
+      '<span class="det-valor">' + unanimes + ' <small style="font-size:11px;font-weight:500">(' + pctUni + '%)</small></span></div>' +
+      '<div class="item-detalhe det-separador">' +
+      '<span class="det-rotulo det-rotulo-maioria">Por Maioria</span>' +
+      '<span class="det-valor">' + maioria + ' <small style="font-size:11px;font-weight:500">(' + pctMai + '%)</small></span></div></div></div>' +
+      '<div class="grafico-anel-box" role="img" aria-label="' + total + ' projetos votados: ' + unanimes + ' por unanimidade e ' + maioria + ' por maioria">' +
+      '<svg class="anel-svg" viewBox="0 0 58 58" aria-hidden="true">' +
+      '<circle class="anel-fundo" cx="29" cy="29" r="23"></circle>' +
+      '<circle class="anel-progresso-unanimidade" cx="29" cy="29" r="23"></circle>' +
+      '<circle class="anel-progresso-maioria" cx="29" cy="29" r="23"></circle></svg>' +
+      '<span class="anel-porcento">' + pctUni + '%</span></div></div>';
+
+    // Update donut chart
+    var circ = 2 * Math.PI * 23;
+    var circUni = container.querySelector(".anel-progresso-unanimidade");
+    var circMai = container.querySelector(".anel-progresso-maioria");
+    if (circUni) {
+      circUni.style.strokeDasharray = (pctUni / 100 * circ) + " " + circ;
+      circUni.style.strokeDashoffset = "0";
+    }
+    if (circMai) {
+      if (pctMai === 0) {
+        circMai.style.display = "none";
+      } else {
+        circMai.style.display = "";
+        circMai.style.strokeDasharray = (pctMai / 100 * circ) + " " + circ;
+        circMai.style.strokeDashoffset = -(pctUni / 100 * circ);
+      }
+    }
+  }
+
+var MATERIAS_TAGS = {
+    25507: { tag_tipo: "PLL", tag_tema: "Outros" },
+    25515: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    25582: { tag_tipo: "PLL", tag_tema: "Outros" },
+    25583: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    25645: { tag_tipo: "PLL", tag_tema: "Educação" },
+    25649: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    25650: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    25717: { tag_tipo: "PLL", tag_tema: "Outros" },
+    25742: { tag_tipo: "PLL", tag_tema: "Administração e finanças" },
+    25778: { tag_tipo: "PLL", tag_tema: "Outros" },
+    25840: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    25871: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    25896: { tag_tipo: "PLL", tag_tema: "Cultura, esporte e lazer" },
+    25991: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26019: { tag_tipo: "PLL", tag_tema: "Outros" },
+    26020: { tag_tipo: "PLL", tag_tema: "Saúde" },
+    26021: { tag_tipo: "PLL", tag_tema: "Outros" },
+    26038: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26040: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26073: { tag_tipo: "PLL", tag_tema: "Saúde" },
+    26074: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26081: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26103: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26104: { tag_tipo: "PLL", tag_tema: "Cultura, esporte e lazer" },
+    26120: { tag_tipo: "PLL", tag_tema: "Outros" },
+    26121: { tag_tipo: "PLL", tag_tema: "Administração e finanças" },
+    26128: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26141: { tag_tipo: "PLL", tag_tema: "Outros" },
+    26142: { tag_tipo: "PLL", tag_tema: "Outros" },
+    26220: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26221: { tag_tipo: "PLL", tag_tema: "Cultura, esporte e lazer" },
+    26222: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26224: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26252: { tag_tipo: "PLL", tag_tema: "Outros" },
+    26288: { tag_tipo: "PLL", tag_tema: "Outros" },
+    26306: { tag_tipo: "PLL", tag_tema: "Outros" },
+    26348: { tag_tipo: "PLL", tag_tema: "Meio ambiente e animais" },
+    26405: { tag_tipo: "PLL", tag_tema: "Administração e finanças" },
+    26453: { tag_tipo: "PLL", tag_tema: "Administração e finanças" },
+    26457: { tag_tipo: "PLL", tag_tema: "Meio ambiente e animais" },
+    26532: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26534: { tag_tipo: "PLL", tag_tema: "Cultura, esporte e lazer" },
+    26535: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26561: { tag_tipo: "PLL", tag_tema: "Educação" },
+    26603: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26607: { tag_tipo: "PLL", tag_tema: "Outros" },
+    26753: { tag_tipo: "PLL", tag_tema: "Saúde" },
+    26769: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26772: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
+    26844: { tag_tipo: "PLL", tag_tema: "Cultura, esporte e lazer" }
   };
 
-  var FILTROS_MATERIA = {
+var FILTROS_MATERIA = {
     sessao: [
       { id: "", rotulo: "Todos", qtd: 2 },
       { id: "unanimidade", rotulo: "Unânimes", qtd: 2 },
@@ -5087,10 +5121,61 @@
     });
   }
 
+  var CORES_TEMAS = ["#e74c3c", "#f39c12", "#27ae60", "#2980b9", "#8e44ad", "#e91e63", "#00bcd4", "#795548", "#ff9800"];
+
+  function renderTemasDistribuicao(periodo) {
+    var container = document.getElementById("temas-distribuicao-" + periodo);
+    if (!container) return;
+
+    var lista = MATERIAS_CAMARA[periodo] || [];
+    var total = lista.length;
+    if (total === 0) { container.innerHTML = ""; return; }
+
+    var contagem = {};
+    lista.forEach(function (m) {
+      var tags = tagsMateria(m.id);
+      var tema = (tags && tags.tag_tema) || "Outros";
+      contagem[tema] = (contagem[tema] || 0) + 1;
+    });
+
+    var ordenado = Object.keys(contagem).sort(function (a, b) { return contagem[b] - contagem[a]; });
+    var max = contagem[ordenado[0]] || 1;
+
+    var htmlBarras = ordenado.map(function (tema, i) {
+      var qtd = contagem[tema];
+      var pct = Math.round((qtd / max) * 100);
+      var pctTotal = Math.round((qtd / total) * 100).toFixed(1).replace(".", ",");
+      var cor = CORES_TEMAS[i % CORES_TEMAS.length];
+      var rotulo = qtd === 1 ? "1 projeto" : qtd + " projetos";
+      return '<div class="barra-tema-linha">' +
+        '<span class="nome">' + esc(tema) + '</span>' +
+        '<div class="trilho"><div class="preenchido" style="width:' + pct + '%;background:' + cor + '"></div></div>' +
+        '<span class="meta-linha">' + rotulo + ' (' + pctTotal + '%)</span></div>';
+    }).join("");
+
+    var rotuloTotal = total === 1 ? "1 projeto votado" : total + " projetos votados";
+
+    container.innerHTML =
+      '<div class="card-header">' +
+      '<div class="card-categoria cat-roxo">' +
+      '<div class="card-icone icone-roxo" aria-hidden="true">' +
+      '<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>' +
+      '<span id="tit-temas-' + esc(periodo) + '">Do que tratam os projetos</span></div>' +
+      '<span class="card-meta">' + rotuloTotal + ' ' +
+      '<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg></span></div>' +
+      '<p class="card-legenda">Temas dos ' + total + ' projetos votados neste período.</p>' +
+      '<details class="card-detalhes" open>' +
+      '<summary>Ver lista de temas</summary>' +
+      '<div class="card-detalhes-corpo">' +
+      '<div class="barra-tema-sessao" role="img" aria-label="Distribuição temática de ' + total + ' projetos votados">' +
+      htmlBarras + '</div></div></details>';
+  }
+
   function initMateriasCamara() {
     ["sessao", "mes", "todo"].forEach(function (periodo) {
       estadoMaterias.listaVisivel[periodo] = true;
       renderBlocoVotadoPeriodo(periodo);
+      renderTemasDistribuicao(periodo);
     });
   }
 
