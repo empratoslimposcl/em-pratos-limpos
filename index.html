@@ -1301,7 +1301,7 @@
   .paginacao {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 8px;
     margin-top: 12px;
     font-size: 12px;
@@ -1473,8 +1473,6 @@
     margin-bottom: 16px;
     box-shadow: var(--sombra);
   }
-
-  .paginacao { display: flex; justify-content: center; gap: 6px; margin-top: 12px; }
 
 
   .titulo-votado {
@@ -2129,7 +2127,7 @@
 
   [data-tema="escuro"] .tag-tipo {
     background: #1a3055;
-    color: #7ec8ff;
+    color: #a0d4ff;
     border-color: rgba(10, 132, 255, 0.35);
   }
 
@@ -2805,8 +2803,8 @@
     <div class="sub-camara ativo" id="sub-camara">
       <h2 class="secao-camara-titulo">O que a Câmara votou</h2>
       <div class="seletor-periodo" role="tablist" aria-label="Período de consulta">
-        <button type="button" class="ativo" role="tab" aria-selected="true" tabindex="0" aria-controls="painel-periodo-sessao" id="tab-periodo-sessao" data-periodo="sessao">Última sessão</button>
-        <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="painel-periodo-mes" id="tab-periodo-mes" data-periodo="mes">Último mês</button>
+        <button type="button" class="ativo" role="tab" aria-selected="true" tabindex="0" aria-controls="painel-periodo-sessao" id="tab-periodo-sessao" data-periodo="sessao">última sessão</button>
+        <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="painel-periodo-mes" id="tab-periodo-mes" data-periodo="mes">último mês</button>
         <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="painel-periodo-todo" id="tab-periodo-todo" data-periodo="todo">Todo o período</button>
       </div>
     </div>
@@ -3113,7 +3111,7 @@
         <p class="voto-progresso" id="voto-progresso" aria-live="polite"></p>
         <div class="voto-swipe-palco" id="voto-swipe-palco">
           <article class="voto-swipe-card" id="voto-swipe-card">
-            <div class="voto-swipe-selo util" id="selo-util">Útil</div>
+            <div class="voto-swipe-selo util" id="selo-util">útil</div>
             <div class="voto-swipe-selo inutil" id="selo-inutil">Inútil</div>
             <p class="voto-card-tipo" id="voto-card-tipo"></p>
             <h3 class="voto-card-titulo" id="voto-card-titulo"></h3>
@@ -3132,7 +3130,7 @@
             <span class="btn-swipe-circulo" aria-hidden="true">
               <svg fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
             </span>
-            <span>Útil</span>
+            <span>útil</span>
           </button>
         </div>
       </div>
@@ -3937,75 +3935,35 @@
       });
   }
 
-var MATERIAS_CAMARA = {
-    sessao: [
-      { id: 26457, tipo: "PLL 62/2026", resultado: "unanimidade", ementa: "Institui o Programa Protetores Mirins no Município de Campo Largo, e Dá Outras Providencias.", categoria: "Meio ambiente e animais", placar: "" },
-      { id: 26772, tipo: "PLL 85/2026", resultado: "unanimidade", ementa: "Institui a Semana Municipal de Proteção das Nascentes no Municipio de Campo Largo e Dá Outras Providências.", categoria: "Homenagens, nomes e datas", placar: "" },
-    ],
-    mes: [
-      { id: 25717, tipo: "PLL 15/2026", resultado: "unanimidade", ementa: "Altera e Acrescenta Dispositivos À Lei Municipal N° 3582/2023, que Institui a Politica de Transparencia nas Obras Publicas Municipais, para Dispor Sobre a Obrigatoriedade de Inserção de Codigo Qr (qr Code) nas Placas de Obras Públicas, e Dá Outras Providencias.", categoria: "Outros", placar: "" },
-      { id: 26038, tipo: "PLL 33/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal do Trilheiro de Motociclismo no Municipio de Campo Largo e Dá Outras Providencias.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26221, tipo: "PLL 52/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal da Cultura no Calendáro Oficial de Eventos do Municipio de Campo Largo e Dá Outras Providências.", categoria: "Cultura, esporte e lazer", placar: "" },
-      { id: 26224, tipo: "PLL 54/2026", resultado: "unanimidade", ementa: "Inclui no Calendário Oficial de Eventos do Município de Campo Largo o Dia do Criador de Cavalo Crioulo.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26532, tipo: "PLL 68/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública a Associação de Pais, Mestres e Funcionários do Colégio Estadual Inove.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26535, tipo: "PLL 70/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública a Agicamp – Associação Campo-larguense de Ginástica Rítmica.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26561, tipo: "PLL 73/2026", resultado: "unanimidade", ementa: "Institui a Campanha Municipal de Educação e Conscientização para o Uso Seguro de Veiculos Autopropelidos no Município de Campo Largo e Dá Outras Providências.", categoria: "Educação", placar: "" },
-      { id: 26607, tipo: "PLL 75/2026", resultado: "unanimidade", ementa: "Institui o Programa Municipal de Ginastica Rítmica no Munícipio de Campo Largo e Dá Outras Providências.", categoria: "Outros", placar: "" },
-      { id: 26753, tipo: "PLL 77/2026", resultado: "unanimidade", ementa: "Dispõe Sobre a Forma de Atendimento Acessível Às Pessoas com Deficiência por Estabelecimentos de Saúde e de Caráter Estético Instalados em Edificações Construidas Anteriormente a Vigencia Desta Lei, e Dá Outras Providências.", categoria: "Saúde", placar: "" },
-    ],
-    todo: [
-      { id: 25507, tipo: "PLL 1/2026", resultado: "unanimidade", ementa: "Institui a Política Municipal de Agroecologia, Produção Orgânica e Alimentação Saudável no Municípiode Campo Largo, Estado do Paraná e Dá Outras Providências.", categoria: "Outros", placar: "" },
-      { id: 25515, tipo: "PLL 2/2026", resultado: "unanimidade", ementa: "Dá Denominação de Rua Como Índia Guaraci Mayer Á Via Pública Localizada no Município de Campo Largo e Dá Outras Providências.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 25582, tipo: "PLL 4/2026", resultado: "unanimidade", ementa: "Dispõe Sobre a Instituição do Dia do Massoterapeuta no Município de Campo Largo - Estado do Paraná e Dá Outras Providências.", categoria: "Outros", placar: "" },
-      { id: 25583, tipo: "PLL 5/2026", resultado: "unanimidade", ementa: "Dá Denominação de Rua Marisa Age Bini o Trecho Indicado no Bairro Jardim Social, Conforme Especifica.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 25645, tipo: "PLL 9/2026", resultado: "unanimidade", ementa: "Institui o Programa Municipal \"plena Mente\" nas Unidades da Rede Pública Municipal de Ensino de Campo Largo e Dá Outras Providências.", categoria: "Educação", placar: "" },
-      { id: 25649, tipo: "PLL 12/2026", resultado: "unanimidade", ementa: "Inclui no Calendário Oficial de Eventos do Município de Campo Largo a \"caminhada de Conscientização do Autismo\", a Ser Realizada Anualmente no Mês de Abril.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 25650, tipo: "PLL 13/2026", resultado: "unanimidade", ementa: "Institui Feriado Municipal o Dia 23 de Fevereiro, em Comemoração À Emancipação Política do Município de Campo Largo.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 25717, tipo: "PLL 15/2026", resultado: "unanimidade", ementa: "Altera e Acrescenta Dispositivos À Lei Municipal N° 3582/2023, que Institui a Politica de Transparencia nas Obras Publicas Municipais, para Dispor Sobre a Obrigatoriedade de Inserção de Codigo Qr (qr Code) nas Placas de Obras Públicas, e Dá Outras Providencias.", categoria: "Outros", placar: "" },
-      { id: 25742, tipo: "PLL 18/2026", resultado: "unanimidade", ementa: "Altera Dispositivo da Lei Municipal N° 3.624, de 2023, para Extinguir o Cargo em Comissão de Tesoureiro e Criar o Cargo Efetivo de Tesoureiro no Quadro de Pessoal da Câmara Municipal de Campo Largo, e Dá Outras Providencias.", categoria: "Administração e finanças", placar: "" },
-      { id: 25778, tipo: "PLL 20/2026", resultado: "unanimidade", ementa: "Institui, no Âmbito do Municipio de Campo Largo a Campanha \"fevereiro Laranja\", Dedicada Á Conscientização Sobre a Leucemia.", categoria: "Outros", placar: "" },
-      { id: 25840, tipo: "PLL 21/2026", resultado: "unanimidade", ementa: "Dá a Denominação de Rua Hilda Karman Conforme Especifica.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 25871, tipo: "PLL 22/2026", resultado: "unanimidade", ementa: "Declaração de Utilidade Pública a Associação Batista de Ação Social - Abasc com Sede e Foro no Município de Curitiba.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 25896, tipo: "PLL 24/2026", resultado: "unanimidade", ementa: "Reconhece o Wheeling Bike (grau de Bicicleta) Como Prática Esportiva no Municipio de Campo Largo e Dá Outras Providências.", categoria: "Cultura, esporte e lazer", placar: "" },
-      { id: 25991, tipo: "PLL 28/2026", resultado: "unanimidade", ementa: "Denomina de Destacamento Alexandre Diniz dos Santos o Módulo da Guarda Municipal do Ferraria, no Municipio de Campo Largo.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26019, tipo: "PLL 30/2026", resultado: "unanimidade", ementa: "Institui no Calendário Municipal de Campo Largo a Festa da Padroeira da Paróquia Nossa Senhora da Piedade.", categoria: "Outros", placar: "" },
-      { id: 26020, tipo: "PLL 31/2026", resultado: "unanimidade", ementa: "Institui no Municipio de Campo Largo o Programa Educativo e Preventivo Samuzinho Voltado À Conscientização Sobre Prevenção de Acidentes e Uso Adequado dos Serviços de Urgência e Emergência, e Dá Outras Providências.", categoria: "Saúde", placar: "" },
-      { id: 26021, tipo: "PLL 32/2026", resultado: "unanimidade", ementa: "Altera o Art. 1° da Lei Municipal N° 3.948, de 16 de Dezembro de 2025, Conforme Especifica.", categoria: "Outros", placar: "" },
-      { id: 26038, tipo: "PLL 33/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal do Trilheiro de Motociclismo no Municipio de Campo Largo e Dá Outras Providencias.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26040, tipo: "PLL 34/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal dos Aventureiros no Municipio de Campo Largo e Dá Outras Providências.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26073, tipo: "PLL 35/2026", resultado: "unanimidade", ementa: "Dispõe Sobre a Obrigatoriedade de Notificação À Prefeitura dos Casos Confirmados de Zoonoses em Animais Atendidos por Serviços de Saúde e Cuidado Animal, Públicos ou Privados, no Municipio de Campo Largo.", categoria: "Saúde", placar: "" },
-      { id: 26074, tipo: "PLL 36/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública Municipal de Campo Largo o Centro de Tradições Gaúchas Poncho Crioulo - Ctg.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26081, tipo: "PLL 37/2026", resultado: "unanimidade", ementa: "Dá Denominação de Rua da Arca ao Trecho Indicado no Bairro Nossa Senhora do Pilar, Conforme Especifica.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26103, tipo: "PLL 38/2026", resultado: "unanimidade", ementa: "Institui o Programa Municipal de Apoio e Fomento À Cultura Hip Hop, Cria a Semana Municipal do Hip Hop e Estabelece Diretrizes para Valorização da Cultura Hip Hop no Municipio de Campo Largo.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26104, tipo: "PLL 39/2026", resultado: "unanimidade", ementa: "Institui o Programa de Incentivo À Pratica do Skate no Municipio de Campo Largo e Dá Outras Providências.", categoria: "Cultura, esporte e lazer", placar: "" },
-      { id: 26120, tipo: "PLL 40/2026", resultado: "unanimidade", ementa: "Altera o Art. 9° da Lei Municipal N° 3.624/2023, para Incluir o Protocolo Legislativo no Âmbito do Setor Legislativo do Departamento Juridico/legislativo da Câmara Municipal de Campo Largo, Conforme Especifica.", categoria: "Outros", placar: "" },
-      { id: 26121, tipo: "PLL 41/2026", resultado: "unanimidade", ementa: "Altera a Lei Municipal N° 3.986/2026, para Adequar o Quantitativo de Cargos de Assessor Parlamentar Constante do Anexo Iii da Lei Municipal N° 3.624/2023, Conforme Especifica.", categoria: "Administração e finanças", placar: "" },
-      { id: 26128, tipo: "PLL 42/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública o Sindicato das Industrias de Vidros, Cristais, Espelhos, Cerâmicas de Louça, Porcelana, Pisos e Revestimentos Cerâmicos no Estado do Paraná com Sede e Foro no Municipio de Campo Largo.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26141, tipo: "PLL 44/2026", resultado: "unanimidade", ementa: "Institui o Selo Pet Seguro no Município de Campo Largo, Conforme Especifica.", categoria: "Outros", placar: "" },
-      { id: 26142, tipo: "PLL 45/2026", resultado: "unanimidade", ementa: "Inclui no Calendário Municipal de Campo Largo a Festa da Padroeira da Paroquia Nossa Senhora Aparecida e a Peregrinação ao Morro do Cal.", categoria: "Outros", placar: "" },
-      { id: 26220, tipo: "PLL 51/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal do Esporte Amador no Calendáro Oficial do Municipio de Campo Largo e Dá Outras Providências.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26221, tipo: "PLL 52/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal da Cultura no Calendáro Oficial de Eventos do Municipio de Campo Largo e Dá Outras Providências.", categoria: "Cultura, esporte e lazer", placar: "" },
-      { id: 26222, tipo: "PLL 53/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal de Conscientização Sobre a Dislexia no Âmbito do Municipio de Campo Largo e Dá Outras Providências.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26224, tipo: "PLL 54/2026", resultado: "unanimidade", ementa: "Inclui no Calendário Oficial de Eventos do Município de Campo Largo o Dia do Criador de Cavalo Crioulo.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26252, tipo: "PLL 55/2026", resultado: "unanimidade", ementa: "Institui o Dia do Zootecnista no Município de Campo Largo, Conforme Especifica.", categoria: "Outros", placar: "" },
-      { id: 26288, tipo: "PLL 57/2026", resultado: "unanimidade", ementa: "Institui a Politica Municipal de Incentivo À Agroindustria Familiar no Municipio de Campo Largo/pr e Dá Outras Providências.", categoria: "Outros", placar: "" },
-      { id: 26306, tipo: "PLL 58/2026", resultado: "unanimidade", ementa: "Institui Politica Municipal de Enfrentamento Às Drogas Ilícitas.", categoria: "Outros", placar: "" },
-      { id: 26348, tipo: "PLL 59/2026", resultado: "unanimidade", ementa: "Institui a Lei Cão Abacate, para Majorar as Multas Administrativas Cominadas À Pratica de Maus-tratos com Crueldade Aos Animais.", categoria: "Meio ambiente e animais", placar: "" },
-      { id: 26405, tipo: "PLL 60/2026", resultado: "unanimidade", ementa: "Concede Recomposição Salarial ao Prefeito, Vice-prefeito e Secretários Municipais, Conforme Especifica.", categoria: "Administração e finanças", placar: "" },
-      { id: 26453, tipo: "PLL 61/2026", resultado: "unanimidade", ementa: "Altera a Lei 3.624/2023, de 19 de Julho de 2023, que Estabelece a Estrutura Institucional - Organizacional. Dispõe Sobre o Quadro de Pessoal e Institui o Plano de Cargos, Scarreiras e Remunerações da Câmara Municipal de Campo Largo, e Dá Outras Providências.", categoria: "Administração e finanças", placar: "" },
-      { id: 26457, tipo: "PLL 62/2026", resultado: "unanimidade", ementa: "Institui o Programa Protetores Mirins no Município de Campo Largo, e Dá Outras Providencias.", categoria: "Meio ambiente e animais", placar: "" },
-      { id: 26532, tipo: "PLL 68/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública a Associação de Pais, Mestres e Funcionários do Colégio Estadual Inove.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26534, tipo: "PLL 69/2026", resultado: "unanimidade", ementa: "Institui o Programa Municipal \"vaca Parada\", Destinado ao Incentivo de Atividades Culturais, Campeiras e Tradicionalistas Voltadas Às Crianças e Adolescentes no Municipio, e Dá Outras Providências.", categoria: "Cultura, esporte e lazer", placar: "" },
-      { id: 26535, tipo: "PLL 70/2026", resultado: "unanimidade", ementa: "Declara de Utilidade Pública a Agicamp – Associação Campo-larguense de Ginástica Rítmica.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26561, tipo: "PLL 73/2026", resultado: "unanimidade", ementa: "Institui a Campanha Municipal de Educação e Conscientização para o Uso Seguro de Veiculos Autopropelidos no Município de Campo Largo e Dá Outras Providências.", categoria: "Educação", placar: "" },
-      { id: 26603, tipo: "PLL 74/2026", resultado: "unanimidade", ementa: "Institui o Dia Municipal do Associativismo, a Ser Celebrado Anualmente no Dia 15 de Julho.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26607, tipo: "PLL 75/2026", resultado: "unanimidade", ementa: "Institui o Programa Municipal de Ginastica Rítmica no Munícipio de Campo Largo e Dá Outras Providências.", categoria: "Outros", placar: "" },
-      { id: 26753, tipo: "PLL 77/2026", resultado: "unanimidade", ementa: "Dispõe Sobre a Forma de Atendimento Acessível Às Pessoas com Deficiência por Estabelecimentos de Saúde e de Caráter Estético Instalados em Edificações Construidas Anteriormente a Vigencia Desta Lei, e Dá Outras Providências.", categoria: "Saúde", placar: "" },
-      { id: 26769, tipo: "PLL 82/2026", resultado: "unanimidade", ementa: "Institui, no Âmbito do Municipio de Campo Largo, a Semana Municipal do Brechó e da Moda Sustentável a Ser Realizada Anualmente na Última Semana do Mês de Agosto.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26772, tipo: "PLL 85/2026", resultado: "unanimidade", ementa: "Institui a Semana Municipal de Proteção das Nascentes no Municipio de Campo Largo e Dá Outras Providências.", categoria: "Homenagens, nomes e datas", placar: "" },
-      { id: 26844, tipo: "PLL 90/2026", resultado: "unanimidade", ementa: "Institui a Politica Municipal de Doação de Bens Culturais ao Acervo do Museu Histórico de Campo Largo.", categoria: "Cultura, esporte e lazer", placar: "" },
-    ]
-  };
+var MATERIAS_CAMARA = { sessao: [], mes: [], todo: [] };
+  var MATERIAS_TAGS = {};
+  var FILTROS_MATERIA = { sessao: [], mes: [], todo: [] };
+
+  var MATERIAS_URL = window.location.pathname.indexOf("/docs/") !== -1
+    ? "../../dados/tratados/"
+    : "dados/tratados/";
+
+  function carregarMateriasCamara() {
+    var urls = [
+      MATERIAS_URL + "materias_camara.json",
+      MATERIAS_URL + "materias_tags.json",
+      MATERIAS_URL + "filtros_materia.json"
+    ];
+    return Promise.all(urls.map(function (url) {
+      return fetch(url).then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.text().then(function (text) { return JSON.parse(text); });
+      });
+    })).then(function (results) {
+      MATERIAS_CAMARA = results[0];
+      MATERIAS_TAGS = results[1];
+      FILTROS_MATERIA = results[2];
+    }).catch(function () {
+      MATERIAS_CAMARA = { sessao: [], mes: [], todo: [] };
+      MATERIAS_TAGS = {};
+      FILTROS_MATERIA = { sessao: [], mes: [], todo: [] };
+    });
+  }
 
   function atualizarCardVotacoes() {
     var lista = MATERIAS_CAMARA.sessao || [];
@@ -4143,76 +4101,6 @@ var MATERIAS_CAMARA = {
     }
   }
 
-var MATERIAS_TAGS = {
-    25507: { tag_tipo: "PLL", tag_tema: "Outros" },
-    25515: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    25582: { tag_tipo: "PLL", tag_tema: "Outros" },
-    25583: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    25645: { tag_tipo: "PLL", tag_tema: "Educação" },
-    25649: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    25650: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    25717: { tag_tipo: "PLL", tag_tema: "Outros" },
-    25742: { tag_tipo: "PLL", tag_tema: "Administração e finanças" },
-    25778: { tag_tipo: "PLL", tag_tema: "Outros" },
-    25840: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    25871: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    25896: { tag_tipo: "PLL", tag_tema: "Cultura, esporte e lazer" },
-    25991: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    26019: { tag_tipo: "PLL", tag_tema: "Outros" },
-    26020: { tag_tipo: "PLL", tag_tema: "Saúde" },
-    26021: { tag_tipo: "PLL", tag_tema: "Outros" },
-    26038: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    26040: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    26073: { tag_tipo: "PLL", tag_tema: "Saúde" },
-    26074: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    26081: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    26103: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    26104: { tag_tipo: "PLL", tag_tema: "Cultura, esporte e lazer" },
-    26120: { tag_tipo: "PLL", tag_tema: "Outros" },
-    26121: { tag_tipo: "PLL", tag_tema: "Administração e finanças" },
-    26128: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    26141: { tag_tipo: "PLL", tag_tema: "Outros" },
-    26142: { tag_tipo: "PLL", tag_tema: "Outros" },
-    26220: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    26221: { tag_tipo: "PLL", tag_tema: "Cultura, esporte e lazer" },
-    26222: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    26224: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    26252: { tag_tipo: "PLL", tag_tema: "Outros" },
-    26288: { tag_tipo: "PLL", tag_tema: "Outros" },
-    26306: { tag_tipo: "PLL", tag_tema: "Outros" },
-    26348: { tag_tipo: "PLL", tag_tema: "Meio ambiente e animais" },
-    26405: { tag_tipo: "PLL", tag_tema: "Administração e finanças" },
-    26453: { tag_tipo: "PLL", tag_tema: "Administração e finanças" },
-    26457: { tag_tipo: "PLL", tag_tema: "Meio ambiente e animais" },
-    26532: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    26534: { tag_tipo: "PLL", tag_tema: "Cultura, esporte e lazer" },
-    26535: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    26561: { tag_tipo: "PLL", tag_tema: "Educação" },
-    26603: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    26607: { tag_tipo: "PLL", tag_tema: "Outros" },
-    26753: { tag_tipo: "PLL", tag_tema: "Saúde" },
-    26769: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    26772: { tag_tipo: "PLL", tag_tema: "Homenagens, nomes e datas" },
-    26844: { tag_tipo: "PLL", tag_tema: "Cultura, esporte e lazer" }
-  };
-
-var FILTROS_MATERIA = {
-    sessao: [
-      { id: "", rotulo: "Todos", qtd: 2 },
-      { id: "unanimidade", rotulo: "Unânimes", qtd: 2 },
-      { id: "maioria", rotulo: "Maioria", qtd: 0 }
-    ],
-    mes: [
-      { id: "", rotulo: "Todos", qtd: 9 },
-      { id: "unanimidade", rotulo: "Unânimes", qtd: 9 },
-      { id: "maioria", rotulo: "Maioria", qtd: 0 }
-    ],
-    todo: [
-      { id: "", rotulo: "Todos", qtd: 50 },
-      { id: "unanimidade", rotulo: "Unânimes", qtd: 49 },
-      { id: "maioria", rotulo: "Maioria", qtd: 1 }
-    ]
-  };
 
   var estadoMaterias = {
     periodo: "sessao",
@@ -6017,7 +5905,7 @@ var FILTROS_MATERIA = {
   aplicarTema(temaInicial());
   initShareSheet();
   initResumoSheet();
-  initMateriasCamara();
+  carregarMateriasCamara().then(initMateriasCamara);
   carregarResultadosRemotos();
   initNavegacao();
   initVotacaoPopular();

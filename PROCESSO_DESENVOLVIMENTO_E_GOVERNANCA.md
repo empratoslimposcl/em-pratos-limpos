@@ -7,7 +7,7 @@
 | Versão | 1.0 (documento definitivo) |
 | Data de vigência | 16 de setembro de 2026 |
 | Repositório | `empratoslimposcl/em-pratos-limpos` |
-| Ambiente de produção | `https://empratoslimposcl.github.io/em-pratos-limpos/` |
+| Ambiente de produção | `https://empratoslimpos.pages.dev` |
 | Branch de produção | `main` (protegida) |
 | Branch de integração | `desenvolvimento` |
 | Classificação | Público (o projeto é cívico e auditável por qualquer cidadão) |
@@ -751,7 +751,7 @@ Nenhum agente de IA (Claude, Cursor, Grok, DeepSeek, Copilot, ou qualquer outro)
 | Hospedagem | GitHub Pages |
 | Fonte | Branch `main` |
 | Gatilho | Merge de Pull Request aprovado |
-| URL de produção | `https://empratoslimposcl.github.io/em-pratos-limpos/` |
+| URL de produção | `https://empratoslimpos.pages.dev` |
 | Natureza | Site estático, sem backend, sem banco de dados, sem sessão de usuário |
 | Tempo típico de propagação | 1 a 5 minutos |
 
@@ -782,8 +782,8 @@ Obrigatório em **toda** publicação, sem exceção. Deve iniciar em até 10 mi
 Verificação objetiva:
 
 ```bash
-curl -I https://empratoslimposcl.github.io/em-pratos-limpos/
-curl -sI https://empratoslimposcl.github.io/em-pratos-limpos/atuacao_vereadores_2026.json
+curl -I https://empratoslimpos.pages.dev/
+curl -sI https://empratoslimpos.pages.dev/dados/tratados/atuacao_vereadores_2026.json
 ```
 
 #### 5.3.2 Integridade dos dados ao vivo
@@ -796,8 +796,8 @@ curl -sI https://empratoslimposcl.github.io/em-pratos-limpos/atuacao_vereadores_
 - [ ] Contagem ao vivo: PLLs maior ou igual a 100.
 
 ```bash
-curl -sO https://empratoslimposcl.github.io/em-pratos-limpos/atuacao_vereadores_2026.json
-curl -sO https://empratoslimposcl.github.io/em-pratos-limpos/atuacao_vereadores_2026.json.sha256
+curl -sO https://empratoslimpos.pages.dev/dados/tratados/atuacao_vereadores_2026.json
+curl -sO https://empratoslimpos.pages.dev/dados/tratados/atuacao_vereadores_2026.json.sha256
 sha256sum -c atuacao_vereadores_2026.json.sha256
 ```
 
