@@ -165,6 +165,59 @@ async function getResultados(db) {
   return resultados;
 }
 
+const RATE_LIMIT_JANELA_MS = 60000;
+const RATE_LIMIT_LIMITE = 100;
+const RATE_LIMIT_SWEEP_MS = 300000;
+
+const rateLimitContadores = Object.create(null);
+let rateLimitUltimoSweep = 0;
+
+function varrerRateLimit(agora) {
+  for (const ip in rateLimitContadores) {
+    const fila = rateLimitContadores[ip];
+    while (fila.length > 0 && fila[0] <= agora - RATE_LIMIT_JANELA_MS) {
+      fila.shift();
+    }
+    if (fila.length === 0) {
+      delete rateLimitContadores[ip];
+    }
+  }
+}
+
+function consumirRateLimit(ip) {
+  const agora = Date.now();
+  if (agora - rateLimitUltimoSweep > RATE_LIMIT_SWEEP_MS) {
+    varrerRateLimit(agora);
+    rateLimitUltimoSweep = agora;
+  }
+  let fila = rateLimitContadores[ip];
+  if (!fila) {
+    fila = [];
+    rateLimitContadores[ip] = fila;
+  }
+  while (fila.length > 0 && fila[0] <= agora - RATE_LIMIT_JANELA_MS) {
+    fila.shift();
+  }
+  if (fila.length >= RATE_LIMIT_LIMITE) {
+    return false;
+  }
+  fila.push(agora);
+  return true;
+}
+
+function respostaRateLimitExcedido(origem) {
+  return new Response(JSON.stringify({ success: false, error: 'Limite de requisições excedido' }), {
+    status: 429,
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': origem,
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Retry-After': '60',
+    },
+  });
+}
+
 // Handler principal
 export default {
   async fetch(request, env, ctx) {
@@ -181,6 +234,13 @@ export default {
           'Access-Control-Allow-Headers': 'Content-Type',
         },
       });
+    }
+
+    if (request.method !== 'OPTIONS' && path.startsWith('/api/')) {
+      const ip = ipDoPedido(request);
+      if (ip && !consumirRateLimit(ip)) {
+        return respostaRateLimitExcedido(origem);
+      }
     }
 
     try {
