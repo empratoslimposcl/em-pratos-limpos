@@ -11,13 +11,13 @@ A norma técnica soberana deste projeto é o documento:
 ## 1. Princípios Operacionais Inegociáveis
 
 1. **Quem Decide:**
-   * Vinicius é o mantenedor único, proprietário e gatekeeper final do projeto.
-   * Nenhuma alteração estrutural, decisão visual, inclusão de dados ou publicação pode ir para produção sem a revisão humana e aprovação explícita de Vinicius.
+   * O mantenedor único, proprietário e gatekeeper final do projeto é quem decide.
+   * Nenhuma alteração estrutural, decisão visual, inclusão de dados ou publicação pode ir para produção sem a revisão humana e aprovação explícita do mantenedor.
 
-2. **Estilo de Comunicação com Vinicius:**
-   * **Estritamente SEM TRAVESSAO:** E terminantemente proibido utilizar caracteres de travessao (em dash ou en dash) ou hifen como pontuacao em qualquer comunicacao, relatorio, commit ou texto direcionado ao Vinicius. Utilize virgulas, dois pontos, pontos finais, parenteses ou hifens simples de listas ("- ").
+2. **Estilo de Comunicação com o Mantenedor:**
+   * **Estritamente SEM TRAVESSAO:** E terminantemente proibido utilizar caracteres de travessao (em dash ou en dash) ou hifen como pontuacao em qualquer comunicacao, relatorio, commit ou texto direcionado ao mantenedor. Utilize virgulas, dois pontos, pontos finais, parenteses ou hifens simples de listas ("- ").
    * **Estimativas Realistas em Minutos:** Para qualquer tarefa delegada, processo em andamento ou ação futura, forneça sempre uma estimativa realista de tempo em minutos.
-   * **Linguagem Acessível:** Vinicius não é programador. Explicações devem ser em português do Brasil, claras, diretas e sem jargões desnecessários de código.
+   * **Linguagem Acessível:** O mantenedor não é programador. Explicações devem ser em português do Brasil, claras, diretas e sem jargões desnecessários de código.
 
 3. **OPSEC e Privacidade Absoluta:**
    * Proibição expressa de expor e-mails pessoais, nomes de usuários da máquina local, caminhos absolutos de arquivos do sistema operacional ou tokens/chaves privadas em commits, documentações, logs ou mensagens.
@@ -37,7 +37,7 @@ A norma técnica soberana deste projeto é o documento:
   * Espelho do GitHub Pages público (`https://empratoslimposcl.github.io/em-pratos-limpos/`).
   * **NUNCA** commite diretamente na branch `main`.
   * **NUNCA** faça force push (`git push --force`).
-  * Atualizações em `main` só ocorrem via Pull Request formal após validação e aprovação de Vinicius.
+   * Atualizações em `main` só ocorrem via Pull Request formal após validação e aprovação do mantenedor.
 * **Branch `desenvolvimento` (Staging e Integração):**
   * Ambiente de trabalho contínuo onde modificações são criadas, testadas e validadas localmente.
 * **Branches Temporárias (`feature/*`, `hotfix/*`, `atualizacao-dados/*`):**
@@ -68,11 +68,11 @@ Qualquer agente que realize alterações deve validar localmente:
 
 ## Proibições absolutas para agentes de IA
 
-1. NUNCA faça merge em main sem aprovação expressa de Vinicius
+1. NUNCA faça merge em main sem aprovação expressa do mantenedor
 2. NUNCA aprove seu próprio PR
-3. NUNCA faça deploy para produção sem aprovação de Vinicius
-4. NUNCA crie, edite ou exclua secrets sem aprovação de Vinicius
-5. NUNCA faça rollback sem aprovação de Vinicius
+3. NUNCA faça deploy para produção sem aprovação do mantenedor
+4. NUNCA crie, edite ou exclua secrets sem aprovação do mantenedor
+5. NUNCA faça rollback sem aprovação do mantenedor
 6. NUNCA ignore o checklist pré-deploy (seção 5.2 do PROCESSO_DESENVOLVIMENTO_E_GOVERNANCA.md)
 
 Violação de qualquer regra acima é considerada incidente de governança e deve ser revertida imediatamente.

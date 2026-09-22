@@ -11,7 +11,7 @@
 | Branch de produção | `main` (protegida) |
 | Branch de integração | `desenvolvimento` |
 | Classificação | Público (o projeto é cívico e auditável por qualquer cidadão) |
-| Aprovador único | Vinicius (Mantenedor e Gatekeeper) |
+| Aprovador único | Mantenedor e Gatekeeper do projeto |
 | Ciclo de revisão | Semestral, ou imediato após incidente de segurança ou mudança estrutural |
 
 ---
@@ -49,7 +49,7 @@ Aplica-se integralmente a:
 
 ### 0.4 Papéis e responsabilidades (matriz RACI)
 
-| Atividade | Mantenedor (Vinicius) | Agente de IA / Assistente | Automação (GitHub Actions) | Comunidade |
+| Atividade | Mantenedor | Agente de IA / Assistente | Automação (GitHub Actions) | Comunidade |
 | :--- | :---: | :---: | :---: | :---: |
 | Definir escopo e prioridade | R, A | C | I | C |
 | Implementar código em `feature/*` | A | R | I | C |
@@ -64,7 +64,7 @@ Aplica-se integralmente a:
 
 Legenda: R (Responsável pela execução), A (Autoridade que aprova), C (Consultado), I (Informado).
 
-**Regra de autoridade:** a aprovação de merge para `main` é indelegável e exclusiva de Vinicius. Nenhum agente automatizado, nenhum bot e nenhum colaborador externo possui essa prerrogativa.
+**Regra de autoridade:** a aprovação de merge para `main` é indelegável e exclusiva do mantenedor. Nenhum agente automatizado, nenhum bot e nenhum colaborador externo possui essa prerrogativa.
 
 ---
 
@@ -215,7 +215,7 @@ A `main` é a fotografia do que os cidadãos de Campo Largo estão vendo neste e
 | :--- | :--- |
 | `git commit` direto | Revert imediato e registro de não conformidade |
 | `git push --force` | Proibição absoluta, risco de perda irreversível de histórico |
-| Merge sem aprovação de Vinicius | Revert imediato |
+| Merge sem aprovação do mantenedor | Revert imediato |
 | Merge com teste de sanidade falhando | Revert imediato e abertura de incidente |
 | Edição de arquivo pela interface web do GitHub | Proibida, pois contorna a suíte de testes local |
 
@@ -528,7 +528,7 @@ Regras:
 
 - O artefato nunca contém segredo, log bruto com caminho local ou arquivo de ambiente.
 - O nome do artefato segue o padrão `backup-dados-<ano>-s<semana>`.
-- A retenção de 90 dias não pode ser reduzida sem aprovação formal de Vinicius registrada no Pull Request.
+- A retenção de 90 dias não pode ser reduzida sem aprovação formal do mantenedor registrada no Pull Request.
 
 #### 3.2.2 Camada 2: tags semânticas
 
@@ -644,12 +644,12 @@ feature/* ou atualizacao-dados/*
         +---> Falhou? --> PR bloqueado. Correção na própria branch. Reenvio.
         |
         v
-[Revisão humana detalhada por Vinicius]
+[Revisão humana detalhada por parte do mantenedor]
         |
         +---> Reprovado? --> Comentários no PR. Autor corrige. Nova rodada completa.
         |
         v
-[APROVAÇÃO EXCLUSIVA DE VINICIUS]
+[APROVAÇÃO EXCLUSIVA DO MANTENEDOR]
         |
         v
 [Merge em main]
@@ -719,26 +719,26 @@ O Pull Request é reprovado sem necessidade de análise adicional quando:
 
 ### 4.7 Autoridade de aprovação
 
-> **Somente Vinicius aprova merges para `main`.**
+> **Somente o mantenedor aprova merges para `main`.**
 
 Esta regra é absoluta e não comporta exceção por urgência, por horário, por feriado ou por simplicidade aparente da mudança. Não existe "aprovação automática", não existe "auto-merge", não existe aprovação por agente de IA. A automação pode preparar, testar, empacotar e propor. A decisão de publicar em nome da transparência pública de Campo Largo é humana, nominal e rastreável.
 
 ### 4.7.1 Proibições explícitas para agentes de IA
 
-Nenhum agente de IA (Claude, Cursor, Grok, DeepSeek, Copilot, ou qualquer outro) pode executar as ações abaixo sem aprovação expressa e registrada de Vinicius:
+Nenhum agente de IA (Claude, Cursor, Grok, DeepSeek, Copilot, ou qualquer outro) pode executar as ações abaixo sem aprovação expressa e registrada do mantenedor:
 
 | Ação | Exigência |
 | :--- | :--- |
-| Merge de PR para `main` | Aprovação expressa de Vinicius no PR |
+| Merge de PR para `main` | Aprovação expressa do mantenedor no PR |
 | Aprovação de PR próprio | Proibido. Nenhum agente aprova seu próprio PR |
-| Deploy para produção | Aprovação expressa de Vinicius |
-| Criação, edição ou exclusão de secrets | Aprovação expressa de Vinicius |
-| Rollback | Aprovação expressa de Vinicius |
+| Deploy para produção | Aprovação expressa do mantenedor |
+| Criação, edição ou exclusão de secrets | Aprovação expressa do mantenedor |
+| Rollback | Aprovação expressa do mantenedor |
 | Push forçado | Proibido em qualquer circunstância |
 
 **Classificação de violação:** Qualquer ação acima sem aprovação registrada é classificada como **violação de governança** (não como "urgência"). A resposta é revert imediato + registro do incidente.
 
-**Prevenção:** Todo PR aberto por agente de IA deve conter, na descrição, a confirmação de que a aprovação de Vinicius foi solicitada antes de abrir o PR.
+**Prevenção:** Todo PR aberto por agente de IA deve conter, na descrição, a confirmação de que a aprovação do mantenedor foi solicitada antes de abrir o PR.
 
 ---
 
@@ -858,7 +858,7 @@ python -m pytest tests/test_sanidade_dados.py -v
 sha256sum -c atuacao_vereadores_2026.json.sha256
 ```
 
-**Passo 4. Publicar o rollback** por Pull Request com aprovação de Vinicius, mantendo a regra de ouro intacta mesmo em emergência. A urgência justifica prioridade de revisão, jamais a supressão da revisão.
+**Passo 4. Publicar o rollback** por Pull Request com aprovação do mantenedor, mantendo a regra de ouro intacta mesmo em emergência. A urgência justifica prioridade de revisão, jamais a supressão da revisão.
 
 **Passo 5. Homologar novamente.** Repetir integralmente o checklist 5.3.
 
@@ -906,9 +906,9 @@ Procedimento:
 | 3. Geração do SHA-256 | `gerar_hash_integridade.py` | `atuacao_vereadores_2026.json.sha256` |
 | 4. Empacotamento de backup | Workflow | `tar.gz` com 90 dias de retenção |
 | 5. Abertura de Pull Request para `main` | Workflow | PR em `atualizacao-dados/*` |
-| 6. Revisão humana | **Vinicius** | Aprovação ou reprovação |
+| 6. Revisão humana | **Mantenedor** | Aprovação ou reprovação |
 | 7. Merge e deploy | GitHub Pages | Produção atualizada |
-| 8. Homologação pós-deploy | **Vinicius** | Registro de conformidade |
+| 8. Homologação pós-deploy | **Mantenedor** | Registro de conformidade |
 
 Princípio central da esteira: **valida antes de publicar e nunca faz push cego na `main`.** A automação tem autonomia para trabalhar, coletar, testar e propor. Não tem autonomia para publicar.
 
@@ -920,7 +920,7 @@ Princípio central da esteira: **valida antes de publicar e nunca faz push cego 
 
 | Tipo | Descrição | Resposta |
 | :--- | :--- | :--- |
-| Violação de merge | Merge em `main` sem aprovação de Vinicius | Revert imediato + incidente |
+| Violação de merge | Merge em `main` sem aprovação do mantenedor | Revert imediato + incidente |
 | Violação de segredo | Segredo exposto em commit, PR ou documento público | Revogar primeiro, limpar depois, registrar |
 | Violação de OPSEC | Dado pessoal do mantenedor exposto | Remover + registrar |
 
@@ -971,7 +971,7 @@ SEGURANÇA
 REVISÃO
 [ ] Pull Request aberto para main com descrição completa
 [ ] CI verde
-[ ] Aprovação explícita de Vinicius
+[ ] Aprovação explícita do mantenedor
 
 PUBLICAÇÃO
 [ ] Merge realizado
@@ -995,7 +995,7 @@ HOMOLOGAÇÃO
 | Uma biblioteca externa resolveria rápido | Avaliar alternativa local. CSP não é negociável. |
 | A coleta está lenta demais | Aceitar. O rate-limiting protege infraestrutura pública. |
 | O dado do SAPL parece errado na origem | Publicar o dado oficial e registrar a divergência. O projeto reflete a fonte, não a corrige silenciosamente. |
-| Vinicius está indisponível e o dado está desatualizado | Aguardar. Atraso é aceitável, publicação não revisada não é. |
+| O mantenedor está indisponível e o dado está desatualizado | Aguardar. Atraso é aceitável, publicação não revisada não é. |
 | Preciso depurar com `console.log` | Usar localmente e remover antes do commit. |
 | Encontrei um segredo commitado | Revogar primeiro, limpar depois, registrar sempre. |
 
@@ -1016,7 +1016,7 @@ HOMOLOGAÇÃO
 
 ### 6.4 Declaração final de governança
 
-Este documento é normativo. Exceções não são criadas por conveniência, por urgência ou por hábito: são criadas apenas por decisão expressa e registrada de Vinicius, documentada no Pull Request correspondente, com justificativa, escopo, prazo de validade e controle compensatório.
+Este documento é normativo. Exceções não são criadas por conveniência, por urgência ou por hábito: são criadas apenas por decisão expressa e registrada do mantenedor, documentada no Pull Request correspondente, com justificativa, escopo, prazo de validade e controle compensatório.
 
 O compromisso operacional do projeto "Em Pratos Limpos" se resume a quatro afirmações verificáveis:
 

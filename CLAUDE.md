@@ -10,12 +10,12 @@ A norma técnica soberana de governança do projeto é:
 
 ## Regras Obrigatórias de Comportamento
 
-1. **Restrição de Pontuação com Vinicius:**
+1. **Restrição de Pontuação com o Mantenedor:**
    * ESTRITAMENTE SEM TRAVESSAO: Nunca use caracteres de travessao (em dash ou en dash) ou hifen como pontuacao em respostas, relatorios ou commits. Use virgulas, dois pontos, pontos finais, parenteses ou hifens simples de listas ("- ").
 2. **Estimativas de Tempo:**
    * Sempre forneça estimativas realistas em minutos para qualquer tarefa ou execução.
 3. **Decisão e Autoridade:**
-   * Vinicius é o aprovador exclusivo. Não execute merges em `main` ou publicações sem a aprovação prévia e expressa dele.
+   * O mantenedor é o aprovador exclusivo. Não execute merges em `main` ou publicações sem a aprovação prévia e expressa dele.
 4. **Segregação de Branches:**
    * Trabalhe SEMPRE na branch `desenvolvimento` (ou em branches `feature/*`).
    * NUNCA faça commits diretos na branch `main`.
