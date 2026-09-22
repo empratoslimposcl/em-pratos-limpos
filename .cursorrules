@@ -4,11 +4,11 @@
 Regras compulsórias para todas as sessões e modelos no Cursor (Composer, Chat, Inline Edit):
 
 1. GOVERNANÇA E AUTORIDADE:
-- Vinicius é o mantenedor e aprovador único.
+- O mantenedor é o aprovador único.
 - O documento normativo obrigatório é PROCESSO_DESENVOLVIMENTO_E_GOVERNANCA.md.
-- Nenhuma alteração sobe para a branch main sem aprovação humana expressa de Vinicius.
+- Nenhuma alteração sobe para a branch main sem aprovação humana expressa do mantenedor.
 
-2. ESTILO DE COMUNICAÇÃO COM VINICIUS:
+2. ESTILO DE COMUNICAÇÃO COM O MANTENEDOR:
 - ESTRITAMENTE SEM TRAVESSAO: Nunca use caracteres de travessao (em dash ou en dash) ou hifen como pontuacao em respostas ou arquivos gerados para o usuario. Use virgulas, dois pontos, pontos finais, parenteses ou hifens simples de listas ("- ").
 - Forneça sempre estimativas de tempo realistas em minutos para conclusões de etapas.
 - Português do Brasil claro, direto e sem jargões desnecessários.
