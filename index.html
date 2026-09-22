@@ -68,6 +68,13 @@
     --maioria-texto: #4338ca;
     --capsula-verde: #e8f8ed;
     --capsula-roxa: #eeedfa;
+
+    --impressao-texto: #000000;
+    --impressao-borda: #b8b8b8;
+    --impressao-borda-clara: #d0d0d0;
+    --tag-tipo-texto: #004494;
+    --app-laranja-fundo: #fff4e5;
+    --grabber-fundo: #c7c7cc;
   }
 
   [data-tema="escuro"] {
@@ -127,6 +134,13 @@
     --app-verde: #86efac;
     --app-roxo: #c4b5fd;
     --maioria-texto: #c4b5fd;
+
+    --impressao-texto: #000000;
+    --impressao-borda: #b8b8b8;
+    --impressao-borda-clara: #d0d0d0;
+    --tag-tipo-texto: #a0d4ff;
+    --app-laranja-fundo: #3a2410;
+    --grabber-fundo: #636366;
   }
 
   * { box-sizing: border-box; }
@@ -160,7 +174,7 @@
     white-space: nowrap;
     border: 0;
     background: var(--marca-solida);
-    color: #ffffff;
+    color: var(--superficie);
     font-family: "Space Grotesk", sans-serif;
     font-size: 14px;
     font-weight: 700;
@@ -314,7 +328,7 @@
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: var(--app-verde, #34c759);
+    background: var(--app-verde);
     flex-shrink: 0;
   }
 
@@ -391,12 +405,12 @@
     height: 5px;
     margin: 8px auto 0;
     border-radius: 3px;
-    background: #c7c7cc;
+    background: var(--grabber-fundo);
     flex-shrink: 0;
   }
 
   [data-tema="escuro"] .share-sheet-grabber {
-    background: #636366;
+    background: var(--grabber-fundo);
   }
 
   .share-sheet-backdrop.ativo .share-sheet {
@@ -974,11 +988,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .status-cartao-votadas { background: #fff4e5; color: #9a3412; }
+  .status-cartao-votadas { background: var(--app-laranja-fundo); color: var(--app-laranja); }
   .status-cartao-lidas { background: var(--neutro-fundo); }
-  .status-cartao-unanimidade { background: var(--capsula-verde, #e8f8ed); color: var(--ok); }
-  .status-cartao-maioria { background: var(--capsula-roxa, #eeedfa); color: var(--maioria-texto); }
-  [data-tema="escuro"] .status-cartao-votadas { background: #3a2410; color: #fdba74; }
+  .status-cartao-unanimidade { background: var(--capsula-verde); color: var(--ok); }
+  .status-cartao-maioria { background: var(--capsula-roxa); color: var(--maioria-texto); }
+  [data-tema="escuro"] .status-cartao-votadas { background: var(--app-laranja-fundo); color: var(--app-laranja); }
 
   .barra-status-trilho + .status-cartoes {
     margin-top: 14px;
@@ -998,7 +1012,7 @@
     border: none;
   }
 
-  .status-cartao-aprovado { background: var(--capsula-verde, #e8f8ed); color: var(--ok); }
+  .status-cartao-aprovado { background: var(--capsula-verde); color: var(--ok); }
   .status-cartao-tramitacao { background: var(--marca-fundo); }
   .status-cartao-rejeitado { background: var(--graf-rejeitado-fundo); }
 
@@ -1062,7 +1076,7 @@
   .filtros-pll button[aria-pressed="true"] {
     background: var(--marca-solida);
     border-color: var(--marca-solida);
-    color: #ffffff;
+    color: var(--superficie);
   }
 
   .filtros-pll button,
@@ -1106,7 +1120,7 @@
 
   .atalhos-voto button[aria-pressed="true"] {
     background: var(--marca-solida);
-    color: #ffffff;
+    color: var(--superficie);
   }
 
   .estado-vazio {
@@ -1327,7 +1341,7 @@
   }
 
   .btn-pagina { padding: 6px 12px; min-height: 44px; border: 1px solid var(--linha); border-radius: 8px; background: var(--superficie-2); color: var(--texto); font-size: 13px; cursor: pointer; }
-  .btn-pagina.ativo { background: var(--primaria); color: #fff; border-color: var(--primaria); }
+  .btn-pagina.ativo { background: var(--primaria); color: var(--superficie); border-color: var(--primaria); }
   .btn-pagina:hover { opacity: 0.8; }
 
   .carregando, .erro-carga {
@@ -1566,10 +1580,10 @@
     flex-shrink: 0;
   }
 
-  .badge-unanimidade { background: var(--capsula-verde, #e8f8ed); color: var(--ok); }
-  .badge-maioria { background: var(--capsula-roxa, #eeedfa); color: var(--maioria-texto); }
+  .badge-unanimidade { background: var(--capsula-verde); color: var(--ok); }
+  .badge-maioria { background: var(--capsula-roxa); color: var(--maioria-texto); }
 
-  .selo.maioria { background: var(--capsula-roxa, #eeedfa); color: var(--maioria-texto); }
+  .selo.maioria { background: var(--capsula-roxa); color: var(--maioria-texto); }
 
   .materia-ementa {
     margin: 0;
@@ -1782,14 +1796,14 @@
     justify-content: center;
     flex-shrink: 0;
   }
-  .icone-laranja { background: #fff4e5; color: #9a3412; }
-  .icone-azul { background: #e5f1ff; color: #0051c7; }
-  .icone-verde { background: #e8f8ed; color: #166534; }
-  .icone-roxo { background: #eeedfa; color: #4338ca; }
-  [data-tema="escuro"] .icone-laranja { background: #3a2410; color: #fdba74; }
-  [data-tema="escuro"] .icone-azul { background: #1a3055; color: #93c5fd; }
-  [data-tema="escuro"] .icone-verde { background: #143322; color: #86efac; }
-  [data-tema="escuro"] .icone-roxo { background: #2a2840; color: #c4b5fd; }
+  .icone-laranja { background: var(--app-laranja-fundo); color: var(--app-laranja); }
+  .icone-azul { background: var(--marca-fundo); color: var(--marca); }
+  .icone-verde { background: var(--ok-fundo); color: var(--graf-presenca); }
+  .icone-roxo { background: var(--capsula-roxa); color: var(--app-roxo); }
+  [data-tema="escuro"] .icone-laranja { background: var(--app-laranja-fundo); color: var(--app-laranja); }
+  [data-tema="escuro"] .icone-azul { background: var(--marca-fundo); color: var(--link); }
+  [data-tema="escuro"] .icone-verde { background: var(--ok-fundo); color: var(--ok); }
+  [data-tema="escuro"] .icone-roxo { background: var(--capsula-roxa); color: var(--app-roxo); }
   .card-meta {
     font-size: 12px;
     font-weight: 500;
@@ -1881,7 +1895,7 @@
     fill: none;
   }
   .anel-progresso-unanimidade {
-    stroke: #34c759;
+    stroke: var(--graf-aprovado);
     stroke-width: 6;
     stroke-linecap: round;
     fill: none;
@@ -1889,7 +1903,7 @@
     stroke-dashoffset: 15;
   }
   .anel-progresso-maioria {
-    stroke: #5856d6;
+    stroke: var(--barra-maioria);
     stroke-width: 6;
     stroke-linecap: round;
     fill: none;
@@ -1897,7 +1911,7 @@
     stroke-dashoffset: 135;
   }
   .anel-progresso-presenca {
-    stroke: #34c759;
+    stroke: var(--graf-aprovado);
     stroke-width: 6;
     stroke-linecap: round;
     fill: none;
@@ -1919,9 +1933,9 @@
     overflow: hidden;
     margin-top: 4px;
   }
-  .barra-seg-unanimidade { width: 91%; background: #34c759; }
-  .barra-seg-maioria { width: 9%; background: #5856d6; }
-  .barra-seg-presenca { width: 100%; background: #34c759; }
+  .barra-seg-unanimidade { width: 91%; background: var(--graf-aprovado); }
+  .barra-seg-maioria { width: 9%; background: var(--barra-maioria); }
+  .barra-seg-presenca { width: 100%; background: var(--graf-aprovado); }
   .status-grade {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1935,10 +1949,10 @@
     flex-direction: column;
     gap: 2px;
   }
-  .capsula-verde { background: #e8f8ed; color: var(--ok); }
-  .capsula-roxa { background: #eeedfa; color: var(--maioria-texto); }
-  .capsula-neutro { background: #f2f2f7; color: #636366; }
-  [data-tema="escuro"] .capsula-neutro { background: #2c2c2e; color: #aeaeb2; }
+  .capsula-verde { background: var(--ok-fundo); color: var(--ok); }
+  .capsula-roxa { background: var(--capsula-roxa); color: var(--maioria-texto); }
+  .capsula-neutro { background: var(--fundo); color: var(--texto-suave); }
+  [data-tema="escuro"] .capsula-neutro { background: var(--superficie-2); color: var(--texto-suave); }
   .card-legenda {
     font-size: 12px;
     color: var(--texto-suave);
@@ -1999,8 +2013,8 @@
     color: var(--texto-suave);
     white-space: nowrap;
   }
-  [data-tema="escuro"] .capsula-verde { background: #143322; color: #86efac; }
-  [data-tema="escuro"] .capsula-roxa { background: #2a2840; color: #c4b5fd; }
+  [data-tema="escuro"] .capsula-verde { background: var(--ok-fundo); color: var(--ok); }
+  [data-tema="escuro"] .capsula-roxa { background: var(--capsula-roxa); color: var(--app-roxo); }
   .capsula-rotulo { font-size: 11px; font-weight: 600; opacity: 0.9; }
   .capsula-valor {
     font-family: "Space Grotesk", sans-serif;
@@ -2018,7 +2032,7 @@
   .btn-filtro.ativo,
   .btn-filtro[aria-pressed="true"] {
     background: var(--marca-solida);
-    color: #ffffff;
+    color: var(--superficie);
   }
   .lista-itens { display: flex; flex-direction: column; }
   .item-votado {
@@ -2085,10 +2099,10 @@
     white-space: nowrap;
     flex-shrink: 0;
   }
-  .badge-unanimidade { background: #e8f8ed; color: var(--ok); }
-  .badge-maioria { background: #eeedfa; color: var(--maioria-texto); }
-  [data-tema="escuro"] .badge-unanimidade { background: #143322; color: #86efac; }
-  [data-tema="escuro"] .badge-maioria { background: #2a2840; color: #c4b5fd; }
+  .badge-unanimidade { background: var(--ok-fundo); color: var(--ok); }
+  .badge-maioria { background: var(--capsula-roxa); color: var(--maioria-texto); }
+  [data-tema="escuro"] .badge-unanimidade { background: var(--ok-fundo); color: var(--ok); }
+  [data-tema="escuro"] .badge-maioria { background: var(--capsula-roxa); color: var(--app-roxo); }
 
   .materia-tags {
     display: flex;
@@ -2115,7 +2129,7 @@
 
   .tag-tipo {
     background: var(--marca-fundo);
-    color: #004494;
+    color: var(--tag-tipo-texto);
     border: 1px solid rgba(0, 122, 255, 0.25);
   }
 
@@ -2126,15 +2140,15 @@
   }
 
   [data-tema="escuro"] .tag-tipo {
-    background: #1a3055;
-    color: #a0d4ff;
+    background: var(--marca-fundo);
+    color: var(--tag-tipo-texto);
     border-color: rgba(10, 132, 255, 0.35);
   }
 
   [data-tema="escuro"] .tag-categoria {
-    background: #2a3140;
-    color: #c8ced8;
-    border-color: #38383a;
+    background: var(--neutro-fundo);
+    color: var(--neutro);
+    border-color: var(--linha);
   }
 
   .lista-votos .materia-tags {
@@ -2183,7 +2197,7 @@
     border: none;
     border-radius: 14px;
     background: var(--marca-solida);
-    color: #ffffff;
+    color: var(--superficie);
     font-family: "Space Grotesk", sans-serif;
     font-size: 16px;
     font-weight: 700;
@@ -2405,7 +2419,7 @@
   .btn-votar-primario {
     border: none;
     background: var(--marca-solida);
-    color: #ffffff;
+    color: var(--superficie);
   }
   .btn-votar-primario:hover:not(:disabled) {
     background: var(--primaria);
@@ -2638,8 +2652,8 @@
   @media print {
     html,
     body {
-      background: #ffffff !important;
-      color: #000000 !important;
+      background: var(--superficie) !important;
+      color: var(--impressao-texto) !important;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 10pt;
       line-height: 1.35;
@@ -2653,14 +2667,14 @@
       max-width: none;
       min-height: 0;
       margin: 0;
-      background: #ffffff !important;
+      background: var(--superficie) !important;
     }
 
     .cabecalho-impressao {
       display: block;
       margin-bottom: 8mm;
       padding-bottom: 4mm;
-      border-bottom: 2px solid #000000;
+      border-bottom: 2px solid var(--impressao-texto);
     }
 
     .cabecalho-impressao h1 {
@@ -2675,7 +2689,7 @@
     }
 
     .cabecalho-impressao a {
-      color: #000000 !important;
+      color: var(--impressao-texto) !important;
       overflow-wrap: anywhere;
     }
 
@@ -2723,16 +2737,16 @@
     .secao {
       margin-bottom: 5mm;
       padding: 4mm;
-      border: 1px solid #b8b8b8;
+      border: 1px solid var(--impressao-borda);
       border-radius: 0;
-      background: #ffffff !important;
+      background: var(--superficie) !important;
       box-shadow: none !important;
     }
 
     .card-app *,
     .secao *,
     .rodape-coleta * {
-      color: #000000 !important;
+      color: var(--impressao-texto) !important;
       text-shadow: none !important;
     }
 
@@ -2746,7 +2760,7 @@
     }
 
     .item-votado {
-      border-bottom-color: #d0d0d0;
+      border-bottom-color: var(--impressao-borda-clara);
     }
 
     .materia-link {
@@ -2755,8 +2769,8 @@
 
     .rodape-coleta {
       margin-top: 4mm;
-      border-top: 1px solid #b8b8b8;
-      color: #000000 !important;
+      border-top: 1px solid var(--impressao-borda);
+      color: var(--impressao-texto) !important;
     }
   }
 
